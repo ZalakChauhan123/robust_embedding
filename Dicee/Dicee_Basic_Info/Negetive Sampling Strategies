@@ -1,0 +1,32 @@
+Local / Sampling-Based Techniques :-- limited number of negative triples dynamically during training.
+
+    1. NegSample
+    2. FixedNegSample
+    3. KvsSample
+
+----------------------------------------------------------------
+
+Global / Complete-Vocabulary Techniques :-- Strategies score a head-relation pair against the entire graph vocabulary at the same time.
+    
+    1. 1vsAll
+    2. KvsAll
+    3. AllvsAll
+
+
+
+----------------
+Explaination
+----------------
+
+Global
+-----
+1vsall ----   Takes a single true head-relation pair (h, r) & scores it against every single entity in the knowledge graph
+KvsAll ----   Groups all valid tail entities that share the same (h, r) pair across the dataset into a single target vector
+AllvsAll ---- Evaluates all entities acting as heads against all entities acting as tails across all relationships simultaneously within the batch limits
+
+Local
+-----
+NegSample ----      Takes a true triple (h, r, t) & replaces either the head or tail with a few randomly chosen entities
+FixedNegSample ---- Unchanging set of negative entities
+KvsSample ----      Selects a small, targeted cluster (K) of candidate entities for each head-relation pair, scoring the true fact against only that restricted local subset
+
