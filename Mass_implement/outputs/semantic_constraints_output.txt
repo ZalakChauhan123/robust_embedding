@@ -2,13 +2,45 @@
 MaSS Semantic Constraints Output
 ========================================
 
-Target Relation: isa
-PRA Templates: 1
+Target Relation: uses
+PRA Templates: 4
 
 ----------------------------------------------------------------------
 Template 1
-Path: conceptually_related_to -> conceptual_part_of
-PRA Confidence: 1.0000
+Path: isa -> uses
+PRA Confidence: 0.8667
+Valid Intermediate Entities: 2
+    group
+    research_activity
+
+----------------------------------------------------------------------
+Template 2
+Path: interacts_with -> produces
+PRA Confidence: 0.8462
+Valid Intermediate Entities: 6
+    age_group
+    family_group
+    group
+    patient_or_disabled_group
+    population_group
+    professional_or_occupational_group
+
+----------------------------------------------------------------------
+Template 3
+Path: uses -> contains
+PRA Confidence: 0.8333
 Valid Intermediate Entities: 1
-    idea_or_concept
+    drug_delivery_device
+
+----------------------------------------------------------------------
+Template 4
+Path: interacts_with -> uses
+PRA Confidence: 0.8205
+Valid Intermediate Entities: 6
+    age_group
+    family_group
+    group
+    patient_or_disabled_group
+    population_group
+    professional_or_occupational_group
 
