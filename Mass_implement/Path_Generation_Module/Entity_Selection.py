@@ -1,6 +1,9 @@
 """
 -- MaSS Section 4.4.1 : rank semantically valid two-hop candidate paths.
--- Uses existing PRA, Semantic Constraints and trained TransE Surrogate modules.
+-- Uses 
+        existing PRA, 
+        Semantic Constraints & 
+        trained TransE Surrogate module.
 """
 from __future__ import annotations
 
@@ -89,8 +92,18 @@ def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
                 "second_triple_score": score_second,
                 "entity_score": entity_score,
                 "lower_bound_score": template["relation_score"] + entity_score,
+                # DIAGNOSTIC 1: DETECT SELF-LOOPS WITHOUT FILTERING CANDIDATE PATHS.
+                "first_triple_is_self_loop": head == middle,
+                "second_triple_is_self_loop": middle == tail,
+                "has_self_loop": head == middle or middle == tail,
+                # DIAGNOSTIC 2: CHECK WHETHER EACH TRIPLE ALREADY EXISTS IN TRAIN.TXT.
                 "first_triple_exists_in_train": (head, r1, middle) in known_train,
                 "second_triple_exists_in_train": (middle, r2, tail) in known_train,
+                # COUNT TRIPLES ABSENT FROM THE TRAINING GRAPH (ZERO, ONE, OR TWO).
+                "num_new_triples": (
+                    int((head, r1, middle) not in known_train)
+                    + int((middle, r2, tail) not in known_train)
+                ),
             })
     ranked_paths.sort(key=lambda x: (-x["lower_bound_score"], x["r1"], x["intermediate_entity"], x["r2"]))
     for index, item in enumerate(ranked_paths, 1):
