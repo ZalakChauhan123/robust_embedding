@@ -25,7 +25,7 @@ from Semantic_Constraints_Module.Semantic_Constraints import (
 from TransE_Surrogate import Surrogate
 
 def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
-               top_k: int = 4, top_entities: int = 10,
+               top_k: int = 10, top_entities: int = 10,
                checkpoint: Path | None = None) -> dict:
     """Return ranked paths. All scores are higher-is-better (negative distances)."""
     if top_k < 1 or top_entities < 1:
@@ -128,7 +128,7 @@ def main() -> None:
     parser.add_argument("--relation", default="uses")
     parser.add_argument("--tail", default="clinical_drug")
     parser.add_argument("--threshold", type=float, default=0.8)
-    parser.add_argument("--top-k", type=int, default=4)
+    parser.add_argument("--top-k", type=int, default=10)
     parser.add_argument("--top-entities", type=int, default=10)
     parser.add_argument("--checkpoint", type=Path, default=MASS_DIR / "outputs" / "Path_Generation" / "transe_umls.pt")
     parser.add_argument("--output", type=Path, default=MASS_DIR / "outputs" / "Path_Generation" / "entity_selection_output.json")

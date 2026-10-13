@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from collections import defaultdict
 
 # ------------------------------------------
@@ -63,12 +64,15 @@ class MaSSPathTranslator:
         total_paths = len(path_pairs)
         print(f"--- Discovered {total_paths} unique 2-hop path templates.")
 
-        # Save Path Templates to Outputs Folder ----------
-        output_dir = r"C:\my-code\Robust Embedding\Mass_implement\outputs"
-        output_file_path = os.path.join(output_dir, "Path_template_pra_output.txt")
-        
-        # Ensure the directory exists
-        os.makedirs(output_dir, exist_ok=True)
+        # SAVE PATH TEMPLATES TO THE MASS PROJECT OUTPUTS DIRECTORY.
+        # USE A RELATIVE PROJECT PATH INSTEAD OF A HARDCODED WINDOWS PATH.
+        output_dir = Path(__file__).resolve().parents[1] / "outputs"
+
+        # CREATE THE OUTPUT DIRECTORY IF IT DOES NOT EXIST.
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        # DEFINE THE PRA OUTPUT FILE PATH.
+        output_file_path = output_dir / "Path_template_pra_output.txt"
         
         with open(output_file_path, 'w', encoding='utf-8') as f_out:
             f_out.write(f"=== DISCOVERED 2-HOP PATH TEMPLATES (Total: {total_paths}) ===\n")
@@ -151,8 +155,11 @@ class MaSSPathTranslator:
 
 if __name__ == "__main__":
 
-    # Input Dataset Path
-    train_file = r"C:\my-code\Robust Embedding\Mass_implement\dataset_uml\train.txt"
+    # LOAD THE TRAINING DATASET RELATIVE TO THE MASS PROJECT DIRECTORY.
+    dataset_dir = Path(__file__).resolve().parents[1] / "dataset_uml"
+
+    # DEFINE THE TRAINING TRIPLES FILE.
+    train_file = dataset_dir / "train.txt"
     
     try:
         clean_kg = load_dataset(train_file)
