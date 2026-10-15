@@ -12,7 +12,7 @@ DEFAULT_INPUT = PROJECT_DIR / "outputs" / "Path_Generation" / "entity_selection_
 DEFAULT_OUTPUT = PROJECT_DIR / "outputs" / "Path_Generation" / "random_sampling_output.json"
 
 
-def sample_paths(payload: dict, delta: float = 0.7, max_paths: int | None = None,
+def sample_paths(payload: dict, delta: float = 0.7, max_paths: int | None = 2,
                  seed: int | None = None) -> dict:
     """EXAMINE RANKED PATHS IN ORDER AND ACCEPT EACH WITH PROBABILITY 1 - DELTA."""
     if not 0.0 <= delta <= 1.0:
@@ -57,8 +57,8 @@ def main() -> None:
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--delta", type=float, default=0.7)
-    parser.add_argument("--max-paths", type=int, default=None,
-                        help="OPTIONAL PATH LIMIT; NOT THE POISONED-TRIPLE BUDGET")
+    parser.add_argument("--max-paths", type=int, default=2,
+                        help="MAXIMUM NUMBER OF SELECTED PATHS (DEFAULT: 2)")
     parser.add_argument("--seed", type=int, default=None,
                         help="OPTIONAL SEED FOR REPRODUCIBLE SAMPLING")
     args = parser.parse_args()
