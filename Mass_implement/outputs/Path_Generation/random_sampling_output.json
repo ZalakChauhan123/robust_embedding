@@ -1,73 +1,73 @@
 {
   "dataset": "UMLS",
   "target_triple": [
-    "age_group",
-    "uses",
-    "clinical_drug"
+    "amphibian",
+    "interacts_with",
+    "fish"
   ],
   "delta": 0.7,
   "acceptance_probability": 0.30000000000000004,
-  "random_seed": 42,
+  "random_seed": null,
   "requested_max_paths": 2,
-  "num_input_paths": 15,
-  "num_examined_paths": 3,
+  "num_input_paths": 12,
+  "num_examined_paths": 5,
   "num_selected_paths": 2,
   "selected_candidate_paths": [
     {
       "r1": "interacts_with",
-      "intermediate_entity": "population_group",
-      "r2": "uses",
+      "intermediate_entity": "mammal",
+      "r2": "interacts_with",
       "first_triple": [
-        "age_group",
+        "amphibian",
         "interacts_with",
-        "population_group"
+        "mammal"
       ],
       "second_triple": [
-        "population_group",
-        "uses",
-        "clinical_drug"
+        "mammal",
+        "interacts_with",
+        "fish"
       ],
-      "pra_confidence": 0.8205128205128205,
+      "pra_confidence": 0.8046875,
       "relation_score": -0.15762671828269958,
-      "first_triple_score": -0.20131373405456543,
-      "second_triple_score": -0.31608617305755615,
-      "entity_score": -0.5173999071121216,
-      "lower_bound_score": -0.6750266253948212,
+      "first_triple_score": -0.10415507853031158,
+      "second_triple_score": -0.21339362859725952,
+      "entity_score": -0.3175487071275711,
+      "lower_bound_score": -0.4751754254102707,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "plant",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "plant"
+      ],
+      "second_triple": [
+        "plant",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.2897615134716034,
+      "second_triple_score": -0.15563611686229706,
+      "entity_score": -0.44539763033390045,
+      "lower_bound_score": -0.6030243486166,
       "first_triple_is_self_loop": false,
       "second_triple_is_self_loop": false,
       "has_self_loop": false,
       "first_triple_exists_in_train": false,
       "second_triple_exists_in_train": true,
       "num_new_triples": 1,
-      "rank": 2
-    },
-    {
-      "r1": "interacts_with",
-      "intermediate_entity": "group",
-      "r2": "uses",
-      "first_triple": [
-        "age_group",
-        "interacts_with",
-        "group"
-      ],
-      "second_triple": [
-        "group",
-        "uses",
-        "clinical_drug"
-      ],
-      "pra_confidence": 0.8205128205128205,
-      "relation_score": -0.15762671828269958,
-      "first_triple_score": -0.1782601773738861,
-      "second_triple_score": -0.3789784014225006,
-      "entity_score": -0.5572385787963867,
-      "lower_bound_score": -0.7148652970790863,
-      "first_triple_is_self_loop": false,
-      "second_triple_is_self_loop": false,
-      "has_self_loop": false,
-      "first_triple_exists_in_train": true,
-      "second_triple_exists_in_train": true,
-      "num_new_triples": 0,
-      "rank": 3
+      "rank": 5
     }
   ]
 }

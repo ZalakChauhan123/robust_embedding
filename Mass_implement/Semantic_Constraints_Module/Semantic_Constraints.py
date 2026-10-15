@@ -371,7 +371,7 @@ if __name__ == "__main__":
     # TARGET RELATION
     # ========================================================
 
-    TARGET_RELATION = "uses"
+    TARGET_RELATION = "interacts_with"
     PRA_THRESHOLD = 0.8
 
 
