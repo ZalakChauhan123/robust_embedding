@@ -1,0 +1,437 @@
+{
+  "dataset": "UMLS",
+  "target_triple": [
+    "age_group",
+    "uses",
+    "clinical_drug"
+  ],
+  "pra_threshold": 0.8,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 4,
+  "num_semantically_valid_templates": 4,
+  "num_selected_templates": 4,
+  "num_ranked_paths": 15,
+  "ranked_candidate_paths": [
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "age_group",
+      "r2": "uses",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "age_group"
+      ],
+      "second_triple": [
+        "age_group",
+        "uses",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8205128205128205,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.15762671828269958,
+      "second_triple_score": -0.25990787148475647,
+      "entity_score": -0.41753458976745605,
+      "lower_bound_score": -0.5751613080501556,
+      "first_triple_is_self_loop": true,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": true,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "population_group",
+      "r2": "uses",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "population_group"
+      ],
+      "second_triple": [
+        "population_group",
+        "uses",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8205128205128205,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.20131373405456543,
+      "second_triple_score": -0.31608617305755615,
+      "entity_score": -0.5173999071121216,
+      "lower_bound_score": -0.6750266253948212,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "group",
+      "r2": "uses",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "group"
+      ],
+      "second_triple": [
+        "group",
+        "uses",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8205128205128205,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.1782601773738861,
+      "second_triple_score": -0.3789784014225006,
+      "entity_score": -0.5572385787963867,
+      "lower_bound_score": -0.7148652970790863,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 0,
+      "rank": 3
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "family_group",
+      "r2": "uses",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "family_group"
+      ],
+      "second_triple": [
+        "family_group",
+        "uses",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8205128205128205,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.2567509412765503,
+      "second_triple_score": -0.40756332874298096,
+      "entity_score": -0.6643142700195312,
+      "lower_bound_score": -0.8219409883022308,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 4
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "patient_or_disabled_group",
+      "r2": "uses",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "patient_or_disabled_group"
+      ],
+      "second_triple": [
+        "patient_or_disabled_group",
+        "uses",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8205128205128205,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.3276278078556061,
+      "second_triple_score": -0.39702939987182617,
+      "entity_score": -0.7246572077274323,
+      "lower_bound_score": -0.8822839260101318,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 0,
+      "rank": 5
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "professional_or_occupational_group",
+      "r2": "uses",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "professional_or_occupational_group"
+      ],
+      "second_triple": [
+        "professional_or_occupational_group",
+        "uses",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8205128205128205,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.294705331325531,
+      "second_triple_score": -0.43061843514442444,
+      "entity_score": -0.7253237664699554,
+      "lower_bound_score": -0.882950484752655,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 6
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "age_group",
+      "r2": "produces",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "age_group"
+      ],
+      "second_triple": [
+        "age_group",
+        "produces",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8461538461538461,
+      "relation_score": -0.789471447467804,
+      "first_triple_score": -0.15762671828269958,
+      "second_triple_score": -0.6970588564872742,
+      "entity_score": -0.8546855747699738,
+      "lower_bound_score": -1.6441570222377777,
+      "first_triple_is_self_loop": true,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": true,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 7
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "group",
+      "r2": "produces",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "group"
+      ],
+      "second_triple": [
+        "group",
+        "produces",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8461538461538461,
+      "relation_score": -0.789471447467804,
+      "first_triple_score": -0.1782601773738861,
+      "second_triple_score": -0.7582531571388245,
+      "entity_score": -0.9365133345127106,
+      "lower_bound_score": -1.7259847819805145,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 0,
+      "rank": 8
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "population_group",
+      "r2": "produces",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "population_group"
+      ],
+      "second_triple": [
+        "population_group",
+        "produces",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8461538461538461,
+      "relation_score": -0.789471447467804,
+      "first_triple_score": -0.20131373405456543,
+      "second_triple_score": -0.7820430994033813,
+      "entity_score": -0.9833568334579468,
+      "lower_bound_score": -1.7728282809257507,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 9
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "patient_or_disabled_group",
+      "r2": "produces",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "patient_or_disabled_group"
+      ],
+      "second_triple": [
+        "patient_or_disabled_group",
+        "produces",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8461538461538461,
+      "relation_score": -0.789471447467804,
+      "first_triple_score": -0.3276278078556061,
+      "second_triple_score": -0.6697797775268555,
+      "entity_score": -0.9974075853824615,
+      "lower_bound_score": -1.7868790328502655,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 0,
+      "rank": 10
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "family_group",
+      "r2": "produces",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "family_group"
+      ],
+      "second_triple": [
+        "family_group",
+        "produces",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8461538461538461,
+      "relation_score": -0.789471447467804,
+      "first_triple_score": -0.2567509412765503,
+      "second_triple_score": -0.7540873289108276,
+      "entity_score": -1.010838270187378,
+      "lower_bound_score": -1.8003097176551819,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 11
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "professional_or_occupational_group",
+      "r2": "produces",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "professional_or_occupational_group"
+      ],
+      "second_triple": [
+        "professional_or_occupational_group",
+        "produces",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8461538461538461,
+      "relation_score": -0.789471447467804,
+      "first_triple_score": -0.294705331325531,
+      "second_triple_score": -0.8659875988960266,
+      "entity_score": -1.1606929302215576,
+      "lower_bound_score": -1.9501643776893616,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 12
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "group",
+      "r2": "uses",
+      "first_triple": [
+        "age_group",
+        "isa",
+        "group"
+      ],
+      "second_triple": [
+        "group",
+        "uses",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8666666666666667,
+      "relation_score": -0.9330383539199829,
+      "first_triple_score": -0.8599784970283508,
+      "second_triple_score": -0.3789784014225006,
+      "entity_score": -1.2389568984508514,
+      "lower_bound_score": -2.1719952523708344,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 13
+    },
+    {
+      "r1": "uses",
+      "intermediate_entity": "drug_delivery_device",
+      "r2": "contains",
+      "first_triple": [
+        "age_group",
+        "uses",
+        "drug_delivery_device"
+      ],
+      "second_triple": [
+        "drug_delivery_device",
+        "contains",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8333333333333334,
+      "relation_score": -1.2808998823165894,
+      "first_triple_score": -0.5410768389701843,
+      "second_triple_score": -1.2654170989990234,
+      "entity_score": -1.8064939379692078,
+      "lower_bound_score": -3.087393820285797,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 0,
+      "rank": 14
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "research_activity",
+      "r2": "uses",
+      "first_triple": [
+        "age_group",
+        "isa",
+        "research_activity"
+      ],
+      "second_triple": [
+        "research_activity",
+        "uses",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.8666666666666667,
+      "relation_score": -0.9330383539199829,
+      "first_triple_score": -1.5304090976715088,
+      "second_triple_score": -1.1754721403121948,
+      "entity_score": -2.7058812379837036,
+      "lower_bound_score": -3.6389195919036865,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 15
+    }
+  ]
+}

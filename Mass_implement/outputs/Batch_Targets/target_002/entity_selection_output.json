@@ -1,0 +1,353 @@
+{
+  "dataset": "UMLS",
+  "target_triple": [
+    "amphibian",
+    "interacts_with",
+    "fish"
+  ],
+  "pra_threshold": 0.8,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 3,
+  "num_semantically_valid_templates": 3,
+  "num_selected_templates": 3,
+  "num_ranked_paths": 12,
+  "ranked_candidate_paths": [
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "mammal",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "mammal"
+      ],
+      "second_triple": [
+        "mammal",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.10415507853031158,
+      "second_triple_score": -0.21339362859725952,
+      "entity_score": -0.3175487071275711,
+      "lower_bound_score": -0.4751754254102707,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "fish",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "fish"
+      ],
+      "second_triple": [
+        "fish",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.19037632644176483,
+      "second_triple_score": -0.15762671828269958,
+      "entity_score": -0.3480030447244644,
+      "lower_bound_score": -0.505629763007164,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": true,
+      "has_self_loop": true,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "amphibian",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "amphibian"
+      ],
+      "second_triple": [
+        "amphibian",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.15762673318386078,
+      "second_triple_score": -0.19037632644176483,
+      "entity_score": -0.3480030596256256,
+      "lower_bound_score": -0.5056297779083252,
+      "first_triple_is_self_loop": true,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": true,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 3
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "bird",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "bird"
+      ],
+      "second_triple": [
+        "bird",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.1907462328672409,
+      "second_triple_score": -0.21398581564426422,
+      "entity_score": -0.4047320485115051,
+      "lower_bound_score": -0.5623587667942047,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 0,
+      "rank": 4
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "plant",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "plant"
+      ],
+      "second_triple": [
+        "plant",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.2897615134716034,
+      "second_triple_score": -0.15563611686229706,
+      "entity_score": -0.44539763033390045,
+      "lower_bound_score": -0.6030243486166,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 5
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "reptile",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "reptile"
+      ],
+      "second_triple": [
+        "reptile",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.20660890638828278,
+      "second_triple_score": -0.24112239480018616,
+      "entity_score": -0.44773130118846893,
+      "lower_bound_score": -0.6053580194711685,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 6
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "fungus",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "fungus"
+      ],
+      "second_triple": [
+        "fungus",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.31102287769317627,
+      "second_triple_score": -0.16145476698875427,
+      "entity_score": -0.47247764468193054,
+      "lower_bound_score": -0.6301043629646301,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 7
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "archaeon",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "archaeon"
+      ],
+      "second_triple": [
+        "archaeon",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.17283478379249573,
+      "second_triple_score": -0.3113132417201996,
+      "entity_score": -0.4841480255126953,
+      "lower_bound_score": -0.6417747437953949,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 8
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "animal",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "animal"
+      ],
+      "second_triple": [
+        "animal",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.2175275832414627,
+      "second_triple_score": -0.28442463278770447,
+      "entity_score": -0.5019522160291672,
+      "lower_bound_score": -0.6595789343118668,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 9
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "vertebrate",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "vertebrate"
+      ],
+      "second_triple": [
+        "vertebrate",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.22106270492076874,
+      "second_triple_score": -0.2833097279071808,
+      "entity_score": -0.5043724328279495,
+      "lower_bound_score": -0.6619991511106491,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 10
+    },
+    {
+      "r1": "manages",
+      "intermediate_entity": "health_care_related_organization",
+      "r2": "manages",
+      "first_triple": [
+        "amphibian",
+        "manages",
+        "health_care_related_organization"
+      ],
+      "second_triple": [
+        "health_care_related_organization",
+        "manages",
+        "fish"
+      ],
+      "pra_confidence": 1.0,
+      "relation_score": -1.6823073625564575,
+      "first_triple_score": -1.7465717792510986,
+      "second_triple_score": -1.9046871662139893,
+      "entity_score": -3.651258945465088,
+      "lower_bound_score": -5.333566308021545,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 11
+    },
+    {
+      "r1": "treats",
+      "intermediate_entity": "patient_or_disabled_group",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "treats",
+        "patient_or_disabled_group"
+      ],
+      "second_triple": [
+        "patient_or_disabled_group",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 1.0,
+      "relation_score": -2.3098721504211426,
+      "first_triple_score": -3.222752809524536,
+      "second_triple_score": -1.3901368379592896,
+      "entity_score": -4.612889647483826,
+      "lower_bound_score": -6.922761797904968,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 12
+    }
+  ]
+}

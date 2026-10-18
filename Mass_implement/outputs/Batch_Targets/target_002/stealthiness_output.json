@@ -1,0 +1,84 @@
+{
+  "dataset": "UMLS",
+  "target_triple": [
+    "amphibian",
+    "interacts_with",
+    "fish"
+  ],
+  "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+  "num_training_triples": 5216,
+  "num_selected_paths": 2,
+  "selected_candidate_paths": [
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "fish",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "fish"
+      ],
+      "second_triple": [
+        "fish",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.19037632644176483,
+      "second_triple_score": -0.15762671828269958,
+      "entity_score": -0.3480030447244644,
+      "lower_bound_score": -0.505629763007164,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": true,
+      "has_self_loop": true,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 2,
+      "intermediate_entity_degree": 60
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "amphibian",
+      "r2": "interacts_with",
+      "first_triple": [
+        "amphibian",
+        "interacts_with",
+        "amphibian"
+      ],
+      "second_triple": [
+        "amphibian",
+        "interacts_with",
+        "fish"
+      ],
+      "pra_confidence": 0.8046875,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.15762673318386078,
+      "second_triple_score": -0.19037632644176483,
+      "entity_score": -0.3480030596256256,
+      "lower_bound_score": -0.5056297779083252,
+      "first_triple_is_self_loop": true,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": true,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 3,
+      "intermediate_entity_degree": 58
+    }
+  ],
+  "paths_by_ascending_intermediate_degree": [
+    {
+      "rank": 3,
+      "intermediate_entity": "amphibian",
+      "degree": 58
+    },
+    {
+      "rank": 2,
+      "intermediate_entity": "fish",
+      "degree": 60
+    }
+  ],
+  "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+}
