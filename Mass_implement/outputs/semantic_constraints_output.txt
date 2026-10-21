@@ -2,65 +2,45 @@
 MaSS Semantic Constraints Output
 ========================================
 
-Target Relation: interacts_with
-PRA Templates: 3
+Target Relation: uses
+PRA Templates: 4
 
 ----------------------------------------------------------------------
 Template 1
-Path: manages -> manages
-PRA Confidence: 1.0000
-Valid Intermediate Entities: 1
-    health_care_related_organization
+Path: isa -> uses
+PRA Confidence: 0.8667
+Valid Intermediate Entities: 2
+    group
+    research_activity
 
 ----------------------------------------------------------------------
 Template 2
-Path: treats -> interacts_with
-PRA Confidence: 1.0000
-Valid Intermediate Entities: 1
+Path: interacts_with -> produces
+PRA Confidence: 0.8462
+Valid Intermediate Entities: 6
+    age_group
+    family_group
+    group
     patient_or_disabled_group
+    population_group
+    professional_or_occupational_group
 
 ----------------------------------------------------------------------
 Template 3
-Path: interacts_with -> interacts_with
-PRA Confidence: 0.8047
-Valid Intermediate Entities: 39
+Path: uses -> contains
+PRA Confidence: 0.8333
+Valid Intermediate Entities: 1
+    drug_delivery_device
+
+----------------------------------------------------------------------
+Template 4
+Path: interacts_with -> uses
+PRA Confidence: 0.8205
+Valid Intermediate Entities: 6
     age_group
-    amino_acid_peptide_or_protein
-    amphibian
-    animal
-    antibiotic
-    archaeon
-    bacterium
-    biologically_active_substance
-    biomedical_or_dental_material
-    bird
-    chemical
-    chemical_viewed_functionally
-    chemical_viewed_structurally
-    element_ion_or_isotope
-    enzyme
     family_group
-    fish
-    fungus
     group
-    hazardous_or_poisonous_substance
-    hormone
-    human
-    immunologic_factor
-    indicator_reagent_or_diagnostic_aid
-    inorganic_chemical
-    mammal
-    nucleic_acid_nucleoside_or_nucleotide
-    organic_chemical
-    organism
     patient_or_disabled_group
-    pharmacologic_substance
-    plant
     population_group
     professional_or_occupational_group
-    receptor
-    reptile
-    vertebrate
-    virus
-    vitamin
 

@@ -165,9 +165,9 @@ if __name__ == "__main__":
         clean_kg = load_dataset(train_file)
         
         # Target triple: change these values to query a different triple.
-        TARGET_HEAD = "amphibian"
-        TARGET_RELATION = "interacts_with"
-        TARGET_TAIL = "fish"
+        TARGET_HEAD = "age_group"
+        TARGET_RELATION = "uses"
+        TARGET_TAIL = "clinical_drug"
         threshold = 0.8
         
         # We target strict rules with a confidence threshold > 0.9
