@@ -70,6 +70,14 @@ def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
     templates = []
     for item in semantic_results:
         r1, r2 = item["r1"], item["r2"]
+
+    # Validate fixed source and target entities
+        if head not in constraints.get(r1, {}).get("domain", set()):
+            continue
+
+        if tail not in constraints.get(r2, {}).get("range", set()):
+            continue
+
         if r1 not in surrogate.relation_to_id or r2 not in surrogate.relation_to_id:
             continue
         candidates = [e for e in item["valid_intermediate_entities"]
@@ -85,7 +93,12 @@ def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
     templates.sort(key=lambda x: (-x["relation_score"], x["r1"], x["r2"]))
 
     selected = templates[:top_k]
-    ranked_paths = []
+    ranked_paths = [
+
+        path for path in ranked_paths
+        if not path["has_self_loop"]
+        and path["num_new_triples"] > 0
+    ]
     for template in selected:
         r1, r2 = template["r1"], template["r2"]
         entity_scores = []
