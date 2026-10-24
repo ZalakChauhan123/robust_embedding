@@ -3,6 +3,7 @@ import sys
 from collections import defaultdict
 
 
+
 # ============================================================
 # PATH CONFIGURATION
 # ============================================================
@@ -28,7 +29,6 @@ from PRA_Module.Pra_implement_finalVersion import (
     load_dataset,
     MaSSPathTranslator
 )
-
 
 # ============================================================
 # 1. NORMALIZE UMLS SEMANTIC TYPES

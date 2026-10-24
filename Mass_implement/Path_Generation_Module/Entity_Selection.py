@@ -16,6 +16,7 @@ MASS_DIR = Path(__file__).resolve().parents[1]
 if str(MASS_DIR) not in sys.path:
     sys.path.insert(0, str(MASS_DIR))
 
+from PRA_Module.PRA_supervised import SupervisedPRA
 from PRA_Module.Pra_implement_finalVersion import MaSSPathTranslator, load_dataset
 from Semantic_Constraints_Module.Semantic_Constraints import (
     apply_semantic_constraints_to_pra,
@@ -26,7 +27,8 @@ from TransE_Surrogate import Surrogate
 
 def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
                top_k: int = 10, top_entities: int = 10,
-               checkpoint: Path | None = None) -> dict:
+               checkpoint: Path | None = None,
+               pra_method: str = "empirical") -> dict:
     """Return ranked paths. All scores are higher-is-better (negative distances)."""
     if top_k < 1 or top_entities < 1:
         raise ValueError("top_k and top_entities must be positive integers")
@@ -43,7 +45,20 @@ def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
             raise ValueError(f"Unknown target {label}: {name!r}")
 
     triples = load_dataset(str(dataset_dir / "train.txt"))
-    translator = MaSSPathTranslator(triples, threshold=threshold)
+    if pra_method == "supervised":
+        translator = SupervisedPRA(
+            model_path=MASS_DIR / "outputs" / "PRA" / "supervised_pra_umls.joblib",
+            threshold=threshold
+        )
+
+    elif pra_method == "empirical":
+        translator = MaSSPathTranslator(
+            triples,
+            threshold=threshold
+        )
+
+    else:
+        raise ValueError(f"Unknown PRA method: {pra_method}")
     pra_paths = translator.translate_relation(relation)
     constraints = load_semantic_constraints(str(dataset_dir / "Semantic_Constraints" / "SRSTRE2"))
     entities = load_dataset_entities(str(dataset_dir / "entities.txt"))
@@ -132,10 +147,11 @@ def main() -> None:
     parser.add_argument("--top-entities", type=int, default=10)
     parser.add_argument("--checkpoint", type=Path, default=MASS_DIR / "outputs" / "Path_Generation" / "transe_umls.pt")
     parser.add_argument("--output", type=Path, default=MASS_DIR / "outputs" / "Path_Generation" / "entity_selection_output.json")
+    parser.add_argument("--pra-method", choices=["empirical", "supervised"], default="empirical")
     args = parser.parse_args()
     result = rank_paths(args.head, args.relation, args.tail,
                         threshold=args.threshold, top_k=args.top_k,
-                        top_entities=args.top_entities, checkpoint=args.checkpoint)
+                        top_entities=args.top_entities, checkpoint=args.checkpoint, pra_method=args.pra_method)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2), encoding="utf-8")
     print(f"Ranked {result['num_ranked_paths']} candidate paths")
