@@ -148,7 +148,7 @@ def train_supervised_pra(train_path=DEFAULT_TRAIN, output_path=DEFAULT_MODEL,
         return Pipeline([
             ("vectorizer", DictVectorizer(sparse=True)),
             ("classifier", LogisticRegression(
-                solver="liblinear", max_iter=1000, random_state=seed
+                solver="lbfgs", max_iter=1000, random_state=seed
             )),
         ])
 
