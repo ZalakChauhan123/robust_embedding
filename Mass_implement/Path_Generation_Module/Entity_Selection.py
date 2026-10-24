@@ -93,12 +93,7 @@ def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
     templates.sort(key=lambda x: (-x["relation_score"], x["r1"], x["r2"]))
 
     selected = templates[:top_k]
-    ranked_paths = [
-
-        path for path in ranked_paths
-        if not path["has_self_loop"]
-        and path["num_new_triples"] > 0
-    ]
+    ranked_paths = []
     for template in selected:
         r1, r2 = template["r1"], template["r2"]
         entity_scores = []
@@ -133,6 +128,14 @@ def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
                     + int((middle, r2, tail) not in known_train)
                 ),
             })
+
+    # Filter candidates AFTER generating all ranked paths
+    ranked_paths = [
+        path for path in ranked_paths
+        if not path["has_self_loop"]
+        and path["num_new_triples"] > 0
+    ]
+    # Sort the remaining candidate paths
     ranked_paths.sort(key=lambda x: (-x["lower_bound_score"], x["r1"], x["intermediate_entity"], x["r2"]))
     for index, item in enumerate(ranked_paths, 1):
         item["rank"] = index
