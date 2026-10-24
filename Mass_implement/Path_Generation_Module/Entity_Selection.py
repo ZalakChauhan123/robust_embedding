@@ -125,6 +125,7 @@ def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
         item["rank"] = index
     return {
         "dataset": "UMLS",
+        "pra_method": pra_method,
         "target_triple": [head, relation, tail],
         "pra_threshold": threshold,
         "top_k_relation_templates": top_k,
