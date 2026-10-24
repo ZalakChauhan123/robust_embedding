@@ -1,0 +1,5904 @@
+{
+  "experiment": "supervised_pra_strict_target_relation_exclusion",
+  "dataset": "UMLS",
+  "threshold": 0.9,
+  "model_path": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\PRA\\supervised_pra_umls.joblib",
+  "target_relation_count": 10,
+  "exclusion_rule": "r1 != r* AND r2 != r*",
+  "model_retrained": false,
+  "results": [
+    {
+      "target_relation": "uses",
+      "num_baseline_templates": 9,
+      "num_excluded_templates": 8,
+      "num_retained_templates": 1,
+      "baseline_templates": [
+        {
+          "r1": "produces",
+          "r2": "uses",
+          "score": 0.96820246
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "uses",
+          "score": 0.9655248
+        },
+        {
+          "r1": "performs",
+          "r2": "uses",
+          "score": 0.95962111
+        },
+        {
+          "r1": "treats",
+          "r2": "uses",
+          "score": 0.9497499
+        },
+        {
+          "r1": "precedes",
+          "r2": "uses",
+          "score": 0.9455504
+        },
+        {
+          "r1": "manages",
+          "r2": "uses",
+          "score": 0.94414801
+        },
+        {
+          "r1": "isa",
+          "r2": "uses",
+          "score": 0.93441667
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "produces",
+          "score": 0.92096964
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "uses",
+          "score": 0.91408199
+        }
+      ],
+      "excluded_path_templates": [
+        {
+          "r1": "produces",
+          "r2": "uses",
+          "score": 0.96820246
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "uses",
+          "score": 0.9655248
+        },
+        {
+          "r1": "performs",
+          "r2": "uses",
+          "score": 0.95962111
+        },
+        {
+          "r1": "treats",
+          "r2": "uses",
+          "score": 0.9497499
+        },
+        {
+          "r1": "precedes",
+          "r2": "uses",
+          "score": 0.9455504
+        },
+        {
+          "r1": "manages",
+          "r2": "uses",
+          "score": 0.94414801
+        },
+        {
+          "r1": "isa",
+          "r2": "uses",
+          "score": 0.93441667
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "uses",
+          "score": 0.91408199
+        }
+      ],
+      "retained_path_templates": [
+        {
+          "r1": "interacts_with",
+          "r2": "produces",
+          "score": 0.92096964
+        }
+      ]
+    },
+    {
+      "target_relation": "isa",
+      "num_baseline_templates": 33,
+      "num_excluded_templates": 33,
+      "num_retained_templates": 0,
+      "baseline_templates": [
+        {
+          "r1": "conceptually_related_to",
+          "r2": "isa",
+          "score": 0.99251863
+        },
+        {
+          "r1": "isa",
+          "r2": "isa",
+          "score": 0.99150326
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "isa",
+          "score": 0.98593035
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "isa",
+          "score": 0.98562187
+        },
+        {
+          "r1": "practices",
+          "r2": "isa",
+          "score": 0.98544297
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "isa",
+          "score": 0.9850048
+        },
+        {
+          "r1": "interconnects",
+          "r2": "isa",
+          "score": 0.9762204
+        },
+        {
+          "r1": "precedes",
+          "r2": "isa",
+          "score": 0.97483963
+        },
+        {
+          "r1": "consists_of",
+          "r2": "isa",
+          "score": 0.97391074
+        },
+        {
+          "r1": "issue_in",
+          "r2": "isa",
+          "score": 0.97341307
+        },
+        {
+          "r1": "ingredient_of",
+          "r2": "isa",
+          "score": 0.97294207
+        },
+        {
+          "r1": "part_of",
+          "r2": "isa",
+          "score": 0.97260339
+        },
+        {
+          "r1": "process_of",
+          "r2": "isa",
+          "score": 0.97252755
+        },
+        {
+          "r1": "manages",
+          "r2": "isa",
+          "score": 0.97032688
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "isa",
+          "score": 0.97012795
+        },
+        {
+          "r1": "degree_of",
+          "r2": "isa",
+          "score": 0.96834176
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "isa",
+          "score": 0.96090759
+        },
+        {
+          "r1": "causes",
+          "r2": "isa",
+          "score": 0.96069011
+        },
+        {
+          "r1": "indicates",
+          "r2": "isa",
+          "score": 0.95715722
+        },
+        {
+          "r1": "property_of",
+          "r2": "isa",
+          "score": 0.9567358
+        },
+        {
+          "r1": "location_of",
+          "r2": "isa",
+          "score": 0.95518154
+        },
+        {
+          "r1": "associated_with",
+          "r2": "isa",
+          "score": 0.95307657
+        },
+        {
+          "r1": "connected_to",
+          "r2": "isa",
+          "score": 0.95040566
+        },
+        {
+          "r1": "surrounds",
+          "r2": "isa",
+          "score": 0.94765254
+        },
+        {
+          "r1": "contains",
+          "r2": "isa",
+          "score": 0.94340473
+        },
+        {
+          "r1": "disrupts",
+          "r2": "isa",
+          "score": 0.9346508
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "isa",
+          "score": 0.93398945
+        },
+        {
+          "r1": "developmental_form_of",
+          "r2": "isa",
+          "score": 0.93371171
+        },
+        {
+          "r1": "result_of",
+          "r2": "isa",
+          "score": 0.93164851
+        },
+        {
+          "r1": "performs",
+          "r2": "isa",
+          "score": 0.93004857
+        },
+        {
+          "r1": "complicates",
+          "r2": "isa",
+          "score": 0.92985986
+        },
+        {
+          "r1": "produces",
+          "r2": "isa",
+          "score": 0.92537669
+        },
+        {
+          "r1": "affects",
+          "r2": "isa",
+          "score": 0.92469322
+        }
+      ],
+      "excluded_path_templates": [
+        {
+          "r1": "conceptually_related_to",
+          "r2": "isa",
+          "score": 0.99251863
+        },
+        {
+          "r1": "isa",
+          "r2": "isa",
+          "score": 0.99150326
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "isa",
+          "score": 0.98593035
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "isa",
+          "score": 0.98562187
+        },
+        {
+          "r1": "practices",
+          "r2": "isa",
+          "score": 0.98544297
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "isa",
+          "score": 0.9850048
+        },
+        {
+          "r1": "interconnects",
+          "r2": "isa",
+          "score": 0.9762204
+        },
+        {
+          "r1": "precedes",
+          "r2": "isa",
+          "score": 0.97483963
+        },
+        {
+          "r1": "consists_of",
+          "r2": "isa",
+          "score": 0.97391074
+        },
+        {
+          "r1": "issue_in",
+          "r2": "isa",
+          "score": 0.97341307
+        },
+        {
+          "r1": "ingredient_of",
+          "r2": "isa",
+          "score": 0.97294207
+        },
+        {
+          "r1": "part_of",
+          "r2": "isa",
+          "score": 0.97260339
+        },
+        {
+          "r1": "process_of",
+          "r2": "isa",
+          "score": 0.97252755
+        },
+        {
+          "r1": "manages",
+          "r2": "isa",
+          "score": 0.97032688
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "isa",
+          "score": 0.97012795
+        },
+        {
+          "r1": "degree_of",
+          "r2": "isa",
+          "score": 0.96834176
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "isa",
+          "score": 0.96090759
+        },
+        {
+          "r1": "causes",
+          "r2": "isa",
+          "score": 0.96069011
+        },
+        {
+          "r1": "indicates",
+          "r2": "isa",
+          "score": 0.95715722
+        },
+        {
+          "r1": "property_of",
+          "r2": "isa",
+          "score": 0.9567358
+        },
+        {
+          "r1": "location_of",
+          "r2": "isa",
+          "score": 0.95518154
+        },
+        {
+          "r1": "associated_with",
+          "r2": "isa",
+          "score": 0.95307657
+        },
+        {
+          "r1": "connected_to",
+          "r2": "isa",
+          "score": 0.95040566
+        },
+        {
+          "r1": "surrounds",
+          "r2": "isa",
+          "score": 0.94765254
+        },
+        {
+          "r1": "contains",
+          "r2": "isa",
+          "score": 0.94340473
+        },
+        {
+          "r1": "disrupts",
+          "r2": "isa",
+          "score": 0.9346508
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "isa",
+          "score": 0.93398945
+        },
+        {
+          "r1": "developmental_form_of",
+          "r2": "isa",
+          "score": 0.93371171
+        },
+        {
+          "r1": "result_of",
+          "r2": "isa",
+          "score": 0.93164851
+        },
+        {
+          "r1": "performs",
+          "r2": "isa",
+          "score": 0.93004857
+        },
+        {
+          "r1": "complicates",
+          "r2": "isa",
+          "score": 0.92985986
+        },
+        {
+          "r1": "produces",
+          "r2": "isa",
+          "score": 0.92537669
+        },
+        {
+          "r1": "affects",
+          "r2": "isa",
+          "score": 0.92469322
+        }
+      ],
+      "retained_path_templates": []
+    },
+    {
+      "target_relation": "affects",
+      "num_baseline_templates": 404,
+      "num_excluded_templates": 57,
+      "num_retained_templates": 347,
+      "baseline_templates": [
+        {
+          "r1": "causes",
+          "r2": "part_of",
+          "score": 0.99728113
+        },
+        {
+          "r1": "disrupts",
+          "r2": "part_of",
+          "score": 0.99576976
+        },
+        {
+          "r1": "affects",
+          "r2": "precedes",
+          "score": 0.99497045
+        },
+        {
+          "r1": "affects",
+          "r2": "conceptually_related_to",
+          "score": 0.99376968
+        },
+        {
+          "r1": "causes",
+          "r2": "disrupts",
+          "score": 0.99341208
+        },
+        {
+          "r1": "degree_of",
+          "r2": "property_of",
+          "score": 0.99264752
+        },
+        {
+          "r1": "affects",
+          "r2": "co-occurs_with",
+          "score": 0.99249825
+        },
+        {
+          "r1": "disrupts",
+          "r2": "process_of",
+          "score": 0.99170118
+        },
+        {
+          "r1": "affects",
+          "r2": "associated_with",
+          "score": 0.99092648
+        },
+        {
+          "r1": "process_of",
+          "r2": "affects",
+          "score": 0.99072075
+        },
+        {
+          "r1": "causes",
+          "r2": "process_of",
+          "score": 0.99057554
+        },
+        {
+          "r1": "affects",
+          "r2": "affects",
+          "score": 0.99052934
+        },
+        {
+          "r1": "isa",
+          "r2": "process_of",
+          "score": 0.99021771
+        },
+        {
+          "r1": "degree_of",
+          "r2": "affects",
+          "score": 0.98955041
+        },
+        {
+          "r1": "result_of",
+          "r2": "part_of",
+          "score": 0.98953742
+        },
+        {
+          "r1": "affects",
+          "r2": "degree_of",
+          "score": 0.98924004
+        },
+        {
+          "r1": "isa",
+          "r2": "affects",
+          "score": 0.98906924
+        },
+        {
+          "r1": "process_of",
+          "r2": "manifestation_of",
+          "score": 0.98872087
+        },
+        {
+          "r1": "affects",
+          "r2": "measurement_of",
+          "score": 0.98850974
+        },
+        {
+          "r1": "causes",
+          "r2": "conceptually_related_to",
+          "score": 0.98842235
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "affects",
+          "score": 0.98824559
+        },
+        {
+          "r1": "affects",
+          "r2": "practices",
+          "score": 0.98786307
+        },
+        {
+          "r1": "complicates",
+          "r2": "process_of",
+          "score": 0.98782344
+        },
+        {
+          "r1": "affects",
+          "r2": "isa",
+          "score": 0.98752918
+        },
+        {
+          "r1": "precedes",
+          "r2": "precedes",
+          "score": 0.98749624
+        },
+        {
+          "r1": "interconnects",
+          "r2": "part_of",
+          "score": 0.98743263
+        },
+        {
+          "r1": "complicates",
+          "r2": "affects",
+          "score": 0.98714254
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "affects",
+          "score": 0.98696589
+        },
+        {
+          "r1": "affects",
+          "r2": "complicates",
+          "score": 0.98681508
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "complicates",
+          "score": 0.98679635
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "affects",
+          "score": 0.98675264
+        },
+        {
+          "r1": "prevents",
+          "r2": "process_of",
+          "score": 0.98665366
+        },
+        {
+          "r1": "causes",
+          "r2": "location_of",
+          "score": 0.98659186
+        },
+        {
+          "r1": "precedes",
+          "r2": "conceptually_related_to",
+          "score": 0.98650163
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "part_of",
+          "score": 0.98627675
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "process_of",
+          "score": 0.9861859
+        },
+        {
+          "r1": "precedes",
+          "r2": "complicates",
+          "score": 0.98587227
+        },
+        {
+          "r1": "complicates",
+          "r2": "part_of",
+          "score": 0.98562798
+        },
+        {
+          "r1": "process_of",
+          "r2": "conceptually_related_to",
+          "score": 0.98559885
+        },
+        {
+          "r1": "degree_of",
+          "r2": "process_of",
+          "score": 0.98524558
+        },
+        {
+          "r1": "process_of",
+          "r2": "precedes",
+          "score": 0.98515079
+        },
+        {
+          "r1": "degree_of",
+          "r2": "precedes",
+          "score": 0.98505006
+        },
+        {
+          "r1": "result_of",
+          "r2": "manifestation_of",
+          "score": 0.98497471
+        },
+        {
+          "r1": "affects",
+          "r2": "process_of",
+          "score": 0.98484591
+        },
+        {
+          "r1": "process_of",
+          "r2": "degree_of",
+          "score": 0.98478103
+        },
+        {
+          "r1": "degree_of",
+          "r2": "conceptually_related_to",
+          "score": 0.984348
+        },
+        {
+          "r1": "causes",
+          "r2": "manifestation_of",
+          "score": 0.98431979
+        },
+        {
+          "r1": "precedes",
+          "r2": "prevents",
+          "score": 0.98426651
+        },
+        {
+          "r1": "complicates",
+          "r2": "conceptually_related_to",
+          "score": 0.98361588
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "process_of",
+          "score": 0.98351071
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "disrupts",
+          "score": 0.98343149
+        },
+        {
+          "r1": "complicates",
+          "r2": "precedes",
+          "score": 0.98314871
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "affects",
+          "score": 0.98260806
+        },
+        {
+          "r1": "affects",
+          "r2": "manifestation_of",
+          "score": 0.98257451
+        },
+        {
+          "r1": "affects",
+          "r2": "carries_out",
+          "score": 0.9824549
+        },
+        {
+          "r1": "affects",
+          "r2": "causes",
+          "score": 0.98219589
+        },
+        {
+          "r1": "affects",
+          "r2": "result_of",
+          "score": 0.98215164
+        },
+        {
+          "r1": "uses",
+          "r2": "affects",
+          "score": 0.98214624
+        },
+        {
+          "r1": "process_of",
+          "r2": "process_of",
+          "score": 0.98212558
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "process_of",
+          "score": 0.98206183
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "part_of",
+          "score": 0.98204523
+        },
+        {
+          "r1": "precedes",
+          "r2": "affects",
+          "score": 0.98193909
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "indicates",
+          "score": 0.98133596
+        },
+        {
+          "r1": "affects",
+          "r2": "manages",
+          "score": 0.98130779
+        },
+        {
+          "r1": "produces",
+          "r2": "affects",
+          "score": 0.98116944
+        },
+        {
+          "r1": "affects",
+          "r2": "interacts_with",
+          "score": 0.98095766
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "process_of",
+          "score": 0.98087346
+        },
+        {
+          "r1": "degree_of",
+          "r2": "measurement_of",
+          "score": 0.98076325
+        },
+        {
+          "r1": "degree_of",
+          "r2": "complicates",
+          "score": 0.98054728
+        },
+        {
+          "r1": "result_of",
+          "r2": "conceptually_related_to",
+          "score": 0.98054558
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "precedes",
+          "score": 0.98042174
+        },
+        {
+          "r1": "process_of",
+          "r2": "associated_with",
+          "score": 0.98031532
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "manifestation_of",
+          "score": 0.98020338
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "affects",
+          "score": 0.98017743
+        },
+        {
+          "r1": "precedes",
+          "r2": "manifestation_of",
+          "score": 0.98012852
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "diagnoses",
+          "score": 0.97990078
+        },
+        {
+          "r1": "associated_with",
+          "r2": "property_of",
+          "score": 0.97977073
+        },
+        {
+          "r1": "disrupts",
+          "r2": "precedes",
+          "score": 0.9793606
+        },
+        {
+          "r1": "affects",
+          "r2": "diagnoses",
+          "score": 0.97895033
+        },
+        {
+          "r1": "degree_of",
+          "r2": "manifestation_of",
+          "score": 0.97862386
+        },
+        {
+          "r1": "disrupts",
+          "r2": "affects",
+          "score": 0.97848546
+        },
+        {
+          "r1": "precedes",
+          "r2": "treats",
+          "score": 0.97831795
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "process_of",
+          "score": 0.97796728
+        },
+        {
+          "r1": "treats",
+          "r2": "affects",
+          "score": 0.97785692
+        },
+        {
+          "r1": "affects",
+          "r2": "property_of",
+          "score": 0.97772386
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "surrounds",
+          "score": 0.97768637
+        },
+        {
+          "r1": "disrupts",
+          "r2": "connected_to",
+          "score": 0.97763732
+        },
+        {
+          "r1": "process_of",
+          "r2": "isa",
+          "score": 0.97753984
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "degree_of",
+          "score": 0.97742541
+        },
+        {
+          "r1": "affects",
+          "r2": "treats",
+          "score": 0.97717885
+        },
+        {
+          "r1": "consists_of",
+          "r2": "affects",
+          "score": 0.97717352
+        },
+        {
+          "r1": "result_of",
+          "r2": "degree_of",
+          "score": 0.97697727
+        },
+        {
+          "r1": "precedes",
+          "r2": "process_of",
+          "score": 0.97692391
+        },
+        {
+          "r1": "causes",
+          "r2": "affects",
+          "score": 0.97666769
+        },
+        {
+          "r1": "process_of",
+          "r2": "co-occurs_with",
+          "score": 0.97661964
+        },
+        {
+          "r1": "result_of",
+          "r2": "process_of",
+          "score": 0.97652701
+        },
+        {
+          "r1": "process_of",
+          "r2": "causes",
+          "score": 0.97641767
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "conceptually_related_to",
+          "score": 0.97637394
+        },
+        {
+          "r1": "result_of",
+          "r2": "affects",
+          "score": 0.97631301
+        },
+        {
+          "r1": "disrupts",
+          "r2": "result_of",
+          "score": 0.97598507
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "manifestation_of",
+          "score": 0.97586316
+        },
+        {
+          "r1": "prevents",
+          "r2": "result_of",
+          "score": 0.9758014
+        },
+        {
+          "r1": "ingredient_of",
+          "r2": "causes",
+          "score": 0.97539466
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "practices",
+          "score": 0.97509057
+        },
+        {
+          "r1": "produces",
+          "r2": "indicates",
+          "score": 0.97502749
+        },
+        {
+          "r1": "produces",
+          "r2": "complicates",
+          "score": 0.97497663
+        },
+        {
+          "r1": "complicates",
+          "r2": "associated_with",
+          "score": 0.97496626
+        },
+        {
+          "r1": "affects",
+          "r2": "conceptual_part_of",
+          "score": 0.97475951
+        },
+        {
+          "r1": "interconnects",
+          "r2": "surrounds",
+          "score": 0.97464652
+        },
+        {
+          "r1": "disrupts",
+          "r2": "interconnects",
+          "score": 0.97461827
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "affects",
+          "score": 0.97454118
+        },
+        {
+          "r1": "isa",
+          "r2": "precedes",
+          "score": 0.974468
+        },
+        {
+          "r1": "prevents",
+          "r2": "conceptually_related_to",
+          "score": 0.97433136
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "degree_of",
+          "score": 0.97382766
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "degree_of",
+          "score": 0.97380384
+        },
+        {
+          "r1": "causes",
+          "r2": "result_of",
+          "score": 0.97373677
+        },
+        {
+          "r1": "precedes",
+          "r2": "degree_of",
+          "score": 0.97370406
+        },
+        {
+          "r1": "process_of",
+          "r2": "interacts_with",
+          "score": 0.97363028
+        },
+        {
+          "r1": "affects",
+          "r2": "occurs_in",
+          "score": 0.97354386
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "complicates",
+          "score": 0.97342551
+        },
+        {
+          "r1": "consists_of",
+          "r2": "part_of",
+          "score": 0.97338475
+        },
+        {
+          "r1": "consists_of",
+          "r2": "derivative_of",
+          "score": 0.97257935
+        },
+        {
+          "r1": "measures",
+          "r2": "affects",
+          "score": 0.97230998
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "part_of",
+          "score": 0.97212563
+        },
+        {
+          "r1": "disrupts",
+          "r2": "degree_of",
+          "score": 0.97184238
+        },
+        {
+          "r1": "produces",
+          "r2": "part_of",
+          "score": 0.97151476
+        },
+        {
+          "r1": "prevents",
+          "r2": "precedes",
+          "score": 0.97143845
+        },
+        {
+          "r1": "result_of",
+          "r2": "prevents",
+          "score": 0.97122578
+        },
+        {
+          "r1": "causes",
+          "r2": "precedes",
+          "score": 0.97099871
+        },
+        {
+          "r1": "interconnects",
+          "r2": "connected_to",
+          "score": 0.97063361
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "complicates",
+          "score": 0.97045085
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "disrupts",
+          "score": 0.97041487
+        },
+        {
+          "r1": "analyzes",
+          "r2": "part_of",
+          "score": 0.97005007
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "precedes",
+          "score": 0.97003961
+        },
+        {
+          "r1": "interconnects",
+          "r2": "interconnects",
+          "score": 0.96998449
+        },
+        {
+          "r1": "complicates",
+          "r2": "manifestation_of",
+          "score": 0.96997314
+        },
+        {
+          "r1": "treats",
+          "r2": "process_of",
+          "score": 0.96990939
+        },
+        {
+          "r1": "isa",
+          "r2": "degree_of",
+          "score": 0.96973869
+        },
+        {
+          "r1": "process_of",
+          "r2": "complicates",
+          "score": 0.96950756
+        },
+        {
+          "r1": "connected_to",
+          "r2": "surrounds",
+          "score": 0.96949749
+        },
+        {
+          "r1": "associated_with",
+          "r2": "process_of",
+          "score": 0.9694025
+        },
+        {
+          "r1": "produces",
+          "r2": "derivative_of",
+          "score": 0.96916993
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "affects",
+          "score": 0.96898624
+        },
+        {
+          "r1": "complicates",
+          "r2": "co-occurs_with",
+          "score": 0.96871554
+        },
+        {
+          "r1": "treats",
+          "r2": "part_of",
+          "score": 0.96854395
+        },
+        {
+          "r1": "causes",
+          "r2": "degree_of",
+          "score": 0.96852315
+        },
+        {
+          "r1": "process_of",
+          "r2": "occurs_in",
+          "score": 0.9685202
+        },
+        {
+          "r1": "prevents",
+          "r2": "disrupts",
+          "score": 0.96849981
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "diagnoses",
+          "score": 0.96847296
+        },
+        {
+          "r1": "isa",
+          "r2": "causes",
+          "score": 0.96840767
+        },
+        {
+          "r1": "connected_to",
+          "r2": "derivative_of",
+          "score": 0.96834114
+        },
+        {
+          "r1": "isa",
+          "r2": "prevents",
+          "score": 0.96822283
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "part_of",
+          "score": 0.96813154
+        },
+        {
+          "r1": "produces",
+          "r2": "surrounds",
+          "score": 0.96735994
+        },
+        {
+          "r1": "complicates",
+          "r2": "isa",
+          "score": 0.96734539
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "location_of",
+          "score": 0.96720918
+        },
+        {
+          "r1": "disrupts",
+          "r2": "carries_out",
+          "score": 0.9671764
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "result_of",
+          "score": 0.96716315
+        },
+        {
+          "r1": "result_of",
+          "r2": "complicates",
+          "score": 0.96703802
+        },
+        {
+          "r1": "consists_of",
+          "r2": "surrounds",
+          "score": 0.96699405
+        },
+        {
+          "r1": "isa",
+          "r2": "conceptually_related_to",
+          "score": 0.96666269
+        },
+        {
+          "r1": "causes",
+          "r2": "associated_with",
+          "score": 0.96653163
+        },
+        {
+          "r1": "prevents",
+          "r2": "degree_of",
+          "score": 0.96640377
+        },
+        {
+          "r1": "part_of",
+          "r2": "surrounds",
+          "score": 0.96629681
+        },
+        {
+          "r1": "associated_with",
+          "r2": "part_of",
+          "score": 0.96623653
+        },
+        {
+          "r1": "disrupts",
+          "r2": "surrounds",
+          "score": 0.96623066
+        },
+        {
+          "r1": "produces",
+          "r2": "associated_with",
+          "score": 0.96620568
+        },
+        {
+          "r1": "method_of",
+          "r2": "affects",
+          "score": 0.96541967
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "precedes",
+          "score": 0.96515196
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "affects",
+          "score": 0.96509494
+        },
+        {
+          "r1": "complicates",
+          "r2": "location_of",
+          "score": 0.96453313
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "complicates",
+          "score": 0.96420186
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "process_of",
+          "score": 0.96400388
+        },
+        {
+          "r1": "connected_to",
+          "r2": "part_of",
+          "score": 0.96390968
+        },
+        {
+          "r1": "isa",
+          "r2": "complicates",
+          "score": 0.96375351
+        },
+        {
+          "r1": "analyzes",
+          "r2": "derivative_of",
+          "score": 0.96329266
+        },
+        {
+          "r1": "precedes",
+          "r2": "isa",
+          "score": 0.9631125
+        },
+        {
+          "r1": "complicates",
+          "r2": "disrupts",
+          "score": 0.96296352
+        },
+        {
+          "r1": "analyzes",
+          "r2": "surrounds",
+          "score": 0.96288919
+        },
+        {
+          "r1": "analyzes",
+          "r2": "affects",
+          "score": 0.96288441
+        },
+        {
+          "r1": "analyzes",
+          "r2": "disrupts",
+          "score": 0.96273118
+        },
+        {
+          "r1": "produces",
+          "r2": "disrupts",
+          "score": 0.96232712
+        },
+        {
+          "r1": "measures",
+          "r2": "disrupts",
+          "score": 0.96141367
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "part_of",
+          "score": 0.96140771
+        },
+        {
+          "r1": "isa",
+          "r2": "result_of",
+          "score": 0.96127707
+        },
+        {
+          "r1": "disrupts",
+          "r2": "co-occurs_with",
+          "score": 0.96104178
+        },
+        {
+          "r1": "affects",
+          "r2": "performs",
+          "score": 0.95954737
+        },
+        {
+          "r1": "associated_with",
+          "r2": "affects",
+          "score": 0.95939389
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "causes",
+          "score": 0.95907255
+        },
+        {
+          "r1": "disrupts",
+          "r2": "location_of",
+          "score": 0.95900957
+        },
+        {
+          "r1": "associated_with",
+          "r2": "disrupts",
+          "score": 0.95885925
+        },
+        {
+          "r1": "measures",
+          "r2": "part_of",
+          "score": 0.95877986
+        },
+        {
+          "r1": "degree_of",
+          "r2": "associated_with",
+          "score": 0.95877024
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "degree_of",
+          "score": 0.95873489
+        },
+        {
+          "r1": "causes",
+          "r2": "isa",
+          "score": 0.95854915
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "prevents",
+          "score": 0.95851371
+        },
+        {
+          "r1": "degree_of",
+          "r2": "isa",
+          "score": 0.95831728
+        },
+        {
+          "r1": "connected_to",
+          "r2": "connected_to",
+          "score": 0.95830945
+        },
+        {
+          "r1": "uses",
+          "r2": "complicates",
+          "score": 0.95800453
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "result_of",
+          "score": 0.95790382
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "precedes",
+          "score": 0.95786377
+        },
+        {
+          "r1": "analyzes",
+          "r2": "complicates",
+          "score": 0.95754967
+        },
+        {
+          "r1": "indicates",
+          "r2": "process_of",
+          "score": 0.95751694
+        },
+        {
+          "r1": "degree_of",
+          "r2": "degree_of",
+          "score": 0.9572134
+        },
+        {
+          "r1": "uses",
+          "r2": "disrupts",
+          "score": 0.95707732
+        },
+        {
+          "r1": "degree_of",
+          "r2": "result_of",
+          "score": 0.95697954
+        },
+        {
+          "r1": "treats",
+          "r2": "result_of",
+          "score": 0.9569027
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "precedes",
+          "score": 0.9568889
+        },
+        {
+          "r1": "indicates",
+          "r2": "affects",
+          "score": 0.95688531
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "manifestation_of",
+          "score": 0.9567387
+        },
+        {
+          "r1": "result_of",
+          "r2": "result_of",
+          "score": 0.95643899
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "prevents",
+          "score": 0.9563008
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "treats",
+          "score": 0.95604453
+        },
+        {
+          "r1": "result_of",
+          "r2": "location_of",
+          "score": 0.95583015
+        },
+        {
+          "r1": "isa",
+          "r2": "disrupts",
+          "score": 0.95544519
+        },
+        {
+          "r1": "carries_out",
+          "r2": "affects",
+          "score": 0.95519731
+        },
+        {
+          "r1": "treats",
+          "r2": "conceptually_related_to",
+          "score": 0.95501108
+        },
+        {
+          "r1": "precedes",
+          "r2": "associated_with",
+          "score": 0.95496318
+        },
+        {
+          "r1": "measures",
+          "r2": "result_of",
+          "score": 0.95455862
+        },
+        {
+          "r1": "analyzes",
+          "r2": "indicates",
+          "score": 0.95447512
+        },
+        {
+          "r1": "performs",
+          "r2": "process_of",
+          "score": 0.95437985
+        },
+        {
+          "r1": "isa",
+          "r2": "treats",
+          "score": 0.95410302
+        },
+        {
+          "r1": "result_of",
+          "r2": "disrupts",
+          "score": 0.95390616
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "result_of",
+          "score": 0.95382081
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "result_of",
+          "score": 0.95329128
+        },
+        {
+          "r1": "indicates",
+          "r2": "part_of",
+          "score": 0.95323623
+        },
+        {
+          "r1": "connected_to",
+          "r2": "interconnects",
+          "score": 0.95249336
+        },
+        {
+          "r1": "produces",
+          "r2": "location_of",
+          "score": 0.95227372
+        },
+        {
+          "r1": "result_of",
+          "r2": "co-occurs_with",
+          "score": 0.95212336
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "part_of",
+          "score": 0.95208474
+        },
+        {
+          "r1": "prevents",
+          "r2": "associated_with",
+          "score": 0.95184144
+        },
+        {
+          "r1": "manages",
+          "r2": "manages",
+          "score": 0.95143939
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "complicates",
+          "score": 0.9512733
+        },
+        {
+          "r1": "method_of",
+          "r2": "complicates",
+          "score": 0.95106489
+        },
+        {
+          "r1": "measures",
+          "r2": "precedes",
+          "score": 0.95098621
+        },
+        {
+          "r1": "result_of",
+          "r2": "precedes",
+          "score": 0.95090645
+        },
+        {
+          "r1": "precedes",
+          "r2": "co-occurs_with",
+          "score": 0.95079645
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "location_of",
+          "score": 0.9507257
+        },
+        {
+          "r1": "practices",
+          "r2": "isa",
+          "score": 0.95062929
+        },
+        {
+          "r1": "produces",
+          "r2": "prevents",
+          "score": 0.95055828
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "result_of",
+          "score": 0.95048801
+        },
+        {
+          "r1": "associated_with",
+          "r2": "measurement_of",
+          "score": 0.95031605
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "associated_with",
+          "score": 0.95027263
+        },
+        {
+          "r1": "disrupts",
+          "r2": "occurs_in",
+          "score": 0.94996107
+        },
+        {
+          "r1": "measures",
+          "r2": "derivative_of",
+          "score": 0.94961171
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "co-occurs_with",
+          "score": 0.94940688
+        },
+        {
+          "r1": "prevents",
+          "r2": "manifestation_of",
+          "score": 0.94917486
+        },
+        {
+          "r1": "measures",
+          "r2": "surrounds",
+          "score": 0.94906581
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "process_of",
+          "score": 0.94882431
+        },
+        {
+          "r1": "complicates",
+          "r2": "result_of",
+          "score": 0.94877442
+        },
+        {
+          "r1": "method_of",
+          "r2": "precedes",
+          "score": 0.94837354
+        },
+        {
+          "r1": "interconnects",
+          "r2": "result_of",
+          "score": 0.94801338
+        },
+        {
+          "r1": "associated_with",
+          "r2": "conceptually_related_to",
+          "score": 0.94775632
+        },
+        {
+          "r1": "prevents",
+          "r2": "complicates",
+          "score": 0.94749216
+        },
+        {
+          "r1": "associated_with",
+          "r2": "manifestation_of",
+          "score": 0.94747414
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "indicates",
+          "score": 0.94704267
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "complicates",
+          "score": 0.94667039
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "associated_with",
+          "score": 0.94612608
+        },
+        {
+          "r1": "process_of",
+          "r2": "result_of",
+          "score": 0.94496663
+        },
+        {
+          "r1": "prevents",
+          "r2": "isa",
+          "score": 0.94493465
+        },
+        {
+          "r1": "complicates",
+          "r2": "degree_of",
+          "score": 0.9446488
+        },
+        {
+          "r1": "performs",
+          "r2": "affects",
+          "score": 0.94408641
+        },
+        {
+          "r1": "process_of",
+          "r2": "conceptual_part_of",
+          "score": 0.94393289
+        },
+        {
+          "r1": "analyzes",
+          "r2": "treats",
+          "score": 0.94336468
+        },
+        {
+          "r1": "result_of",
+          "r2": "diagnoses",
+          "score": 0.94285293
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "prevents",
+          "score": 0.94272986
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "connected_to",
+          "score": 0.94250805
+        },
+        {
+          "r1": "location_of",
+          "r2": "disrupts",
+          "score": 0.94223867
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "disrupts",
+          "score": 0.94217329
+        },
+        {
+          "r1": "measures",
+          "r2": "co-occurs_with",
+          "score": 0.94193773
+        },
+        {
+          "r1": "part_of",
+          "r2": "connected_to",
+          "score": 0.94164623
+        },
+        {
+          "r1": "measures",
+          "r2": "indicates",
+          "score": 0.94151394
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "conceptually_related_to",
+          "score": 0.94139311
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "result_of",
+          "score": 0.94119672
+        },
+        {
+          "r1": "precedes",
+          "r2": "occurs_in",
+          "score": 0.94049888
+        },
+        {
+          "r1": "isa",
+          "r2": "property_of",
+          "score": 0.94043938
+        },
+        {
+          "r1": "prevents",
+          "r2": "occurs_in",
+          "score": 0.94039465
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "associated_with",
+          "score": 0.9402563
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "conceptually_related_to",
+          "score": 0.93965634
+        },
+        {
+          "r1": "measures",
+          "r2": "degree_of",
+          "score": 0.93917804
+        },
+        {
+          "r1": "isa",
+          "r2": "part_of",
+          "score": 0.93909211
+        },
+        {
+          "r1": "developmental_form_of",
+          "r2": "surrounds",
+          "score": 0.93892945
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "manages",
+          "score": 0.93847504
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "treats",
+          "score": 0.93830919
+        },
+        {
+          "r1": "developmental_form_of",
+          "r2": "connected_to",
+          "score": 0.93810617
+        },
+        {
+          "r1": "measures",
+          "r2": "property_of",
+          "score": 0.93786638
+        },
+        {
+          "r1": "contains",
+          "r2": "part_of",
+          "score": 0.93768562
+        },
+        {
+          "r1": "precedes",
+          "r2": "result_of",
+          "score": 0.93762416
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "developmental_form_of",
+          "score": 0.93755015
+        },
+        {
+          "r1": "measures",
+          "r2": "process_of",
+          "score": 0.93747566
+        },
+        {
+          "r1": "complicates",
+          "r2": "complicates",
+          "score": 0.93727493
+        },
+        {
+          "r1": "isa",
+          "r2": "occurs_in",
+          "score": 0.93714853
+        },
+        {
+          "r1": "result_of",
+          "r2": "measures",
+          "score": 0.93672998
+        },
+        {
+          "r1": "indicates",
+          "r2": "precedes",
+          "score": 0.93671774
+        },
+        {
+          "r1": "degree_of",
+          "r2": "occurs_in",
+          "score": 0.93627969
+        },
+        {
+          "r1": "analyzes",
+          "r2": "causes",
+          "score": 0.93609769
+        },
+        {
+          "r1": "associated_with",
+          "r2": "precedes",
+          "score": 0.93559345
+        },
+        {
+          "r1": "manages",
+          "r2": "carries_out",
+          "score": 0.93482734
+        },
+        {
+          "r1": "causes",
+          "r2": "co-occurs_with",
+          "score": 0.93411679
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "isa",
+          "score": 0.93410327
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "degree_of",
+          "score": 0.93360825
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "manifestation_of",
+          "score": 0.93318567
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "disrupts",
+          "score": 0.93287816
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "precedes",
+          "score": 0.9327877
+        },
+        {
+          "r1": "affects",
+          "r2": "uses",
+          "score": 0.93222529
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "treats",
+          "score": 0.9321596
+        },
+        {
+          "r1": "isa",
+          "r2": "measurement_of",
+          "score": 0.93211437
+        },
+        {
+          "r1": "causes",
+          "r2": "complicates",
+          "score": 0.93195086
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "associated_with",
+          "score": 0.93102075
+        },
+        {
+          "r1": "measures",
+          "r2": "conceptually_related_to",
+          "score": 0.93098793
+        },
+        {
+          "r1": "location_of",
+          "r2": "indicates",
+          "score": 0.93019906
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "isa",
+          "score": 0.92974829
+        },
+        {
+          "r1": "analyzes",
+          "r2": "prevents",
+          "score": 0.92949243
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "manifestation_of",
+          "score": 0.92938662
+        },
+        {
+          "r1": "complicates",
+          "r2": "occurs_in",
+          "score": 0.92936049
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "diagnoses",
+          "score": 0.9284928
+        },
+        {
+          "r1": "process_of",
+          "r2": "exhibits",
+          "score": 0.92838621
+        },
+        {
+          "r1": "causes",
+          "r2": "occurs_in",
+          "score": 0.92780059
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "disrupts",
+          "score": 0.92771285
+        },
+        {
+          "r1": "associated_with",
+          "r2": "causes",
+          "score": 0.92728288
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "causes",
+          "score": 0.92629272
+        },
+        {
+          "r1": "produces",
+          "r2": "causes",
+          "score": 0.92616906
+        },
+        {
+          "r1": "measures",
+          "r2": "occurs_in",
+          "score": 0.92616092
+        },
+        {
+          "r1": "analyzes",
+          "r2": "diagnoses",
+          "score": 0.92599894
+        },
+        {
+          "r1": "associated_with",
+          "r2": "practices",
+          "score": 0.92597303
+        },
+        {
+          "r1": "treats",
+          "r2": "co-occurs_with",
+          "score": 0.92588342
+        },
+        {
+          "r1": "method_of",
+          "r2": "prevents",
+          "score": 0.92578041
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "co-occurs_with",
+          "score": 0.92541226
+        },
+        {
+          "r1": "precedes",
+          "r2": "conceptual_part_of",
+          "score": 0.92533484
+        },
+        {
+          "r1": "part_of",
+          "r2": "interconnects",
+          "score": 0.9252622
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "degree_of",
+          "score": 0.9245536
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "associated_with",
+          "score": 0.92392099
+        },
+        {
+          "r1": "connected_to",
+          "r2": "result_of",
+          "score": 0.92275312
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "manifestation_of",
+          "score": 0.92258235
+        },
+        {
+          "r1": "prevents",
+          "r2": "affects",
+          "score": 0.92231492
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "occurs_in",
+          "score": 0.92230313
+        },
+        {
+          "r1": "manages",
+          "r2": "location_of",
+          "score": 0.9218785
+        },
+        {
+          "r1": "location_of",
+          "r2": "affects",
+          "score": 0.9216243
+        },
+        {
+          "r1": "complicates",
+          "r2": "conceptual_part_of",
+          "score": 0.92053752
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "occurs_in",
+          "score": 0.92020265
+        },
+        {
+          "r1": "property_of",
+          "r2": "part_of",
+          "score": 0.91959068
+        },
+        {
+          "r1": "treats",
+          "r2": "disrupts",
+          "score": 0.91956298
+        },
+        {
+          "r1": "indicates",
+          "r2": "complicates",
+          "score": 0.91901812
+        },
+        {
+          "r1": "result_of",
+          "r2": "assesses_effect_of",
+          "score": 0.91861317
+        },
+        {
+          "r1": "isa",
+          "r2": "manifestation_of",
+          "score": 0.91841518
+        },
+        {
+          "r1": "result_of",
+          "r2": "associated_with",
+          "score": 0.91819296
+        },
+        {
+          "r1": "surrounds",
+          "r2": "part_of",
+          "score": 0.91819227
+        },
+        {
+          "r1": "affects",
+          "r2": "exhibits",
+          "score": 0.91813098
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "manifestation_of",
+          "score": 0.91779224
+        },
+        {
+          "r1": "carries_out",
+          "r2": "precedes",
+          "score": 0.91737777
+        },
+        {
+          "r1": "isa",
+          "r2": "carries_out",
+          "score": 0.91711288
+        },
+        {
+          "r1": "disrupts",
+          "r2": "conceptual_part_of",
+          "score": 0.91702015
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "surrounds",
+          "score": 0.91690036
+        },
+        {
+          "r1": "associated_with",
+          "r2": "result_of",
+          "score": 0.91685739
+        },
+        {
+          "r1": "connected_to",
+          "r2": "developmental_form_of",
+          "score": 0.9168002
+        },
+        {
+          "r1": "result_of",
+          "r2": "isa",
+          "score": 0.91663304
+        },
+        {
+          "r1": "location_of",
+          "r2": "connected_to",
+          "score": 0.91641204
+        },
+        {
+          "r1": "associated_with",
+          "r2": "location_of",
+          "score": 0.91598725
+        },
+        {
+          "r1": "indicates",
+          "r2": "isa",
+          "score": 0.91597349
+        },
+        {
+          "r1": "degree_of",
+          "r2": "co-occurs_with",
+          "score": 0.91586164
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "precedes",
+          "score": 0.91509659
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "interconnects",
+          "score": 0.9145203
+        },
+        {
+          "r1": "produces",
+          "r2": "treats",
+          "score": 0.91401622
+        },
+        {
+          "r1": "associated_with",
+          "r2": "associated_with",
+          "score": 0.91328165
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "treats",
+          "score": 0.91297298
+        },
+        {
+          "r1": "consists_of",
+          "r2": "interacts_with",
+          "score": 0.91270499
+        },
+        {
+          "r1": "indicates",
+          "r2": "manifestation_of",
+          "score": 0.91259615
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "diagnoses",
+          "score": 0.91254119
+        },
+        {
+          "r1": "analyzes",
+          "r2": "associated_with",
+          "score": 0.91208378
+        },
+        {
+          "r1": "performs",
+          "r2": "precedes",
+          "score": 0.91133659
+        },
+        {
+          "r1": "surrounds",
+          "r2": "affects",
+          "score": 0.91126664
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "conceptual_part_of",
+          "score": 0.91110489
+        },
+        {
+          "r1": "precedes",
+          "r2": "uses",
+          "score": 0.91109689
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "occurs_in",
+          "score": 0.91103328
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "occurs_in",
+          "score": 0.91101114
+        },
+        {
+          "r1": "associated_with",
+          "r2": "manages",
+          "score": 0.91033541
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "location_of",
+          "score": 0.90985166
+        },
+        {
+          "r1": "indicates",
+          "r2": "conceptually_related_to",
+          "score": 0.90962016
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "conceptual_part_of",
+          "score": 0.90834201
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "isa",
+          "score": 0.90789986
+        },
+        {
+          "r1": "treats",
+          "r2": "occurs_in",
+          "score": 0.90788015
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "measures",
+          "score": 0.9077934
+        },
+        {
+          "r1": "degree_of",
+          "r2": "conceptual_part_of",
+          "score": 0.90720131
+        },
+        {
+          "r1": "property_of",
+          "r2": "affects",
+          "score": 0.90710196
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "occurs_in",
+          "score": 0.90681424
+        },
+        {
+          "r1": "developmental_form_of",
+          "r2": "interconnects",
+          "score": 0.90671545
+        },
+        {
+          "r1": "treats",
+          "r2": "isa",
+          "score": 0.90649062
+        },
+        {
+          "r1": "treats",
+          "r2": "exhibits",
+          "score": 0.90647601
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "ingredient_of",
+          "score": 0.90639162
+        },
+        {
+          "r1": "measures",
+          "r2": "associated_with",
+          "score": 0.90545734
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "associated_with",
+          "score": 0.90541887
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "complicates",
+          "score": 0.90475276
+        },
+        {
+          "r1": "measures",
+          "r2": "measurement_of",
+          "score": 0.90422026
+        },
+        {
+          "r1": "treats",
+          "r2": "evaluation_of",
+          "score": 0.90398349
+        },
+        {
+          "r1": "location_of",
+          "r2": "derivative_of",
+          "score": 0.90377104
+        },
+        {
+          "r1": "uses",
+          "r2": "prevents",
+          "score": 0.90291722
+        },
+        {
+          "r1": "associated_with",
+          "r2": "complicates",
+          "score": 0.90284051
+        },
+        {
+          "r1": "result_of",
+          "r2": "occurs_in",
+          "score": 0.90257196
+        },
+        {
+          "r1": "indicates",
+          "r2": "result_of",
+          "score": 0.90231645
+        },
+        {
+          "r1": "affects",
+          "r2": "location_of",
+          "score": 0.90199073
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "degree_of",
+          "score": 0.90087762
+        },
+        {
+          "r1": "associated_with",
+          "r2": "degree_of",
+          "score": 0.90079886
+        },
+        {
+          "r1": "associated_with",
+          "r2": "exhibits",
+          "score": 0.90074292
+        },
+        {
+          "r1": "interconnects",
+          "r2": "isa",
+          "score": 0.90026599
+        }
+      ],
+      "excluded_path_templates": [
+        {
+          "r1": "affects",
+          "r2": "precedes",
+          "score": 0.99497045
+        },
+        {
+          "r1": "affects",
+          "r2": "conceptually_related_to",
+          "score": 0.99376968
+        },
+        {
+          "r1": "affects",
+          "r2": "co-occurs_with",
+          "score": 0.99249825
+        },
+        {
+          "r1": "affects",
+          "r2": "associated_with",
+          "score": 0.99092648
+        },
+        {
+          "r1": "process_of",
+          "r2": "affects",
+          "score": 0.99072075
+        },
+        {
+          "r1": "affects",
+          "r2": "affects",
+          "score": 0.99052934
+        },
+        {
+          "r1": "degree_of",
+          "r2": "affects",
+          "score": 0.98955041
+        },
+        {
+          "r1": "affects",
+          "r2": "degree_of",
+          "score": 0.98924004
+        },
+        {
+          "r1": "isa",
+          "r2": "affects",
+          "score": 0.98906924
+        },
+        {
+          "r1": "affects",
+          "r2": "measurement_of",
+          "score": 0.98850974
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "affects",
+          "score": 0.98824559
+        },
+        {
+          "r1": "affects",
+          "r2": "practices",
+          "score": 0.98786307
+        },
+        {
+          "r1": "affects",
+          "r2": "isa",
+          "score": 0.98752918
+        },
+        {
+          "r1": "complicates",
+          "r2": "affects",
+          "score": 0.98714254
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "affects",
+          "score": 0.98696589
+        },
+        {
+          "r1": "affects",
+          "r2": "complicates",
+          "score": 0.98681508
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "affects",
+          "score": 0.98675264
+        },
+        {
+          "r1": "affects",
+          "r2": "process_of",
+          "score": 0.98484591
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "affects",
+          "score": 0.98260806
+        },
+        {
+          "r1": "affects",
+          "r2": "manifestation_of",
+          "score": 0.98257451
+        },
+        {
+          "r1": "affects",
+          "r2": "carries_out",
+          "score": 0.9824549
+        },
+        {
+          "r1": "affects",
+          "r2": "causes",
+          "score": 0.98219589
+        },
+        {
+          "r1": "affects",
+          "r2": "result_of",
+          "score": 0.98215164
+        },
+        {
+          "r1": "uses",
+          "r2": "affects",
+          "score": 0.98214624
+        },
+        {
+          "r1": "precedes",
+          "r2": "affects",
+          "score": 0.98193909
+        },
+        {
+          "r1": "affects",
+          "r2": "manages",
+          "score": 0.98130779
+        },
+        {
+          "r1": "produces",
+          "r2": "affects",
+          "score": 0.98116944
+        },
+        {
+          "r1": "affects",
+          "r2": "interacts_with",
+          "score": 0.98095766
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "affects",
+          "score": 0.98017743
+        },
+        {
+          "r1": "affects",
+          "r2": "diagnoses",
+          "score": 0.97895033
+        },
+        {
+          "r1": "disrupts",
+          "r2": "affects",
+          "score": 0.97848546
+        },
+        {
+          "r1": "treats",
+          "r2": "affects",
+          "score": 0.97785692
+        },
+        {
+          "r1": "affects",
+          "r2": "property_of",
+          "score": 0.97772386
+        },
+        {
+          "r1": "affects",
+          "r2": "treats",
+          "score": 0.97717885
+        },
+        {
+          "r1": "consists_of",
+          "r2": "affects",
+          "score": 0.97717352
+        },
+        {
+          "r1": "causes",
+          "r2": "affects",
+          "score": 0.97666769
+        },
+        {
+          "r1": "result_of",
+          "r2": "affects",
+          "score": 0.97631301
+        },
+        {
+          "r1": "affects",
+          "r2": "conceptual_part_of",
+          "score": 0.97475951
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "affects",
+          "score": 0.97454118
+        },
+        {
+          "r1": "affects",
+          "r2": "occurs_in",
+          "score": 0.97354386
+        },
+        {
+          "r1": "measures",
+          "r2": "affects",
+          "score": 0.97230998
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "affects",
+          "score": 0.96898624
+        },
+        {
+          "r1": "method_of",
+          "r2": "affects",
+          "score": 0.96541967
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "affects",
+          "score": 0.96509494
+        },
+        {
+          "r1": "analyzes",
+          "r2": "affects",
+          "score": 0.96288441
+        },
+        {
+          "r1": "affects",
+          "r2": "performs",
+          "score": 0.95954737
+        },
+        {
+          "r1": "associated_with",
+          "r2": "affects",
+          "score": 0.95939389
+        },
+        {
+          "r1": "indicates",
+          "r2": "affects",
+          "score": 0.95688531
+        },
+        {
+          "r1": "carries_out",
+          "r2": "affects",
+          "score": 0.95519731
+        },
+        {
+          "r1": "performs",
+          "r2": "affects",
+          "score": 0.94408641
+        },
+        {
+          "r1": "affects",
+          "r2": "uses",
+          "score": 0.93222529
+        },
+        {
+          "r1": "prevents",
+          "r2": "affects",
+          "score": 0.92231492
+        },
+        {
+          "r1": "location_of",
+          "r2": "affects",
+          "score": 0.9216243
+        },
+        {
+          "r1": "affects",
+          "r2": "exhibits",
+          "score": 0.91813098
+        },
+        {
+          "r1": "surrounds",
+          "r2": "affects",
+          "score": 0.91126664
+        },
+        {
+          "r1": "property_of",
+          "r2": "affects",
+          "score": 0.90710196
+        },
+        {
+          "r1": "affects",
+          "r2": "location_of",
+          "score": 0.90199073
+        }
+      ],
+      "retained_path_templates": [
+        {
+          "r1": "causes",
+          "r2": "part_of",
+          "score": 0.99728113
+        },
+        {
+          "r1": "disrupts",
+          "r2": "part_of",
+          "score": 0.99576976
+        },
+        {
+          "r1": "causes",
+          "r2": "disrupts",
+          "score": 0.99341208
+        },
+        {
+          "r1": "degree_of",
+          "r2": "property_of",
+          "score": 0.99264752
+        },
+        {
+          "r1": "disrupts",
+          "r2": "process_of",
+          "score": 0.99170118
+        },
+        {
+          "r1": "causes",
+          "r2": "process_of",
+          "score": 0.99057554
+        },
+        {
+          "r1": "isa",
+          "r2": "process_of",
+          "score": 0.99021771
+        },
+        {
+          "r1": "result_of",
+          "r2": "part_of",
+          "score": 0.98953742
+        },
+        {
+          "r1": "process_of",
+          "r2": "manifestation_of",
+          "score": 0.98872087
+        },
+        {
+          "r1": "causes",
+          "r2": "conceptually_related_to",
+          "score": 0.98842235
+        },
+        {
+          "r1": "complicates",
+          "r2": "process_of",
+          "score": 0.98782344
+        },
+        {
+          "r1": "precedes",
+          "r2": "precedes",
+          "score": 0.98749624
+        },
+        {
+          "r1": "interconnects",
+          "r2": "part_of",
+          "score": 0.98743263
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "complicates",
+          "score": 0.98679635
+        },
+        {
+          "r1": "prevents",
+          "r2": "process_of",
+          "score": 0.98665366
+        },
+        {
+          "r1": "causes",
+          "r2": "location_of",
+          "score": 0.98659186
+        },
+        {
+          "r1": "precedes",
+          "r2": "conceptually_related_to",
+          "score": 0.98650163
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "part_of",
+          "score": 0.98627675
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "process_of",
+          "score": 0.9861859
+        },
+        {
+          "r1": "precedes",
+          "r2": "complicates",
+          "score": 0.98587227
+        },
+        {
+          "r1": "complicates",
+          "r2": "part_of",
+          "score": 0.98562798
+        },
+        {
+          "r1": "process_of",
+          "r2": "conceptually_related_to",
+          "score": 0.98559885
+        },
+        {
+          "r1": "degree_of",
+          "r2": "process_of",
+          "score": 0.98524558
+        },
+        {
+          "r1": "process_of",
+          "r2": "precedes",
+          "score": 0.98515079
+        },
+        {
+          "r1": "degree_of",
+          "r2": "precedes",
+          "score": 0.98505006
+        },
+        {
+          "r1": "result_of",
+          "r2": "manifestation_of",
+          "score": 0.98497471
+        },
+        {
+          "r1": "process_of",
+          "r2": "degree_of",
+          "score": 0.98478103
+        },
+        {
+          "r1": "degree_of",
+          "r2": "conceptually_related_to",
+          "score": 0.984348
+        },
+        {
+          "r1": "causes",
+          "r2": "manifestation_of",
+          "score": 0.98431979
+        },
+        {
+          "r1": "precedes",
+          "r2": "prevents",
+          "score": 0.98426651
+        },
+        {
+          "r1": "complicates",
+          "r2": "conceptually_related_to",
+          "score": 0.98361588
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "process_of",
+          "score": 0.98351071
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "disrupts",
+          "score": 0.98343149
+        },
+        {
+          "r1": "complicates",
+          "r2": "precedes",
+          "score": 0.98314871
+        },
+        {
+          "r1": "process_of",
+          "r2": "process_of",
+          "score": 0.98212558
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "process_of",
+          "score": 0.98206183
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "part_of",
+          "score": 0.98204523
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "indicates",
+          "score": 0.98133596
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "process_of",
+          "score": 0.98087346
+        },
+        {
+          "r1": "degree_of",
+          "r2": "measurement_of",
+          "score": 0.98076325
+        },
+        {
+          "r1": "degree_of",
+          "r2": "complicates",
+          "score": 0.98054728
+        },
+        {
+          "r1": "result_of",
+          "r2": "conceptually_related_to",
+          "score": 0.98054558
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "precedes",
+          "score": 0.98042174
+        },
+        {
+          "r1": "process_of",
+          "r2": "associated_with",
+          "score": 0.98031532
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "manifestation_of",
+          "score": 0.98020338
+        },
+        {
+          "r1": "precedes",
+          "r2": "manifestation_of",
+          "score": 0.98012852
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "diagnoses",
+          "score": 0.97990078
+        },
+        {
+          "r1": "associated_with",
+          "r2": "property_of",
+          "score": 0.97977073
+        },
+        {
+          "r1": "disrupts",
+          "r2": "precedes",
+          "score": 0.9793606
+        },
+        {
+          "r1": "degree_of",
+          "r2": "manifestation_of",
+          "score": 0.97862386
+        },
+        {
+          "r1": "precedes",
+          "r2": "treats",
+          "score": 0.97831795
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "process_of",
+          "score": 0.97796728
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "surrounds",
+          "score": 0.97768637
+        },
+        {
+          "r1": "disrupts",
+          "r2": "connected_to",
+          "score": 0.97763732
+        },
+        {
+          "r1": "process_of",
+          "r2": "isa",
+          "score": 0.97753984
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "degree_of",
+          "score": 0.97742541
+        },
+        {
+          "r1": "result_of",
+          "r2": "degree_of",
+          "score": 0.97697727
+        },
+        {
+          "r1": "precedes",
+          "r2": "process_of",
+          "score": 0.97692391
+        },
+        {
+          "r1": "process_of",
+          "r2": "co-occurs_with",
+          "score": 0.97661964
+        },
+        {
+          "r1": "result_of",
+          "r2": "process_of",
+          "score": 0.97652701
+        },
+        {
+          "r1": "process_of",
+          "r2": "causes",
+          "score": 0.97641767
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "conceptually_related_to",
+          "score": 0.97637394
+        },
+        {
+          "r1": "disrupts",
+          "r2": "result_of",
+          "score": 0.97598507
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "manifestation_of",
+          "score": 0.97586316
+        },
+        {
+          "r1": "prevents",
+          "r2": "result_of",
+          "score": 0.9758014
+        },
+        {
+          "r1": "ingredient_of",
+          "r2": "causes",
+          "score": 0.97539466
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "practices",
+          "score": 0.97509057
+        },
+        {
+          "r1": "produces",
+          "r2": "indicates",
+          "score": 0.97502749
+        },
+        {
+          "r1": "produces",
+          "r2": "complicates",
+          "score": 0.97497663
+        },
+        {
+          "r1": "complicates",
+          "r2": "associated_with",
+          "score": 0.97496626
+        },
+        {
+          "r1": "interconnects",
+          "r2": "surrounds",
+          "score": 0.97464652
+        },
+        {
+          "r1": "disrupts",
+          "r2": "interconnects",
+          "score": 0.97461827
+        },
+        {
+          "r1": "isa",
+          "r2": "precedes",
+          "score": 0.974468
+        },
+        {
+          "r1": "prevents",
+          "r2": "conceptually_related_to",
+          "score": 0.97433136
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "degree_of",
+          "score": 0.97382766
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "degree_of",
+          "score": 0.97380384
+        },
+        {
+          "r1": "causes",
+          "r2": "result_of",
+          "score": 0.97373677
+        },
+        {
+          "r1": "precedes",
+          "r2": "degree_of",
+          "score": 0.97370406
+        },
+        {
+          "r1": "process_of",
+          "r2": "interacts_with",
+          "score": 0.97363028
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "complicates",
+          "score": 0.97342551
+        },
+        {
+          "r1": "consists_of",
+          "r2": "part_of",
+          "score": 0.97338475
+        },
+        {
+          "r1": "consists_of",
+          "r2": "derivative_of",
+          "score": 0.97257935
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "part_of",
+          "score": 0.97212563
+        },
+        {
+          "r1": "disrupts",
+          "r2": "degree_of",
+          "score": 0.97184238
+        },
+        {
+          "r1": "produces",
+          "r2": "part_of",
+          "score": 0.97151476
+        },
+        {
+          "r1": "prevents",
+          "r2": "precedes",
+          "score": 0.97143845
+        },
+        {
+          "r1": "result_of",
+          "r2": "prevents",
+          "score": 0.97122578
+        },
+        {
+          "r1": "causes",
+          "r2": "precedes",
+          "score": 0.97099871
+        },
+        {
+          "r1": "interconnects",
+          "r2": "connected_to",
+          "score": 0.97063361
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "complicates",
+          "score": 0.97045085
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "disrupts",
+          "score": 0.97041487
+        },
+        {
+          "r1": "analyzes",
+          "r2": "part_of",
+          "score": 0.97005007
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "precedes",
+          "score": 0.97003961
+        },
+        {
+          "r1": "interconnects",
+          "r2": "interconnects",
+          "score": 0.96998449
+        },
+        {
+          "r1": "complicates",
+          "r2": "manifestation_of",
+          "score": 0.96997314
+        },
+        {
+          "r1": "treats",
+          "r2": "process_of",
+          "score": 0.96990939
+        },
+        {
+          "r1": "isa",
+          "r2": "degree_of",
+          "score": 0.96973869
+        },
+        {
+          "r1": "process_of",
+          "r2": "complicates",
+          "score": 0.96950756
+        },
+        {
+          "r1": "connected_to",
+          "r2": "surrounds",
+          "score": 0.96949749
+        },
+        {
+          "r1": "associated_with",
+          "r2": "process_of",
+          "score": 0.9694025
+        },
+        {
+          "r1": "produces",
+          "r2": "derivative_of",
+          "score": 0.96916993
+        },
+        {
+          "r1": "complicates",
+          "r2": "co-occurs_with",
+          "score": 0.96871554
+        },
+        {
+          "r1": "treats",
+          "r2": "part_of",
+          "score": 0.96854395
+        },
+        {
+          "r1": "causes",
+          "r2": "degree_of",
+          "score": 0.96852315
+        },
+        {
+          "r1": "process_of",
+          "r2": "occurs_in",
+          "score": 0.9685202
+        },
+        {
+          "r1": "prevents",
+          "r2": "disrupts",
+          "score": 0.96849981
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "diagnoses",
+          "score": 0.96847296
+        },
+        {
+          "r1": "isa",
+          "r2": "causes",
+          "score": 0.96840767
+        },
+        {
+          "r1": "connected_to",
+          "r2": "derivative_of",
+          "score": 0.96834114
+        },
+        {
+          "r1": "isa",
+          "r2": "prevents",
+          "score": 0.96822283
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "part_of",
+          "score": 0.96813154
+        },
+        {
+          "r1": "produces",
+          "r2": "surrounds",
+          "score": 0.96735994
+        },
+        {
+          "r1": "complicates",
+          "r2": "isa",
+          "score": 0.96734539
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "location_of",
+          "score": 0.96720918
+        },
+        {
+          "r1": "disrupts",
+          "r2": "carries_out",
+          "score": 0.9671764
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "result_of",
+          "score": 0.96716315
+        },
+        {
+          "r1": "result_of",
+          "r2": "complicates",
+          "score": 0.96703802
+        },
+        {
+          "r1": "consists_of",
+          "r2": "surrounds",
+          "score": 0.96699405
+        },
+        {
+          "r1": "isa",
+          "r2": "conceptually_related_to",
+          "score": 0.96666269
+        },
+        {
+          "r1": "causes",
+          "r2": "associated_with",
+          "score": 0.96653163
+        },
+        {
+          "r1": "prevents",
+          "r2": "degree_of",
+          "score": 0.96640377
+        },
+        {
+          "r1": "part_of",
+          "r2": "surrounds",
+          "score": 0.96629681
+        },
+        {
+          "r1": "associated_with",
+          "r2": "part_of",
+          "score": 0.96623653
+        },
+        {
+          "r1": "disrupts",
+          "r2": "surrounds",
+          "score": 0.96623066
+        },
+        {
+          "r1": "produces",
+          "r2": "associated_with",
+          "score": 0.96620568
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "precedes",
+          "score": 0.96515196
+        },
+        {
+          "r1": "complicates",
+          "r2": "location_of",
+          "score": 0.96453313
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "complicates",
+          "score": 0.96420186
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "process_of",
+          "score": 0.96400388
+        },
+        {
+          "r1": "connected_to",
+          "r2": "part_of",
+          "score": 0.96390968
+        },
+        {
+          "r1": "isa",
+          "r2": "complicates",
+          "score": 0.96375351
+        },
+        {
+          "r1": "analyzes",
+          "r2": "derivative_of",
+          "score": 0.96329266
+        },
+        {
+          "r1": "precedes",
+          "r2": "isa",
+          "score": 0.9631125
+        },
+        {
+          "r1": "complicates",
+          "r2": "disrupts",
+          "score": 0.96296352
+        },
+        {
+          "r1": "analyzes",
+          "r2": "surrounds",
+          "score": 0.96288919
+        },
+        {
+          "r1": "analyzes",
+          "r2": "disrupts",
+          "score": 0.96273118
+        },
+        {
+          "r1": "produces",
+          "r2": "disrupts",
+          "score": 0.96232712
+        },
+        {
+          "r1": "measures",
+          "r2": "disrupts",
+          "score": 0.96141367
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "part_of",
+          "score": 0.96140771
+        },
+        {
+          "r1": "isa",
+          "r2": "result_of",
+          "score": 0.96127707
+        },
+        {
+          "r1": "disrupts",
+          "r2": "co-occurs_with",
+          "score": 0.96104178
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "causes",
+          "score": 0.95907255
+        },
+        {
+          "r1": "disrupts",
+          "r2": "location_of",
+          "score": 0.95900957
+        },
+        {
+          "r1": "associated_with",
+          "r2": "disrupts",
+          "score": 0.95885925
+        },
+        {
+          "r1": "measures",
+          "r2": "part_of",
+          "score": 0.95877986
+        },
+        {
+          "r1": "degree_of",
+          "r2": "associated_with",
+          "score": 0.95877024
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "degree_of",
+          "score": 0.95873489
+        },
+        {
+          "r1": "causes",
+          "r2": "isa",
+          "score": 0.95854915
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "prevents",
+          "score": 0.95851371
+        },
+        {
+          "r1": "degree_of",
+          "r2": "isa",
+          "score": 0.95831728
+        },
+        {
+          "r1": "connected_to",
+          "r2": "connected_to",
+          "score": 0.95830945
+        },
+        {
+          "r1": "uses",
+          "r2": "complicates",
+          "score": 0.95800453
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "result_of",
+          "score": 0.95790382
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "precedes",
+          "score": 0.95786377
+        },
+        {
+          "r1": "analyzes",
+          "r2": "complicates",
+          "score": 0.95754967
+        },
+        {
+          "r1": "indicates",
+          "r2": "process_of",
+          "score": 0.95751694
+        },
+        {
+          "r1": "degree_of",
+          "r2": "degree_of",
+          "score": 0.9572134
+        },
+        {
+          "r1": "uses",
+          "r2": "disrupts",
+          "score": 0.95707732
+        },
+        {
+          "r1": "degree_of",
+          "r2": "result_of",
+          "score": 0.95697954
+        },
+        {
+          "r1": "treats",
+          "r2": "result_of",
+          "score": 0.9569027
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "precedes",
+          "score": 0.9568889
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "manifestation_of",
+          "score": 0.9567387
+        },
+        {
+          "r1": "result_of",
+          "r2": "result_of",
+          "score": 0.95643899
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "prevents",
+          "score": 0.9563008
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "treats",
+          "score": 0.95604453
+        },
+        {
+          "r1": "result_of",
+          "r2": "location_of",
+          "score": 0.95583015
+        },
+        {
+          "r1": "isa",
+          "r2": "disrupts",
+          "score": 0.95544519
+        },
+        {
+          "r1": "treats",
+          "r2": "conceptually_related_to",
+          "score": 0.95501108
+        },
+        {
+          "r1": "precedes",
+          "r2": "associated_with",
+          "score": 0.95496318
+        },
+        {
+          "r1": "measures",
+          "r2": "result_of",
+          "score": 0.95455862
+        },
+        {
+          "r1": "analyzes",
+          "r2": "indicates",
+          "score": 0.95447512
+        },
+        {
+          "r1": "performs",
+          "r2": "process_of",
+          "score": 0.95437985
+        },
+        {
+          "r1": "isa",
+          "r2": "treats",
+          "score": 0.95410302
+        },
+        {
+          "r1": "result_of",
+          "r2": "disrupts",
+          "score": 0.95390616
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "result_of",
+          "score": 0.95382081
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "result_of",
+          "score": 0.95329128
+        },
+        {
+          "r1": "indicates",
+          "r2": "part_of",
+          "score": 0.95323623
+        },
+        {
+          "r1": "connected_to",
+          "r2": "interconnects",
+          "score": 0.95249336
+        },
+        {
+          "r1": "produces",
+          "r2": "location_of",
+          "score": 0.95227372
+        },
+        {
+          "r1": "result_of",
+          "r2": "co-occurs_with",
+          "score": 0.95212336
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "part_of",
+          "score": 0.95208474
+        },
+        {
+          "r1": "prevents",
+          "r2": "associated_with",
+          "score": 0.95184144
+        },
+        {
+          "r1": "manages",
+          "r2": "manages",
+          "score": 0.95143939
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "complicates",
+          "score": 0.9512733
+        },
+        {
+          "r1": "method_of",
+          "r2": "complicates",
+          "score": 0.95106489
+        },
+        {
+          "r1": "measures",
+          "r2": "precedes",
+          "score": 0.95098621
+        },
+        {
+          "r1": "result_of",
+          "r2": "precedes",
+          "score": 0.95090645
+        },
+        {
+          "r1": "precedes",
+          "r2": "co-occurs_with",
+          "score": 0.95079645
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "location_of",
+          "score": 0.9507257
+        },
+        {
+          "r1": "practices",
+          "r2": "isa",
+          "score": 0.95062929
+        },
+        {
+          "r1": "produces",
+          "r2": "prevents",
+          "score": 0.95055828
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "result_of",
+          "score": 0.95048801
+        },
+        {
+          "r1": "associated_with",
+          "r2": "measurement_of",
+          "score": 0.95031605
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "associated_with",
+          "score": 0.95027263
+        },
+        {
+          "r1": "disrupts",
+          "r2": "occurs_in",
+          "score": 0.94996107
+        },
+        {
+          "r1": "measures",
+          "r2": "derivative_of",
+          "score": 0.94961171
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "co-occurs_with",
+          "score": 0.94940688
+        },
+        {
+          "r1": "prevents",
+          "r2": "manifestation_of",
+          "score": 0.94917486
+        },
+        {
+          "r1": "measures",
+          "r2": "surrounds",
+          "score": 0.94906581
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "process_of",
+          "score": 0.94882431
+        },
+        {
+          "r1": "complicates",
+          "r2": "result_of",
+          "score": 0.94877442
+        },
+        {
+          "r1": "method_of",
+          "r2": "precedes",
+          "score": 0.94837354
+        },
+        {
+          "r1": "interconnects",
+          "r2": "result_of",
+          "score": 0.94801338
+        },
+        {
+          "r1": "associated_with",
+          "r2": "conceptually_related_to",
+          "score": 0.94775632
+        },
+        {
+          "r1": "prevents",
+          "r2": "complicates",
+          "score": 0.94749216
+        },
+        {
+          "r1": "associated_with",
+          "r2": "manifestation_of",
+          "score": 0.94747414
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "indicates",
+          "score": 0.94704267
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "complicates",
+          "score": 0.94667039
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "associated_with",
+          "score": 0.94612608
+        },
+        {
+          "r1": "process_of",
+          "r2": "result_of",
+          "score": 0.94496663
+        },
+        {
+          "r1": "prevents",
+          "r2": "isa",
+          "score": 0.94493465
+        },
+        {
+          "r1": "complicates",
+          "r2": "degree_of",
+          "score": 0.9446488
+        },
+        {
+          "r1": "process_of",
+          "r2": "conceptual_part_of",
+          "score": 0.94393289
+        },
+        {
+          "r1": "analyzes",
+          "r2": "treats",
+          "score": 0.94336468
+        },
+        {
+          "r1": "result_of",
+          "r2": "diagnoses",
+          "score": 0.94285293
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "prevents",
+          "score": 0.94272986
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "connected_to",
+          "score": 0.94250805
+        },
+        {
+          "r1": "location_of",
+          "r2": "disrupts",
+          "score": 0.94223867
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "disrupts",
+          "score": 0.94217329
+        },
+        {
+          "r1": "measures",
+          "r2": "co-occurs_with",
+          "score": 0.94193773
+        },
+        {
+          "r1": "part_of",
+          "r2": "connected_to",
+          "score": 0.94164623
+        },
+        {
+          "r1": "measures",
+          "r2": "indicates",
+          "score": 0.94151394
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "conceptually_related_to",
+          "score": 0.94139311
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "result_of",
+          "score": 0.94119672
+        },
+        {
+          "r1": "precedes",
+          "r2": "occurs_in",
+          "score": 0.94049888
+        },
+        {
+          "r1": "isa",
+          "r2": "property_of",
+          "score": 0.94043938
+        },
+        {
+          "r1": "prevents",
+          "r2": "occurs_in",
+          "score": 0.94039465
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "associated_with",
+          "score": 0.9402563
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "conceptually_related_to",
+          "score": 0.93965634
+        },
+        {
+          "r1": "measures",
+          "r2": "degree_of",
+          "score": 0.93917804
+        },
+        {
+          "r1": "isa",
+          "r2": "part_of",
+          "score": 0.93909211
+        },
+        {
+          "r1": "developmental_form_of",
+          "r2": "surrounds",
+          "score": 0.93892945
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "manages",
+          "score": 0.93847504
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "treats",
+          "score": 0.93830919
+        },
+        {
+          "r1": "developmental_form_of",
+          "r2": "connected_to",
+          "score": 0.93810617
+        },
+        {
+          "r1": "measures",
+          "r2": "property_of",
+          "score": 0.93786638
+        },
+        {
+          "r1": "contains",
+          "r2": "part_of",
+          "score": 0.93768562
+        },
+        {
+          "r1": "precedes",
+          "r2": "result_of",
+          "score": 0.93762416
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "developmental_form_of",
+          "score": 0.93755015
+        },
+        {
+          "r1": "measures",
+          "r2": "process_of",
+          "score": 0.93747566
+        },
+        {
+          "r1": "complicates",
+          "r2": "complicates",
+          "score": 0.93727493
+        },
+        {
+          "r1": "isa",
+          "r2": "occurs_in",
+          "score": 0.93714853
+        },
+        {
+          "r1": "result_of",
+          "r2": "measures",
+          "score": 0.93672998
+        },
+        {
+          "r1": "indicates",
+          "r2": "precedes",
+          "score": 0.93671774
+        },
+        {
+          "r1": "degree_of",
+          "r2": "occurs_in",
+          "score": 0.93627969
+        },
+        {
+          "r1": "analyzes",
+          "r2": "causes",
+          "score": 0.93609769
+        },
+        {
+          "r1": "associated_with",
+          "r2": "precedes",
+          "score": 0.93559345
+        },
+        {
+          "r1": "manages",
+          "r2": "carries_out",
+          "score": 0.93482734
+        },
+        {
+          "r1": "causes",
+          "r2": "co-occurs_with",
+          "score": 0.93411679
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "isa",
+          "score": 0.93410327
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "degree_of",
+          "score": 0.93360825
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "manifestation_of",
+          "score": 0.93318567
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "disrupts",
+          "score": 0.93287816
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "precedes",
+          "score": 0.9327877
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "treats",
+          "score": 0.9321596
+        },
+        {
+          "r1": "isa",
+          "r2": "measurement_of",
+          "score": 0.93211437
+        },
+        {
+          "r1": "causes",
+          "r2": "complicates",
+          "score": 0.93195086
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "associated_with",
+          "score": 0.93102075
+        },
+        {
+          "r1": "measures",
+          "r2": "conceptually_related_to",
+          "score": 0.93098793
+        },
+        {
+          "r1": "location_of",
+          "r2": "indicates",
+          "score": 0.93019906
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "isa",
+          "score": 0.92974829
+        },
+        {
+          "r1": "analyzes",
+          "r2": "prevents",
+          "score": 0.92949243
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "manifestation_of",
+          "score": 0.92938662
+        },
+        {
+          "r1": "complicates",
+          "r2": "occurs_in",
+          "score": 0.92936049
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "diagnoses",
+          "score": 0.9284928
+        },
+        {
+          "r1": "process_of",
+          "r2": "exhibits",
+          "score": 0.92838621
+        },
+        {
+          "r1": "causes",
+          "r2": "occurs_in",
+          "score": 0.92780059
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "disrupts",
+          "score": 0.92771285
+        },
+        {
+          "r1": "associated_with",
+          "r2": "causes",
+          "score": 0.92728288
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "causes",
+          "score": 0.92629272
+        },
+        {
+          "r1": "produces",
+          "r2": "causes",
+          "score": 0.92616906
+        },
+        {
+          "r1": "measures",
+          "r2": "occurs_in",
+          "score": 0.92616092
+        },
+        {
+          "r1": "analyzes",
+          "r2": "diagnoses",
+          "score": 0.92599894
+        },
+        {
+          "r1": "associated_with",
+          "r2": "practices",
+          "score": 0.92597303
+        },
+        {
+          "r1": "treats",
+          "r2": "co-occurs_with",
+          "score": 0.92588342
+        },
+        {
+          "r1": "method_of",
+          "r2": "prevents",
+          "score": 0.92578041
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "co-occurs_with",
+          "score": 0.92541226
+        },
+        {
+          "r1": "precedes",
+          "r2": "conceptual_part_of",
+          "score": 0.92533484
+        },
+        {
+          "r1": "part_of",
+          "r2": "interconnects",
+          "score": 0.9252622
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "degree_of",
+          "score": 0.9245536
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "associated_with",
+          "score": 0.92392099
+        },
+        {
+          "r1": "connected_to",
+          "r2": "result_of",
+          "score": 0.92275312
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "manifestation_of",
+          "score": 0.92258235
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "occurs_in",
+          "score": 0.92230313
+        },
+        {
+          "r1": "manages",
+          "r2": "location_of",
+          "score": 0.9218785
+        },
+        {
+          "r1": "complicates",
+          "r2": "conceptual_part_of",
+          "score": 0.92053752
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "occurs_in",
+          "score": 0.92020265
+        },
+        {
+          "r1": "property_of",
+          "r2": "part_of",
+          "score": 0.91959068
+        },
+        {
+          "r1": "treats",
+          "r2": "disrupts",
+          "score": 0.91956298
+        },
+        {
+          "r1": "indicates",
+          "r2": "complicates",
+          "score": 0.91901812
+        },
+        {
+          "r1": "result_of",
+          "r2": "assesses_effect_of",
+          "score": 0.91861317
+        },
+        {
+          "r1": "isa",
+          "r2": "manifestation_of",
+          "score": 0.91841518
+        },
+        {
+          "r1": "result_of",
+          "r2": "associated_with",
+          "score": 0.91819296
+        },
+        {
+          "r1": "surrounds",
+          "r2": "part_of",
+          "score": 0.91819227
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "manifestation_of",
+          "score": 0.91779224
+        },
+        {
+          "r1": "carries_out",
+          "r2": "precedes",
+          "score": 0.91737777
+        },
+        {
+          "r1": "isa",
+          "r2": "carries_out",
+          "score": 0.91711288
+        },
+        {
+          "r1": "disrupts",
+          "r2": "conceptual_part_of",
+          "score": 0.91702015
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "surrounds",
+          "score": 0.91690036
+        },
+        {
+          "r1": "associated_with",
+          "r2": "result_of",
+          "score": 0.91685739
+        },
+        {
+          "r1": "connected_to",
+          "r2": "developmental_form_of",
+          "score": 0.9168002
+        },
+        {
+          "r1": "result_of",
+          "r2": "isa",
+          "score": 0.91663304
+        },
+        {
+          "r1": "location_of",
+          "r2": "connected_to",
+          "score": 0.91641204
+        },
+        {
+          "r1": "associated_with",
+          "r2": "location_of",
+          "score": 0.91598725
+        },
+        {
+          "r1": "indicates",
+          "r2": "isa",
+          "score": 0.91597349
+        },
+        {
+          "r1": "degree_of",
+          "r2": "co-occurs_with",
+          "score": 0.91586164
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "precedes",
+          "score": 0.91509659
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "interconnects",
+          "score": 0.9145203
+        },
+        {
+          "r1": "produces",
+          "r2": "treats",
+          "score": 0.91401622
+        },
+        {
+          "r1": "associated_with",
+          "r2": "associated_with",
+          "score": 0.91328165
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "treats",
+          "score": 0.91297298
+        },
+        {
+          "r1": "consists_of",
+          "r2": "interacts_with",
+          "score": 0.91270499
+        },
+        {
+          "r1": "indicates",
+          "r2": "manifestation_of",
+          "score": 0.91259615
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "diagnoses",
+          "score": 0.91254119
+        },
+        {
+          "r1": "analyzes",
+          "r2": "associated_with",
+          "score": 0.91208378
+        },
+        {
+          "r1": "performs",
+          "r2": "precedes",
+          "score": 0.91133659
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "conceptual_part_of",
+          "score": 0.91110489
+        },
+        {
+          "r1": "precedes",
+          "r2": "uses",
+          "score": 0.91109689
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "occurs_in",
+          "score": 0.91103328
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "occurs_in",
+          "score": 0.91101114
+        },
+        {
+          "r1": "associated_with",
+          "r2": "manages",
+          "score": 0.91033541
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "location_of",
+          "score": 0.90985166
+        },
+        {
+          "r1": "indicates",
+          "r2": "conceptually_related_to",
+          "score": 0.90962016
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "conceptual_part_of",
+          "score": 0.90834201
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "isa",
+          "score": 0.90789986
+        },
+        {
+          "r1": "treats",
+          "r2": "occurs_in",
+          "score": 0.90788015
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "measures",
+          "score": 0.9077934
+        },
+        {
+          "r1": "degree_of",
+          "r2": "conceptual_part_of",
+          "score": 0.90720131
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "occurs_in",
+          "score": 0.90681424
+        },
+        {
+          "r1": "developmental_form_of",
+          "r2": "interconnects",
+          "score": 0.90671545
+        },
+        {
+          "r1": "treats",
+          "r2": "isa",
+          "score": 0.90649062
+        },
+        {
+          "r1": "treats",
+          "r2": "exhibits",
+          "score": 0.90647601
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "ingredient_of",
+          "score": 0.90639162
+        },
+        {
+          "r1": "measures",
+          "r2": "associated_with",
+          "score": 0.90545734
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "associated_with",
+          "score": 0.90541887
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "complicates",
+          "score": 0.90475276
+        },
+        {
+          "r1": "measures",
+          "r2": "measurement_of",
+          "score": 0.90422026
+        },
+        {
+          "r1": "treats",
+          "r2": "evaluation_of",
+          "score": 0.90398349
+        },
+        {
+          "r1": "location_of",
+          "r2": "derivative_of",
+          "score": 0.90377104
+        },
+        {
+          "r1": "uses",
+          "r2": "prevents",
+          "score": 0.90291722
+        },
+        {
+          "r1": "associated_with",
+          "r2": "complicates",
+          "score": 0.90284051
+        },
+        {
+          "r1": "result_of",
+          "r2": "occurs_in",
+          "score": 0.90257196
+        },
+        {
+          "r1": "indicates",
+          "r2": "result_of",
+          "score": 0.90231645
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "degree_of",
+          "score": 0.90087762
+        },
+        {
+          "r1": "associated_with",
+          "r2": "degree_of",
+          "score": 0.90079886
+        },
+        {
+          "r1": "associated_with",
+          "r2": "exhibits",
+          "score": 0.90074292
+        },
+        {
+          "r1": "interconnects",
+          "r2": "isa",
+          "score": 0.90026599
+        }
+      ]
+    },
+    {
+      "target_relation": "interacts_with",
+      "num_baseline_templates": 8,
+      "num_excluded_templates": 3,
+      "num_retained_templates": 5,
+      "baseline_templates": [
+        {
+          "r1": "interacts_with",
+          "r2": "interacts_with",
+          "score": 0.98721143
+        },
+        {
+          "r1": "causes",
+          "r2": "produces",
+          "score": 0.98169104
+        },
+        {
+          "r1": "isa",
+          "r2": "interacts_with",
+          "score": 0.96381224
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "isa",
+          "score": 0.94079704
+        },
+        {
+          "r1": "disrupts",
+          "r2": "produces",
+          "score": 0.92345231
+        },
+        {
+          "r1": "affects",
+          "r2": "produces",
+          "score": 0.91693562
+        },
+        {
+          "r1": "treats",
+          "r2": "produces",
+          "score": 0.90819003
+        },
+        {
+          "r1": "complicates",
+          "r2": "produces",
+          "score": 0.90168616
+        }
+      ],
+      "excluded_path_templates": [
+        {
+          "r1": "interacts_with",
+          "r2": "interacts_with",
+          "score": 0.98721143
+        },
+        {
+          "r1": "isa",
+          "r2": "interacts_with",
+          "score": 0.96381224
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "isa",
+          "score": 0.94079704
+        }
+      ],
+      "retained_path_templates": [
+        {
+          "r1": "causes",
+          "r2": "produces",
+          "score": 0.98169104
+        },
+        {
+          "r1": "disrupts",
+          "r2": "produces",
+          "score": 0.92345231
+        },
+        {
+          "r1": "affects",
+          "r2": "produces",
+          "score": 0.91693562
+        },
+        {
+          "r1": "treats",
+          "r2": "produces",
+          "score": 0.90819003
+        },
+        {
+          "r1": "complicates",
+          "r2": "produces",
+          "score": 0.90168616
+        }
+      ]
+    },
+    {
+      "target_relation": "produces",
+      "num_baseline_templates": 64,
+      "num_excluded_templates": 38,
+      "num_retained_templates": 26,
+      "baseline_templates": [
+        {
+          "r1": "location_of",
+          "r2": "produces",
+          "score": 0.99692806
+        },
+        {
+          "r1": "produces",
+          "r2": "produces",
+          "score": 0.99648619
+        },
+        {
+          "r1": "part_of",
+          "r2": "produces",
+          "score": 0.99486633
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "produces",
+          "score": 0.99351701
+        },
+        {
+          "r1": "contains",
+          "r2": "produces",
+          "score": 0.99344499
+        },
+        {
+          "r1": "process_of",
+          "r2": "produces",
+          "score": 0.99233551
+        },
+        {
+          "r1": "produces",
+          "r2": "uses",
+          "score": 0.99201398
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "produces",
+          "score": 0.99125522
+        },
+        {
+          "r1": "interconnects",
+          "r2": "produces",
+          "score": 0.98941213
+        },
+        {
+          "r1": "result_of",
+          "r2": "produces",
+          "score": 0.98906457
+        },
+        {
+          "r1": "connected_to",
+          "r2": "produces",
+          "score": 0.98786538
+        },
+        {
+          "r1": "manages",
+          "r2": "produces",
+          "score": 0.98741759
+        },
+        {
+          "r1": "isa",
+          "r2": "produces",
+          "score": 0.9873068
+        },
+        {
+          "r1": "surrounds",
+          "r2": "produces",
+          "score": 0.98461853
+        },
+        {
+          "r1": "location_of",
+          "r2": "uses",
+          "score": 0.98332395
+        },
+        {
+          "r1": "precedes",
+          "r2": "produces",
+          "score": 0.98287111
+        },
+        {
+          "r1": "developmental_form_of",
+          "r2": "produces",
+          "score": 0.98227141
+        },
+        {
+          "r1": "treats",
+          "r2": "produces",
+          "score": 0.98038991
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "produces",
+          "score": 0.979952
+        },
+        {
+          "r1": "carries_out",
+          "r2": "produces",
+          "score": 0.97869876
+        },
+        {
+          "r1": "degree_of",
+          "r2": "produces",
+          "score": 0.97648621
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "produces",
+          "score": 0.97619996
+        },
+        {
+          "r1": "property_of",
+          "r2": "produces",
+          "score": 0.97611271
+        },
+        {
+          "r1": "location_of",
+          "r2": "analyzes",
+          "score": 0.97589119
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "produces",
+          "score": 0.97576647
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "produces",
+          "score": 0.97431109
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "produces",
+          "score": 0.9741584
+        },
+        {
+          "r1": "performs",
+          "r2": "uses",
+          "score": 0.97394127
+        },
+        {
+          "r1": "precedes",
+          "r2": "uses",
+          "score": 0.97259767
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "uses",
+          "score": 0.97081155
+        },
+        {
+          "r1": "affects",
+          "r2": "produces",
+          "score": 0.97056043
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "produces",
+          "score": 0.96881171
+        },
+        {
+          "r1": "manages",
+          "r2": "uses",
+          "score": 0.96814404
+        },
+        {
+          "r1": "contains",
+          "r2": "consists_of",
+          "score": 0.96690769
+        },
+        {
+          "r1": "produces",
+          "r2": "consists_of",
+          "score": 0.96583609
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "produces",
+          "score": 0.96549141
+        },
+        {
+          "r1": "prevents",
+          "r2": "produces",
+          "score": 0.96306313
+        },
+        {
+          "r1": "complicates",
+          "r2": "produces",
+          "score": 0.96173435
+        },
+        {
+          "r1": "produces",
+          "r2": "interacts_with",
+          "score": 0.96162404
+        },
+        {
+          "r1": "affects",
+          "r2": "uses",
+          "score": 0.96075602
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "uses",
+          "score": 0.95968489
+        },
+        {
+          "r1": "measurement_of",
+          "r2": "produces",
+          "score": 0.95666575
+        },
+        {
+          "r1": "treats",
+          "r2": "uses",
+          "score": 0.95497027
+        },
+        {
+          "r1": "indicates",
+          "r2": "produces",
+          "score": 0.95128114
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "produces",
+          "score": 0.95065327
+        },
+        {
+          "r1": "affects",
+          "r2": "location_of",
+          "score": 0.94347996
+        },
+        {
+          "r1": "produces",
+          "r2": "contains",
+          "score": 0.9424882
+        },
+        {
+          "r1": "part_of",
+          "r2": "location_of",
+          "score": 0.94059391
+        },
+        {
+          "r1": "location_of",
+          "r2": "contains",
+          "score": 0.94001352
+        },
+        {
+          "r1": "isa",
+          "r2": "uses",
+          "score": 0.93734459
+        },
+        {
+          "r1": "location_of",
+          "r2": "measures",
+          "score": 0.93388423
+        },
+        {
+          "r1": "location_of",
+          "r2": "assesses_effect_of",
+          "score": 0.93067999
+        },
+        {
+          "r1": "uses",
+          "r2": "contains",
+          "score": 0.93003375
+        },
+        {
+          "r1": "process_of",
+          "r2": "location_of",
+          "score": 0.92961755
+        },
+        {
+          "r1": "part_of",
+          "r2": "consists_of",
+          "score": 0.92908921
+        },
+        {
+          "r1": "connected_to",
+          "r2": "consists_of",
+          "score": 0.92502119
+        },
+        {
+          "r1": "property_of",
+          "r2": "uses",
+          "score": 0.92501394
+        },
+        {
+          "r1": "result_of",
+          "r2": "uses",
+          "score": 0.92491393
+        },
+        {
+          "r1": "result_of",
+          "r2": "analyzes",
+          "score": 0.92471217
+        },
+        {
+          "r1": "location_of",
+          "r2": "consists_of",
+          "score": 0.92152486
+        },
+        {
+          "r1": "consists_of",
+          "r2": "consists_of",
+          "score": 0.92100604
+        },
+        {
+          "r1": "carries_out",
+          "r2": "uses",
+          "score": 0.92071525
+        },
+        {
+          "r1": "associated_with",
+          "r2": "produces",
+          "score": 0.90969929
+        },
+        {
+          "r1": "produces",
+          "r2": "isa",
+          "score": 0.90286807
+        }
+      ],
+      "excluded_path_templates": [
+        {
+          "r1": "location_of",
+          "r2": "produces",
+          "score": 0.99692806
+        },
+        {
+          "r1": "produces",
+          "r2": "produces",
+          "score": 0.99648619
+        },
+        {
+          "r1": "part_of",
+          "r2": "produces",
+          "score": 0.99486633
+        },
+        {
+          "r1": "derivative_of",
+          "r2": "produces",
+          "score": 0.99351701
+        },
+        {
+          "r1": "contains",
+          "r2": "produces",
+          "score": 0.99344499
+        },
+        {
+          "r1": "process_of",
+          "r2": "produces",
+          "score": 0.99233551
+        },
+        {
+          "r1": "produces",
+          "r2": "uses",
+          "score": 0.99201398
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "produces",
+          "score": 0.99125522
+        },
+        {
+          "r1": "interconnects",
+          "r2": "produces",
+          "score": 0.98941213
+        },
+        {
+          "r1": "result_of",
+          "r2": "produces",
+          "score": 0.98906457
+        },
+        {
+          "r1": "connected_to",
+          "r2": "produces",
+          "score": 0.98786538
+        },
+        {
+          "r1": "manages",
+          "r2": "produces",
+          "score": 0.98741759
+        },
+        {
+          "r1": "isa",
+          "r2": "produces",
+          "score": 0.9873068
+        },
+        {
+          "r1": "surrounds",
+          "r2": "produces",
+          "score": 0.98461853
+        },
+        {
+          "r1": "precedes",
+          "r2": "produces",
+          "score": 0.98287111
+        },
+        {
+          "r1": "developmental_form_of",
+          "r2": "produces",
+          "score": 0.98227141
+        },
+        {
+          "r1": "treats",
+          "r2": "produces",
+          "score": 0.98038991
+        },
+        {
+          "r1": "conceptually_related_to",
+          "r2": "produces",
+          "score": 0.979952
+        },
+        {
+          "r1": "carries_out",
+          "r2": "produces",
+          "score": 0.97869876
+        },
+        {
+          "r1": "degree_of",
+          "r2": "produces",
+          "score": 0.97648621
+        },
+        {
+          "r1": "manifestation_of",
+          "r2": "produces",
+          "score": 0.97619996
+        },
+        {
+          "r1": "property_of",
+          "r2": "produces",
+          "score": 0.97611271
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "produces",
+          "score": 0.97576647
+        },
+        {
+          "r1": "co-occurs_with",
+          "r2": "produces",
+          "score": 0.97431109
+        },
+        {
+          "r1": "adjacent_to",
+          "r2": "produces",
+          "score": 0.9741584
+        },
+        {
+          "r1": "affects",
+          "r2": "produces",
+          "score": 0.97056043
+        },
+        {
+          "r1": "occurs_in",
+          "r2": "produces",
+          "score": 0.96881171
+        },
+        {
+          "r1": "produces",
+          "r2": "consists_of",
+          "score": 0.96583609
+        },
+        {
+          "r1": "diagnoses",
+          "r2": "produces",
+          "score": 0.96549141
+        },
+        {
+          "r1": "prevents",
+          "r2": "produces",
+          "score": 0.96306313
+        },
+        {
+          "r1": "complicates",
+          "r2": "produces",
+          "score": 0.96173435
+        },
+        {
+          "r1": "produces",
+          "r2": "interacts_with",
+          "score": 0.96162404
+        },
+        {
+          "r1": "measurement_of",
+          "r2": "produces",
+          "score": 0.95666575
+        },
+        {
+          "r1": "indicates",
+          "r2": "produces",
+          "score": 0.95128114
+        },
+        {
+          "r1": "assesses_effect_of",
+          "r2": "produces",
+          "score": 0.95065327
+        },
+        {
+          "r1": "produces",
+          "r2": "contains",
+          "score": 0.9424882
+        },
+        {
+          "r1": "associated_with",
+          "r2": "produces",
+          "score": 0.90969929
+        },
+        {
+          "r1": "produces",
+          "r2": "isa",
+          "score": 0.90286807
+        }
+      ],
+      "retained_path_templates": [
+        {
+          "r1": "location_of",
+          "r2": "uses",
+          "score": 0.98332395
+        },
+        {
+          "r1": "location_of",
+          "r2": "analyzes",
+          "score": 0.97589119
+        },
+        {
+          "r1": "performs",
+          "r2": "uses",
+          "score": 0.97394127
+        },
+        {
+          "r1": "precedes",
+          "r2": "uses",
+          "score": 0.97259767
+        },
+        {
+          "r1": "interacts_with",
+          "r2": "uses",
+          "score": 0.97081155
+        },
+        {
+          "r1": "manages",
+          "r2": "uses",
+          "score": 0.96814404
+        },
+        {
+          "r1": "contains",
+          "r2": "consists_of",
+          "score": 0.96690769
+        },
+        {
+          "r1": "affects",
+          "r2": "uses",
+          "score": 0.96075602
+        },
+        {
+          "r1": "conceptual_part_of",
+          "r2": "uses",
+          "score": 0.95968489
+        },
+        {
+          "r1": "treats",
+          "r2": "uses",
+          "score": 0.95497027
+        },
+        {
+          "r1": "affects",
+          "r2": "location_of",
+          "score": 0.94347996
+        },
+        {
+          "r1": "part_of",
+          "r2": "location_of",
+          "score": 0.94059391
+        },
+        {
+          "r1": "location_of",
+          "r2": "contains",
+          "score": 0.94001352
+        },
+        {
+          "r1": "isa",
+          "r2": "uses",
+          "score": 0.93734459
+        },
+        {
+          "r1": "location_of",
+          "r2": "measures",
+          "score": 0.93388423
+        },
+        {
+          "r1": "location_of",
+          "r2": "assesses_effect_of",
+          "score": 0.93067999
+        },
+        {
+          "r1": "uses",
+          "r2": "contains",
+          "score": 0.93003375
+        },
+        {
+          "r1": "process_of",
+          "r2": "location_of",
+          "score": 0.92961755
+        },
+        {
+          "r1": "part_of",
+          "r2": "consists_of",
+          "score": 0.92908921
+        },
+        {
+          "r1": "connected_to",
+          "r2": "consists_of",
+          "score": 0.92502119
+        },
+        {
+          "r1": "property_of",
+          "r2": "uses",
+          "score": 0.92501394
+        },
+        {
+          "r1": "result_of",
+          "r2": "uses",
+          "score": 0.92491393
+        },
+        {
+          "r1": "result_of",
+          "r2": "analyzes",
+          "score": 0.92471217
+        },
+        {
+          "r1": "location_of",
+          "r2": "consists_of",
+          "score": 0.92152486
+        },
+        {
+          "r1": "consists_of",
+          "r2": "consists_of",
+          "score": 0.92100604
+        },
+        {
+          "r1": "carries_out",
+          "r2": "uses",
+          "score": 0.92071525
+        }
+      ]
+    },
+    {
+      "target_relation": "treats",
+      "num_baseline_templates": 28,
+      "num_excluded_templates": 17,
+      "num_retained_templates": 11,
+      "baseline_templates": [
+        {
+          "r1": "prevents",
+          "r2": "complicates",
+          "score": 0.97400476
+        },
+        {
+          "r1": "treats",
+          "r2": "co-occurs_with",
+          "score": 0.97345917
+        },
+        {
+          "r1": "treats",
+          "r2": "complicates",
+          "score": 0.97301743
+        },
+        {
+          "r1": "prevents",
+          "r2": "occurs_in",
+          "score": 0.96953435
+        },
+        {
+          "r1": "treats",
+          "r2": "occurs_in",
+          "score": 0.96840069
+        },
+        {
+          "r1": "treats",
+          "r2": "diagnoses",
+          "score": 0.96786345
+        },
+        {
+          "r1": "prevents",
+          "r2": "result_of",
+          "score": 0.96754823
+        },
+        {
+          "r1": "prevents",
+          "r2": "co-occurs_with",
+          "score": 0.96656701
+        },
+        {
+          "r1": "prevents",
+          "r2": "conceptually_related_to",
+          "score": 0.96571223
+        },
+        {
+          "r1": "treats",
+          "r2": "conceptually_related_to",
+          "score": 0.9641753
+        },
+        {
+          "r1": "prevents",
+          "r2": "precedes",
+          "score": 0.95940998
+        },
+        {
+          "r1": "prevents",
+          "r2": "associated_with",
+          "score": 0.95849325
+        },
+        {
+          "r1": "prevents",
+          "r2": "manifestation_of",
+          "score": 0.95678879
+        },
+        {
+          "r1": "treats",
+          "r2": "isa",
+          "score": 0.95305532
+        },
+        {
+          "r1": "treats",
+          "r2": "precedes",
+          "score": 0.9515918
+        },
+        {
+          "r1": "treats",
+          "r2": "performs",
+          "score": 0.947353
+        },
+        {
+          "r1": "treats",
+          "r2": "result_of",
+          "score": 0.94723361
+        },
+        {
+          "r1": "treats",
+          "r2": "uses",
+          "score": 0.94581916
+        },
+        {
+          "r1": "treats",
+          "r2": "location_of",
+          "score": 0.94386858
+        },
+        {
+          "r1": "treats",
+          "r2": "associated_with",
+          "score": 0.94183678
+        },
+        {
+          "r1": "prevents",
+          "r2": "degree_of",
+          "score": 0.93302928
+        },
+        {
+          "r1": "prevents",
+          "r2": "affects",
+          "score": 0.92778677
+        },
+        {
+          "r1": "treats",
+          "r2": "evaluation_of",
+          "score": 0.92308395
+        },
+        {
+          "r1": "treats",
+          "r2": "manifestation_of",
+          "score": 0.92140093
+        },
+        {
+          "r1": "treats",
+          "r2": "degree_of",
+          "score": 0.91688987
+        },
+        {
+          "r1": "treats",
+          "r2": "process_of",
+          "score": 0.91634663
+        },
+        {
+          "r1": "prevents",
+          "r2": "isa",
+          "score": 0.9096268
+        },
+        {
+          "r1": "treats",
+          "r2": "affects",
+          "score": 0.9057297
+        }
+      ],
+      "excluded_path_templates": [
+        {
+          "r1": "treats",
+          "r2": "co-occurs_with",
+          "score": 0.97345917
+        },
+        {
+          "r1": "treats",
+          "r2": "complicates",
+          "score": 0.97301743
+        },
+        {
+          "r1": "treats",
+          "r2": "occurs_in",
+          "score": 0.96840069
+        },
+        {
+          "r1": "treats",
+          "r2": "diagnoses",
+          "score": 0.96786345
+        },
+        {
+          "r1": "treats",
+          "r2": "conceptually_related_to",
+          "score": 0.9641753
+        },
+        {
+          "r1": "treats",
+          "r2": "isa",
+          "score": 0.95305532
+        },
+        {
+          "r1": "treats",
+          "r2": "precedes",
+          "score": 0.9515918
+        },
+        {
+          "r1": "treats",
+          "r2": "performs",
+          "score": 0.947353
+        },
+        {
+          "r1": "treats",
+          "r2": "result_of",
+          "score": 0.94723361
+        },
+        {
+          "r1": "treats",
+          "r2": "uses",
+          "score": 0.94581916
+        },
+        {
+          "r1": "treats",
+          "r2": "location_of",
+          "score": 0.94386858
+        },
+        {
+          "r1": "treats",
+          "r2": "associated_with",
+          "score": 0.94183678
+        },
+        {
+          "r1": "treats",
+          "r2": "evaluation_of",
+          "score": 0.92308395
+        },
+        {
+          "r1": "treats",
+          "r2": "manifestation_of",
+          "score": 0.92140093
+        },
+        {
+          "r1": "treats",
+          "r2": "degree_of",
+          "score": 0.91688987
+        },
+        {
+          "r1": "treats",
+          "r2": "process_of",
+          "score": 0.91634663
+        },
+        {
+          "r1": "treats",
+          "r2": "affects",
+          "score": 0.9057297
+        }
+      ],
+      "retained_path_templates": [
+        {
+          "r1": "prevents",
+          "r2": "complicates",
+          "score": 0.97400476
+        },
+        {
+          "r1": "prevents",
+          "r2": "occurs_in",
+          "score": 0.96953435
+        },
+        {
+          "r1": "prevents",
+          "r2": "result_of",
+          "score": 0.96754823
+        },
+        {
+          "r1": "prevents",
+          "r2": "co-occurs_with",
+          "score": 0.96656701
+        },
+        {
+          "r1": "prevents",
+          "r2": "conceptually_related_to",
+          "score": 0.96571223
+        },
+        {
+          "r1": "prevents",
+          "r2": "precedes",
+          "score": 0.95940998
+        },
+        {
+          "r1": "prevents",
+          "r2": "associated_with",
+          "score": 0.95849325
+        },
+        {
+          "r1": "prevents",
+          "r2": "manifestation_of",
+          "score": 0.95678879
+        },
+        {
+          "r1": "prevents",
+          "r2": "degree_of",
+          "score": 0.93302928
+        },
+        {
+          "r1": "prevents",
+          "r2": "affects",
+          "score": 0.92778677
+        },
+        {
+          "r1": "prevents",
+          "r2": "isa",
+          "score": 0.9096268
+        }
+      ]
+    },
+    {
+      "target_relation": "prevents",
+      "num_baseline_templates": 25,
+      "num_excluded_templates": 9,
+      "num_retained_templates": 16,
+      "baseline_templates": [
+        {
+          "r1": "prevents",
+          "r2": "associated_with",
+          "score": 0.97179936
+        },
+        {
+          "r1": "prevents",
+          "r2": "degree_of",
+          "score": 0.97178543
+        },
+        {
+          "r1": "prevents",
+          "r2": "conceptually_related_to",
+          "score": 0.97024542
+        },
+        {
+          "r1": "treats",
+          "r2": "conceptually_related_to",
+          "score": 0.96802653
+        },
+        {
+          "r1": "prevents",
+          "r2": "precedes",
+          "score": 0.96358226
+        },
+        {
+          "r1": "prevents",
+          "r2": "complicates",
+          "score": 0.9618678
+        },
+        {
+          "r1": "treats",
+          "r2": "co-occurs_with",
+          "score": 0.96100863
+        },
+        {
+          "r1": "prevents",
+          "r2": "occurs_in",
+          "score": 0.95932486
+        },
+        {
+          "r1": "treats",
+          "r2": "degree_of",
+          "score": 0.95923806
+        },
+        {
+          "r1": "treats",
+          "r2": "complicates",
+          "score": 0.95825103
+        },
+        {
+          "r1": "prevents",
+          "r2": "manifestation_of",
+          "score": 0.95806888
+        },
+        {
+          "r1": "treats",
+          "r2": "occurs_in",
+          "score": 0.95521198
+        },
+        {
+          "r1": "treats",
+          "r2": "performs",
+          "score": 0.95021496
+        },
+        {
+          "r1": "treats",
+          "r2": "associated_with",
+          "score": 0.94627609
+        },
+        {
+          "r1": "treats",
+          "r2": "uses",
+          "score": 0.94518013
+        },
+        {
+          "r1": "treats",
+          "r2": "affects",
+          "score": 0.94315158
+        },
+        {
+          "r1": "treats",
+          "r2": "result_of",
+          "score": 0.94013302
+        },
+        {
+          "r1": "treats",
+          "r2": "location_of",
+          "score": 0.93850511
+        },
+        {
+          "r1": "treats",
+          "r2": "process_of",
+          "score": 0.9375585
+        },
+        {
+          "r1": "prevents",
+          "r2": "co-occurs_with",
+          "score": 0.9348341
+        },
+        {
+          "r1": "treats",
+          "r2": "exhibits",
+          "score": 0.91952079
+        },
+        {
+          "r1": "treats",
+          "r2": "precedes",
+          "score": 0.91712457
+        },
+        {
+          "r1": "prevents",
+          "r2": "affects",
+          "score": 0.90729566
+        },
+        {
+          "r1": "treats",
+          "r2": "diagnoses",
+          "score": 0.90410283
+        },
+        {
+          "r1": "treats",
+          "r2": "manifestation_of",
+          "score": 0.90097666
+        }
+      ],
+      "excluded_path_templates": [
+        {
+          "r1": "prevents",
+          "r2": "associated_with",
+          "score": 0.97179936
+        },
+        {
+          "r1": "prevents",
+          "r2": "degree_of",
+          "score": 0.97178543
+        },
+        {
+          "r1": "prevents",
+          "r2": "conceptually_related_to",
+          "score": 0.97024542
+        },
+        {
+          "r1": "prevents",
+          "r2": "precedes",
+          "score": 0.96358226
+        },
+        {
+          "r1": "prevents",
+          "r2": "complicates",
+          "score": 0.9618678
+        },
+        {
+          "r1": "prevents",
+          "r2": "occurs_in",
+          "score": 0.95932486
+        },
+        {
+          "r1": "prevents",
+          "r2": "manifestation_of",
+          "score": 0.95806888
+        },
+        {
+          "r1": "prevents",
+          "r2": "co-occurs_with",
+          "score": 0.9348341
+        },
+        {
+          "r1": "prevents",
+          "r2": "affects",
+          "score": 0.90729566
+        }
+      ],
+      "retained_path_templates": [
+        {
+          "r1": "treats",
+          "r2": "conceptually_related_to",
+          "score": 0.96802653
+        },
+        {
+          "r1": "treats",
+          "r2": "co-occurs_with",
+          "score": 0.96100863
+        },
+        {
+          "r1": "treats",
+          "r2": "degree_of",
+          "score": 0.95923806
+        },
+        {
+          "r1": "treats",
+          "r2": "complicates",
+          "score": 0.95825103
+        },
+        {
+          "r1": "treats",
+          "r2": "occurs_in",
+          "score": 0.95521198
+        },
+        {
+          "r1": "treats",
+          "r2": "performs",
+          "score": 0.95021496
+        },
+        {
+          "r1": "treats",
+          "r2": "associated_with",
+          "score": 0.94627609
+        },
+        {
+          "r1": "treats",
+          "r2": "uses",
+          "score": 0.94518013
+        },
+        {
+          "r1": "treats",
+          "r2": "affects",
+          "score": 0.94315158
+        },
+        {
+          "r1": "treats",
+          "r2": "result_of",
+          "score": 0.94013302
+        },
+        {
+          "r1": "treats",
+          "r2": "location_of",
+          "score": 0.93850511
+        },
+        {
+          "r1": "treats",
+          "r2": "process_of",
+          "score": 0.9375585
+        },
+        {
+          "r1": "treats",
+          "r2": "exhibits",
+          "score": 0.91952079
+        },
+        {
+          "r1": "treats",
+          "r2": "precedes",
+          "score": 0.91712457
+        },
+        {
+          "r1": "treats",
+          "r2": "diagnoses",
+          "score": 0.90410283
+        },
+        {
+          "r1": "treats",
+          "r2": "manifestation_of",
+          "score": 0.90097666
+        }
+      ]
+    },
+    {
+      "target_relation": "performs",
+      "num_baseline_templates": 7,
+      "num_excluded_templates": 5,
+      "num_retained_templates": 2,
+      "baseline_templates": [
+        {
+          "r1": "interacts_with",
+          "r2": "performs",
+          "score": 0.94919449
+        },
+        {
+          "r1": "manages",
+          "r2": "performs",
+          "score": 0.93807184
+        },
+        {
+          "r1": "manages",
+          "r2": "exhibits",
+          "score": 0.91654484
+        },
+        {
+          "r1": "performs",
+          "r2": "affects",
+          "score": 0.91407141
+        },
+        {
+          "r1": "performs",
+          "r2": "isa",
+          "score": 0.90674476
+        },
+        {
+          "r1": "exhibits",
+          "r2": "isa",
+          "score": 0.9049636
+        },
+        {
+          "r1": "treats",
+          "r2": "performs",
+          "score": 0.90462858
+        }
+      ],
+      "excluded_path_templates": [
+        {
+          "r1": "interacts_with",
+          "r2": "performs",
+          "score": 0.94919449
+        },
+        {
+          "r1": "manages",
+          "r2": "performs",
+          "score": 0.93807184
+        },
+        {
+          "r1": "performs",
+          "r2": "affects",
+          "score": 0.91407141
+        },
+        {
+          "r1": "performs",
+          "r2": "isa",
+          "score": 0.90674476
+        },
+        {
+          "r1": "treats",
+          "r2": "performs",
+          "score": 0.90462858
+        }
+      ],
+      "retained_path_templates": [
+        {
+          "r1": "manages",
+          "r2": "exhibits",
+          "score": 0.91654484
+        },
+        {
+          "r1": "exhibits",
+          "r2": "isa",
+          "score": 0.9049636
+        }
+      ]
+    },
+    {
+      "target_relation": "conceptually_related_to",
+      "num_baseline_templates": 0,
+      "num_excluded_templates": 0,
+      "num_retained_templates": 0,
+      "baseline_templates": [],
+      "excluded_path_templates": [],
+      "retained_path_templates": []
+    },
+    {
+      "target_relation": "manages",
+      "num_baseline_templates": 0,
+      "num_excluded_templates": 0,
+      "num_retained_templates": 0,
+      "baseline_templates": [],
+      "excluded_path_templates": [],
+      "retained_path_templates": []
+    }
+  ]
+}

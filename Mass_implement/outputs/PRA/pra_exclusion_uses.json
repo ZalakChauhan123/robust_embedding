@@ -1,0 +1,108 @@
+{
+  "experiment": "supervised_pra_strict_target_relation_exclusion",
+  "dataset": "UMLS",
+  "target_relation": "uses",
+  "threshold": 0.9,
+  "model_path": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\PRA\\supervised_pra_umls.joblib",
+  "exclusion_rule": "r1 != target_relation AND r2 != target_relation",
+  "training_reused": true,
+  "num_baseline_templates": 9,
+  "num_excluded_templates": 8,
+  "num_retained_templates": 1,
+  "baseline_templates": [
+    {
+      "r1": "produces",
+      "r2": "uses",
+      "score": 0.9682024558604483
+    },
+    {
+      "r1": "interacts_with",
+      "r2": "uses",
+      "score": 0.9655247992671345
+    },
+    {
+      "r1": "performs",
+      "r2": "uses",
+      "score": 0.9596211143130505
+    },
+    {
+      "r1": "treats",
+      "r2": "uses",
+      "score": 0.9497499040893774
+    },
+    {
+      "r1": "precedes",
+      "r2": "uses",
+      "score": 0.9455503991208498
+    },
+    {
+      "r1": "manages",
+      "r2": "uses",
+      "score": 0.9441480069469265
+    },
+    {
+      "r1": "isa",
+      "r2": "uses",
+      "score": 0.934416674263169
+    },
+    {
+      "r1": "interacts_with",
+      "r2": "produces",
+      "score": 0.9209696368863887
+    },
+    {
+      "r1": "conceptual_part_of",
+      "r2": "uses",
+      "score": 0.9140819925798476
+    }
+  ],
+  "excluded_templates": [
+    {
+      "r1": "produces",
+      "r2": "uses",
+      "score": 0.9682024558604483
+    },
+    {
+      "r1": "interacts_with",
+      "r2": "uses",
+      "score": 0.9655247992671345
+    },
+    {
+      "r1": "performs",
+      "r2": "uses",
+      "score": 0.9596211143130505
+    },
+    {
+      "r1": "treats",
+      "r2": "uses",
+      "score": 0.9497499040893774
+    },
+    {
+      "r1": "precedes",
+      "r2": "uses",
+      "score": 0.9455503991208498
+    },
+    {
+      "r1": "manages",
+      "r2": "uses",
+      "score": 0.9441480069469265
+    },
+    {
+      "r1": "isa",
+      "r2": "uses",
+      "score": 0.934416674263169
+    },
+    {
+      "r1": "conceptual_part_of",
+      "r2": "uses",
+      "score": 0.9140819925798476
+    }
+  ],
+  "retained_templates": [
+    {
+      "r1": "interacts_with",
+      "r2": "produces",
+      "score": 0.9209696368863887
+    }
+  ]
+}

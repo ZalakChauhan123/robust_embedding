@@ -1,0 +1,73 @@
+{
+  "dataset": "UMLS",
+  "target_triple": [
+    "age_group",
+    "uses",
+    "clinical_drug"
+  ],
+  "delta": 0.7,
+  "acceptance_probability": 0.30000000000000004,
+  "random_seed": 42,
+  "requested_max_paths": 2,
+  "num_input_paths": 12,
+  "num_examined_paths": 3,
+  "num_selected_paths": 2,
+  "selected_candidate_paths": [
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "family_group",
+      "r2": "uses",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "family_group"
+      ],
+      "second_triple": [
+        "family_group",
+        "uses",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.9655247992671345,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.2567509412765503,
+      "second_triple_score": -0.40756332874298096,
+      "entity_score": -0.6643142700195312,
+      "lower_bound_score": -0.8219409883022308,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "professional_or_occupational_group",
+      "r2": "uses",
+      "first_triple": [
+        "age_group",
+        "interacts_with",
+        "professional_or_occupational_group"
+      ],
+      "second_triple": [
+        "professional_or_occupational_group",
+        "uses",
+        "clinical_drug"
+      ],
+      "pra_confidence": 0.9655247992671345,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.294705331325531,
+      "second_triple_score": -0.43061843514442444,
+      "entity_score": -0.7253237664699554,
+      "lower_bound_score": -0.882950484752655,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 3
+    }
+  ]
+}
