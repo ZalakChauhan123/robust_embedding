@@ -1,0 +1,1917 @@
+{
+  "delta": 0.7,
+  "budget_per_target": 2,
+  "stealthiness_note": "degree annotation only, not degree-aware selection",
+  "targets": [
+    {
+      "target_id": "target_001",
+      "target_triple": [
+        "body_space_or_junction",
+        "interacts_with",
+        "biomedical_or_dental_material"
+      ],
+      "status": "injected",
+      "sampling_seed": 42,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "body_space_or_junction",
+          "interacts_with",
+          "biomedical_or_dental_material"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 42,
+        "requested_max_paths": null,
+        "num_input_paths": 8,
+        "num_examined_paths": 8,
+        "num_selected_paths": 4
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "body_space_or_junction",
+          "isa",
+          "chemical"
+        ],
+        [
+          "chemical",
+          "interacts_with",
+          "biomedical_or_dental_material"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "body_space_or_junction",
+          "isa",
+          "chemical"
+        ],
+        [
+          "chemical",
+          "interacts_with",
+          "biomedical_or_dental_material"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "body_space_or_junction",
+          "interacts_with",
+          "biomedical_or_dental_material"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 1,
+        "selected_candidate_paths": [
+          {
+            "r1": "isa",
+            "intermediate_entity": "chemical",
+            "r2": "interacts_with",
+            "first_triple": [
+              "body_space_or_junction",
+              "isa",
+              "chemical"
+            ],
+            "second_triple": [
+              "chemical",
+              "interacts_with",
+              "biomedical_or_dental_material"
+            ],
+            "pra_confidence": 0.9638122429080128,
+            "relation_score": -0.9330384135246277,
+            "first_triple_score": -1.781725287437439,
+            "second_triple_score": -0.46404916048049927,
+            "entity_score": -2.2457744479179382,
+            "lower_bound_score": -3.178812861442566,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 2,
+            "rank": 3,
+            "intermediate_entity_degree": 68
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 3,
+            "intermediate_entity": "chemical",
+            "degree": 68
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_002",
+      "target_triple": [
+        "professional_society",
+        "disrupts",
+        "organism_function"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 43,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "professional_society",
+          "disrupts",
+          "organism_function"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 43,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "professional_society",
+          "disrupts",
+          "organism_function"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_003",
+      "target_triple": [
+        "machine_activity",
+        "manifestation_of",
+        "organism_function"
+      ],
+      "status": "injected",
+      "sampling_seed": 44,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "machine_activity",
+          "manifestation_of",
+          "organism_function"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 44,
+        "requested_max_paths": null,
+        "num_input_paths": 9,
+        "num_examined_paths": 9,
+        "num_selected_paths": 6
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "machine_activity",
+          "isa",
+          "disease_or_syndrome"
+        ],
+        [
+          "machine_activity",
+          "isa",
+          "pathologic_function"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "machine_activity",
+          "isa",
+          "disease_or_syndrome"
+        ],
+        [
+          "machine_activity",
+          "isa",
+          "pathologic_function"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "machine_activity",
+          "manifestation_of",
+          "organism_function"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "selected_candidate_paths": [
+          {
+            "r1": "isa",
+            "intermediate_entity": "pathologic_function",
+            "r2": "manifestation_of",
+            "first_triple": [
+              "machine_activity",
+              "isa",
+              "pathologic_function"
+            ],
+            "second_triple": [
+              "pathologic_function",
+              "manifestation_of",
+              "organism_function"
+            ],
+            "pra_confidence": 0.9679711675562186,
+            "relation_score": -0.9330384135246277,
+            "first_triple_score": -2.141904354095459,
+            "second_triple_score": -0.4924376308917999,
+            "entity_score": -2.634341984987259,
+            "lower_bound_score": -3.5673803985118866,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 5,
+            "intermediate_entity_degree": 304
+          },
+          {
+            "r1": "isa",
+            "intermediate_entity": "disease_or_syndrome",
+            "r2": "manifestation_of",
+            "first_triple": [
+              "machine_activity",
+              "isa",
+              "disease_or_syndrome"
+            ],
+            "second_triple": [
+              "disease_or_syndrome",
+              "manifestation_of",
+              "organism_function"
+            ],
+            "pra_confidence": 0.9679711675562186,
+            "relation_score": -0.9330384135246277,
+            "first_triple_score": -2.18284273147583,
+            "second_triple_score": -0.47813084721565247,
+            "entity_score": -2.6609735786914825,
+            "lower_bound_score": -3.5940119922161102,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 6,
+            "intermediate_entity_degree": 300
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 6,
+            "intermediate_entity": "disease_or_syndrome",
+            "degree": 300
+          },
+          {
+            "rank": 5,
+            "intermediate_entity": "pathologic_function",
+            "degree": 304
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_004",
+      "target_triple": [
+        "professional_or_occupational_group",
+        "manifestation_of",
+        "disease_or_syndrome"
+      ],
+      "status": "injected",
+      "sampling_seed": 45,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "professional_or_occupational_group",
+          "manifestation_of",
+          "disease_or_syndrome"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 45,
+        "requested_max_paths": null,
+        "num_input_paths": 8,
+        "num_examined_paths": 8,
+        "num_selected_paths": 6
+      },
+      "budget": 2,
+      "budget_skipped_paths": 3,
+      "attributed_injected_triples": [
+        [
+          "professional_or_occupational_group",
+          "isa",
+          "finding"
+        ],
+        [
+          "professional_or_occupational_group",
+          "produces",
+          "tissue"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "professional_or_occupational_group",
+          "isa",
+          "finding"
+        ],
+        [
+          "professional_or_occupational_group",
+          "produces",
+          "tissue"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "professional_or_occupational_group",
+          "manifestation_of",
+          "disease_or_syndrome"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "selected_candidate_paths": [
+          {
+            "r1": "isa",
+            "intermediate_entity": "finding",
+            "r2": "evaluation_of",
+            "first_triple": [
+              "professional_or_occupational_group",
+              "isa",
+              "finding"
+            ],
+            "second_triple": [
+              "finding",
+              "evaluation_of",
+              "disease_or_syndrome"
+            ],
+            "pra_confidence": 0.9278952465947706,
+            "relation_score": -1.0284380912780762,
+            "first_triple_score": -1.7334188222885132,
+            "second_triple_score": -0.2698195278644562,
+            "entity_score": -2.0032383501529694,
+            "lower_bound_score": -3.0316764414310455,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 1,
+            "intermediate_entity_degree": 45
+          },
+          {
+            "r1": "produces",
+            "intermediate_entity": "tissue",
+            "r2": "location_of",
+            "first_triple": [
+              "professional_or_occupational_group",
+              "produces",
+              "tissue"
+            ],
+            "second_triple": [
+              "tissue",
+              "location_of",
+              "disease_or_syndrome"
+            ],
+            "pra_confidence": 0.9090907349747301,
+            "relation_score": -2.5173404216766357,
+            "first_triple_score": -2.3646209239959717,
+            "second_triple_score": -0.34132397174835205,
+            "entity_score": -2.7059448957443237,
+            "lower_bound_score": -5.2232853174209595,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 10,
+            "intermediate_entity_degree": 76
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 1,
+            "intermediate_entity": "finding",
+            "degree": 45
+          },
+          {
+            "rank": 10,
+            "intermediate_entity": "tissue",
+            "degree": 76
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_005",
+      "target_triple": [
+        "alga",
+        "isa",
+        "chemical_viewed_functionally"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 46,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "alga",
+          "isa",
+          "chemical_viewed_functionally"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 46,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "alga",
+          "isa",
+          "chemical_viewed_functionally"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_006",
+      "target_triple": [
+        "molecular_sequence",
+        "measurement_of",
+        "molecular_function"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 47,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "molecular_sequence",
+          "measurement_of",
+          "molecular_function"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 47,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "molecular_sequence",
+          "measurement_of",
+          "molecular_function"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_007",
+      "target_triple": [
+        "sign_or_symptom",
+        "interacts_with",
+        "virus"
+      ],
+      "status": "injected",
+      "sampling_seed": 48,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "sign_or_symptom",
+          "interacts_with",
+          "virus"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 48,
+        "requested_max_paths": null,
+        "num_input_paths": 10,
+        "num_examined_paths": 10,
+        "num_selected_paths": 3
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "organism",
+          "interacts_with",
+          "virus"
+        ],
+        [
+          "sign_or_symptom",
+          "isa",
+          "organism"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "organism",
+          "interacts_with",
+          "virus"
+        ],
+        [
+          "sign_or_symptom",
+          "isa",
+          "organism"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "sign_or_symptom",
+          "interacts_with",
+          "virus"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 1,
+        "selected_candidate_paths": [
+          {
+            "r1": "isa",
+            "intermediate_entity": "organism",
+            "r2": "interacts_with",
+            "first_triple": [
+              "sign_or_symptom",
+              "isa",
+              "organism"
+            ],
+            "second_triple": [
+              "organism",
+              "interacts_with",
+              "virus"
+            ],
+            "pra_confidence": 0.9638122429080128,
+            "relation_score": -0.9330384135246277,
+            "first_triple_score": -1.5380674600601196,
+            "second_triple_score": -0.5283536314964294,
+            "entity_score": -2.066421091556549,
+            "lower_bound_score": -2.9994595050811768,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 2,
+            "rank": 2,
+            "intermediate_entity_degree": 67
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 2,
+            "intermediate_entity": "organism",
+            "degree": 67
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_008",
+      "target_triple": [
+        "educational_activity",
+        "result_of",
+        "cell_function"
+      ],
+      "status": "injected",
+      "sampling_seed": 49,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "educational_activity",
+          "result_of",
+          "cell_function"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 49,
+        "requested_max_paths": null,
+        "num_input_paths": 40,
+        "num_examined_paths": 40,
+        "num_selected_paths": 13
+      },
+      "budget": 2,
+      "budget_skipped_paths": 1,
+      "attributed_injected_triples": [
+        [
+          "educational_activity",
+          "associated_with",
+          "clinical_attribute"
+        ],
+        [
+          "educational_activity",
+          "isa",
+          "pathologic_function"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "educational_activity",
+          "associated_with",
+          "clinical_attribute"
+        ],
+        [
+          "educational_activity",
+          "isa",
+          "pathologic_function"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "educational_activity",
+          "result_of",
+          "cell_function"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "selected_candidate_paths": [
+          {
+            "r1": "associated_with",
+            "intermediate_entity": "clinical_attribute",
+            "r2": "result_of",
+            "first_triple": [
+              "educational_activity",
+              "associated_with",
+              "clinical_attribute"
+            ],
+            "second_triple": [
+              "clinical_attribute",
+              "result_of",
+              "cell_function"
+            ],
+            "pra_confidence": 0.9410432043335415,
+            "relation_score": -1.4711967706680298,
+            "first_triple_score": -0.49733513593673706,
+            "second_triple_score": -0.5002994537353516,
+            "entity_score": -0.9976345896720886,
+            "lower_bound_score": -2.4688313603401184,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 5,
+            "intermediate_entity_degree": 70
+          },
+          {
+            "r1": "isa",
+            "intermediate_entity": "pathologic_function",
+            "r2": "result_of",
+            "first_triple": [
+              "educational_activity",
+              "isa",
+              "pathologic_function"
+            ],
+            "second_triple": [
+              "pathologic_function",
+              "result_of",
+              "cell_function"
+            ],
+            "pra_confidence": 0.9761798924612837,
+            "relation_score": -0.9330384135246277,
+            "first_triple_score": -1.8516247272491455,
+            "second_triple_score": -0.19218480587005615,
+            "entity_score": -2.0438095331192017,
+            "lower_bound_score": -2.9768479466438293,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 10,
+            "intermediate_entity_degree": 304
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 5,
+            "intermediate_entity": "clinical_attribute",
+            "degree": 70
+          },
+          {
+            "rank": 10,
+            "intermediate_entity": "pathologic_function",
+            "degree": 304
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_009",
+      "target_triple": [
+        "machine_activity",
+        "affects",
+        "virus"
+      ],
+      "status": "injected",
+      "sampling_seed": 50,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "machine_activity",
+          "affects",
+          "virus"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 50,
+        "requested_max_paths": null,
+        "num_input_paths": 22,
+        "num_examined_paths": 22,
+        "num_selected_paths": 6
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "chemical_viewed_functionally",
+          "affects",
+          "virus"
+        ],
+        [
+          "machine_activity",
+          "isa",
+          "chemical_viewed_functionally"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "chemical_viewed_functionally",
+          "affects",
+          "virus"
+        ],
+        [
+          "machine_activity",
+          "isa",
+          "chemical_viewed_functionally"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "machine_activity",
+          "affects",
+          "virus"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 1,
+        "selected_candidate_paths": [
+          {
+            "r1": "isa",
+            "intermediate_entity": "chemical_viewed_functionally",
+            "r2": "affects",
+            "first_triple": [
+              "machine_activity",
+              "isa",
+              "chemical_viewed_functionally"
+            ],
+            "second_triple": [
+              "chemical_viewed_functionally",
+              "affects",
+              "virus"
+            ],
+            "pra_confidence": 0.9890692423153381,
+            "relation_score": -0.9330384135246277,
+            "first_triple_score": -2.055051803588867,
+            "second_triple_score": -0.729875922203064,
+            "entity_score": -2.784927725791931,
+            "lower_bound_score": -3.717966139316559,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 2,
+            "rank": 2,
+            "intermediate_entity_degree": 60
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 2,
+            "intermediate_entity": "chemical_viewed_functionally",
+            "degree": 60
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_010",
+      "target_triple": [
+        "population_group",
+        "result_of",
+        "neoplastic_process"
+      ],
+      "status": "injected",
+      "sampling_seed": 51,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "population_group",
+          "result_of",
+          "neoplastic_process"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 51,
+        "requested_max_paths": null,
+        "num_input_paths": 49,
+        "num_examined_paths": 49,
+        "num_selected_paths": 11
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "population_group",
+          "produces",
+          "immunologic_factor"
+        ],
+        [
+          "population_group",
+          "produces",
+          "receptor"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "population_group",
+          "produces",
+          "immunologic_factor"
+        ],
+        [
+          "population_group",
+          "produces",
+          "receptor"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "population_group",
+          "result_of",
+          "neoplastic_process"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "selected_candidate_paths": [
+          {
+            "r1": "produces",
+            "intermediate_entity": "receptor",
+            "r2": "complicates",
+            "first_triple": [
+              "population_group",
+              "produces",
+              "receptor"
+            ],
+            "second_triple": [
+              "receptor",
+              "complicates",
+              "neoplastic_process"
+            ],
+            "pra_confidence": 0.9735944849016206,
+            "relation_score": -0.6371446847915649,
+            "first_triple_score": -1.5419038534164429,
+            "second_triple_score": -0.17339129745960236,
+            "entity_score": -1.7152951508760452,
+            "lower_bound_score": -2.35243983566761,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 1,
+            "intermediate_entity_degree": 95
+          },
+          {
+            "r1": "produces",
+            "intermediate_entity": "immunologic_factor",
+            "r2": "complicates",
+            "first_triple": [
+              "population_group",
+              "produces",
+              "immunologic_factor"
+            ],
+            "second_triple": [
+              "immunologic_factor",
+              "complicates",
+              "neoplastic_process"
+            ],
+            "pra_confidence": 0.9735944849016206,
+            "relation_score": -0.6371446847915649,
+            "first_triple_score": -1.6029740571975708,
+            "second_triple_score": -0.2192096710205078,
+            "entity_score": -1.8221837282180786,
+            "lower_bound_score": -2.4593284130096436,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 3,
+            "intermediate_entity_degree": 117
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 1,
+            "intermediate_entity": "receptor",
+            "degree": 95
+          },
+          {
+            "rank": 3,
+            "intermediate_entity": "immunologic_factor",
+            "degree": 117
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_011",
+      "target_triple": [
+        "plant",
+        "interacts_with",
+        "antibiotic"
+      ],
+      "status": "injected",
+      "sampling_seed": 52,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "plant",
+          "interacts_with",
+          "antibiotic"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 52,
+        "requested_max_paths": null,
+        "num_input_paths": 17,
+        "num_examined_paths": 17,
+        "num_selected_paths": 6
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "plant",
+          "interacts_with",
+          "receptor"
+        ],
+        [
+          "receptor",
+          "interacts_with",
+          "antibiotic"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "plant",
+          "interacts_with",
+          "receptor"
+        ],
+        [
+          "receptor",
+          "interacts_with",
+          "antibiotic"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "plant",
+          "interacts_with",
+          "antibiotic"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 1,
+        "selected_candidate_paths": [
+          {
+            "r1": "interacts_with",
+            "intermediate_entity": "receptor",
+            "r2": "interacts_with",
+            "first_triple": [
+              "plant",
+              "interacts_with",
+              "receptor"
+            ],
+            "second_triple": [
+              "receptor",
+              "interacts_with",
+              "antibiotic"
+            ],
+            "pra_confidence": 0.9872114328401597,
+            "relation_score": -0.15762671828269958,
+            "first_triple_score": -1.6738122701644897,
+            "second_triple_score": -0.20171356201171875,
+            "entity_score": -1.8755258321762085,
+            "lower_bound_score": -2.033152550458908,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 2,
+            "rank": 3,
+            "intermediate_entity_degree": 95
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 3,
+            "intermediate_entity": "receptor",
+            "degree": 95
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_012",
+      "target_triple": [
+        "age_group",
+        "result_of",
+        "experimental_model_of_disease"
+      ],
+      "status": "injected",
+      "sampling_seed": 53,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "age_group",
+          "result_of",
+          "experimental_model_of_disease"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 53,
+        "requested_max_paths": null,
+        "num_input_paths": 53,
+        "num_examined_paths": 53,
+        "num_selected_paths": 18
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "age_group",
+          "isa",
+          "natural_phenomenon_or_process"
+        ],
+        [
+          "age_group",
+          "produces",
+          "nucleic_acid_nucleoside_or_nucleotide"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "age_group",
+          "isa",
+          "natural_phenomenon_or_process"
+        ],
+        [
+          "age_group",
+          "produces",
+          "nucleic_acid_nucleoside_or_nucleotide"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "age_group",
+          "result_of",
+          "experimental_model_of_disease"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "selected_candidate_paths": [
+          {
+            "r1": "produces",
+            "intermediate_entity": "nucleic_acid_nucleoside_or_nucleotide",
+            "r2": "causes",
+            "first_triple": [
+              "age_group",
+              "produces",
+              "nucleic_acid_nucleoside_or_nucleotide"
+            ],
+            "second_triple": [
+              "nucleic_acid_nucleoside_or_nucleotide",
+              "causes",
+              "experimental_model_of_disease"
+            ],
+            "pra_confidence": 0.9495550171019048,
+            "relation_score": -0.8178362250328064,
+            "first_triple_score": -1.5229268074035645,
+            "second_triple_score": -0.6563596725463867,
+            "entity_score": -2.179286479949951,
+            "lower_bound_score": -2.9971227049827576,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 12,
+            "intermediate_entity_degree": 61
+          },
+          {
+            "r1": "isa",
+            "intermediate_entity": "natural_phenomenon_or_process",
+            "r2": "result_of",
+            "first_triple": [
+              "age_group",
+              "isa",
+              "natural_phenomenon_or_process"
+            ],
+            "second_triple": [
+              "natural_phenomenon_or_process",
+              "result_of",
+              "experimental_model_of_disease"
+            ],
+            "pra_confidence": 0.9761798924612837,
+            "relation_score": -0.9330384135246277,
+            "first_triple_score": -1.8698617219924927,
+            "second_triple_score": -0.195892795920372,
+            "entity_score": -2.0657545179128647,
+            "lower_bound_score": -2.9987929314374924,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 13,
+            "intermediate_entity_degree": 116
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 12,
+            "intermediate_entity": "nucleic_acid_nucleoside_or_nucleotide",
+            "degree": 61
+          },
+          {
+            "rank": 13,
+            "intermediate_entity": "natural_phenomenon_or_process",
+            "degree": 116
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_013",
+      "target_triple": [
+        "body_substance",
+        "affects",
+        "patient_or_disabled_group"
+      ],
+      "status": "injected",
+      "sampling_seed": 54,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "body_substance",
+          "affects",
+          "patient_or_disabled_group"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 54,
+        "requested_max_paths": null,
+        "num_input_paths": 42,
+        "num_examined_paths": 42,
+        "num_selected_paths": 13
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "amino_acid_peptide_or_protein",
+          "affects",
+          "patient_or_disabled_group"
+        ],
+        [
+          "amino_acid_peptide_or_protein",
+          "interacts_with",
+          "patient_or_disabled_group"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "amino_acid_peptide_or_protein",
+          "affects",
+          "patient_or_disabled_group"
+        ],
+        [
+          "amino_acid_peptide_or_protein",
+          "interacts_with",
+          "patient_or_disabled_group"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "body_substance",
+          "affects",
+          "patient_or_disabled_group"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "selected_candidate_paths": [
+          {
+            "r1": "consists_of",
+            "intermediate_entity": "amino_acid_peptide_or_protein",
+            "r2": "affects",
+            "first_triple": [
+              "body_substance",
+              "consists_of",
+              "amino_acid_peptide_or_protein"
+            ],
+            "second_triple": [
+              "amino_acid_peptide_or_protein",
+              "affects",
+              "patient_or_disabled_group"
+            ],
+            "pra_confidence": 0.9771735178484808,
+            "relation_score": -0.6230732798576355,
+            "first_triple_score": -0.2695745527744293,
+            "second_triple_score": -1.5438231229782104,
+            "entity_score": -1.8133976757526398,
+            "lower_bound_score": -2.4364709556102753,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 3,
+            "intermediate_entity_degree": 59
+          },
+          {
+            "r1": "consists_of",
+            "intermediate_entity": "amino_acid_peptide_or_protein",
+            "r2": "interacts_with",
+            "first_triple": [
+              "body_substance",
+              "consists_of",
+              "amino_acid_peptide_or_protein"
+            ],
+            "second_triple": [
+              "amino_acid_peptide_or_protein",
+              "interacts_with",
+              "patient_or_disabled_group"
+            ],
+            "pra_confidence": 0.9127049884955978,
+            "relation_score": -1.5200254917144775,
+            "first_triple_score": -0.2695745527744293,
+            "second_triple_score": -1.8067309856414795,
+            "entity_score": -2.076305538415909,
+            "lower_bound_score": -3.5963310301303864,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 15,
+            "intermediate_entity_degree": 59
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 3,
+            "intermediate_entity": "amino_acid_peptide_or_protein",
+            "degree": 59
+          },
+          {
+            "rank": 15,
+            "intermediate_entity": "amino_acid_peptide_or_protein",
+            "degree": 59
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_014",
+      "target_triple": [
+        "therapeutic_or_preventive_procedure",
+        "process_of",
+        "alga"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 55,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "therapeutic_or_preventive_procedure",
+          "process_of",
+          "alga"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 55,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "therapeutic_or_preventive_procedure",
+          "process_of",
+          "alga"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_015",
+      "target_triple": [
+        "regulation_or_law",
+        "complicates",
+        "cell_function"
+      ],
+      "status": "injected",
+      "sampling_seed": 56,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "regulation_or_law",
+          "complicates",
+          "cell_function"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 56,
+        "requested_max_paths": null,
+        "num_input_paths": 17,
+        "num_examined_paths": 17,
+        "num_selected_paths": 4
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "mental_or_behavioral_dysfunction",
+          "complicates",
+          "cell_function"
+        ],
+        [
+          "regulation_or_law",
+          "affects",
+          "mental_or_behavioral_dysfunction"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "mental_or_behavioral_dysfunction",
+          "complicates",
+          "cell_function"
+        ],
+        [
+          "regulation_or_law",
+          "affects",
+          "mental_or_behavioral_dysfunction"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "regulation_or_law",
+          "complicates",
+          "cell_function"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 1,
+        "selected_candidate_paths": [
+          {
+            "r1": "affects",
+            "intermediate_entity": "mental_or_behavioral_dysfunction",
+            "r2": "complicates",
+            "first_triple": [
+              "regulation_or_law",
+              "affects",
+              "mental_or_behavioral_dysfunction"
+            ],
+            "second_triple": [
+              "mental_or_behavioral_dysfunction",
+              "complicates",
+              "cell_function"
+            ],
+            "pra_confidence": 0.9339452315889272,
+            "relation_score": -1.239169716835022,
+            "first_triple_score": -1.6669013500213623,
+            "second_triple_score": -1.303117036819458,
+            "entity_score": -2.9700183868408203,
+            "lower_bound_score": -4.209188103675842,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 2,
+            "rank": 9,
+            "intermediate_entity_degree": 295
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 9,
+            "intermediate_entity": "mental_or_behavioral_dysfunction",
+            "degree": 295
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_016",
+      "target_triple": [
+        "regulation_or_law",
+        "complicates",
+        "genetic_function"
+      ],
+      "status": "injected",
+      "sampling_seed": 57,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "regulation_or_law",
+          "complicates",
+          "genetic_function"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 57,
+        "requested_max_paths": null,
+        "num_input_paths": 18,
+        "num_examined_paths": 18,
+        "num_selected_paths": 4
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "regulation_or_law",
+          "isa",
+          "molecular_function"
+        ],
+        [
+          "regulation_or_law",
+          "isa",
+          "pharmacologic_substance"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "regulation_or_law",
+          "isa",
+          "molecular_function"
+        ],
+        [
+          "regulation_or_law",
+          "isa",
+          "pharmacologic_substance"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "regulation_or_law",
+          "complicates",
+          "genetic_function"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "selected_candidate_paths": [
+          {
+            "r1": "isa",
+            "intermediate_entity": "pharmacologic_substance",
+            "r2": "complicates",
+            "first_triple": [
+              "regulation_or_law",
+              "isa",
+              "pharmacologic_substance"
+            ],
+            "second_triple": [
+              "pharmacologic_substance",
+              "complicates",
+              "genetic_function"
+            ],
+            "pra_confidence": 0.9512052042999561,
+            "relation_score": -0.9330383539199829,
+            "first_triple_score": -1.9788202047348022,
+            "second_triple_score": -0.23602694272994995,
+            "entity_score": -2.214847147464752,
+            "lower_bound_score": -3.147885501384735,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 1,
+            "intermediate_entity_degree": 100
+          },
+          {
+            "r1": "isa",
+            "intermediate_entity": "molecular_function",
+            "r2": "co-occurs_with",
+            "first_triple": [
+              "regulation_or_law",
+              "isa",
+              "molecular_function"
+            ],
+            "second_triple": [
+              "molecular_function",
+              "co-occurs_with",
+              "genetic_function"
+            ],
+            "pra_confidence": 0.9354699394488559,
+            "relation_score": -1.6702079772949219,
+            "first_triple_score": -2.2862303256988525,
+            "second_triple_score": -0.14219047129154205,
+            "entity_score": -2.4284207969903946,
+            "lower_bound_score": -4.0986287742853165,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 3,
+            "intermediate_entity_degree": 211
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 1,
+            "intermediate_entity": "pharmacologic_substance",
+            "degree": 100
+          },
+          {
+            "rank": 3,
+            "intermediate_entity": "molecular_function",
+            "degree": 211
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_017",
+      "target_triple": [
+        "qualitative_concept",
+        "affects",
+        "molecular_function"
+      ],
+      "status": "injected",
+      "sampling_seed": 58,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "qualitative_concept",
+          "affects",
+          "molecular_function"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 58,
+        "requested_max_paths": null,
+        "num_input_paths": 76,
+        "num_examined_paths": 76,
+        "num_selected_paths": 24
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "qualitative_concept",
+          "result_of",
+          "social_behavior"
+        ],
+        [
+          "social_behavior",
+          "affects",
+          "molecular_function"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "qualitative_concept",
+          "result_of",
+          "social_behavior"
+        ],
+        [
+          "social_behavior",
+          "affects",
+          "molecular_function"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "qualitative_concept",
+          "affects",
+          "molecular_function"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 1,
+        "selected_candidate_paths": [
+          {
+            "r1": "result_of",
+            "intermediate_entity": "social_behavior",
+            "r2": "affects",
+            "first_triple": [
+              "qualitative_concept",
+              "result_of",
+              "social_behavior"
+            ],
+            "second_triple": [
+              "social_behavior",
+              "affects",
+              "molecular_function"
+            ],
+            "pra_confidence": 0.976313014900605,
+            "relation_score": -0.11335216462612152,
+            "first_triple_score": -0.888107180595398,
+            "second_triple_score": -1.5682965517044067,
+            "entity_score": -2.4564037322998047,
+            "lower_bound_score": -2.569755896925926,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 2,
+            "rank": 2,
+            "intermediate_entity_degree": 44
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 2,
+            "intermediate_entity": "social_behavior",
+            "degree": 44
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_018",
+      "target_triple": [
+        "clinical_drug",
+        "location_of",
+        "physiologic_function"
+      ],
+      "status": "injected",
+      "sampling_seed": 59,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "clinical_drug",
+          "location_of",
+          "physiologic_function"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 59,
+        "requested_max_paths": null,
+        "num_input_paths": 3,
+        "num_examined_paths": 3,
+        "num_selected_paths": 1
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "anatomical_structure",
+          "location_of",
+          "physiologic_function"
+        ],
+        [
+          "clinical_drug",
+          "isa",
+          "anatomical_structure"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "anatomical_structure",
+          "location_of",
+          "physiologic_function"
+        ],
+        [
+          "clinical_drug",
+          "isa",
+          "anatomical_structure"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "clinical_drug",
+          "location_of",
+          "physiologic_function"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 1,
+        "selected_candidate_paths": [
+          {
+            "r1": "isa",
+            "intermediate_entity": "anatomical_structure",
+            "r2": "location_of",
+            "first_triple": [
+              "clinical_drug",
+              "isa",
+              "anatomical_structure"
+            ],
+            "second_triple": [
+              "anatomical_structure",
+              "location_of",
+              "physiologic_function"
+            ],
+            "pra_confidence": 0.9621909461373833,
+            "relation_score": -0.9330384135246277,
+            "first_triple_score": -1.7559759616851807,
+            "second_triple_score": -0.6456305980682373,
+            "entity_score": -2.401606559753418,
+            "lower_bound_score": -3.3346449732780457,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 2,
+            "rank": 1,
+            "intermediate_entity_degree": 31
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 1,
+            "intermediate_entity": "anatomical_structure",
+            "degree": 31
+          }
+        ],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_019",
+      "target_triple": [
+        "nucleotide_sequence",
+        "result_of",
+        "human_caused_phenomenon_or_process"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 60,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "nucleotide_sequence",
+          "result_of",
+          "human_caused_phenomenon_or_process"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 60,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "nucleotide_sequence",
+          "result_of",
+          "human_caused_phenomenon_or_process"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    },
+    {
+      "target_id": "target_020",
+      "target_triple": [
+        "event",
+        "associated_with",
+        "age_group"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 61,
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "event",
+          "associated_with",
+          "age_group"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 61,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "event",
+          "associated_with",
+          "age_group"
+        ],
+        "degree_definition": "IN_PLUS_OUT_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "DEGREE ANNOTATION ONLY; NO PATHS FILTERED OR RESELECTED"
+      }
+    }
+  ]
+}

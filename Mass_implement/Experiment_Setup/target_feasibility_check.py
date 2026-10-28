@@ -4,11 +4,6 @@
 Run from Mass_implement/:
     python Experiment_Setup/target_feasibility_check.py
 
-Outputs (default: outputs/Experiments/UMLS_pilot/feasibility/):
-    target_001.json ... target_NNN.json  - full entity-selection results
-    feasibility_summary.csv               - one row per Set B target
-    feasibility_summary.json              - configuration and aggregated results
-    feasible_targets.tsv                  - original-order subset with usable paths
 """
 
 from __future__ import annotations
