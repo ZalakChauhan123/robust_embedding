@@ -1,0 +1,130 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "clinical_drug",
+    "location_of",
+    "physiologic_function"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 89,
+  "num_semantically_valid_templates": 1,
+  "num_selected_templates": 1,
+  "num_ranked_paths": 4,
+  "ranked_candidate_paths": [
+    {
+      "r1": "isa",
+      "intermediate_entity": "anatomical_structure",
+      "r2": "location_of",
+      "first_triple": [
+        "clinical_drug",
+        "isa",
+        "anatomical_structure"
+      ],
+      "second_triple": [
+        "anatomical_structure",
+        "location_of",
+        "physiologic_function"
+      ],
+      "pra_confidence": 0.9621909461373833,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.7559759616851807,
+      "second_triple_score": -0.6456305980682373,
+      "entity_score": -2.401606559753418,
+      "lower_bound_score": -3.3346449732780457,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 1
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "fully_formed_anatomical_structure",
+      "r2": "location_of",
+      "first_triple": [
+        "clinical_drug",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "second_triple": [
+        "fully_formed_anatomical_structure",
+        "location_of",
+        "physiologic_function"
+      ],
+      "pra_confidence": 0.9621909461373833,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -2.021967887878418,
+      "second_triple_score": -0.6294907927513123,
+      "entity_score": -2.6514586806297302,
+      "lower_bound_score": -3.584497094154358,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 2
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organization",
+      "r2": "location_of",
+      "first_triple": [
+        "clinical_drug",
+        "isa",
+        "organization"
+      ],
+      "second_triple": [
+        "organization",
+        "location_of",
+        "physiologic_function"
+      ],
+      "pra_confidence": 0.9621909461373833,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.364641547203064,
+      "second_triple_score": -1.5033191442489624,
+      "entity_score": -2.8679606914520264,
+      "lower_bound_score": -3.800999104976654,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 3
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "anatomical_abnormality",
+      "r2": "location_of",
+      "first_triple": [
+        "clinical_drug",
+        "isa",
+        "anatomical_abnormality"
+      ],
+      "second_triple": [
+        "anatomical_abnormality",
+        "location_of",
+        "physiologic_function"
+      ],
+      "pra_confidence": 0.9621909461373833,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -2.2533862590789795,
+      "second_triple_score": -1.5828824043273926,
+      "entity_score": -3.836268663406372,
+      "lower_bound_score": -4.769307076931,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 4
+    }
+  ]
+}
