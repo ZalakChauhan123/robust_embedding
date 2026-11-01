@@ -21,11 +21,10 @@ import torch
 from torch.nn import functional as F
 
 MASS_DIR = Path(__file__).resolve().parents[1]
-PATH_MODULE_DIR = MASS_DIR / "Path_Generation_Module"
-if str(PATH_MODULE_DIR) not in sys.path:  
-    sys.path.insert(0, str(PATH_MODULE_DIR))
+if str(MASS_DIR) not in sys.path:
+    sys.path.insert(0, str(MASS_DIR))
 
-from TransE_Surrogate import TransE, read_names, read_triples
+from Path_Generation_Module.TransE_Surrogate import TransE, read_names, read_triples
 
 DATASET_DIR = MASS_DIR / "dataset_uml"
 PILOT_DIR = MASS_DIR / "outputs" / "Experiments" / "UMLS_pilot"
