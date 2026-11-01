@@ -1,0 +1,115 @@
+{
+  "research_question": "RQ1 — attack effectiveness (TransE-only UMLS pilot)",
+  "prediction": "TAIL only: (h*, r*, ?) ranked against every known entity",
+  "ranking_protocol": "filtered; same original train+valid+test facts for both models",
+  "filter_excludes": "injected edges and synthetic Set B targets",
+  "tie_policy": "average rank, consistent with existing Model_Evaluation.py",
+  "interpretation": "Higher poisoned MRR/Hits@10, or positive rank improvement, favors the attacker",
+  "set_B_all_targets": {
+    "count": 20,
+    "clean": {
+      "count": 20,
+      "MRR": 0.01206760429387366,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 88.95,
+      "Median_Rank": 92.5
+    },
+    "poisoned": {
+      "count": 20,
+      "MRR": 0.013443225702550531,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 81.5,
+      "Median_Rank": 87.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.0013756214086768706,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": -7.450000000000003,
+      "Median_Rank": -5.5
+    },
+    "num_improved_rank": 9,
+    "num_worsened_rank": 11,
+    "num_unchanged_rank": 0,
+    "num_new_hits_at_10": 0,
+    "num_lost_hits_at_10": 0,
+    "mean_rank_improvement_clean_minus_poisoned": 7.45
+  },
+  "set_B_injected_targets": {
+    "count": 14,
+    "clean": {
+      "count": 14,
+      "MRR": 0.01141543532927024,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 89.07142857142857,
+      "Median_Rank": 92.5
+    },
+    "poisoned": {
+      "count": 14,
+      "MRR": 0.013028196874980793,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 81.64285714285714,
+      "Median_Rank": 87.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.0016127615457105539,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": -7.428571428571431,
+      "Median_Rank": -5.5
+    },
+    "num_improved_rank": 7,
+    "num_worsened_rank": 7,
+    "num_unchanged_rank": 0,
+    "num_new_hits_at_10": 0,
+    "num_lost_hits_at_10": 0,
+    "mean_rank_improvement_clean_minus_poisoned": 7.428571428571429
+  },
+  "set_B_not_injected_targets": {
+    "count": 6,
+    "clean": {
+      "count": 6,
+      "MRR": 0.013589331877948313,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 88.66666666666667,
+      "Median_Rank": 100.0
+    },
+    "poisoned": {
+      "count": 6,
+      "MRR": 0.014411626300213256,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 81.16666666666667,
+      "Median_Rank": 80.5
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.000822294422264943,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": -7.5,
+      "Median_Rank": -19.5
+    },
+    "num_improved_rank": 2,
+    "num_worsened_rank": 4,
+    "num_unchanged_rank": 0,
+    "num_new_hits_at_10": 0,
+    "num_lost_hits_at_10": 0,
+    "mean_rank_improvement_clean_minus_poisoned": 7.5
+  },
+  "baseline_comparison_note": "No DirectAdd or ComAttack implementation in this pilot",
+  "opaque_box_note": "TransE surrogate and TransE victims are same architecture; opaque-box transfer is not tested"
+}
