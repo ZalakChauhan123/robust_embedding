@@ -1,14 +1,18 @@
-"""
--- Construct a poisoned UMLS training graph from MaSS feasibility outputs.
+"""Construct a leakage-controlled poisoned UMLS training graph from MaSS feasibility outputs.
 
--- Run from: Mass_implement/
+Place in: Mass_implement/Experiment_Setup/construct_poisoned_dataset.py
+Run from: Mass_implement/
     python Experiment_Setup/construct_poisoned_dataset.py --delta 0.7 --budget 2 --seed 42
 
 Prerequisite: Experiment_Setup/target_feasibility_check.py has generated
 outputs/Experiments/UMLS_pilot/feasibility/target_001.json ... target_020.json.
 
+Reuses Path_Generation_Module.Random_Sampling.sample_paths and
+Path_Generation_Module.Stealthiness.annotate_stealthiness. Does not retrain models
+or change the original dataset_uml/train.txt.
+
 This is a leakage-controlled UMLS PILOT, not an exact reproduction of the MaSS
-paper. The existing Stealthiness module annotates degrees but does not filter.
+paper. Optional low_degree policy prefers low-degree intermediate entities after random sampling.
 """
 from __future__ import annotations
 
@@ -27,7 +31,12 @@ if str(PATH_MODULE_DIR) not in sys.path:
     sys.path.insert(0, str(PATH_MODULE_DIR))
 
 from Random_Sampling import sample_paths
-from Stealthiness import annotate_stealthiness
+from Stealthiness import (
+    annotate_stealthiness,
+    entity_degrees,
+    mean_intermediate_degree,
+    order_sampled_paths,
+)
 
 DATASET_DIR = MASS_DIR / "dataset_uml"
 PILOT_DIR = MASS_DIR / "outputs" / "Experiments" / "UMLS_pilot"
@@ -41,6 +50,8 @@ CSV_FIELDS = [
     "eligible_paths", "rejected_leakage", "rejected_target_overlap",
     "rejected_invalid", "sampled_paths", "selected_paths", "injected_for_target",
     "new_to_global_training", "budget_skipped_paths", "status",
+    "selection_policy", "mean_sampled_intermediate_degree",
+    "mean_selected_intermediate_degree",
 ]
 
 
@@ -160,15 +171,19 @@ def construct(
     delta: float = 0.7,
     budget: int = 2,
     seed: int = 42,
+    selection_policy: str = "baseline",
 ) -> dict[str, Any]:
     if not 0.0 <= delta <= 1.0:
         raise ValueError("delta must be within [0, 1]")
     if budget < 1:
         raise ValueError("budget must be >= 1")
+    if selection_policy not in ("baseline", "low_degree"):
+        raise ValueError("selection_policy must be baseline or low_degree")
 
     targets = read_triples(targets_file, require_unique=True)
     train = read_triples(train_file)
     train_set = set(train)
+    clean_degrees = entity_degrees(train)  # Fixed across both policies.
     valid_set = set(read_triples(valid_file))
     test_set = set(read_triples(test_file))
     held_out = valid_set | test_set
@@ -240,10 +255,15 @@ def construct(
             delta=delta, max_paths=None, seed=seed + i,
         )
         sampled = sampling["selected_candidate_paths"]
+        # Keep MaSS random acceptance untouched. Change ONLY the order in
+        # which already accepted paths compete for the limited triple budget.
+        ordered_sampled = order_sampled_paths(
+            sampled, clean_degrees, selection_policy
+        )
         chosen = []
         attributed: set[Triple] = set()
         skipped_budget = 0
-        for candidate in sampled:
+        for candidate in ordered_sampled:
             first, second = parse_candidate_edges(candidate)
             required = {e for e in (first, second) if e not in train_set}
             # Charge only distinct non-clean edges, including any already
@@ -266,7 +286,10 @@ def construct(
             "num_selected_paths": len(chosen),
             "selected_candidate_paths": chosen,
         }
-        stealth = annotate_stealthiness(sampling_after_budget, train)
+        stealth = annotate_stealthiness(
+            sampling_after_budget, train,
+            degrees=clean_degrees, selection_policy=selection_policy,
+        )
         for triple in attributed:
             if triple in held_out or triple in target_set or triple in train_set:
                 raise AssertionError(f"Illegal poisoning triple: {triple}")
@@ -292,11 +315,15 @@ def construct(
             "injected_for_target": len(attributed),
             "new_to_global_training": len(globally_new),
             "budget_skipped_paths": skipped_budget, "status": status,
+            "selection_policy": selection_policy,
+            "mean_sampled_intermediate_degree": mean_intermediate_degree(sampled, clean_degrees),
+            "mean_selected_intermediate_degree": mean_intermediate_degree(chosen, clean_degrees),
         }
         rows.append(row)
         all_selected.append({
             "target_id": target_id, "target_triple": list(target),
             "status": status, "sampling_seed": seed + i,
+            "selection_policy": selection_policy,
             "sampling": {k: v for k, v in sampling.items() if k != "selected_candidate_paths"},
             "budget": budget, "budget_skipped_paths": skipped_budget,
             "attributed_injected_triples": [list(t) for t in sorted(attributed)],
@@ -321,7 +348,12 @@ def construct(
     })
     write_json(output_dir / "selected_poisoning_paths.json", {
         "delta": delta, "budget_per_target": budget,
-        "stealthiness_note": "degree annotation only, not degree-aware selection",
+        "selection_policy": selection_policy,
+        "stealthiness_note": (
+            "Baseline: lower-bound ranked random sampling and budget order; degrees annotated only."
+            if selection_policy == "baseline" else
+            "Low-degree ablation: re-rank randomly accepted paths by clean intermediate degree before budget."
+        ),
         "targets": all_selected,
     })
     write_triples(output_dir / "injected_triples.tsv", sorted(all_injected))
@@ -337,7 +369,8 @@ def construct(
         "source": "saved feasibility target_XXX.json files, not recomputed Entity Selection",
         "parameters": {"delta": delta, "path_accept_probability": 1 - delta,
                        "budget_distinct_new_triples_per_target": budget,
-                       "seed": seed, "seed_per_target": "seed + zero-based Set B index"},
+                       "seed": seed, "seed_per_target": "seed + zero-based Set B index",
+                       "selection_policy": selection_policy},
         "source_files": {
             "targets": str(targets_file), "feasibility_summary": str(summary_path),
             "train": str(train_file), "valid": str(valid_file), "test": str(test_file),
@@ -355,6 +388,10 @@ def construct(
         "total_eligible_candidate_paths": sum(r["eligible_paths"] for r in rows),
         "total_sampled_paths": sum(r["sampled_paths"] for r in rows),
         "total_selected_paths": sum(r["selected_paths"] for r in rows),
+        "mean_selected_intermediate_degree": mean_intermediate_degree(
+            [p for item in all_selected for p in item["stealthiness"]["selected_candidate_paths"]],
+            clean_degrees,
+        ),
         "num_clean_train_triples": len(train),
         "num_unique_injected_triples": len(all_injected),
         "num_poisoned_train_triples": len(poisoned),
@@ -389,11 +426,15 @@ def main() -> None:
     parser.add_argument("--budget", type=int, default=2,
                         help="Maximum distinct new triples injected per target")
     parser.add_argument("--seed", type=int, default=42)
+    parser.add_argument("--selection-policy", choices=("baseline", "low_degree"),
+                        default="baseline",
+                        help="baseline keeps original choices; low_degree prioritizes lower-degree intermediates")
     args = parser.parse_args()
     construct(targets_file=args.targets, feasibility_dir=args.feasibility_dir,
               output_dir=args.output_dir, train_file=args.train,
               valid_file=args.valid, test_file=args.test,
-              delta=args.delta, budget=args.budget, seed=args.seed)
+              delta=args.delta, budget=args.budget, seed=args.seed,
+              selection_policy=args.selection_policy)
 
 
 if __name__ == "__main__":
