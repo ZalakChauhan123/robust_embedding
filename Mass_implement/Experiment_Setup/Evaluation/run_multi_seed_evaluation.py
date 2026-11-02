@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""
-NOTE MaSS UMLS pilot: paired multi-seed RQ1/RQ2 experiments.
+"""MaSS UMLS: policy-controlled paired multi-seed RQ1/RQ2 experiments.
 
+Place at: Mass_implement/Experiment_Setup/Evaluation/run_multi_seed_evaluation.py
 Run from Mass_implement/:
     python Experiment_Setup/Evaluation/run_multi_seed_evaluation.py --seeds 42 43 44 45 46 --budgets 2 4
+
+Default (fixed attack): make ONE poisoned dataset per budget, then train 5 independently
+initialized clean/poisoned victim PAIRS. --attack-mode vary also varies attack sampling.
+Reuses existing construct_poisoned_dataset.py, train_victim_models.py and
+Evaluation/Evaluate_victim_models.py; does not modify these implementations.
 """
 from __future__ import annotations
 
@@ -113,7 +118,8 @@ def source_fingerprints(args: argparse.Namespace) -> dict[str, str]:
 def poison_command(args: argparse.Namespace, budget: int, attack_seed: int, poison: Path) -> list[str]:
     return [sys.executable, str(CONSTRUCT_SCRIPT), "--targets", str(args.targets),
             "--feasibility-dir", str(args.feasibility_dir), "--output-dir", str(poison),
-            "--budget", str(budget), "--delta", str(args.delta), "--seed", str(attack_seed)]
+            "--budget", str(budget), "--delta", str(args.delta), "--seed", str(attack_seed),
+            "--selection-policy", args.selection_policy]
 
 
 def train_command(args: argparse.Namespace, seed: int, poison: Path, victims: Path) -> list[str]:
@@ -161,7 +167,8 @@ def collect_run(args: argparse.Namespace, budget: int, seed: int, attack_seed: i
     summary = read_json(evaluation / "evaluation_summary.json")
     pb = p["parameters"]
     if (int(pb["budget_distinct_new_triples_per_target"]) != budget or
-        int(pb["seed"]) != attack_seed or not close(pb["delta"], args.delta)):
+        int(pb["seed"]) != attack_seed or not close(pb["delta"], args.delta) or
+        pb.get("selection_policy") != args.selection_policy):
         raise ValueError(f"Poisoning configuration mismatch: {poison}")
     for key in ("injected_train_overlap", "injected_valid_overlap", "injected_test_overlap", "injected_set_B_overlap"):
         if p[key] != 0:
@@ -201,6 +208,8 @@ def collect_run(args: argparse.Namespace, budget: int, seed: int, attack_seed: i
     bv, av = b["set_B_all"], a
     row = {
         "budget": budget, "victim_seed": seed, "attack_seed": attack_seed,
+        "selection_policy": args.selection_policy,
+        "mean_selected_intermediate_degree": p.get("mean_selected_intermediate_degree"),
         "delta": args.delta, "num_injected_triples": p["num_unique_injected_triples"],
         "num_injected_targets": p["num_targets_with_injections"],
         "rq1_setB_clean_MRR": bv["clean"]["MRR"],
@@ -223,7 +232,8 @@ def collect_run(args: argparse.Namespace, budget: int, seed: int, attack_seed: i
 
 
 RUN_FIELDS = [
-    "budget", "victim_seed", "attack_seed", "delta", "num_injected_triples", "num_injected_targets",
+    "budget", "victim_seed", "attack_seed", "selection_policy",
+    "mean_selected_intermediate_degree", "delta", "num_injected_triples", "num_injected_targets",
     "rq1_setB_clean_MRR", "rq1_setB_poisoned_MRR", "rq1_delta_MRR",
     "rq1_setB_clean_Hits10", "rq1_setB_poisoned_Hits10", "rq1_delta_Hits10",
     "rq1_mean_target_rank_improvement", "rq1_num_improved_targets",
@@ -301,6 +311,8 @@ def main() -> None:
                         help="fixed: same poison dataset for every victim seed; vary: resample poison per seed")
     parser.add_argument("--attack-seed", type=int, default=42,
                         help="Attack seed used with --attack-mode fixed")
+    parser.add_argument("--selection-policy", choices=("baseline", "low_degree"), default="baseline",
+                        help="Select original baseline ordering or low-degree priority after random sampling")
     parser.add_argument("--delta", type=float, default=0.7)
     parser.add_argument("--epochs", type=int, default=500)
     parser.add_argument("--dim", type=int, default=64)
@@ -334,7 +346,9 @@ def main() -> None:
         parser.error("--output-root must not be under dataset_uml/")
 
     fingerprints = source_fingerprints(args)
-    mode_dir = args.output_root / (f"fixed_attack_seed{args.attack_seed}" if args.attack_mode == "fixed" else "vary_attack_seed")
+    mode_dir = args.output_root / args.selection_policy / (
+        f"fixed_attack_seed{args.attack_seed}" if args.attack_mode == "fixed" else "vary_attack_seed"
+    )
     plans: list[tuple[int,int,int,Path,Path,Path,Path]] = []
     for budget in args.budgets:
         for seed in args.seeds:
@@ -344,7 +358,8 @@ def main() -> None:
             poison = (budget_root / "poisoning") if args.attack_mode == "fixed" else (run_root / "poisoning")
             plans.append((budget, seed, attack_seed, run_root, poison, run_root / "victim_models", run_root / "evaluation"))
 
-    print(f"Mode={args.attack_mode} | seeds={args.seeds} | budgets={args.budgets} | delta={args.delta}")
+    print(f"Policy={args.selection_policy} | Mode={args.attack_mode} | seeds={args.seeds} "
+          f"| budgets={args.budgets} | delta={args.delta}")
     print(f"Source Set B: {args.targets} (SHA-256: {fingerprints['targets']})")
     if args.dry_run:
         printed_poison = set()
@@ -371,13 +386,15 @@ def main() -> None:
                     shutil.rmtree(poison)
                 reset_poison.add(poison)
         poison_manifest = {"kind": "poison", "budget": budget, "attack_seed": attack_seed,
-                           "delta": args.delta, "source_fingerprints": fingerprints}
+                           "delta": args.delta, "selection_policy": args.selection_policy,
+                           "source_fingerprints": fingerprints}
         ensure_manifest(poison / "multi_seed_manifest.json", poison_manifest,
                         resume=args.resume or (args.attack_mode == "fixed" and index > 1))
         stage(poison_command(args,budget,attack_seed,poison), poison, POISON_FILES,
               resume=args.resume or (args.attack_mode == "fixed" and (poison / "poisoning_summary.json").exists()))
         run_manifest = {"kind": "victim_evaluation", "budget": budget, "victim_seed": seed,
-                        "attack_seed": attack_seed, "delta": args.delta, "epochs": args.epochs,
+                        "attack_seed": attack_seed, "delta": args.delta, "selection_policy": args.selection_policy,
+                        "epochs": args.epochs,
                         "dim": args.dim, "batch_size": args.batch_size, "lr": args.lr,
                         "margin": args.margin, "source_fingerprints": fingerprints,
                         "poison_dataset_sha256": digest(poison / "poisoned_train.txt")}
@@ -420,6 +437,7 @@ def main() -> None:
         "notes": [
             "This experiment measures reliability; multiple seeds do NOT guarantee a better attack.",
             "Same Set A, Set B, clean KG and feasibility inputs for all runs.",
+            "Compare policies using matching seeds, budgets, attack seed, and hyperparameters.",
             "fixed attack mode isolates victim-training randomness; vary attack mode also samples path-selection randomness.",
             "Reported sample SD uses n-1 denominator; no claim of statistical significance from 5 seeds.",
             "Stealthiness here means unchanged genuine-fact predictive performance, NOT detection resistance.",
@@ -427,6 +445,7 @@ def main() -> None:
         ],
         "configuration": {"seeds": args.seeds, "budgets": args.budgets, "attack_mode": args.attack_mode,
                           "fixed_attack_seed": args.attack_seed if args.attack_mode=="fixed" else None,
+                          "selection_policy": args.selection_policy,
                           "delta": args.delta, "epochs": args.epochs, "dimension": args.dim,
                           "batch_size": args.batch_size, "lr": args.lr, "margin": args.margin},
         "source_sha256": fingerprints,

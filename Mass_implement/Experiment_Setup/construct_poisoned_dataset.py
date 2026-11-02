@@ -26,11 +26,22 @@ from pathlib import Path
 from typing import Any
 
 MASS_DIR = Path(__file__).resolve().parents[1]
+if str(MASS_DIR) not in sys.path:
+    sys.path.insert(0, str(MASS_DIR))
+
+from Path_Generation_Module.Random_Sampling import sample_paths
+from Path_Generation_Module.Stealthiness import (
+    annotate_stealthiness,
+    entity_degrees,
+    mean_intermediate_degree,
+    order_sampled_paths,
+)
+
 PATH_MODULE_DIR = MASS_DIR / "Path_Generation_Module"
 if str(PATH_MODULE_DIR) not in sys.path:
     sys.path.insert(0, str(PATH_MODULE_DIR))
 
-from Random_Sampling import sample_paths
+from Path_Generation_Module.Random_Sampling import sample_paths
 from Stealthiness import (
     annotate_stealthiness,
     entity_degrees,
