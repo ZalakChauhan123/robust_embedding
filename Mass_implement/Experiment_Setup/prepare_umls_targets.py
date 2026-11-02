@@ -1,12 +1,8 @@
-"""
--- Prepare UMLS Set B for Experiment.
--- Place at Mass_implement/Experiment_Setup/prepare_umls_targets.py.
--- Run from Mass_implement/:
-        python Experiment_Setup/prepare_umls_targets.py --num-targets 20 --target-rank 100 --seed 42
 
--- Set A is the original UMLS test.txt and is not modified.
--- Set B contains ABSENT / low-plausibility candidate triples
 """
+MaSS UMLS Priority 1: Set B target generation.
+"""
+
 from __future__ import annotations
 
 import argparse
@@ -20,148 +16,323 @@ from pathlib import Path
 import torch
 
 MASS_DIR = Path(__file__).resolve().parents[1]
-MODULE_DIR = MASS_DIR / "Path_Generation_Module"
-if str(MODULE_DIR) not in sys.path:
-    sys.path.insert(0, str(MODULE_DIR))
+sys.path.insert(
+    0, str(MASS_DIR / "Path_Generation_Module")
+)
 
 from TransE_Surrogate import Surrogate, read_triples
 
 
-def clean_tail_rank(
-    surrogate: Surrogate,
-    head: str,
-    relation: str,
-    tail: str,
-    true_tails: dict[tuple[str, str], set[str]],
-) -> float:
-    """Filtered tail rank of a candidate ABSENT target using the clean TransE model."""
-    model = surrogate.model
-    eid = surrogate.entity_to_id
-    rid = surrogate.relation_to_id
-    n = len(eid)
-    heads = torch.full((n,), eid[head], dtype=torch.long)
-    rels = torch.full((n,), rid[relation], dtype=torch.long)
-    tails = torch.arange(n, dtype=torch.long)
+def filtered_tail_rank(surrogate, h, r, t, true_tails):
+    """Calculate filtered average-tie rank of an absent target."""
+
+    e2id = surrogate.entity_to_id
+    r2id = surrogate.relation_to_id
+    n = len(e2id)
+
     with torch.no_grad():
-        scores = model.score(heads, rels, tails)
-    target_score = scores[eid[tail]].item()
-    # Exclude already-known true answers so the candidate's rank isn't inflated
-    # by observed facts. The candidate itself is guaranteed absent.
-    other_true = true_tails.get((head, relation), set()) - {tail}
-    if other_true:
-        scores[[eid[t] for t in other_true]] = -torch.inf
-    better = (scores > target_score).sum().item()
-    tied = (scores == target_score).sum().item()
+        scores = surrogate.model.score(
+            torch.full((n,), e2id[h], dtype=torch.long),
+            torch.full((n,), r2id[r], dtype=torch.long),
+            torch.arange(n, dtype=torch.long),
+        ).clone()
+
+    if t in true_tails.get((h, r), set()):
+        raise ValueError("Target is already a known fact")
+
+    target_score = scores[e2id[t]].item()
+
+    for other in true_tails.get((h, r), set()):
+        scores[e2id[other]] = -torch.inf
+
+    better = int((scores > target_score).sum())
+    tied = int((scores == target_score).sum())
+
     return float(1 + better + (tied - 1) / 2)
 
 
-def prepare(num_targets: int, target_rank: int, min_rank: int, seed: int,
-            checkpoint: Path, output_dir: Path) -> dict:
+def prepare(args):
+
+    if not 1 <= args.min_rank <= args.target_rank:
+        raise ValueError("Invalid minimum or target rank")
+
+    if args.max_rank is not None:
+        if args.max_rank < args.target_rank:
+            raise ValueError("max-rank must be >= target-rank")
+
     data_dir = MASS_DIR / "dataset_uml"
-    data = {split: read_triples(data_dir / f"{split}.txt")
-            for split in ("train", "valid", "test")}
-    all_true = set(data["train"] + data["valid"] + data["test"])
+
+    data = {
+        s: read_triples(data_dir / f"{s}.txt")
+        for s in ("train", "valid", "test")
+    }
+
+    true_facts = set(
+        data["train"] + data["valid"] + data["test"]
+    )
+
     true_tails = defaultdict(set)
-    for h, r, t in all_true:
+
+    for h, r, t in true_facts:
         true_tails[(h, r)].add(t)
 
-    surrogate = Surrogate.load(checkpoint)
-    entity_names = list(surrogate.entity_to_id)
-    n_entities = len(entity_names)
-    if not 1 <= target_rank <= n_entities:
-        raise ValueError(f"--target-rank must be between 1 and {n_entities}")
-    if not 1 <= min_rank <= target_rank:
-        raise ValueError("--min-rank must be >= 1 and <= --target-rank")
-    if num_targets < 1:
-        raise ValueError("--num-targets must be positive")
+    surrogate = Surrogate.load(args.checkpoint)
+    entities = list(surrogate.entity_to_id)
 
-    rng = random.Random(seed)
-    originals = list(data["test"])
-    rng.shuffle(originals)
+    if args.num_targets > len(data["test"]):
+        raise ValueError("Too many requested targets")
+
+    if args.target_rank > len(entities):
+        raise ValueError("Target rank exceeds entity count")
+
+    if args.max_rank and args.max_rank > len(entities):
+        raise ValueError("Maximum rank exceeds entity count")
+
+    output_dir = args.output_dir
+
+    filenames = [
+        "set_B_target_triples.tsv",
+        "set_B_provenance.csv",
+        "target_setup_summary.json",
+    ]
+
+    if not args.overwrite:
+        if any((output_dir / n).exists() for n in filenames):
+            raise FileExistsError(
+                "Output exists. Choose another output directory."
+            )
+
+    rng = random.Random(args.seed)
+
+    # Randomly sample original test triples.
+    anchors = rng.sample(
+        data["test"],
+        k=args.num_targets
+    )
+
     selected = []
-    used_targets = set()
-    for original_h, relation, tail in originals:
-        if len(selected) >= num_targets:
-            break
-        # Search alternate existing source entities for the same relation + tail.
-        # Each target must be a missing fact in ALL the original splits.
-        alternatives = []
-        for new_h in entity_names:
-            target = (new_h, relation, tail)
-            if new_h == original_h or target in all_true or target in used_targets:
+    used = set()
+
+    for original_h, relation, original_t in anchors:
+
+        candidates = []
+
+        for new_entity in entities:
+
+            if args.replacement_mode == "tail":
+
+                if new_entity == original_t:
+                    continue
+
+                target = (
+                    original_h,
+                    relation,
+                    new_entity
+                )
+
+            else:
+
+                if new_entity == original_h:
+                    continue
+
+                target = (
+                    new_entity,
+                    relation,
+                    original_t
+                )
+
+            # Do not inject a known KG fact as a target.
+            if target in true_facts or target in used:
                 continue
-            rank = clean_tail_rank(surrogate, new_h, relation, tail, true_tails)
-            if rank >= min_rank:
-                alternatives.append((abs(rank - target_rank), -rank, new_h, rank))
-        if not alternatives:
+
+            rank = filtered_tail_rank(
+                surrogate,
+                *target,
+                true_tails
+            )
+
+            upper = args.max_rank or len(entities)
+
+            if args.min_rank <= rank <= upper:
+
+                candidates.append(
+                    (
+                        abs(rank - args.target_rank),
+                        -rank,
+                        new_entity,
+                        target
+                    )
+                )
+
+        if not candidates:
             continue
-        alternatives.sort()
-        _, _, new_head, clean_rank = alternatives[0]
-        target = (new_head, relation, tail)
-        used_targets.add(target)
+
+        # Prefer ranks closest to the requested rank.
+        candidates.sort(
+            key=lambda x: (x[0], x[1], x[2])
+        )
+
+        _, neg_rank, _, target = candidates[0]
+
+        used.add(target)
+
         selected.append({
+            "original_test_triple": [
+                original_h, relation, original_t
+            ],
             "target_triple": list(target),
-            "original_test_triple": [original_h, relation, tail],
-            "clean_filtered_tail_rank": clean_rank,
+            "clean_filtered_tail_rank": -neg_rank,
         })
 
-    output_dir.mkdir(parents=True, exist_ok=True)
-    with (output_dir / "set_B_target_triples.tsv").open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f, delimiter="\t")
-        writer.writerows(row["target_triple"] for row in selected)
-    with (output_dir / "set_B_provenance.csv").open("w", newline="", encoding="utf-8") as f:
-        writer = csv.writer(f)
-        writer.writerow(["original_head", "relation", "tail", "new_head", "clean_filtered_tail_rank"])
-        for row in selected:
-            o = row["original_test_triple"]
-            writer.writerow([o[0], o[1], o[2], row["target_triple"][0], row["clean_filtered_tail_rank"]])
+    if len(selected) != args.num_targets:
+        if not args.allow_partial:
+            raise ValueError(
+                f"Only {len(selected)}/{args.num_targets} "
+                "targets found. No files written. "
+                "Change seed or rank window."
+            )
 
+    if not selected:
+        raise ValueError("No valid targets found")
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Set B file
+    with (output_dir / filenames[0]).open(
+        "w", encoding="utf-8", newline=""
+    ) as f:
+
+        csv.writer(
+            f, delimiter="\t"
+        ).writerows(
+            row["target_triple"] for row in selected
+        )
+
+    # Provenance file
+    with (output_dir / filenames[1]).open(
+        "w", encoding="utf-8", newline=""
+    ) as f:
+
+        writer = csv.writer(f)
+
+        writer.writerow([
+            "original_head",
+            "relation",
+            "original_tail",
+            "target_head",
+            "target_tail",
+            "clean_filtered_tail_rank"
+        ])
+
+        for row in selected:
+
+            oh, relation, ot = row["original_test_triple"]
+            th, _, tt = row["target_triple"]
+
+            writer.writerow([
+                oh, relation, ot, th, tt,
+                row["clean_filtered_tail_rank"]
+            ])
+
+    # Metadata required by feasibility module
     summary = {
-        "experiment": "UMLS MaSS Set B pilot preparation",
-        "paper_fidelity": "adaptation: TransE-only low-plausibility screening, not TransE+ConvKB",
-        "set_A_clean_test_path": str(data_dir / "test.txt"),
+        "experiment": "UMLS MaSS Priority 1",
+        "paper_fidelity": (
+            "UMLS adaptation with TransE-only target screening"
+        ),
+        "replacement_mode": args.replacement_mode,
+        "screening_models": ["TransE"],
+        "set_A_clean_test_path": str(
+            data_dir / "test.txt"
+        ),
         "set_A_size": len(data["test"]),
-        "set_B_target_triples_path": str(output_dir / "set_B_target_triples.tsv"),
-        "requested_set_B_size": num_targets,
+        "set_B_target_triples_path": str(
+            output_dir / filenames[0]
+        ),
+        "requested_set_B_size": args.num_targets,
         "actual_set_B_size": len(selected),
         "clean_train_size": len(data["train"]),
-        "num_entities": n_entities,
-        "desired_target_rank": target_rank,
-        "min_acceptable_target_rank": min_rank,
-        "surrogate_checkpoint": str(checkpoint),
-        "random_seed": seed,
-        "all_targets_absent_from_original_train_valid_test": all(
-            tuple(row["target_triple"]) not in all_true for row in selected
-        ),
+        "num_entities": len(entities),
+        "desired_target_rank": args.target_rank,
+        "min_acceptable_target_rank": args.min_rank,
+        "max_acceptable_target_rank": args.max_rank,
+        "surrogate_checkpoint": str(args.checkpoint),
+        "random_seed": args.seed,
+        "all_targets_absent_from_original_train_valid_test": True,
         "set_B_rows": selected,
     }
-    (output_dir / "target_setup_summary.json").write_text(
-        json.dumps(summary, indent=2), encoding="utf-8"
+
+    (output_dir / filenames[2]).write_text(
+        json.dumps(summary, indent=2),
+        encoding="utf-8"
     )
-    print(f"Set A: original test.txt ({len(data['test'])} triples)")
-    print(f"Set B: {len(selected)}/{num_targets} absent target triples selected")
-    print(f"Target ranks: {[x['clean_filtered_tail_rank'] for x in selected]}")
-    print(f"Saved: {output_dir / 'set_B_target_triples.tsv'}")
-    if len(selected) < num_targets:
-        print("NOTE: Not enough test triples yielded a candidate at the requested minimum rank.")
-    return summary
+
+    print(
+        f"Created {len(selected)}/{args.num_targets} "
+        f"Set B targets"
+    )
+
+    print(
+        "Target ranks:",
+        [r["clean_filtered_tail_rank"] for r in selected]
+    )
+
+    print("Saved to:", output_dir.resolve())
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Prepare fixed Set A/Set B for UMLS MaSS pilot")
-    parser.add_argument("--num-targets", type=int, default=20)
-    parser.add_argument("--target-rank", type=int, default=100,
-                        help="Desired approximate CLEAN filtered tail rank (UMLS has 135 entities)")
-    parser.add_argument("--min-rank", type=int, default=75,
-                        help="Minimum acceptable CLEAN filtered tail rank")
-    parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--checkpoint", type=Path,
-                        default=MASS_DIR / "outputs" / "Path_Generation" / "transe_umls.pt")
-    parser.add_argument("--output-dir", type=Path,
-                        default=MASS_DIR / "outputs" / "Experiments" / "UMLS_pilot" / "setup")
-    args = parser.parse_args()
-    prepare(args.num_targets, args.target_rank, args.min_rank,
-            args.seed, args.checkpoint, args.output_dir)
+def main():
+
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument(
+        "--replacement-mode",
+        choices=["tail", "head"],
+        default="tail"
+    )
+
+    parser.add_argument(
+        "--num-targets", type=int, default=20
+    )
+
+    parser.add_argument(
+        "--target-rank", type=int, default=100
+    )
+
+    parser.add_argument(
+        "--min-rank", type=int, default=75
+    )
+
+    parser.add_argument(
+        "--max-rank", type=int
+    )
+
+    parser.add_argument(
+        "--seed", type=int, default=42
+    )
+
+    parser.add_argument(
+        "--checkpoint",
+        type=Path,
+        default=MASS_DIR / "outputs" /
+                "Path_Generation" / "transe_umls.pt"
+    )
+
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        default=MASS_DIR / "outputs" /
+                "Experiments" / "UMLS_tail_v1" / "setup"
+    )
+
+    parser.add_argument(
+        "--allow-partial", action="store_true"
+    )
+
+    parser.add_argument(
+        "--overwrite", action="store_true"
+    )
+
+    prepare(parser.parse_args())
 
 
 if __name__ == "__main__":
