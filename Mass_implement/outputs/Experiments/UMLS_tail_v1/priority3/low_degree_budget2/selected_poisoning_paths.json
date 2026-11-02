@@ -1,0 +1,1828 @@
+{
+  "delta": 0.7,
+  "budget_per_target": 2,
+  "selection_policy": "low_degree",
+  "stealthiness_note": "Low-degree ablation: re-rank randomly accepted paths by clean intermediate degree before budget.",
+  "targets": [
+    {
+      "target_id": "target_001",
+      "target_triple": [
+        "environmental_effect_of_humans",
+        "isa",
+        "group"
+      ],
+      "status": "injected",
+      "sampling_seed": 42,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "environmental_effect_of_humans",
+          "isa",
+          "group"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 42,
+        "requested_max_paths": null,
+        "num_input_paths": 15,
+        "num_examined_paths": 15,
+        "num_selected_paths": 8
+      },
+      "budget": 2,
+      "budget_skipped_paths": 2,
+      "attributed_injected_triples": [
+        [
+          "biomedical_occupation_or_discipline",
+          "isa",
+          "group"
+        ],
+        [
+          "genetic_function",
+          "isa",
+          "group"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "biomedical_occupation_or_discipline",
+          "isa",
+          "group"
+        ],
+        [
+          "genetic_function",
+          "isa",
+          "group"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "environmental_effect_of_humans",
+          "isa",
+          "group"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "mean_selected_intermediate_degree": 172.5,
+        "selected_candidate_paths": [
+          {
+            "r1": "issue_in",
+            "intermediate_entity": "biomedical_occupation_or_discipline",
+            "r2": "isa",
+            "first_triple": [
+              "environmental_effect_of_humans",
+              "issue_in",
+              "biomedical_occupation_or_discipline"
+            ],
+            "second_triple": [
+              "biomedical_occupation_or_discipline",
+              "isa",
+              "group"
+            ],
+            "pra_confidence": 0.973413069404759,
+            "relation_score": -8.212182998657227,
+            "first_triple_score": -7.056177139282227,
+            "second_triple_score": -1.647515892982483,
+            "entity_score": -8.70369303226471,
+            "lower_bound_score": -16.915876030921936,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 19,
+            "intermediate_entity_degree": 122
+          },
+          {
+            "r1": "result_of",
+            "intermediate_entity": "genetic_function",
+            "r2": "isa",
+            "first_triple": [
+              "environmental_effect_of_humans",
+              "result_of",
+              "genetic_function"
+            ],
+            "second_triple": [
+              "genetic_function",
+              "isa",
+              "group"
+            ],
+            "pra_confidence": 0.931648514527672,
+            "relation_score": -0.11335217207670212,
+            "first_triple_score": -0.3119911849498749,
+            "second_triple_score": -1.735595464706421,
+            "entity_score": -2.0475866496562958,
+            "lower_bound_score": -2.160938821732998,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 2,
+            "intermediate_entity_degree": 223
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 19,
+            "intermediate_entity": "biomedical_occupation_or_discipline",
+            "degree": 122
+          },
+          {
+            "rank": 2,
+            "intermediate_entity": "genetic_function",
+            "degree": 223
+          }
+        ],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_002",
+      "target_triple": [
+        "daily_or_recreational_activity",
+        "associated_with",
+        "body_system"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 43,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "daily_or_recreational_activity",
+          "associated_with",
+          "body_system"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 43,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "daily_or_recreational_activity",
+          "associated_with",
+          "body_system"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "mean_selected_intermediate_degree": null,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_003",
+      "target_triple": [
+        "antibiotic",
+        "complicates",
+        "idea_or_concept"
+      ],
+      "status": "injected",
+      "sampling_seed": 44,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "antibiotic",
+          "complicates",
+          "idea_or_concept"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 44,
+        "requested_max_paths": null,
+        "num_input_paths": 39,
+        "num_examined_paths": 39,
+        "num_selected_paths": 17
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "antibiotic",
+          "affects",
+          "individual_behavior"
+        ],
+        [
+          "body_part_organ_or_organ_component",
+          "isa",
+          "idea_or_concept"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "antibiotic",
+          "affects",
+          "individual_behavior"
+        ],
+        [
+          "body_part_organ_or_organ_component",
+          "isa",
+          "idea_or_concept"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "antibiotic",
+          "complicates",
+          "idea_or_concept"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "mean_selected_intermediate_degree": 69.0,
+        "selected_candidate_paths": [
+          {
+            "r1": "affects",
+            "intermediate_entity": "individual_behavior",
+            "r2": "conceptually_related_to",
+            "first_triple": [
+              "antibiotic",
+              "affects",
+              "individual_behavior"
+            ],
+            "second_triple": [
+              "individual_behavior",
+              "conceptually_related_to",
+              "idea_or_concept"
+            ],
+            "pra_confidence": 0.9130785567125644,
+            "relation_score": -1.5192078351974487,
+            "first_triple_score": -1.2229640483856201,
+            "second_triple_score": -0.7457488775253296,
+            "entity_score": -1.9687129259109497,
+            "lower_bound_score": -3.4879207611083984,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 29,
+            "intermediate_entity_degree": 58
+          },
+          {
+            "r1": "disrupts",
+            "intermediate_entity": "body_part_organ_or_organ_component",
+            "r2": "isa",
+            "first_triple": [
+              "antibiotic",
+              "disrupts",
+              "body_part_organ_or_organ_component"
+            ],
+            "second_triple": [
+              "body_part_organ_or_organ_component",
+              "isa",
+              "idea_or_concept"
+            ],
+            "pra_confidence": 0.9362551928712248,
+            "relation_score": -1.4344632625579834,
+            "first_triple_score": -0.8404003381729126,
+            "second_triple_score": -1.0310558080673218,
+            "entity_score": -1.8714561462402344,
+            "lower_bound_score": -3.3059194087982178,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 25,
+            "intermediate_entity_degree": 80
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 29,
+            "intermediate_entity": "individual_behavior",
+            "degree": 58
+          },
+          {
+            "rank": 25,
+            "intermediate_entity": "body_part_organ_or_organ_component",
+            "degree": 80
+          }
+        ],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_004",
+      "target_triple": [
+        "genetic_function",
+        "affects",
+        "manufactured_object"
+      ],
+      "status": "injected",
+      "sampling_seed": 45,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "genetic_function",
+          "affects",
+          "manufactured_object"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 45,
+        "requested_max_paths": null,
+        "num_input_paths": 52,
+        "num_examined_paths": 52,
+        "num_selected_paths": 18
+      },
+      "budget": 2,
+      "budget_skipped_paths": 1,
+      "attributed_injected_triples": [
+        [
+          "genetic_function",
+          "affects",
+          "group"
+        ],
+        [
+          "temporal_concept",
+          "isa",
+          "manufactured_object"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "genetic_function",
+          "affects",
+          "group"
+        ],
+        [
+          "temporal_concept",
+          "isa",
+          "manufactured_object"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "genetic_function",
+          "affects",
+          "manufactured_object"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "mean_selected_intermediate_degree": 36.5,
+        "selected_candidate_paths": [
+          {
+            "r1": "occurs_in",
+            "intermediate_entity": "temporal_concept",
+            "r2": "isa",
+            "first_triple": [
+              "genetic_function",
+              "occurs_in",
+              "temporal_concept"
+            ],
+            "second_triple": [
+              "temporal_concept",
+              "isa",
+              "manufactured_object"
+            ],
+            "pra_confidence": 0.9078998559768374,
+            "relation_score": -2.4799273014068604,
+            "first_triple_score": -0.5231655836105347,
+            "second_triple_score": -1.310990571975708,
+            "entity_score": -1.8341561555862427,
+            "lower_bound_score": -4.314083456993103,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 51,
+            "intermediate_entity_degree": 19
+          },
+          {
+            "r1": "affects",
+            "intermediate_entity": "group",
+            "r2": "uses",
+            "first_triple": [
+              "genetic_function",
+              "affects",
+              "group"
+            ],
+            "second_triple": [
+              "group",
+              "uses",
+              "manufactured_object"
+            ],
+            "pra_confidence": 0.9322252913212106,
+            "relation_score": -1.3922348022460938,
+            "first_triple_score": -2.1307976245880127,
+            "second_triple_score": -0.4379962682723999,
+            "entity_score": -2.5687938928604126,
+            "lower_bound_score": -3.9610286951065063,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 24,
+            "intermediate_entity_degree": 54
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 51,
+            "intermediate_entity": "temporal_concept",
+            "degree": 19
+          },
+          {
+            "rank": 24,
+            "intermediate_entity": "group",
+            "degree": 54
+          }
+        ],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_005",
+      "target_triple": [
+        "cell",
+        "produces",
+        "organ_or_tissue_function"
+      ],
+      "status": "injected",
+      "sampling_seed": 46,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "cell",
+          "produces",
+          "organ_or_tissue_function"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 46,
+        "requested_max_paths": null,
+        "num_input_paths": 8,
+        "num_examined_paths": 8,
+        "num_selected_paths": 1
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "cell",
+          "location_of",
+          "laboratory_procedure"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "cell",
+          "location_of",
+          "laboratory_procedure"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "cell",
+          "produces",
+          "organ_or_tissue_function"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 1,
+        "mean_selected_intermediate_degree": 141.0,
+        "selected_candidate_paths": [
+          {
+            "r1": "location_of",
+            "intermediate_entity": "laboratory_procedure",
+            "r2": "measures",
+            "first_triple": [
+              "cell",
+              "location_of",
+              "laboratory_procedure"
+            ],
+            "second_triple": [
+              "laboratory_procedure",
+              "measures",
+              "organ_or_tissue_function"
+            ],
+            "pra_confidence": 0.9338842261224178,
+            "relation_score": -2.7812187671661377,
+            "first_triple_score": -1.031026005744934,
+            "second_triple_score": -1.43993079662323,
+            "entity_score": -2.470956802368164,
+            "lower_bound_score": -5.252175569534302,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 9,
+            "intermediate_entity_degree": 141
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 9,
+            "intermediate_entity": "laboratory_procedure",
+            "degree": 141
+          }
+        ],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_006",
+      "target_triple": [
+        "cell_function",
+        "affects",
+        "regulation_or_law"
+      ],
+      "status": "not_selected_by_random_sampling_or_budget",
+      "sampling_seed": 47,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "cell_function",
+          "affects",
+          "regulation_or_law"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 47,
+        "requested_max_paths": null,
+        "num_input_paths": 5,
+        "num_examined_paths": 5,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "cell_function",
+          "affects",
+          "regulation_or_law"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "mean_selected_intermediate_degree": null,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_007",
+      "target_triple": [
+        "pathologic_function",
+        "result_of",
+        "organization"
+      ],
+      "status": "injected",
+      "sampling_seed": 48,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "pathologic_function",
+          "result_of",
+          "organization"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 48,
+        "requested_max_paths": null,
+        "num_input_paths": 75,
+        "num_examined_paths": 75,
+        "num_selected_paths": 28
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "organic_chemical",
+          "affects",
+          "organization"
+        ],
+        [
+          "pathologic_function",
+          "produces",
+          "organic_chemical"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "organic_chemical",
+          "affects",
+          "organization"
+        ],
+        [
+          "pathologic_function",
+          "produces",
+          "organic_chemical"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "pathologic_function",
+          "result_of",
+          "organization"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 1,
+        "mean_selected_intermediate_degree": 59.0,
+        "selected_candidate_paths": [
+          {
+            "r1": "produces",
+            "intermediate_entity": "organic_chemical",
+            "r2": "affects",
+            "first_triple": [
+              "pathologic_function",
+              "produces",
+              "organic_chemical"
+            ],
+            "second_triple": [
+              "organic_chemical",
+              "affects",
+              "organization"
+            ],
+            "pra_confidence": 0.9287327563661771,
+            "relation_score": -0.9982149600982666,
+            "first_triple_score": -0.9303179979324341,
+            "second_triple_score": -1.721984624862671,
+            "entity_score": -2.652302622795105,
+            "lower_bound_score": -3.6505175828933716,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 2,
+            "rank": 53,
+            "intermediate_entity_degree": 59
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 53,
+            "intermediate_entity": "organic_chemical",
+            "degree": 59
+          }
+        ],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_008",
+      "target_triple": [
+        "laboratory_procedure",
+        "diagnoses",
+        "molecular_sequence"
+      ],
+      "status": "injected",
+      "sampling_seed": 49,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "laboratory_procedure",
+          "diagnoses",
+          "molecular_sequence"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 49,
+        "requested_max_paths": null,
+        "num_input_paths": 8,
+        "num_examined_paths": 8,
+        "num_selected_paths": 4
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "anatomical_abnormality",
+          "isa",
+          "molecular_sequence"
+        ],
+        [
+          "injury_or_poisoning",
+          "isa",
+          "molecular_sequence"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "anatomical_abnormality",
+          "isa",
+          "molecular_sequence"
+        ],
+        [
+          "injury_or_poisoning",
+          "isa",
+          "molecular_sequence"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "laboratory_procedure",
+          "diagnoses",
+          "molecular_sequence"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "mean_selected_intermediate_degree": 163.0,
+        "selected_candidate_paths": [
+          {
+            "r1": "diagnoses",
+            "intermediate_entity": "injury_or_poisoning",
+            "r2": "isa",
+            "first_triple": [
+              "laboratory_procedure",
+              "diagnoses",
+              "injury_or_poisoning"
+            ],
+            "second_triple": [
+              "injury_or_poisoning",
+              "isa",
+              "molecular_sequence"
+            ],
+            "pra_confidence": 0.9436340090128158,
+            "relation_score": -0.9330384135246277,
+            "first_triple_score": -0.8377725481987,
+            "second_triple_score": -1.644400715827942,
+            "entity_score": -2.482173264026642,
+            "lower_bound_score": -3.4152116775512695,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 8,
+            "intermediate_entity_degree": 145
+          },
+          {
+            "r1": "diagnoses",
+            "intermediate_entity": "anatomical_abnormality",
+            "r2": "isa",
+            "first_triple": [
+              "laboratory_procedure",
+              "diagnoses",
+              "anatomical_abnormality"
+            ],
+            "second_triple": [
+              "anatomical_abnormality",
+              "isa",
+              "molecular_sequence"
+            ],
+            "pra_confidence": 0.9436340090128158,
+            "relation_score": -0.9330384135246277,
+            "first_triple_score": -0.8368719816207886,
+            "second_triple_score": -1.61457359790802,
+            "entity_score": -2.4514455795288086,
+            "lower_bound_score": -3.3844839930534363,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 3,
+            "intermediate_entity_degree": 181
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 8,
+            "intermediate_entity": "injury_or_poisoning",
+            "degree": 145
+          },
+          {
+            "rank": 3,
+            "intermediate_entity": "anatomical_abnormality",
+            "degree": 181
+          }
+        ],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_009",
+      "target_triple": [
+        "lipid",
+        "causes",
+        "nucleotide_sequence"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 50,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "lipid",
+          "causes",
+          "nucleotide_sequence"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 50,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "lipid",
+          "causes",
+          "nucleotide_sequence"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "mean_selected_intermediate_degree": null,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_010",
+      "target_triple": [
+        "physiologic_function",
+        "result_of",
+        "spatial_concept"
+      ],
+      "status": "injected",
+      "sampling_seed": 51,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "physiologic_function",
+          "result_of",
+          "spatial_concept"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 51,
+        "requested_max_paths": null,
+        "num_input_paths": 43,
+        "num_examined_paths": 43,
+        "num_selected_paths": 9
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "bacterium",
+          "isa",
+          "spatial_concept"
+        ],
+        [
+          "clinical_attribute",
+          "measurement_of",
+          "spatial_concept"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "bacterium",
+          "isa",
+          "spatial_concept"
+        ],
+        [
+          "clinical_attribute",
+          "measurement_of",
+          "spatial_concept"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "physiologic_function",
+          "result_of",
+          "spatial_concept"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "mean_selected_intermediate_degree": 68.0,
+        "selected_candidate_paths": [
+          {
+            "r1": "process_of",
+            "intermediate_entity": "bacterium",
+            "r2": "isa",
+            "first_triple": [
+              "physiologic_function",
+              "process_of",
+              "bacterium"
+            ],
+            "second_triple": [
+              "bacterium",
+              "isa",
+              "spatial_concept"
+            ],
+            "pra_confidence": 0.9811082123239258,
+            "relation_score": -1.483233094215393,
+            "first_triple_score": -0.39160722494125366,
+            "second_triple_score": -1.5679075717926025,
+            "entity_score": -1.9595147967338562,
+            "lower_bound_score": -3.4427478909492493,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 35,
+            "intermediate_entity_degree": 66
+          },
+          {
+            "r1": "affects",
+            "intermediate_entity": "clinical_attribute",
+            "r2": "measurement_of",
+            "first_triple": [
+              "physiologic_function",
+              "affects",
+              "clinical_attribute"
+            ],
+            "second_triple": [
+              "clinical_attribute",
+              "measurement_of",
+              "spatial_concept"
+            ],
+            "pra_confidence": 0.9748802980794943,
+            "relation_score": -1.609516978263855,
+            "first_triple_score": -1.405097484588623,
+            "second_triple_score": -2.163682222366333,
+            "entity_score": -3.568779706954956,
+            "lower_bound_score": -5.178296685218811,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 47,
+            "intermediate_entity_degree": 70
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 35,
+            "intermediate_entity": "bacterium",
+            "degree": 66
+          },
+          {
+            "rank": 47,
+            "intermediate_entity": "clinical_attribute",
+            "degree": 70
+          }
+        ],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_011",
+      "target_triple": [
+        "laboratory_procedure",
+        "analyzes",
+        "behavior"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 52,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "laboratory_procedure",
+          "analyzes",
+          "behavior"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 52,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "laboratory_procedure",
+          "analyzes",
+          "behavior"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "mean_selected_intermediate_degree": null,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_012",
+      "target_triple": [
+        "organ_or_tissue_function",
+        "co-occurs_with",
+        "occupational_activity"
+      ],
+      "status": "not_selected_by_random_sampling_or_budget",
+      "sampling_seed": 53,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "organ_or_tissue_function",
+          "co-occurs_with",
+          "occupational_activity"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 53,
+        "requested_max_paths": null,
+        "num_input_paths": 5,
+        "num_examined_paths": 5,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "organ_or_tissue_function",
+          "co-occurs_with",
+          "occupational_activity"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "mean_selected_intermediate_degree": null,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_013",
+      "target_triple": [
+        "mental_process",
+        "isa",
+        "biomedical_or_dental_material"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 54,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "mental_process",
+          "isa",
+          "biomedical_or_dental_material"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 54,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "mental_process",
+          "isa",
+          "biomedical_or_dental_material"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "mean_selected_intermediate_degree": null,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_014",
+      "target_triple": [
+        "vitamin",
+        "disrupts",
+        "geographic_area"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 55,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "vitamin",
+          "disrupts",
+          "geographic_area"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 55,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "vitamin",
+          "disrupts",
+          "geographic_area"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "mean_selected_intermediate_degree": null,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_015",
+      "target_triple": [
+        "physiologic_function",
+        "result_of",
+        "qualitative_concept"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 56,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "physiologic_function",
+          "result_of",
+          "qualitative_concept"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 56,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "physiologic_function",
+          "result_of",
+          "qualitative_concept"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "mean_selected_intermediate_degree": null,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_016",
+      "target_triple": [
+        "hormone",
+        "interacts_with",
+        "embryonic_structure"
+      ],
+      "status": "originally_infeasible",
+      "sampling_seed": 57,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "hormone",
+          "interacts_with",
+          "embryonic_structure"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 57,
+        "requested_max_paths": null,
+        "num_input_paths": 0,
+        "num_examined_paths": 0,
+        "num_selected_paths": 0
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [],
+      "new_to_global_training": [],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "hormone",
+          "interacts_with",
+          "embryonic_structure"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 0,
+        "mean_selected_intermediate_degree": null,
+        "selected_candidate_paths": [],
+        "paths_by_ascending_intermediate_degree": [],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_017",
+      "target_triple": [
+        "organism_function",
+        "co-occurs_with",
+        "family_group"
+      ],
+      "status": "injected",
+      "sampling_seed": 58,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "organism_function",
+          "co-occurs_with",
+          "family_group"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 58,
+        "requested_max_paths": null,
+        "num_input_paths": 5,
+        "num_examined_paths": 5,
+        "num_selected_paths": 2
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "injury_or_poisoning",
+          "associated_with",
+          "family_group"
+        ],
+        [
+          "organism_function",
+          "occurs_in",
+          "injury_or_poisoning"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "injury_or_poisoning",
+          "associated_with",
+          "family_group"
+        ],
+        [
+          "organism_function",
+          "occurs_in",
+          "injury_or_poisoning"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "organism_function",
+          "co-occurs_with",
+          "family_group"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 1,
+        "mean_selected_intermediate_degree": 145.0,
+        "selected_candidate_paths": [
+          {
+            "r1": "occurs_in",
+            "intermediate_entity": "injury_or_poisoning",
+            "r2": "associated_with",
+            "first_triple": [
+              "organism_function",
+              "occurs_in",
+              "injury_or_poisoning"
+            ],
+            "second_triple": [
+              "injury_or_poisoning",
+              "associated_with",
+              "family_group"
+            ],
+            "pra_confidence": 0.9299949478137042,
+            "relation_score": -1.4937973022460938,
+            "first_triple_score": -1.7598026990890503,
+            "second_triple_score": -2.7348389625549316,
+            "entity_score": -4.494641661643982,
+            "lower_bound_score": -5.988438963890076,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 2,
+            "rank": 2,
+            "intermediate_entity_degree": 145
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 2,
+            "intermediate_entity": "injury_or_poisoning",
+            "degree": 145
+          }
+        ],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_018",
+      "target_triple": [
+        "organism_function",
+        "affects",
+        "drug_delivery_device"
+      ],
+      "status": "injected",
+      "sampling_seed": 59,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "organism_function",
+          "affects",
+          "drug_delivery_device"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 59,
+        "requested_max_paths": null,
+        "num_input_paths": 6,
+        "num_examined_paths": 6,
+        "num_selected_paths": 2
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "organism_function",
+          "affects",
+          "age_group"
+        ],
+        [
+          "organism_function",
+          "affects",
+          "group"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "organism_function",
+          "affects",
+          "age_group"
+        ],
+        [
+          "organism_function",
+          "affects",
+          "group"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "organism_function",
+          "affects",
+          "drug_delivery_device"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "mean_selected_intermediate_degree": 50.0,
+        "selected_candidate_paths": [
+          {
+            "r1": "affects",
+            "intermediate_entity": "age_group",
+            "r2": "uses",
+            "first_triple": [
+              "organism_function",
+              "affects",
+              "age_group"
+            ],
+            "second_triple": [
+              "age_group",
+              "uses",
+              "drug_delivery_device"
+            ],
+            "pra_confidence": 0.9322252913212106,
+            "relation_score": -1.3922348022460938,
+            "first_triple_score": -2.090768575668335,
+            "second_triple_score": -0.5410768389701843,
+            "entity_score": -2.6318454146385193,
+            "lower_bound_score": -4.024080216884613,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 1,
+            "intermediate_entity_degree": 46
+          },
+          {
+            "r1": "affects",
+            "intermediate_entity": "group",
+            "r2": "uses",
+            "first_triple": [
+              "organism_function",
+              "affects",
+              "group"
+            ],
+            "second_triple": [
+              "group",
+              "uses",
+              "drug_delivery_device"
+            ],
+            "pra_confidence": 0.9322252913212106,
+            "relation_score": -1.3922348022460938,
+            "first_triple_score": -2.156763792037964,
+            "second_triple_score": -0.6744713187217712,
+            "entity_score": -2.831235110759735,
+            "lower_bound_score": -4.223469913005829,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 4,
+            "intermediate_entity_degree": 54
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 1,
+            "intermediate_entity": "age_group",
+            "degree": 46
+          },
+          {
+            "rank": 4,
+            "intermediate_entity": "group",
+            "degree": 54
+          }
+        ],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_019",
+      "target_triple": [
+        "acquired_abnormality",
+        "affects",
+        "biomedical_or_dental_material"
+      ],
+      "status": "injected",
+      "sampling_seed": 60,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "acquired_abnormality",
+          "affects",
+          "biomedical_or_dental_material"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 60,
+        "requested_max_paths": null,
+        "num_input_paths": 14,
+        "num_examined_paths": 14,
+        "num_selected_paths": 3
+      },
+      "budget": 2,
+      "budget_skipped_paths": 1,
+      "attributed_injected_triples": [
+        [
+          "archaeon",
+          "interacts_with",
+          "biomedical_or_dental_material"
+        ],
+        [
+          "organism_attribute",
+          "measurement_of",
+          "biomedical_or_dental_material"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "archaeon",
+          "interacts_with",
+          "biomedical_or_dental_material"
+        ],
+        [
+          "organism_attribute",
+          "measurement_of",
+          "biomedical_or_dental_material"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "acquired_abnormality",
+          "affects",
+          "biomedical_or_dental_material"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "mean_selected_intermediate_degree": 58.5,
+        "selected_candidate_paths": [
+          {
+            "r1": "affects",
+            "intermediate_entity": "archaeon",
+            "r2": "interacts_with",
+            "first_triple": [
+              "acquired_abnormality",
+              "affects",
+              "archaeon"
+            ],
+            "second_triple": [
+              "archaeon",
+              "interacts_with",
+              "biomedical_or_dental_material"
+            ],
+            "pra_confidence": 0.9809576630209349,
+            "relation_score": -0.15762671828269958,
+            "first_triple_score": -1.5372910499572754,
+            "second_triple_score": -1.8092883825302124,
+            "entity_score": -3.346579432487488,
+            "lower_bound_score": -3.5042061507701874,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 5,
+            "intermediate_entity_degree": 53
+          },
+          {
+            "r1": "associated_with",
+            "intermediate_entity": "organism_attribute",
+            "r2": "measurement_of",
+            "first_triple": [
+              "acquired_abnormality",
+              "associated_with",
+              "organism_attribute"
+            ],
+            "second_triple": [
+              "organism_attribute",
+              "measurement_of",
+              "biomedical_or_dental_material"
+            ],
+            "pra_confidence": 0.9503160520433299,
+            "relation_score": -2.8755314350128174,
+            "first_triple_score": -1.5475990772247314,
+            "second_triple_score": -1.4386851787567139,
+            "entity_score": -2.9862842559814453,
+            "lower_bound_score": -5.861815690994263,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 19,
+            "intermediate_entity_degree": 64
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 5,
+            "intermediate_entity": "archaeon",
+            "degree": 53
+          },
+          {
+            "rank": 19,
+            "intermediate_entity": "organism_attribute",
+            "degree": 64
+          }
+        ],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    },
+    {
+      "target_id": "target_020",
+      "target_triple": [
+        "pathologic_function",
+        "affects",
+        "medical_device"
+      ],
+      "status": "injected",
+      "sampling_seed": 61,
+      "selection_policy": "low_degree",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "pathologic_function",
+          "affects",
+          "medical_device"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 61,
+        "requested_max_paths": null,
+        "num_input_paths": 60,
+        "num_examined_paths": 60,
+        "num_selected_paths": 16
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "pathologic_function",
+          "affects",
+          "age_group"
+        ],
+        [
+          "pathologic_function",
+          "affects",
+          "group"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "pathologic_function",
+          "affects",
+          "age_group"
+        ],
+        [
+          "pathologic_function",
+          "affects",
+          "group"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "pathologic_function",
+          "affects",
+          "medical_device"
+        ],
+        "selection_policy": "low_degree",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "mean_selected_intermediate_degree": 50.0,
+        "selected_candidate_paths": [
+          {
+            "r1": "affects",
+            "intermediate_entity": "age_group",
+            "r2": "uses",
+            "first_triple": [
+              "pathologic_function",
+              "affects",
+              "age_group"
+            ],
+            "second_triple": [
+              "age_group",
+              "uses",
+              "medical_device"
+            ],
+            "pra_confidence": 0.9322252913212106,
+            "relation_score": -1.3922348022460938,
+            "first_triple_score": -2.107698917388916,
+            "second_triple_score": -0.4814961552619934,
+            "entity_score": -2.5891950726509094,
+            "lower_bound_score": -3.981429874897003,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 28,
+            "intermediate_entity_degree": 46
+          },
+          {
+            "r1": "affects",
+            "intermediate_entity": "group",
+            "r2": "uses",
+            "first_triple": [
+              "pathologic_function",
+              "affects",
+              "group"
+            ],
+            "second_triple": [
+              "group",
+              "uses",
+              "medical_device"
+            ],
+            "pra_confidence": 0.9322252913212106,
+            "relation_score": -1.3922348022460938,
+            "first_triple_score": -2.172945976257324,
+            "second_triple_score": -0.5979777574539185,
+            "entity_score": -2.7709237337112427,
+            "lower_bound_score": -4.163158535957336,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": false,
+            "second_triple_exists_in_train": true,
+            "num_new_triples": 1,
+            "rank": 43,
+            "intermediate_entity_degree": 54
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 28,
+            "intermediate_entity": "age_group",
+            "degree": 46
+          },
+          {
+            "rank": 43,
+            "intermediate_entity": "group",
+            "degree": 54
+          }
+        ],
+        "note": "Low-degree UMLS ablation: accepted paths re-ordered by intermediate degree BEFORE budget allocation."
+      }
+    }
+  ]
+}
