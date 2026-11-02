@@ -12,6 +12,10 @@ import csv
 import json
 from collections import defaultdict
 from pathlib import Path
+from construct_poisoned_dataset import (
+    filter_candidate_paths,
+    read_triples,
+)
 
 MASS_DIR = Path(__file__).resolve().parents[1]
 DATA_DIR = MASS_DIR / "dataset_uml"
@@ -137,6 +141,37 @@ def main():
 
     targets = read_targets(args.targets)
 
+    # Improvement 1: Load correct target statuses.
+    feasibility_file = (
+        args.feasibility_dir / "feasibility_summary.json"
+    )
+
+    feasibility_summary = json.loads(
+        feasibility_file.read_text(encoding="utf-8-sig")
+    )
+
+    status_rows = {
+        row["target_id"]: row
+        for row in feasibility_summary["targets"]
+    }
+
+    if len(status_rows) != len(targets):
+        raise ValueError(
+            "Feasibility summary does not match Set B size."
+        )
+
+    # Improvement 2: Load original KG splits for leakage checks.
+    train_set = set(
+        read_triples(DATA_DIR / "train.txt")
+    )
+
+    held_out_set = (
+        set(read_triples(DATA_DIR / "valid.txt"))
+        | set(read_triples(DATA_DIR / "test.txt"))
+    )
+
+    target_set = set(targets)
+
     domain, range_, pairs = load_ontology(args.srstre2)
 
     selected_by_id = {}
@@ -187,13 +222,43 @@ def main():
                 f"Missing ranked_candidate_paths in {source}"
             )
 
+        
+        # Validate the feasibility status belongs to this target.
+        prior = status_rows.get(tid)
+
+        if prior is None:
+            raise ValueError(
+                f"Missing feasibility status for {tid}"
+            )
+
+        reported_target = (
+            prior["head"],
+            prior["relation"],
+            prior["tail"],
+        )
+
+        if reported_target != target:
+            raise ValueError(
+                f"Feasibility summary target mismatch: {tid}"
+            )
+
+        # Reuse the SAME filtering rules as the poisoning module.
+        eligible, rejected = filter_candidate_paths(
+            candidates,
+            train_set,
+            held_out_set,
+            target_set,
+            target,
+        )
+
+
         target_check = check_edge(
             target, domain, range_, pairs
         )
 
         summary = {
             "target_id": tid,
-            "status": data.get("status", "unknown"),
+            "status": prior["status"],
             "target_head": target[0],
             "target_relation": target[1],
             "target_tail": target[2],
@@ -204,12 +269,24 @@ def main():
             "candidate_paths": len(candidates),
             "candidate_paths_marginal_ok": 0,
             "candidate_paths_both_exact_pairs": 0,
-            "selected_paths": 0,
+            # Counts after applying the poisoning eligibility filter.
+            "eligible_paths": len(eligible),
+            "eligible_paths_marginal_ok": 0,
+            "eligible_paths_both_exact_pairs": 0,
+
+            # Reasons for rejecting candidate paths.
+            "rejected_leakage": rejected.get("leakage", 0),
+            "rejected_target_overlap": rejected.get(
+                "target_overlap", 0
+            ),
+            "rejected_invalid": rejected.get("invalid", 0),
+                        "selected_paths": 0,
             "selected_paths_both_exact_pairs": 0,
         }
 
         stages = (
             ("candidate", candidates),
+            ("eligible", eligible),
             ("selected", selected_by_id.get(tid, [])),
         )
 
@@ -273,7 +350,9 @@ def main():
                         candidate.get("lower_bound_score", ""),
                 })
 
+                                
                 if stage == "candidate":
+
                     summary[
                         "candidate_paths_marginal_ok"
                     ] += int(marginal_ok)
@@ -281,12 +360,25 @@ def main():
                     summary[
                         "candidate_paths_both_exact_pairs"
                     ] += int(exact_ok)
-                else:
+
+                elif stage == "eligible":
+
+                    summary[
+                        "eligible_paths_marginal_ok"
+                    ] += int(marginal_ok)
+
+                    summary[
+                        "eligible_paths_both_exact_pairs"
+                    ] += int(exact_ok)
+
+                elif stage == "selected":
+
                     summary["selected_paths"] += 1
 
                     summary[
                         "selected_paths_both_exact_pairs"
                     ] += int(exact_ok)
+
 
         target_rows.append(summary)
 
@@ -316,6 +408,49 @@ def main():
             x["candidate_paths_both_exact_pairs"] > 0
             for x in target_rows
         ),
+
+        
+        "eligible_paths": sum(
+            x["eligible_paths"]
+            for x in target_rows
+        ),
+
+        "eligible_paths_marginal_ok": sum(
+            x["eligible_paths_marginal_ok"]
+            for x in target_rows
+        ),
+
+        "eligible_paths_both_exact_pairs": sum(
+            x["eligible_paths_both_exact_pairs"]
+            for x in target_rows
+        ),
+
+        "targets_with_eligible_paths": sum(
+            x["eligible_paths"] > 0
+            for x in target_rows
+        ),
+
+        "targets_with_eligible_exact_pair_paths": sum(
+            x["eligible_paths_both_exact_pairs"] > 0
+            for x in target_rows
+        ),
+
+        "rejected_leakage": sum(
+            x["rejected_leakage"]
+            for x in target_rows
+        ),
+
+        "rejected_target_overlap": sum(
+            x["rejected_target_overlap"]
+            for x in target_rows
+        ),
+
+        "rejected_invalid": sum(
+            x["rejected_invalid"]
+            for x in target_rows
+        ),
+
+
         "selected_paths": sum(
             x["selected_paths"] for x in target_rows
         ),

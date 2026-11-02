@@ -1,7 +1,5 @@
 
-"""
-MaSS UMLS Priority 1: Set B target generation.
-"""
+"""MaSS UMLS Priority 1: Set B target generation."""
 
 from __future__ import annotations
 
