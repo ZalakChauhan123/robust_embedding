@@ -280,7 +280,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     set_a_metrics = compare_group(clean_rows)
 
     attack_result = {
-        "research_question": "RQ1 — attack effectiveness (TransE-only UMLS pilot)",
+        "research_question": f"RQ1 — attack effectiveness ({args.attack_name}, TransE-only UMLS pilot)",
         "prediction": "TAIL only: (h*, r*, ?) ranked against every known entity",
         "ranking_protocol": "filtered; same original train+valid+test facts for both models",
         "filter_excludes": "injected edges and synthetic Set B targets",
@@ -289,7 +289,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         "set_B_all_targets": all_b,
         "set_B_injected_targets": injected_b,
         "set_B_not_injected_targets": not_injected_b,
-        "baseline_comparison_note": "No DirectAdd or ComAttack implementation in this pilot",
+        "attack_name": args.attack_name,
         "opaque_box_note": "TransE surrogate and TransE victims are same architecture; opaque-box transfer is not tested",
     }
     set_a_result = {
@@ -299,7 +299,8 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         "interpretation": "Small clean-to-poisoned degradation in Hits@10/MRR favors stealthiness",
     }
     evaluation_summary = {
-        "experiment": "MaSS UMLS pilot: TransE victim evaluation",
+        "experiment": f"{args.attack_name} UMLS pilot: TransE victim evaluation",
+        "attack_name": args.attack_name,
         "input_files": {
             "clean_victim": str(args.clean_checkpoint),
             "poisoned_victim": str(args.poisoned_checkpoint),
@@ -327,7 +328,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         "limitations": [
             "One UMLS dataset and one random seed; results are preliminary.",
             "TransE only: no opaque-box KGE transferability test yet.",
-            "This evaluation does not compare against DirectAdd or ComAttack.",
+            "This report evaluates one attack method at a time; compare matching runs separately.",
         ],
     }
 
@@ -357,7 +358,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
     write_json(output_paths[4], set_a_result)
     write_json(output_paths[5], evaluation_summary)
 
-    print("\n=== MaSS UMLS RQ1 — ATTACK EFFECTIVENESS ===")
+    print(f"\n=== {args.attack_name} UMLS RQ1 — ATTACK EFFECTIVENESS ===")
     print(f"Set B: {len(set_b)} targets (injected={injected_b['count']}, no injection={not_injected_b['count']})")
     print(f"Hits@10  clean={all_b['clean']['Hits@10']:.4f}  poisoned={all_b['poisoned']['Hits@10']:.4f}  delta={all_b['delta_poisoned_minus_clean']['Hits@10']:+.4f}")
     print(f"MRR      clean={all_b['clean']['MRR']:.4f}  poisoned={all_b['poisoned']['MRR']:.4f}  delta={all_b['delta_poisoned_minus_clean']['MRR']:+.4f}")
@@ -371,7 +372,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Evaluate MaSS UMLS clean vs poisoned TransE victims (RQ1, preliminary RQ2)")
+    parser = argparse.ArgumentParser(description="Evaluate an attack's UMLS clean vs poisoned TransE victim (RQ1, preliminary RQ2)")
     parser.add_argument("--clean-checkpoint", type=Path, default=VICTIM_DIR / "clean_transe.pt")
     parser.add_argument("--poisoned-checkpoint", type=Path, default=VICTIM_DIR / "poisoned_transe.pt")
     parser.add_argument("--train", type=Path, default=DATASET_DIR / "train.txt")
@@ -383,6 +384,8 @@ def main() -> None:
     parser.add_argument("--poisoning-summary", type=Path, default=POISONING_DIR / "poisoning_summary.csv")
     parser.add_argument("--training-summary", type=Path, default=VICTIM_DIR / "training_summary.json")
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument("--attack-name", default="MaSS",
+                        help="Label stored in RQ1/RQ2 provenance")
     parser.add_argument("--overwrite", action="store_true", help="Overwrite existing evaluation reports")
     args = parser.parse_args()
     run(args)

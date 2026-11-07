@@ -1,0 +1,214 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "physiologic_function",
+    "produces",
+    "indicator_reagent_or_diagnostic_aid"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 64,
+  "num_semantically_valid_templates": 2,
+  "num_selected_templates": 2,
+  "num_ranked_paths": 7,
+  "ranked_candidate_paths": [
+    {
+      "r1": "produces",
+      "intermediate_entity": "biologically_active_substance",
+      "r2": "interacts_with",
+      "first_triple": [
+        "physiologic_function",
+        "produces",
+        "biologically_active_substance"
+      ],
+      "second_triple": [
+        "biologically_active_substance",
+        "interacts_with",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "pra_confidence": 0.9616240435845533,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.5086281895637512,
+      "second_triple_score": -0.50531405210495,
+      "entity_score": -1.0139422416687012,
+      "lower_bound_score": -1.1715689599514008,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "nucleic_acid_nucleoside_or_nucleotide",
+      "r2": "interacts_with",
+      "first_triple": [
+        "physiologic_function",
+        "produces",
+        "nucleic_acid_nucleoside_or_nucleotide"
+      ],
+      "second_triple": [
+        "nucleic_acid_nucleoside_or_nucleotide",
+        "interacts_with",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "pra_confidence": 0.9616240435845533,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.7933752536773682,
+      "second_triple_score": -0.26091673970222473,
+      "entity_score": -1.054291993379593,
+      "lower_bound_score": -1.2119187116622925,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "amino_acid_peptide_or_protein",
+      "r2": "interacts_with",
+      "first_triple": [
+        "physiologic_function",
+        "produces",
+        "amino_acid_peptide_or_protein"
+      ],
+      "second_triple": [
+        "amino_acid_peptide_or_protein",
+        "interacts_with",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "pra_confidence": 0.9616240435845533,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.8794584274291992,
+      "second_triple_score": -0.23857538402080536,
+      "entity_score": -1.1180338114500046,
+      "lower_bound_score": -1.2756605297327042,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 3
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "organic_chemical",
+      "r2": "interacts_with",
+      "first_triple": [
+        "physiologic_function",
+        "produces",
+        "organic_chemical"
+      ],
+      "second_triple": [
+        "organic_chemical",
+        "interacts_with",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "pra_confidence": 0.9616240435845533,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.8036966919898987,
+      "second_triple_score": -0.340188592672348,
+      "entity_score": -1.1438852846622467,
+      "lower_bound_score": -1.3015120029449463,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 4
+    },
+    {
+      "r1": "result_of",
+      "intermediate_entity": "laboratory_procedure",
+      "r2": "analyzes",
+      "first_triple": [
+        "physiologic_function",
+        "result_of",
+        "laboratory_procedure"
+      ],
+      "second_triple": [
+        "laboratory_procedure",
+        "analyzes",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "pra_confidence": 0.9247121680365403,
+      "relation_score": -1.6552828550338745,
+      "first_triple_score": -1.2718724012374878,
+      "second_triple_score": -0.5019018650054932,
+      "entity_score": -1.773774266242981,
+      "lower_bound_score": -3.4290571212768555,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 5
+    },
+    {
+      "r1": "result_of",
+      "intermediate_entity": "diagnostic_procedure",
+      "r2": "analyzes",
+      "first_triple": [
+        "physiologic_function",
+        "result_of",
+        "diagnostic_procedure"
+      ],
+      "second_triple": [
+        "diagnostic_procedure",
+        "analyzes",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "pra_confidence": 0.9247121680365403,
+      "relation_score": -1.6552828550338745,
+      "first_triple_score": -1.3292877674102783,
+      "second_triple_score": -0.49036547541618347,
+      "entity_score": -1.8196532428264618,
+      "lower_bound_score": -3.4749360978603363,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 6
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "family_group",
+      "r2": "interacts_with",
+      "first_triple": [
+        "physiologic_function",
+        "produces",
+        "family_group"
+      ],
+      "second_triple": [
+        "family_group",
+        "interacts_with",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "pra_confidence": 0.9616240435845533,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -2.1734602451324463,
+      "second_triple_score": -1.8118102550506592,
+      "entity_score": -3.9852705001831055,
+      "lower_bound_score": -4.142897218465805,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 7
+    }
+  ]
+}

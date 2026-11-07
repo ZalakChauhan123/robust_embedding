@@ -1,0 +1,1586 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "biomedical_or_dental_material",
+    "affects",
+    "human"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 404,
+  "num_semantically_valid_templates": 12,
+  "num_selected_templates": 10,
+  "num_ranked_paths": 56,
+  "ranked_candidate_paths": [
+    {
+      "r1": "affects",
+      "intermediate_entity": "fungus",
+      "r2": "interacts_with",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "fungus"
+      ],
+      "second_triple": [
+        "fungus",
+        "interacts_with",
+        "human"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.7511600255966187,
+      "second_triple_score": -0.17727410793304443,
+      "entity_score": -0.9284341335296631,
+      "lower_bound_score": -1.0860608518123627,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "receptor",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "interacts_with",
+        "receptor"
+      ],
+      "second_triple": [
+        "receptor",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.1361812800168991,
+      "second_triple_score": -0.8158164024353027,
+      "entity_score": -0.9519976824522018,
+      "lower_bound_score": -1.1096243858337402,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "virus",
+      "r2": "interacts_with",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "virus"
+      ],
+      "second_triple": [
+        "virus",
+        "interacts_with",
+        "human"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.7077896595001221,
+      "second_triple_score": -0.2668749988079071,
+      "entity_score": -0.9746646583080292,
+      "lower_bound_score": -1.1322913765907288,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 3
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "antibiotic",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "interacts_with",
+        "antibiotic"
+      ],
+      "second_triple": [
+        "antibiotic",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.15376825630664825,
+      "second_triple_score": -0.8401981592178345,
+      "entity_score": -0.9939664155244827,
+      "lower_bound_score": -1.1515931189060211,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 4
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "fish",
+      "r2": "interacts_with",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "fish"
+      ],
+      "second_triple": [
+        "fish",
+        "interacts_with",
+        "human"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.8315223455429077,
+      "second_triple_score": -0.1825309693813324,
+      "entity_score": -1.0140533149242401,
+      "lower_bound_score": -1.1716800332069397,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 5
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "immunologic_factor",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "interacts_with",
+        "immunologic_factor"
+      ],
+      "second_triple": [
+        "immunologic_factor",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.17337767779827118,
+      "second_triple_score": -0.8418657779693604,
+      "entity_score": -1.0152434557676315,
+      "lower_bound_score": -1.17287015914917,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 6
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "bacterium",
+      "r2": "interacts_with",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "bacterium"
+      ],
+      "second_triple": [
+        "bacterium",
+        "interacts_with",
+        "human"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.8792878985404968,
+      "second_triple_score": -0.1523132175207138,
+      "entity_score": -1.0316011160612106,
+      "lower_bound_score": -1.1892278343439102,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 7
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "plant",
+      "r2": "interacts_with",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "plant"
+      ],
+      "second_triple": [
+        "plant",
+        "interacts_with",
+        "human"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.8507119417190552,
+      "second_triple_score": -0.18421302735805511,
+      "entity_score": -1.0349249690771103,
+      "lower_bound_score": -1.1925516873598099,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 8
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "mammal",
+      "r2": "interacts_with",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "mammal"
+      ],
+      "second_triple": [
+        "mammal",
+        "interacts_with",
+        "human"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.8165407180786133,
+      "second_triple_score": -0.2441871464252472,
+      "entity_score": -1.0607278645038605,
+      "lower_bound_score": -1.21835458278656,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 9
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "bird",
+      "r2": "interacts_with",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "bird"
+      ],
+      "second_triple": [
+        "bird",
+        "interacts_with",
+        "human"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.8582891821861267,
+      "second_triple_score": -0.20364195108413696,
+      "entity_score": -1.0619311332702637,
+      "lower_bound_score": -1.2195578515529633,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 10
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "amphibian",
+      "r2": "interacts_with",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "amphibian"
+      ],
+      "second_triple": [
+        "amphibian",
+        "interacts_with",
+        "human"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.8030516505241394,
+      "second_triple_score": -0.2643834054470062,
+      "entity_score": -1.0674350559711456,
+      "lower_bound_score": -1.2250617742538452,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 11
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "hazardous_or_poisonous_substance",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "interacts_with",
+        "hazardous_or_poisonous_substance"
+      ],
+      "second_triple": [
+        "hazardous_or_poisonous_substance",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.18279530107975006,
+      "second_triple_score": -0.9130135178565979,
+      "entity_score": -1.095808818936348,
+      "lower_bound_score": -1.2534355223178864,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 12
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "reptile",
+      "r2": "interacts_with",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "reptile"
+      ],
+      "second_triple": [
+        "reptile",
+        "interacts_with",
+        "human"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.8854259252548218,
+      "second_triple_score": -0.2176123410463333,
+      "entity_score": -1.103038266301155,
+      "lower_bound_score": -1.2606649845838547,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 13
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "chemical_viewed_functionally",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "interacts_with",
+        "chemical_viewed_functionally"
+      ],
+      "second_triple": [
+        "chemical_viewed_functionally",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.22917094826698303,
+      "second_triple_score": -0.9079150557518005,
+      "entity_score": -1.1370860040187836,
+      "lower_bound_score": -1.294712707400322,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 14
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "indicator_reagent_or_diagnostic_aid",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "interacts_with",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "second_triple": [
+        "indicator_reagent_or_diagnostic_aid",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.2333046942949295,
+      "second_triple_score": -0.9227392673492432,
+      "entity_score": -1.1560439616441727,
+      "lower_bound_score": -1.313670665025711,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 15
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "nucleic_acid_nucleoside_or_nucleotide",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "interacts_with",
+        "nucleic_acid_nucleoside_or_nucleotide"
+      ],
+      "second_triple": [
+        "nucleic_acid_nucleoside_or_nucleotide",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.27460426092147827,
+      "second_triple_score": -0.8895861506462097,
+      "entity_score": -1.164190411567688,
+      "lower_bound_score": -1.3218171149492264,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 16
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "hormone",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "interacts_with",
+        "hormone"
+      ],
+      "second_triple": [
+        "hormone",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.27188095450401306,
+      "second_triple_score": -0.8984745144844055,
+      "entity_score": -1.1703554689884186,
+      "lower_bound_score": -1.327982172369957,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 17
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "vitamin",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "interacts_with",
+        "vitamin"
+      ],
+      "second_triple": [
+        "vitamin",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.2571776509284973,
+      "second_triple_score": -0.9206649661064148,
+      "entity_score": -1.177842617034912,
+      "lower_bound_score": -1.3354693204164505,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 18
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "organ_or_tissue_function",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "organ_or_tissue_function"
+      ],
+      "second_triple": [
+        "organ_or_tissue_function",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9848459054889204,
+      "relation_score": -0.7996082305908203,
+      "first_triple_score": -0.34414681792259216,
+      "second_triple_score": -0.4191005229949951,
+      "entity_score": -0.7632473409175873,
+      "lower_bound_score": -1.5628555715084076,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 19
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "organism_function",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "organism_function"
+      ],
+      "second_triple": [
+        "organism_function",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9848459054889204,
+      "relation_score": -0.7996082305908203,
+      "first_triple_score": -0.3425943851470947,
+      "second_triple_score": -0.4258449971675873,
+      "entity_score": -0.768439382314682,
+      "lower_bound_score": -1.5680476129055023,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 20
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "neoplastic_process",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "neoplastic_process"
+      ],
+      "second_triple": [
+        "neoplastic_process",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9848459054889204,
+      "relation_score": -0.7996082305908203,
+      "first_triple_score": -0.3815311789512634,
+      "second_triple_score": -0.4242251217365265,
+      "entity_score": -0.8057563006877899,
+      "lower_bound_score": -1.6053645312786102,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 21
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "biologic_function",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "biologic_function"
+      ],
+      "second_triple": [
+        "biologic_function",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9848459054889204,
+      "relation_score": -0.7996082305908203,
+      "first_triple_score": -0.34724560379981995,
+      "second_triple_score": -0.4593510329723358,
+      "entity_score": -0.8065966367721558,
+      "lower_bound_score": -1.606204867362976,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 22
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "cell_or_molecular_dysfunction",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "cell_or_molecular_dysfunction"
+      ],
+      "second_triple": [
+        "cell_or_molecular_dysfunction",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9848459054889204,
+      "relation_score": -0.7996082305908203,
+      "first_triple_score": -0.3905494809150696,
+      "second_triple_score": -0.43561723828315735,
+      "entity_score": -0.8261667191982269,
+      "lower_bound_score": -1.6257749497890472,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 23
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "natural_phenomenon_or_process",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "natural_phenomenon_or_process"
+      ],
+      "second_triple": [
+        "natural_phenomenon_or_process",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9848459054889204,
+      "relation_score": -0.7996082305908203,
+      "first_triple_score": -0.36668187379837036,
+      "second_triple_score": -0.4727986454963684,
+      "entity_score": -0.8394805192947388,
+      "lower_bound_score": -1.639088749885559,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 24
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "cell_or_molecular_dysfunction",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "causes",
+        "cell_or_molecular_dysfunction"
+      ],
+      "second_triple": [
+        "cell_or_molecular_dysfunction",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9905755366119874,
+      "relation_score": -0.6990978717803955,
+      "first_triple_score": -0.6892890334129333,
+      "second_triple_score": -0.43561723828315735,
+      "entity_score": -1.1249062716960907,
+      "lower_bound_score": -1.8240041434764862,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 25
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "neoplastic_process",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "causes",
+        "neoplastic_process"
+      ],
+      "second_triple": [
+        "neoplastic_process",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9905755366119874,
+      "relation_score": -0.6990978717803955,
+      "first_triple_score": -0.7192513942718506,
+      "second_triple_score": -0.4242251217365265,
+      "entity_score": -1.143476516008377,
+      "lower_bound_score": -1.8425743877887726,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 26
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "chemical",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "chemical"
+      ],
+      "second_triple": [
+        "chemical",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.5593371391296387,
+      "second_triple_score": -0.8903402090072632,
+      "entity_score": -1.4496773481369019,
+      "lower_bound_score": -2.3827157616615295,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 27
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "clinical_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "clinical_attribute"
+      ],
+      "second_triple": [
+        "clinical_attribute",
+        "property_of",
+        "human"
+      ],
+      "pra_confidence": 0.9777238577324141,
+      "relation_score": -1.4830657243728638,
+      "first_triple_score": -0.5928817391395569,
+      "second_triple_score": -0.41807839274406433,
+      "entity_score": -1.0109601318836212,
+      "lower_bound_score": -2.494025856256485,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 28
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "organism_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "property_of",
+        "human"
+      ],
+      "pra_confidence": 0.9777238577324141,
+      "relation_score": -1.4830657243728638,
+      "first_triple_score": -0.5213369727134705,
+      "second_triple_score": -0.5058751106262207,
+      "entity_score": -1.0272120833396912,
+      "lower_bound_score": -2.510277807712555,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 29
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "chemical_viewed_functionally",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "chemical_viewed_functionally"
+      ],
+      "second_triple": [
+        "chemical_viewed_functionally",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.8213877081871033,
+      "second_triple_score": -0.9079150557518005,
+      "entity_score": -1.7293027639389038,
+      "lower_bound_score": -2.6623411774635315,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 30
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organic_chemical",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "organic_chemical"
+      ],
+      "second_triple": [
+        "organic_chemical",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.8591362237930298,
+      "second_triple_score": -0.9390856027603149,
+      "entity_score": -1.7982218265533447,
+      "lower_bound_score": -2.7312602400779724,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 31
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "chemical_viewed_structurally",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "chemical_viewed_structurally"
+      ],
+      "second_triple": [
+        "chemical_viewed_structurally",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.8127444982528687,
+      "second_triple_score": -1.032556414604187,
+      "entity_score": -1.8453009128570557,
+      "lower_bound_score": -2.7783393263816833,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 32
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "biologically_active_substance",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "biologically_active_substance"
+      ],
+      "second_triple": [
+        "biologically_active_substance",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.007728099822998,
+      "second_triple_score": -0.8494345545768738,
+      "entity_score": -1.8571626543998718,
+      "lower_bound_score": -2.7902010679244995,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 33
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "pharmacologic_substance",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "pharmacologic_substance"
+      ],
+      "second_triple": [
+        "pharmacologic_substance",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.0346291065216064,
+      "second_triple_score": -0.9753320813179016,
+      "entity_score": -2.009961187839508,
+      "lower_bound_score": -2.9429996013641357,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 34
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "organ_or_tissue_function",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "organ_or_tissue_function"
+      ],
+      "second_triple": [
+        "organ_or_tissue_function",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9905293422708435,
+      "relation_score": -1.239169716835022,
+      "first_triple_score": -0.34414681792259216,
+      "second_triple_score": -1.6194056272506714,
+      "entity_score": -1.9635524451732635,
+      "lower_bound_score": -3.2027221620082855,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 35
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "biologic_function",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "biologic_function"
+      ],
+      "second_triple": [
+        "biologic_function",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9905293422708435,
+      "relation_score": -1.239169716835022,
+      "first_triple_score": -0.34724560379981995,
+      "second_triple_score": -1.6225154399871826,
+      "entity_score": -1.9697610437870026,
+      "lower_bound_score": -3.2089307606220245,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 36
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "cell_function",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "cell_function"
+      ],
+      "second_triple": [
+        "cell_function",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9905293422708435,
+      "relation_score": -1.239169716835022,
+      "first_triple_score": -0.3452547490596771,
+      "second_triple_score": -1.6352750062942505,
+      "entity_score": -1.9805297553539276,
+      "lower_bound_score": -3.2196994721889496,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 37
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "natural_phenomenon_or_process",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "natural_phenomenon_or_process"
+      ],
+      "second_triple": [
+        "natural_phenomenon_or_process",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9905293422708435,
+      "relation_score": -1.239169716835022,
+      "first_triple_score": -0.36668187379837036,
+      "second_triple_score": -1.633417010307312,
+      "entity_score": -2.0000988841056824,
+      "lower_bound_score": -3.2392686009407043,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 38
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "cell_or_molecular_dysfunction",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "cell_or_molecular_dysfunction"
+      ],
+      "second_triple": [
+        "cell_or_molecular_dysfunction",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9905293422708435,
+      "relation_score": -1.239169716835022,
+      "first_triple_score": -0.3905494809150696,
+      "second_triple_score": -1.64231276512146,
+      "entity_score": -2.0328622460365295,
+      "lower_bound_score": -3.2720319628715515,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 39
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "anatomical_abnormality",
+      "r2": "part_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "causes",
+        "anatomical_abnormality"
+      ],
+      "second_triple": [
+        "anatomical_abnormality",
+        "part_of",
+        "human"
+      ],
+      "pra_confidence": 0.9972811251740029,
+      "relation_score": -1.4672962427139282,
+      "first_triple_score": -0.6360936164855957,
+      "second_triple_score": -1.172150731086731,
+      "entity_score": -1.8082443475723267,
+      "lower_bound_score": -3.275540590286255,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 40
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "biologic_function",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "biologic_function"
+      ],
+      "second_triple": [
+        "biologic_function",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.607823133468628,
+      "second_triple_score": -0.4593510329723358,
+      "entity_score": -2.0671741664409637,
+      "lower_bound_score": -3.767888754606247,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 41
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "natural_phenomenon_or_process",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "natural_phenomenon_or_process"
+      ],
+      "second_triple": [
+        "natural_phenomenon_or_process",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.5948445796966553,
+      "second_triple_score": -0.4727986454963684,
+      "entity_score": -2.0676432251930237,
+      "lower_bound_score": -3.768357813358307,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 42
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "molecular_function",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "molecular_function"
+      ],
+      "second_triple": [
+        "molecular_function",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.668359398841858,
+      "second_triple_score": -0.41530299186706543,
+      "entity_score": -2.0836623907089233,
+      "lower_bound_score": -3.7843769788742065,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 43
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organism_function",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "organism_function"
+      ],
+      "second_triple": [
+        "organism_function",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.6779520511627197,
+      "second_triple_score": -0.4258449971675873,
+      "entity_score": -2.103797048330307,
+      "lower_bound_score": -3.80451163649559,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 44
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "pathologic_function",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "pathologic_function"
+      ],
+      "second_triple": [
+        "pathologic_function",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.6778957843780518,
+      "second_triple_score": -0.4398043751716614,
+      "entity_score": -2.117700159549713,
+      "lower_bound_score": -3.8184147477149963,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 45
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "disease_or_syndrome",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "disease_or_syndrome"
+      ],
+      "second_triple": [
+        "disease_or_syndrome",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.6622908115386963,
+      "second_triple_score": -0.4673585295677185,
+      "entity_score": -2.129649341106415,
+      "lower_bound_score": -3.830363929271698,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 46
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "physiologic_function",
+      "r2": "process_of",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "physiologic_function"
+      ],
+      "second_triple": [
+        "physiologic_function",
+        "process_of",
+        "human"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.6998556852340698,
+      "second_triple_score": -0.4578160345554352,
+      "entity_score": -2.157671719789505,
+      "lower_bound_score": -3.858386307954788,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 47
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "health_care_activity",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "health_care_activity"
+      ],
+      "second_triple": [
+        "health_care_activity",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.5941747426986694,
+      "second_triple_score": -1.596772313117981,
+      "entity_score": -3.1909470558166504,
+      "lower_bound_score": -4.123985469341278,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 48
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "natural_phenomenon_or_process",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "natural_phenomenon_or_process"
+      ],
+      "second_triple": [
+        "natural_phenomenon_or_process",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.5948445796966553,
+      "second_triple_score": -1.633417010307312,
+      "entity_score": -3.2282615900039673,
+      "lower_bound_score": -4.161300003528595,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 49
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "biologic_function",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "biologic_function"
+      ],
+      "second_triple": [
+        "biologic_function",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.607823133468628,
+      "second_triple_score": -1.6225154399871826,
+      "entity_score": -3.2303385734558105,
+      "lower_bound_score": -4.163376986980438,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 50
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "anatomical_abnormality",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "causes",
+        "anatomical_abnormality"
+      ],
+      "second_triple": [
+        "anatomical_abnormality",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9766676901911038,
+      "relation_score": -1.881468415260315,
+      "first_triple_score": -0.6360936164855957,
+      "second_triple_score": -1.6584608554840088,
+      "entity_score": -2.2945544719696045,
+      "lower_bound_score": -4.176022887229919,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 51
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "disease_or_syndrome",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "causes",
+        "disease_or_syndrome"
+      ],
+      "second_triple": [
+        "disease_or_syndrome",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9766676901911038,
+      "relation_score": -1.881468415260315,
+      "first_triple_score": -0.6653233170509338,
+      "second_triple_score": -1.6357454061508179,
+      "entity_score": -2.3010687232017517,
+      "lower_bound_score": -4.182537138462067,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 52
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "research_activity",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "isa",
+        "research_activity"
+      ],
+      "second_triple": [
+        "research_activity",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.6796900033950806,
+      "second_triple_score": -1.5809248685836792,
+      "entity_score": -3.2606148719787598,
+      "lower_bound_score": -4.1936532855033875,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 53
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "acquired_abnormality",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "causes",
+        "acquired_abnormality"
+      ],
+      "second_triple": [
+        "acquired_abnormality",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9766676901911038,
+      "relation_score": -1.881468415260315,
+      "first_triple_score": -0.5980793237686157,
+      "second_triple_score": -1.7160980701446533,
+      "entity_score": -2.314177393913269,
+      "lower_bound_score": -4.195645809173584,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 54
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "neoplastic_process",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "causes",
+        "neoplastic_process"
+      ],
+      "second_triple": [
+        "neoplastic_process",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9766676901911038,
+      "relation_score": -1.881468415260315,
+      "first_triple_score": -0.7192513942718506,
+      "second_triple_score": -1.6099387407302856,
+      "entity_score": -2.3291901350021362,
+      "lower_bound_score": -4.210658550262451,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 55
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "cell_or_molecular_dysfunction",
+      "r2": "affects",
+      "first_triple": [
+        "biomedical_or_dental_material",
+        "causes",
+        "cell_or_molecular_dysfunction"
+      ],
+      "second_triple": [
+        "cell_or_molecular_dysfunction",
+        "affects",
+        "human"
+      ],
+      "pra_confidence": 0.9766676901911038,
+      "relation_score": -1.881468415260315,
+      "first_triple_score": -0.6892890334129333,
+      "second_triple_score": -1.64231276512146,
+      "entity_score": -2.3316017985343933,
+      "lower_bound_score": -4.213070213794708,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 56
+    }
+  ]
+}

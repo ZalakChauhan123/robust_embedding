@@ -1,0 +1,36 @@
+{
+  "experiment": "ComAttack UMLS pilot: ConvKB victim evaluation",
+  "attack_name": "ComAttack",
+  "victim_model": "ConvKB",
+  "implementation_variant": "standard_local_implementation",
+  "input_files": {
+    "clean_victim": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\ComAttack\\seed_42\\convkb_victim_models\\clean_convkb.pt",
+    "poisoned_victim": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\ComAttack\\seed_42\\convkb_victim_models\\poisoned_convkb.pt",
+    "set_A": "dataset_uml\\test.txt",
+    "set_B": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv",
+    "training_summary": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\ComAttack\\seed_42\\convkb_victim_models\\training_summary.json",
+    "poisoning_summary": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\ComAttack\\poisoning\\poisoning_summary.csv"
+  },
+  "num_clean_training_triples": 5216,
+  "num_poisoned_training_triples": 5416,
+  "num_injected_triples": 200,
+  "num_entities": 135,
+  "num_relations": 46,
+  "num_set_B_targets": 100,
+  "num_injected_targets": 100,
+  "num_not_injected_targets": 0,
+  "num_set_A_test_triples": 661,
+  "set_B_MRR_clean": 0.06015360914463654,
+  "set_B_MRR_poisoned": 0.06016727474088172,
+  "set_B_Hits_at_10_clean": 0.16,
+  "set_B_Hits_at_10_poisoned": 0.15,
+  "set_A_MRR_clean": 0.09520261153361106,
+  "set_A_MRR_poisoned": 0.060102663907774814,
+  "set_A_Hits_at_10_clean": 0.22844175491679275,
+  "set_A_Hits_at_10_poisoned": 0.14674735249621784,
+  "limitations": [
+    "One UMLS dataset and one random seed; results are preliminary.",
+    "ConvKB is an opaque-box victim relative to the TransE attacker surrogate.",
+    "The frozen targets were rank-qualified under TransE, not this victim."
+  ]
+}

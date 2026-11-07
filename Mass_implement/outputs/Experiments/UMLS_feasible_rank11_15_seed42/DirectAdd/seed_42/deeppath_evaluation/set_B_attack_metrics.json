@@ -1,0 +1,87 @@
+{
+  "research_question": "RQ1 — attack effectiveness (DirectAdd, DeepPath victim)",
+  "victim_model": "DeepPath",
+  "prediction": "TAIL only: (h*, r*, ?) ranked against every known entity",
+  "ranking_protocol": "filtered; same original train+valid+test facts for both models",
+  "filter_excludes": "injected edges and synthetic Set B targets",
+  "tie_policy": "average rank, consistent with the TransE evaluation",
+  "interpretation": "Higher poisoned MRR/Hits@10, or positive rank improvement, favors the attacker",
+  "set_B_all_targets": {
+    "count": 100,
+    "clean": {
+      "count": 100,
+      "MRR": 0.0636925384744325,
+      "Hits@1": 0.01,
+      "Hits@3": 0.05,
+      "Hits@10": 0.11,
+      "Mean_Rank": 39.99,
+      "Median_Rank": 37.5
+    },
+    "poisoned": {
+      "count": 100,
+      "MRR": 0.10217775243401123,
+      "Hits@1": 0.04,
+      "Hits@3": 0.08,
+      "Hits@10": 0.19,
+      "Mean_Rank": 33.1,
+      "Median_Rank": 28.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.038485213959578726,
+      "Hits@1": 0.03,
+      "Hits@3": 0.03,
+      "Hits@10": 0.08,
+      "Mean_Rank": -6.890000000000001,
+      "Median_Rank": -9.5
+    },
+    "num_improved_rank": 61,
+    "num_worsened_rank": 38,
+    "num_unchanged_rank": 1,
+    "num_new_hits_at_10": 12,
+    "num_lost_hits_at_10": 4,
+    "mean_rank_improvement_clean_minus_poisoned": 6.89
+  },
+  "set_B_injected_targets": {
+    "count": 100,
+    "clean": {
+      "count": 100,
+      "MRR": 0.0636925384744325,
+      "Hits@1": 0.01,
+      "Hits@3": 0.05,
+      "Hits@10": 0.11,
+      "Mean_Rank": 39.99,
+      "Median_Rank": 37.5
+    },
+    "poisoned": {
+      "count": 100,
+      "MRR": 0.10217775243401123,
+      "Hits@1": 0.04,
+      "Hits@3": 0.08,
+      "Hits@10": 0.19,
+      "Mean_Rank": 33.1,
+      "Median_Rank": 28.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.038485213959578726,
+      "Hits@1": 0.03,
+      "Hits@3": 0.03,
+      "Hits@10": 0.08,
+      "Mean_Rank": -6.890000000000001,
+      "Median_Rank": -9.5
+    },
+    "num_improved_rank": 61,
+    "num_worsened_rank": 38,
+    "num_unchanged_rank": 1,
+    "num_new_hits_at_10": 12,
+    "num_lost_hits_at_10": 4,
+    "mean_rank_improvement_clean_minus_poisoned": 6.89
+  },
+  "set_B_not_injected_targets": {
+    "count": 0,
+    "note": "No targets in this group"
+  },
+  "attack_name": "DirectAdd",
+  "implementation_variant": "local_supervised_two_hop_path_policy_not_official_DeepPath",
+  "opaque_box_note": "The frozen attacker surrogate is TransE while the victim is DeepPath.",
+  "target_protocol_note": "Set B was selected with TransE ranks 11–15, not this victim's ranks."
+}

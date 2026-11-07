@@ -1,0 +1,1619 @@
+{
+  "experiment": "UMLS feasibility-qualified MaSS Set B target selection",
+  "selection_rule": "clean seed-42 victim filtered tail rank in requested band and at least one complete candidate path legal under train/valid/test/Set-B leakage rules",
+  "requested_set_B_size": 100,
+  "actual_set_B_size": 100,
+  "clean_victim_rank_band": [
+    11.0,
+    30.0
+  ],
+  "candidate_sources": {
+    "targets": "Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_30_seed42\\candidate_pool\\setup\\set_B_target_triples.tsv",
+    "metadata": "Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_30_seed42\\candidate_pool\\setup\\target_setup_summary.json",
+    "feasibility_dir": "Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_30_seed42\\candidate_pool\\feasibility",
+    "clean_victim_checkpoint": "Mass_implement\\outputs\\Experiments\\UMLS_tail_v3\\rank20_mass_seed42\\baseline\\fixed_attack_seed42\\budget_2\\seed_42\\victim_models\\clean_transe.pt"
+  },
+  "all_targets_absent_from_original_train_valid_test": true,
+  "set_B_rows": [
+    {
+      "target_id": "target_001",
+      "source_target_id": "target_004",
+      "original_test_triple": [
+        "genetic_function",
+        "affects",
+        "plant"
+      ],
+      "target_triple": [
+        "genetic_function",
+        "affects",
+        "population_group"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 74
+    },
+    {
+      "target_id": "target_002",
+      "source_target_id": "target_006",
+      "original_test_triple": [
+        "cell_function",
+        "affects",
+        "disease_or_syndrome"
+      ],
+      "target_triple": [
+        "cell_function",
+        "affects",
+        "temporal_concept"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 24
+    },
+    {
+      "target_id": "target_003",
+      "source_target_id": "target_007",
+      "original_test_triple": [
+        "pathologic_function",
+        "result_of",
+        "disease_or_syndrome"
+      ],
+      "target_triple": [
+        "pathologic_function",
+        "result_of",
+        "mammal"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 61
+    },
+    {
+      "target_id": "target_004",
+      "source_target_id": "target_010",
+      "original_test_triple": [
+        "physiologic_function",
+        "result_of",
+        "human_caused_phenomenon_or_process"
+      ],
+      "target_triple": [
+        "physiologic_function",
+        "result_of",
+        "organism"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 53
+    },
+    {
+      "target_id": "target_005",
+      "source_target_id": "target_011",
+      "original_test_triple": [
+        "laboratory_procedure",
+        "analyzes",
+        "neuroreactive_substance_or_biogenic_amine"
+      ],
+      "target_triple": [
+        "laboratory_procedure",
+        "analyzes",
+        "molecular_function"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 1
+    },
+    {
+      "target_id": "target_006",
+      "source_target_id": "target_012",
+      "original_test_triple": [
+        "organ_or_tissue_function",
+        "co-occurs_with",
+        "molecular_function"
+      ],
+      "target_triple": [
+        "organ_or_tissue_function",
+        "co-occurs_with",
+        "organism_attribute"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 4
+    },
+    {
+      "target_id": "target_007",
+      "source_target_id": "target_013",
+      "original_test_triple": [
+        "mental_process",
+        "isa",
+        "organism_function"
+      ],
+      "target_triple": [
+        "mental_process",
+        "isa",
+        "physical_object"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 62
+    },
+    {
+      "target_id": "target_008",
+      "source_target_id": "target_014",
+      "original_test_triple": [
+        "vitamin",
+        "disrupts",
+        "organ_or_tissue_function"
+      ],
+      "target_triple": [
+        "vitamin",
+        "disrupts",
+        "injury_or_poisoning"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 11
+    },
+    {
+      "target_id": "target_009",
+      "source_target_id": "target_015",
+      "original_test_triple": [
+        "physiologic_function",
+        "result_of",
+        "congenital_abnormality"
+      ],
+      "target_triple": [
+        "physiologic_function",
+        "result_of",
+        "mammal"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 51
+    },
+    {
+      "target_id": "target_010",
+      "source_target_id": "target_016",
+      "original_test_triple": [
+        "hormone",
+        "interacts_with",
+        "enzyme"
+      ],
+      "target_triple": [
+        "hormone",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 20
+    },
+    {
+      "target_id": "target_011",
+      "source_target_id": "target_018",
+      "original_test_triple": [
+        "organism_function",
+        "affects",
+        "bird"
+      ],
+      "target_triple": [
+        "organism_function",
+        "affects",
+        "temporal_concept"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 22
+    },
+    {
+      "target_id": "target_012",
+      "source_target_id": "target_019",
+      "original_test_triple": [
+        "acquired_abnormality",
+        "affects",
+        "virus"
+      ],
+      "target_triple": [
+        "acquired_abnormality",
+        "affects",
+        "cell_component"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 23
+    },
+    {
+      "target_id": "target_013",
+      "source_target_id": "target_020",
+      "original_test_triple": [
+        "pathologic_function",
+        "affects",
+        "biologic_function"
+      ],
+      "target_triple": [
+        "pathologic_function",
+        "affects",
+        "patient_or_disabled_group"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 63
+    },
+    {
+      "target_id": "target_014",
+      "source_target_id": "target_021",
+      "original_test_triple": [
+        "disease_or_syndrome",
+        "process_of",
+        "genetic_function"
+      ],
+      "target_triple": [
+        "disease_or_syndrome",
+        "process_of",
+        "age_group"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 68
+    },
+    {
+      "target_id": "target_015",
+      "source_target_id": "target_022",
+      "original_test_triple": [
+        "experimental_model_of_disease",
+        "affects",
+        "biologic_function"
+      ],
+      "target_triple": [
+        "experimental_model_of_disease",
+        "affects",
+        "embryonic_structure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 16
+    },
+    {
+      "target_id": "target_016",
+      "source_target_id": "target_027",
+      "original_test_triple": [
+        "mental_or_behavioral_dysfunction",
+        "associated_with",
+        "organism_attribute"
+      ],
+      "target_triple": [
+        "mental_or_behavioral_dysfunction",
+        "associated_with",
+        "amphibian"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 1
+    },
+    {
+      "target_id": "target_017",
+      "source_target_id": "target_029",
+      "original_test_triple": [
+        "substance",
+        "issue_in",
+        "occupation_or_discipline"
+      ],
+      "target_triple": [
+        "substance",
+        "issue_in",
+        "substance"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 1
+    },
+    {
+      "target_id": "target_018",
+      "source_target_id": "target_032",
+      "original_test_triple": [
+        "mental_or_behavioral_dysfunction",
+        "result_of",
+        "environmental_effect_of_humans"
+      ],
+      "target_triple": [
+        "mental_or_behavioral_dysfunction",
+        "result_of",
+        "body_part_organ_or_organ_component"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 13
+    },
+    {
+      "target_id": "target_019",
+      "source_target_id": "target_034",
+      "original_test_triple": [
+        "chemical",
+        "affects",
+        "genetic_function"
+      ],
+      "target_triple": [
+        "chemical",
+        "affects",
+        "fish"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 33
+    },
+    {
+      "target_id": "target_020",
+      "source_target_id": "target_035",
+      "original_test_triple": [
+        "group",
+        "exhibits",
+        "individual_behavior"
+      ],
+      "target_triple": [
+        "group",
+        "exhibits",
+        "organization"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 11
+    },
+    {
+      "target_id": "target_021",
+      "source_target_id": "target_037",
+      "original_test_triple": [
+        "mental_or_behavioral_dysfunction",
+        "affects",
+        "mammal"
+      ],
+      "target_triple": [
+        "mental_or_behavioral_dysfunction",
+        "affects",
+        "embryonic_structure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 17
+    },
+    {
+      "target_id": "target_022",
+      "source_target_id": "target_038",
+      "original_test_triple": [
+        "cell_component",
+        "produces",
+        "receptor"
+      ],
+      "target_triple": [
+        "cell_component",
+        "produces",
+        "intellectual_product"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 44
+    },
+    {
+      "target_id": "target_023",
+      "source_target_id": "target_039",
+      "original_test_triple": [
+        "plant",
+        "interacts_with",
+        "alga"
+      ],
+      "target_triple": [
+        "plant",
+        "interacts_with",
+        "phenomenon_or_process"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 7
+    },
+    {
+      "target_id": "target_024",
+      "source_target_id": "target_041",
+      "original_test_triple": [
+        "hormone",
+        "complicates",
+        "physiologic_function"
+      ],
+      "target_triple": [
+        "hormone",
+        "complicates",
+        "sign_or_symptom"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 66
+    },
+    {
+      "target_id": "target_025",
+      "source_target_id": "target_042",
+      "original_test_triple": [
+        "element_ion_or_isotope",
+        "interacts_with",
+        "vitamin"
+      ],
+      "target_triple": [
+        "element_ion_or_isotope",
+        "interacts_with",
+        "physical_object"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 3
+    },
+    {
+      "target_id": "target_026",
+      "source_target_id": "target_043",
+      "original_test_triple": [
+        "embryonic_structure",
+        "location_of",
+        "fungus"
+      ],
+      "target_triple": [
+        "embryonic_structure",
+        "location_of",
+        "health_care_activity"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 40
+    },
+    {
+      "target_id": "target_027",
+      "source_target_id": "target_044",
+      "original_test_triple": [
+        "congenital_abnormality",
+        "manifestation_of",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "target_triple": [
+        "congenital_abnormality",
+        "manifestation_of",
+        "fully_formed_anatomical_structure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 11
+    },
+    {
+      "target_id": "target_028",
+      "source_target_id": "target_045",
+      "original_test_triple": [
+        "enzyme",
+        "disrupts",
+        "cell_function"
+      ],
+      "target_triple": [
+        "enzyme",
+        "disrupts",
+        "injury_or_poisoning"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 12
+    },
+    {
+      "target_id": "target_029",
+      "source_target_id": "target_047",
+      "original_test_triple": [
+        "disease_or_syndrome",
+        "result_of",
+        "mental_process"
+      ],
+      "target_triple": [
+        "disease_or_syndrome",
+        "result_of",
+        "plant"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 32
+    },
+    {
+      "target_id": "target_030",
+      "source_target_id": "target_048",
+      "original_test_triple": [
+        "pathologic_function",
+        "issue_in",
+        "occupation_or_discipline"
+      ],
+      "target_triple": [
+        "pathologic_function",
+        "issue_in",
+        "organism_attribute"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 1
+    },
+    {
+      "target_id": "target_031",
+      "source_target_id": "target_050",
+      "original_test_triple": [
+        "physiologic_function",
+        "produces",
+        "biologically_active_substance"
+      ],
+      "target_triple": [
+        "physiologic_function",
+        "produces",
+        "substance"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 2
+    },
+    {
+      "target_id": "target_032",
+      "source_target_id": "target_051",
+      "original_test_triple": [
+        "fully_formed_anatomical_structure",
+        "location_of",
+        "virus"
+      ],
+      "target_triple": [
+        "fully_formed_anatomical_structure",
+        "location_of",
+        "finding"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 23
+    },
+    {
+      "target_id": "target_033",
+      "source_target_id": "target_052",
+      "original_test_triple": [
+        "mental_process",
+        "process_of",
+        "vertebrate"
+      ],
+      "target_triple": [
+        "mental_process",
+        "process_of",
+        "fully_formed_anatomical_structure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 55
+    },
+    {
+      "target_id": "target_034",
+      "source_target_id": "target_053",
+      "original_test_triple": [
+        "chemical",
+        "causes",
+        "disease_or_syndrome"
+      ],
+      "target_triple": [
+        "chemical",
+        "causes",
+        "tissue"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 2
+    },
+    {
+      "target_id": "target_035",
+      "source_target_id": "target_054",
+      "original_test_triple": [
+        "organization",
+        "location_of",
+        "educational_activity"
+      ],
+      "target_triple": [
+        "organization",
+        "location_of",
+        "biologic_function"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 52
+    },
+    {
+      "target_id": "target_036",
+      "source_target_id": "target_055",
+      "original_test_triple": [
+        "molecular_function",
+        "affects",
+        "animal"
+      ],
+      "target_triple": [
+        "molecular_function",
+        "affects",
+        "anatomical_structure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 40
+    },
+    {
+      "target_id": "target_037",
+      "source_target_id": "target_056",
+      "original_test_triple": [
+        "physiologic_function",
+        "affects",
+        "archaeon"
+      ],
+      "target_triple": [
+        "physiologic_function",
+        "affects",
+        "population_group"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 63
+    },
+    {
+      "target_id": "target_038",
+      "source_target_id": "target_059",
+      "original_test_triple": [
+        "disease_or_syndrome",
+        "affects",
+        "fish"
+      ],
+      "target_triple": [
+        "disease_or_syndrome",
+        "affects",
+        "embryonic_structure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 17
+    },
+    {
+      "target_id": "target_039",
+      "source_target_id": "target_060",
+      "original_test_triple": [
+        "fully_formed_anatomical_structure",
+        "part_of",
+        "amphibian"
+      ],
+      "target_triple": [
+        "fully_formed_anatomical_structure",
+        "part_of",
+        "molecular_function"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 11
+    },
+    {
+      "target_id": "target_040",
+      "source_target_id": "target_061",
+      "original_test_triple": [
+        "natural_phenomenon_or_process",
+        "affects",
+        "cell_function"
+      ],
+      "target_triple": [
+        "natural_phenomenon_or_process",
+        "affects",
+        "virus"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 35
+    },
+    {
+      "target_id": "target_041",
+      "source_target_id": "target_062",
+      "original_test_triple": [
+        "organism_function",
+        "produces",
+        "vitamin"
+      ],
+      "target_triple": [
+        "organism_function",
+        "produces",
+        "substance"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 2
+    },
+    {
+      "target_id": "target_042",
+      "source_target_id": "target_063",
+      "original_test_triple": [
+        "neoplastic_process",
+        "result_of",
+        "acquired_abnormality"
+      ],
+      "target_triple": [
+        "neoplastic_process",
+        "result_of",
+        "laboratory_or_test_result"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 51
+    },
+    {
+      "target_id": "target_043",
+      "source_target_id": "target_064",
+      "original_test_triple": [
+        "injury_or_poisoning",
+        "complicates",
+        "experimental_model_of_disease"
+      ],
+      "target_triple": [
+        "injury_or_poisoning",
+        "complicates",
+        "sign_or_symptom"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 57
+    },
+    {
+      "target_id": "target_044",
+      "source_target_id": "target_065",
+      "original_test_triple": [
+        "receptor",
+        "causes",
+        "pathologic_function"
+      ],
+      "target_triple": [
+        "receptor",
+        "causes",
+        "fungus"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 10
+    },
+    {
+      "target_id": "target_045",
+      "source_target_id": "target_066",
+      "original_test_triple": [
+        "experimental_model_of_disease",
+        "result_of",
+        "health_care_activity"
+      ],
+      "target_triple": [
+        "experimental_model_of_disease",
+        "result_of",
+        "mammal"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 63
+    },
+    {
+      "target_id": "target_046",
+      "source_target_id": "target_070",
+      "original_test_triple": [
+        "cell_or_molecular_dysfunction",
+        "result_of",
+        "organism_function"
+      ],
+      "target_triple": [
+        "cell_or_molecular_dysfunction",
+        "result_of",
+        "fully_formed_anatomical_structure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 51
+    },
+    {
+      "target_id": "target_047",
+      "source_target_id": "target_071",
+      "original_test_triple": [
+        "virus",
+        "location_of",
+        "hormone"
+      ],
+      "target_triple": [
+        "virus",
+        "location_of",
+        "archaeon"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 25
+    },
+    {
+      "target_id": "target_048",
+      "source_target_id": "target_072",
+      "original_test_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "chemical_viewed_functionally"
+      ],
+      "target_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "archaeon"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 19
+    },
+    {
+      "target_id": "target_049",
+      "source_target_id": "target_076",
+      "original_test_triple": [
+        "diagnostic_procedure",
+        "associated_with",
+        "congenital_abnormality"
+      ],
+      "target_triple": [
+        "diagnostic_procedure",
+        "associated_with",
+        "reptile"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 9
+    },
+    {
+      "target_id": "target_050",
+      "source_target_id": "target_078",
+      "original_test_triple": [
+        "laboratory_procedure",
+        "assesses_effect_of",
+        "disease_or_syndrome"
+      ],
+      "target_triple": [
+        "laboratory_procedure",
+        "assesses_effect_of",
+        "bacterium"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 16
+    },
+    {
+      "target_id": "target_051",
+      "source_target_id": "target_079",
+      "original_test_triple": [
+        "laboratory_procedure",
+        "affects",
+        "organ_or_tissue_function"
+      ],
+      "target_triple": [
+        "laboratory_procedure",
+        "affects",
+        "occupational_activity"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 52
+    },
+    {
+      "target_id": "target_052",
+      "source_target_id": "target_080",
+      "original_test_triple": [
+        "gene_or_genome",
+        "location_of",
+        "mental_process"
+      ],
+      "target_triple": [
+        "gene_or_genome",
+        "location_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 19
+    },
+    {
+      "target_id": "target_053",
+      "source_target_id": "target_081",
+      "original_test_triple": [
+        "pathologic_function",
+        "process_of",
+        "archaeon"
+      ],
+      "target_triple": [
+        "pathologic_function",
+        "process_of",
+        "population_group"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 50
+    },
+    {
+      "target_id": "target_054",
+      "source_target_id": "target_082",
+      "original_test_triple": [
+        "mental_process",
+        "produces",
+        "biologically_active_substance"
+      ],
+      "target_triple": [
+        "mental_process",
+        "produces",
+        "substance"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 2
+    },
+    {
+      "target_id": "target_055",
+      "source_target_id": "target_083",
+      "original_test_triple": [
+        "congenital_abnormality",
+        "part_of",
+        "bacterium"
+      ],
+      "target_triple": [
+        "congenital_abnormality",
+        "part_of",
+        "phenomenon_or_process"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 7
+    },
+    {
+      "target_id": "target_056",
+      "source_target_id": "target_084",
+      "original_test_triple": [
+        "group_attribute",
+        "property_of",
+        "family_group"
+      ],
+      "target_triple": [
+        "group_attribute",
+        "property_of",
+        "organism"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 6
+    },
+    {
+      "target_id": "target_057",
+      "source_target_id": "target_085",
+      "original_test_triple": [
+        "neoplastic_process",
+        "affects",
+        "amphibian"
+      ],
+      "target_triple": [
+        "neoplastic_process",
+        "affects",
+        "embryonic_structure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 12
+    },
+    {
+      "target_id": "target_058",
+      "source_target_id": "target_088",
+      "original_test_triple": [
+        "organ_or_tissue_function",
+        "produces",
+        "hormone"
+      ],
+      "target_triple": [
+        "organ_or_tissue_function",
+        "produces",
+        "substance"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 2
+    },
+    {
+      "target_id": "target_059",
+      "source_target_id": "target_089",
+      "original_test_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "disease_or_syndrome"
+      ],
+      "target_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "fully_formed_anatomical_structure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 13
+    },
+    {
+      "target_id": "target_060",
+      "source_target_id": "target_090",
+      "original_test_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "natural_phenomenon_or_process"
+      ],
+      "target_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "gene_or_genome"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 8
+    },
+    {
+      "target_id": "target_061",
+      "source_target_id": "target_091",
+      "original_test_triple": [
+        "cell_component",
+        "location_of",
+        "genetic_function"
+      ],
+      "target_triple": [
+        "cell_component",
+        "location_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 13
+    },
+    {
+      "target_id": "target_062",
+      "source_target_id": "target_092",
+      "original_test_triple": [
+        "organism_attribute",
+        "result_of",
+        "disease_or_syndrome"
+      ],
+      "target_triple": [
+        "organism_attribute",
+        "result_of",
+        "vertebrate"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 62
+    },
+    {
+      "target_id": "target_063",
+      "source_target_id": "target_094",
+      "original_test_triple": [
+        "genetic_function",
+        "result_of",
+        "human_caused_phenomenon_or_process"
+      ],
+      "target_triple": [
+        "genetic_function",
+        "result_of",
+        "mammal"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 52
+    },
+    {
+      "target_id": "target_064",
+      "source_target_id": "target_095",
+      "original_test_triple": [
+        "therapeutic_or_preventive_procedure",
+        "affects",
+        "cell_function"
+      ],
+      "target_triple": [
+        "therapeutic_or_preventive_procedure",
+        "affects",
+        "daily_or_recreational_activity"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 34
+    },
+    {
+      "target_id": "target_065",
+      "source_target_id": "target_096",
+      "original_test_triple": [
+        "pathologic_function",
+        "result_of",
+        "organism_function"
+      ],
+      "target_triple": [
+        "pathologic_function",
+        "result_of",
+        "organism"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 64
+    },
+    {
+      "target_id": "target_066",
+      "source_target_id": "target_097",
+      "original_test_triple": [
+        "therapeutic_or_preventive_procedure",
+        "complicates",
+        "pathologic_function"
+      ],
+      "target_triple": [
+        "therapeutic_or_preventive_procedure",
+        "complicates",
+        "organism_attribute"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 54
+    },
+    {
+      "target_id": "target_067",
+      "source_target_id": "target_098",
+      "original_test_triple": [
+        "cell_or_molecular_dysfunction",
+        "process_of",
+        "bird"
+      ],
+      "target_triple": [
+        "cell_or_molecular_dysfunction",
+        "process_of",
+        "event"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 24
+    },
+    {
+      "target_id": "target_068",
+      "source_target_id": "target_100",
+      "original_test_triple": [
+        "pathologic_function",
+        "result_of",
+        "anatomical_abnormality"
+      ],
+      "target_triple": [
+        "pathologic_function",
+        "result_of",
+        "plant"
+      ],
+      "clean_filtered_tail_rank": 19.0,
+      "legal_paths_in_final_set": 42
+    },
+    {
+      "target_id": "target_069",
+      "source_target_id": "target_102",
+      "original_test_triple": [
+        "biologically_active_substance",
+        "disrupts",
+        "gene_or_genome"
+      ],
+      "target_triple": [
+        "biologically_active_substance",
+        "disrupts",
+        "injury_or_poisoning"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 10
+    },
+    {
+      "target_id": "target_070",
+      "source_target_id": "target_105",
+      "original_test_triple": [
+        "molecular_function",
+        "result_of",
+        "experimental_model_of_disease"
+      ],
+      "target_triple": [
+        "molecular_function",
+        "result_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 63
+    },
+    {
+      "target_id": "target_071",
+      "source_target_id": "target_106",
+      "original_test_triple": [
+        "disease_or_syndrome",
+        "affects",
+        "cell_or_molecular_dysfunction"
+      ],
+      "target_triple": [
+        "disease_or_syndrome",
+        "affects",
+        "finding"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 74
+    },
+    {
+      "target_id": "target_072",
+      "source_target_id": "target_108",
+      "original_test_triple": [
+        "therapeutic_or_preventive_procedure",
+        "complicates",
+        "cell_function"
+      ],
+      "target_triple": [
+        "therapeutic_or_preventive_procedure",
+        "complicates",
+        "machine_activity"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 1
+    },
+    {
+      "target_id": "target_073",
+      "source_target_id": "target_110",
+      "original_test_triple": [
+        "disease_or_syndrome",
+        "process_of",
+        "pathologic_function"
+      ],
+      "target_triple": [
+        "disease_or_syndrome",
+        "process_of",
+        "sign_or_symptom"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 66
+    },
+    {
+      "target_id": "target_074",
+      "source_target_id": "target_111",
+      "original_test_triple": [
+        "molecular_function",
+        "affects",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "target_triple": [
+        "molecular_function",
+        "affects",
+        "population_group"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 58
+    },
+    {
+      "target_id": "target_075",
+      "source_target_id": "target_112",
+      "original_test_triple": [
+        "organism_function",
+        "affects",
+        "alga"
+      ],
+      "target_triple": [
+        "organism_function",
+        "affects",
+        "population_group"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 63
+    },
+    {
+      "target_id": "target_076",
+      "source_target_id": "target_113",
+      "original_test_triple": [
+        "neoplastic_process",
+        "produces",
+        "tissue"
+      ],
+      "target_triple": [
+        "neoplastic_process",
+        "produces",
+        "substance"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 2
+    },
+    {
+      "target_id": "target_077",
+      "source_target_id": "target_114",
+      "original_test_triple": [
+        "molecular_function",
+        "result_of",
+        "natural_phenomenon_or_process"
+      ],
+      "target_triple": [
+        "molecular_function",
+        "result_of",
+        "bacterium"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 32
+    },
+    {
+      "target_id": "target_078",
+      "source_target_id": "target_116",
+      "original_test_triple": [
+        "gene_or_genome",
+        "part_of",
+        "plant"
+      ],
+      "target_triple": [
+        "gene_or_genome",
+        "part_of",
+        "conceptual_entity"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 7
+    },
+    {
+      "target_id": "target_079",
+      "source_target_id": "target_117",
+      "original_test_triple": [
+        "therapeutic_or_preventive_procedure",
+        "prevents",
+        "neoplastic_process"
+      ],
+      "target_triple": [
+        "therapeutic_or_preventive_procedure",
+        "prevents",
+        "laboratory_procedure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 17
+    },
+    {
+      "target_id": "target_080",
+      "source_target_id": "target_118",
+      "original_test_triple": [
+        "cell_function",
+        "result_of",
+        "mental_process"
+      ],
+      "target_triple": [
+        "cell_function",
+        "result_of",
+        "tissue"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 10
+    },
+    {
+      "target_id": "target_081",
+      "source_target_id": "target_119",
+      "original_test_triple": [
+        "cell_or_molecular_dysfunction",
+        "affects",
+        "bird"
+      ],
+      "target_triple": [
+        "cell_or_molecular_dysfunction",
+        "affects",
+        "embryonic_structure"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 16
+    },
+    {
+      "target_id": "target_082",
+      "source_target_id": "target_120",
+      "original_test_triple": [
+        "laboratory_procedure",
+        "assesses_effect_of",
+        "element_ion_or_isotope"
+      ],
+      "target_triple": [
+        "laboratory_procedure",
+        "assesses_effect_of",
+        "cell_component"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 20
+    },
+    {
+      "target_id": "target_083",
+      "source_target_id": "target_122",
+      "original_test_triple": [
+        "fully_formed_anatomical_structure",
+        "part_of",
+        "archaeon"
+      ],
+      "target_triple": [
+        "fully_formed_anatomical_structure",
+        "part_of",
+        "spatial_concept"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 8
+    },
+    {
+      "target_id": "target_084",
+      "source_target_id": "target_125",
+      "original_test_triple": [
+        "anatomical_structure",
+        "part_of",
+        "fungus"
+      ],
+      "target_triple": [
+        "anatomical_structure",
+        "part_of",
+        "medical_device"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 9
+    },
+    {
+      "target_id": "target_085",
+      "source_target_id": "target_127",
+      "original_test_triple": [
+        "fully_formed_anatomical_structure",
+        "produces",
+        "carbohydrate"
+      ],
+      "target_triple": [
+        "fully_formed_anatomical_structure",
+        "produces",
+        "intellectual_product"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 37
+    },
+    {
+      "target_id": "target_086",
+      "source_target_id": "target_130",
+      "original_test_triple": [
+        "neoplastic_process",
+        "isa",
+        "disease_or_syndrome"
+      ],
+      "target_triple": [
+        "neoplastic_process",
+        "isa",
+        "physical_object"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 64
+    },
+    {
+      "target_id": "target_087",
+      "source_target_id": "target_132",
+      "original_test_triple": [
+        "organ_or_tissue_function",
+        "affects",
+        "organism_function"
+      ],
+      "target_triple": [
+        "organ_or_tissue_function",
+        "affects",
+        "temporal_concept"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 21
+    },
+    {
+      "target_id": "target_088",
+      "source_target_id": "target_133",
+      "original_test_triple": [
+        "immunologic_factor",
+        "complicates",
+        "disease_or_syndrome"
+      ],
+      "target_triple": [
+        "immunologic_factor",
+        "complicates",
+        "plant"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 15
+    },
+    {
+      "target_id": "target_089",
+      "source_target_id": "target_134",
+      "original_test_triple": [
+        "cell_function",
+        "result_of",
+        "genetic_function"
+      ],
+      "target_triple": [
+        "cell_function",
+        "result_of",
+        "plant"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 29
+    },
+    {
+      "target_id": "target_090",
+      "source_target_id": "target_135",
+      "original_test_triple": [
+        "mental_process",
+        "affects",
+        "bacterium"
+      ],
+      "target_triple": [
+        "mental_process",
+        "affects",
+        "population_group"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 69
+    },
+    {
+      "target_id": "target_091",
+      "source_target_id": "target_137",
+      "original_test_triple": [
+        "experimental_model_of_disease",
+        "result_of",
+        "neoplastic_process"
+      ],
+      "target_triple": [
+        "experimental_model_of_disease",
+        "result_of",
+        "finding"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 75
+    },
+    {
+      "target_id": "target_092",
+      "source_target_id": "target_138",
+      "original_test_triple": [
+        "injury_or_poisoning",
+        "complicates",
+        "disease_or_syndrome"
+      ],
+      "target_triple": [
+        "injury_or_poisoning",
+        "complicates",
+        "vertebrate"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 33
+    },
+    {
+      "target_id": "target_093",
+      "source_target_id": "target_139",
+      "original_test_triple": [
+        "pharmacologic_substance",
+        "interacts_with",
+        "neuroreactive_substance_or_biogenic_amine"
+      ],
+      "target_triple": [
+        "pharmacologic_substance",
+        "interacts_with",
+        "research_device"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 39
+    },
+    {
+      "target_id": "target_094",
+      "source_target_id": "target_144",
+      "original_test_triple": [
+        "finding",
+        "isa",
+        "conceptual_entity"
+      ],
+      "target_triple": [
+        "finding",
+        "isa",
+        "organism_attribute"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 27
+    },
+    {
+      "target_id": "target_095",
+      "source_target_id": "target_145",
+      "original_test_triple": [
+        "inorganic_chemical",
+        "causes",
+        "cell_or_molecular_dysfunction"
+      ],
+      "target_triple": [
+        "inorganic_chemical",
+        "causes",
+        "tissue"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 1
+    },
+    {
+      "target_id": "target_096",
+      "source_target_id": "target_146",
+      "original_test_triple": [
+        "fully_formed_anatomical_structure",
+        "location_of",
+        "molecular_function"
+      ],
+      "target_triple": [
+        "fully_formed_anatomical_structure",
+        "location_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 12
+    },
+    {
+      "target_id": "target_097",
+      "source_target_id": "target_150",
+      "original_test_triple": [
+        "cell",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "target_triple": [
+        "cell",
+        "location_of",
+        "immunologic_factor"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 41
+    },
+    {
+      "target_id": "target_098",
+      "source_target_id": "target_151",
+      "original_test_triple": [
+        "organic_chemical",
+        "affects",
+        "neoplastic_process"
+      ],
+      "target_triple": [
+        "organic_chemical",
+        "affects",
+        "cell_component"
+      ],
+      "clean_filtered_tail_rank": 20.0,
+      "legal_paths_in_final_set": 15
+    },
+    {
+      "target_id": "target_099",
+      "source_target_id": "target_152",
+      "original_test_triple": [
+        "cell_or_molecular_dysfunction",
+        "process_of",
+        "natural_phenomenon_or_process"
+      ],
+      "target_triple": [
+        "cell_or_molecular_dysfunction",
+        "process_of",
+        "family_group"
+      ],
+      "clean_filtered_tail_rank": 21.0,
+      "legal_paths_in_final_set": 70
+    },
+    {
+      "target_id": "target_100",
+      "source_target_id": "target_154",
+      "original_test_triple": [
+        "fully_formed_anatomical_structure",
+        "part_of",
+        "bird"
+      ],
+      "target_triple": [
+        "fully_formed_anatomical_structure",
+        "part_of",
+        "conceptual_entity"
+      ],
+      "clean_filtered_tail_rank": 19.0,
+      "legal_paths_in_final_set": 7
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "experiment": "MaSS UMLS pilot: TransE victim evaluation",
+  "input_files": {
+    "clean_victim": "Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_30_seed42\\baseline\\seed_42\\victim_models\\clean_transe.pt",
+    "poisoned_victim": "Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_30_seed42\\baseline\\seed_42\\victim_models\\poisoned_transe.pt",
+    "set_A": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt",
+    "set_B": "Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_30_seed42\\setup\\set_B_target_triples.tsv",
+    "training_summary": "Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_30_seed42\\baseline\\seed_42\\victim_models\\training_summary.json",
+    "poisoning_summary": "Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_30_seed42\\baseline\\poisoning\\poisoning_summary.csv"
+  },
+  "num_clean_training_triples": 5216,
+  "num_poisoned_training_triples": 5374,
+  "num_injected_triples": 158,
+  "num_entities": 135,
+  "num_relations": 46,
+  "num_set_B_targets": 100,
+  "num_injected_targets": 93,
+  "num_not_injected_targets": 7,
+  "num_set_A_test_triples": 661,
+  "set_B_MRR_clean": 0.04964786967418546,
+  "set_B_MRR_poisoned": 0.06741906353067388,
+  "set_B_Hits_at_10_clean": 0.0,
+  "set_B_Hits_at_10_poisoned": 0.08,
+  "set_A_MRR_clean": 0.4978775377900342,
+  "set_A_MRR_poisoned": 0.4870874903116616,
+  "set_A_Hits_at_10_clean": 0.8078668683812406,
+  "set_A_Hits_at_10_poisoned": 0.8169440242057489,
+  "limitations": [
+    "One UMLS dataset and one random seed; results are preliminary.",
+    "TransE only: no opaque-box KGE transferability test yet.",
+    "This evaluation does not compare against DirectAdd or ComAttack."
+  ]
+}

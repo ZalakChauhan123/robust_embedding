@@ -1,0 +1,1530 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "inorganic_chemical",
+    "affects",
+    "fungus"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 404,
+  "num_semantically_valid_templates": 14,
+  "num_selected_templates": 10,
+  "num_ranked_paths": 54,
+  "ranked_candidate_paths": [
+    {
+      "r1": "affects",
+      "intermediate_entity": "cell_function",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "cell_function"
+      ],
+      "second_triple": [
+        "cell_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9848459054889204,
+      "relation_score": -0.7996082305908203,
+      "first_triple_score": -0.17187833786010742,
+      "second_triple_score": -0.2342170625925064,
+      "entity_score": -0.40609540045261383,
+      "lower_bound_score": -1.2057036310434341,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 1
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "molecular_function",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "molecular_function"
+      ],
+      "second_triple": [
+        "molecular_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9848459054889204,
+      "relation_score": -0.7996082305908203,
+      "first_triple_score": -0.17520105838775635,
+      "second_triple_score": -0.24382203817367554,
+      "entity_score": -0.4190230965614319,
+      "lower_bound_score": -1.2186313271522522,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "pharmacologic_substance",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "interacts_with",
+        "pharmacologic_substance"
+      ],
+      "second_triple": [
+        "pharmacologic_substance",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.1993071287870407,
+      "second_triple_score": -0.8735631704330444,
+      "entity_score": -1.0728702992200851,
+      "lower_bound_score": -1.2304970026016235,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 3
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "biomedical_or_dental_material",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "interacts_with",
+        "biomedical_or_dental_material"
+      ],
+      "second_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.32273128628730774,
+      "second_triple_score": -0.7511600255966187,
+      "entity_score": -1.0738913118839264,
+      "lower_bound_score": -1.2315180152654648,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 4
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "receptor",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "interacts_with",
+        "receptor"
+      ],
+      "second_triple": [
+        "receptor",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.3691379725933075,
+      "second_triple_score": -0.720116376876831,
+      "entity_score": -1.0892543494701385,
+      "lower_bound_score": -1.246881052851677,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 5
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "immunologic_factor",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "interacts_with",
+        "immunologic_factor"
+      ],
+      "second_triple": [
+        "immunologic_factor",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.3587574362754822,
+      "second_triple_score": -0.7321181297302246,
+      "entity_score": -1.0908755660057068,
+      "lower_bound_score": -1.2485022693872452,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 6
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "chemical_viewed_functionally",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "interacts_with",
+        "chemical_viewed_functionally"
+      ],
+      "second_triple": [
+        "chemical_viewed_functionally",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.32386505603790283,
+      "second_triple_score": -0.7783142924308777,
+      "entity_score": -1.1021793484687805,
+      "lower_bound_score": -1.259806051850319,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 7
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "hazardous_or_poisonous_substance",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "interacts_with",
+        "hazardous_or_poisonous_substance"
+      ],
+      "second_triple": [
+        "hazardous_or_poisonous_substance",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.2899433970451355,
+      "second_triple_score": -0.8172736167907715,
+      "entity_score": -1.107217013835907,
+      "lower_bound_score": -1.2648437172174454,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 8
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "vitamin",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "interacts_with",
+        "vitamin"
+      ],
+      "second_triple": [
+        "vitamin",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.3184383511543274,
+      "second_triple_score": -0.7919257879257202,
+      "entity_score": -1.1103641390800476,
+      "lower_bound_score": -1.267990842461586,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 9
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "mental_process",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "mental_process"
+      ],
+      "second_triple": [
+        "mental_process",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9848459054889204,
+      "relation_score": -0.7996082305908203,
+      "first_triple_score": -0.16571754217147827,
+      "second_triple_score": -0.3093087673187256,
+      "entity_score": -0.47502630949020386,
+      "lower_bound_score": -1.2746345400810242,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 10
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "antibiotic",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "interacts_with",
+        "antibiotic"
+      ],
+      "second_triple": [
+        "antibiotic",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.3439938724040985,
+      "second_triple_score": -0.7738253474235535,
+      "entity_score": -1.117819219827652,
+      "lower_bound_score": -1.2754459232091904,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 11
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "element_ion_or_isotope",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "interacts_with",
+        "element_ion_or_isotope"
+      ],
+      "second_triple": [
+        "element_ion_or_isotope",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.2964180111885071,
+      "second_triple_score": -0.8448610901832581,
+      "entity_score": -1.1412791013717651,
+      "lower_bound_score": -1.2989058047533035,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 12
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "indicator_reagent_or_diagnostic_aid",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "interacts_with",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "second_triple": [
+        "indicator_reagent_or_diagnostic_aid",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9801774280242534,
+      "relation_score": -0.1576267033815384,
+      "first_triple_score": -0.29419341683387756,
+      "second_triple_score": -0.8492958545684814,
+      "entity_score": -1.143489271402359,
+      "lower_bound_score": -1.3011159747838974,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 13
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "virus",
+      "r2": "interacts_with",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "virus"
+      ],
+      "second_triple": [
+        "virus",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.9837132692337036,
+      "second_triple_score": -0.2197013646364212,
+      "entity_score": -1.2034146338701248,
+      "lower_bound_score": -1.3610413521528244,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 14
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "amphibian",
+      "r2": "interacts_with",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "amphibian"
+      ],
+      "second_triple": [
+        "amphibian",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -1.0181211233139038,
+      "second_triple_score": -0.31102287769317627,
+      "entity_score": -1.32914400100708,
+      "lower_bound_score": -1.4867707192897797,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 15
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "plant",
+      "r2": "interacts_with",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "plant"
+      ],
+      "second_triple": [
+        "plant",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -1.1057631969451904,
+      "second_triple_score": -0.25127410888671875,
+      "entity_score": -1.3570373058319092,
+      "lower_bound_score": -1.5146640241146088,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 16
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "mammal",
+      "r2": "interacts_with",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "mammal"
+      ],
+      "second_triple": [
+        "mammal",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -1.0483040809631348,
+      "second_triple_score": -0.3569851815700531,
+      "entity_score": -1.4052892625331879,
+      "lower_bound_score": -1.5629159808158875,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 17
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "bacterium",
+      "r2": "interacts_with",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "bacterium"
+      ],
+      "second_triple": [
+        "bacterium",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -1.14154851436615,
+      "second_triple_score": -0.2699531614780426,
+      "entity_score": -1.4115016758441925,
+      "lower_bound_score": -1.569128394126892,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 18
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "fish",
+      "r2": "interacts_with",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "fish"
+      ],
+      "second_triple": [
+        "fish",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -1.0798171758651733,
+      "second_triple_score": -0.3454762101173401,
+      "entity_score": -1.4252933859825134,
+      "lower_bound_score": -1.582920104265213,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 19
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "bird",
+      "r2": "interacts_with",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "bird"
+      ],
+      "second_triple": [
+        "bird",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -1.1027271747589111,
+      "second_triple_score": -0.3365306854248047,
+      "entity_score": -1.4392578601837158,
+      "lower_bound_score": -1.5968845784664154,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 20
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "vertebrate",
+      "r2": "interacts_with",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "vertebrate"
+      ],
+      "second_triple": [
+        "vertebrate",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -1.0808491706848145,
+      "second_triple_score": -0.3623870611190796,
+      "entity_score": -1.443236231803894,
+      "lower_bound_score": -1.6008629500865936,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 21
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "archaeon",
+      "r2": "interacts_with",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "archaeon"
+      ],
+      "second_triple": [
+        "archaeon",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9809576630209349,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -1.0654499530792236,
+      "second_triple_score": -0.39511507749557495,
+      "entity_score": -1.4605650305747986,
+      "lower_bound_score": -1.6181917488574982,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 22
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "cell_or_molecular_dysfunction",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "causes",
+        "cell_or_molecular_dysfunction"
+      ],
+      "second_triple": [
+        "cell_or_molecular_dysfunction",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9905755366119874,
+      "relation_score": -0.6990978717803955,
+      "first_triple_score": -0.9931089282035828,
+      "second_triple_score": -0.27928218245506287,
+      "entity_score": -1.2723911106586456,
+      "lower_bound_score": -1.9714889824390411,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 23
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "mental_or_behavioral_dysfunction",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "causes",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "second_triple": [
+        "mental_or_behavioral_dysfunction",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9905755366119874,
+      "relation_score": -0.6990978717803955,
+      "first_triple_score": -0.972371518611908,
+      "second_triple_score": -0.3069742023944855,
+      "entity_score": -1.2793457210063934,
+      "lower_bound_score": -1.978443592786789,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 24
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "neoplastic_process",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "causes",
+        "neoplastic_process"
+      ],
+      "second_triple": [
+        "neoplastic_process",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9905755366119874,
+      "relation_score": -0.6990978717803955,
+      "first_triple_score": -1.022161602973938,
+      "second_triple_score": -0.26818251609802246,
+      "entity_score": -1.2903441190719604,
+      "lower_bound_score": -1.989441990852356,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 25
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "chemical",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "chemical"
+      ],
+      "second_triple": [
+        "chemical",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.6078027486801147,
+      "second_triple_score": -0.7614580392837524,
+      "entity_score": -1.3692607879638672,
+      "lower_bound_score": -2.302299201488495,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 26
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "clinical_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "clinical_attribute"
+      ],
+      "second_triple": [
+        "clinical_attribute",
+        "property_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9777238577324141,
+      "relation_score": -1.4830657243728638,
+      "first_triple_score": -0.5147694945335388,
+      "second_triple_score": -0.4907861351966858,
+      "entity_score": -1.0055556297302246,
+      "lower_bound_score": -2.4886213541030884,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 27
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "chemical_viewed_functionally",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "chemical_viewed_functionally"
+      ],
+      "second_triple": [
+        "chemical_viewed_functionally",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.8069663047790527,
+      "second_triple_score": -0.7783142924308777,
+      "entity_score": -1.5852805972099304,
+      "lower_bound_score": -2.518319010734558,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 28
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "organism_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "property_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9777238577324141,
+      "relation_score": -1.4830657243728638,
+      "first_triple_score": -0.4599696099758148,
+      "second_triple_score": -0.6021935343742371,
+      "entity_score": -1.0621631443500519,
+      "lower_bound_score": -2.5452288687229156,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 29
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organic_chemical",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "organic_chemical"
+      ],
+      "second_triple": [
+        "organic_chemical",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.8455492258071899,
+      "second_triple_score": -0.7745574116706848,
+      "entity_score": -1.6201066374778748,
+      "lower_bound_score": -2.5531450510025024,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 30
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "chemical_viewed_structurally",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "chemical_viewed_structurally"
+      ],
+      "second_triple": [
+        "chemical_viewed_structurally",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.7507504224777222,
+      "second_triple_score": -0.8775021433830261,
+      "entity_score": -1.6282525658607483,
+      "lower_bound_score": -2.561290979385376,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 31
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "biologically_active_substance",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "biologically_active_substance"
+      ],
+      "second_triple": [
+        "biologically_active_substance",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.0121055841445923,
+      "second_triple_score": -0.730008065700531,
+      "entity_score": -1.7421136498451233,
+      "lower_bound_score": -2.675152063369751,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 32
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "pharmacologic_substance",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "pharmacologic_substance"
+      ],
+      "second_triple": [
+        "pharmacologic_substance",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.9816322326660156,
+      "second_triple_score": -0.8735631704330444,
+      "entity_score": -1.85519540309906,
+      "lower_bound_score": -2.7882338166236877,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 33
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "cell_function",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "cell_function"
+      ],
+      "second_triple": [
+        "cell_function",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9905293422708435,
+      "relation_score": -1.239169716835022,
+      "first_triple_score": -0.17187833786010742,
+      "second_triple_score": -1.4881467819213867,
+      "entity_score": -1.6600251197814941,
+      "lower_bound_score": -2.899194836616516,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 34
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "physiologic_function",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "physiologic_function"
+      ],
+      "second_triple": [
+        "physiologic_function",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9905293422708435,
+      "relation_score": -1.239169716835022,
+      "first_triple_score": -0.18640302121639252,
+      "second_triple_score": -1.5164225101470947,
+      "entity_score": -1.7028255313634872,
+      "lower_bound_score": -2.941995248198509,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 35
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "biologic_function",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "biologic_function"
+      ],
+      "second_triple": [
+        "biologic_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.4490894079208374,
+      "second_triple_score": -0.26305079460144043,
+      "entity_score": -1.7121402025222778,
+      "lower_bound_score": -3.412854790687561,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 36
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "natural_phenomenon_or_process",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "natural_phenomenon_or_process"
+      ],
+      "second_triple": [
+        "natural_phenomenon_or_process",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.4353264570236206,
+      "second_triple_score": -0.31672200560569763,
+      "entity_score": -1.7520484626293182,
+      "lower_bound_score": -3.4527630507946014,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 37
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "molecular_function",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "molecular_function"
+      ],
+      "second_triple": [
+        "molecular_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.5135520696640015,
+      "second_triple_score": -0.24382203817367554,
+      "entity_score": -1.757374107837677,
+      "lower_bound_score": -3.45808869600296,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 38
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organism_function",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "organism_function"
+      ],
+      "second_triple": [
+        "organism_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.5204968452453613,
+      "second_triple_score": -0.24846674501895905,
+      "entity_score": -1.7689635902643204,
+      "lower_bound_score": -3.4696781784296036,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 39
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "physiologic_function",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "physiologic_function"
+      ],
+      "second_triple": [
+        "physiologic_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.5421291589736938,
+      "second_triple_score": -0.23687110841274261,
+      "entity_score": -1.7790002673864365,
+      "lower_bound_score": -3.4797148555517197,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 40
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "pathologic_function",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "pathologic_function"
+      ],
+      "second_triple": [
+        "pathologic_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.5161998271942139,
+      "second_triple_score": -0.26400938630104065,
+      "entity_score": -1.7802092134952545,
+      "lower_bound_score": -3.4809238016605377,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 41
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "disease_or_syndrome",
+      "r2": "process_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "disease_or_syndrome"
+      ],
+      "second_triple": [
+        "disease_or_syndrome",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9902177098340089,
+      "relation_score": -1.7007145881652832,
+      "first_triple_score": -1.4939472675323486,
+      "second_triple_score": -0.31040889024734497,
+      "entity_score": -1.8043561577796936,
+      "lower_bound_score": -3.505070745944977,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 42
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "anatomical_abnormality",
+      "r2": "part_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "causes",
+        "anatomical_abnormality"
+      ],
+      "second_triple": [
+        "anatomical_abnormality",
+        "part_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9972811251740029,
+      "relation_score": -1.4672962427139282,
+      "first_triple_score": -0.9377665519714355,
+      "second_triple_score": -1.2195738554000854,
+      "entity_score": -2.157340407371521,
+      "lower_bound_score": -3.624636650085449,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 43
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "congenital_abnormality",
+      "r2": "part_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "causes",
+        "congenital_abnormality"
+      ],
+      "second_triple": [
+        "congenital_abnormality",
+        "part_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9972811251740029,
+      "relation_score": -1.4672962427139282,
+      "first_triple_score": -0.9584131240844727,
+      "second_triple_score": -1.2484513521194458,
+      "entity_score": -2.2068644762039185,
+      "lower_bound_score": -3.6741607189178467,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 44
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "biologic_function",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "biologic_function"
+      ],
+      "second_triple": [
+        "biologic_function",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.4490894079208374,
+      "second_triple_score": -1.4724386930465698,
+      "entity_score": -2.9215281009674072,
+      "lower_bound_score": -3.854566514492035,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 45
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "natural_phenomenon_or_process",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "natural_phenomenon_or_process"
+      ],
+      "second_triple": [
+        "natural_phenomenon_or_process",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.4353264570236206,
+      "second_triple_score": -1.4906885623931885,
+      "entity_score": -2.926015019416809,
+      "lower_bound_score": -3.8590534329414368,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 46
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "anatomical_abnormality",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "anatomical_abnormality"
+      ],
+      "second_triple": [
+        "anatomical_abnormality",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.4687232971191406,
+      "second_triple_score": -1.5057826042175293,
+      "entity_score": -2.97450590133667,
+      "lower_bound_score": -3.9075443148612976,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 47
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "disease_or_syndrome",
+      "r2": "affects",
+      "first_triple": [
+        "inorganic_chemical",
+        "isa",
+        "disease_or_syndrome"
+      ],
+      "second_triple": [
+        "disease_or_syndrome",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9890692423153381,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.4939472675323486,
+      "second_triple_score": -1.493626356124878,
+      "entity_score": -2.9875736236572266,
+      "lower_bound_score": -3.9206120371818542,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 48
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "virus",
+      "r2": "location_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "virus"
+      ],
+      "second_triple": [
+        "virus",
+        "location_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9019907338448373,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.9837132692337036,
+      "second_triple_score": -1.545516014099121,
+      "entity_score": -2.5292292833328247,
+      "lower_bound_score": -4.046910643577576,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 49
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "plant",
+      "r2": "location_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "plant"
+      ],
+      "second_triple": [
+        "plant",
+        "location_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9019907338448373,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -1.1057631969451904,
+      "second_triple_score": -1.4235607385635376,
+      "entity_score": -2.529323935508728,
+      "lower_bound_score": -4.047005295753479,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 50
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "bacterium",
+      "r2": "location_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "bacterium"
+      ],
+      "second_triple": [
+        "bacterium",
+        "location_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9019907338448373,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -1.14154851436615,
+      "second_triple_score": -1.4036173820495605,
+      "entity_score": -2.5451658964157104,
+      "lower_bound_score": -4.062847256660461,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 51
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "organization",
+      "r2": "location_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "organization"
+      ],
+      "second_triple": [
+        "organization",
+        "location_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9019907338448373,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -1.7839391231536865,
+      "second_triple_score": -1.5736998319625854,
+      "entity_score": -3.357638955116272,
+      "lower_bound_score": -4.875320315361023,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 52
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "health_care_related_organization",
+      "r2": "location_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "health_care_related_organization"
+      ],
+      "second_triple": [
+        "health_care_related_organization",
+        "location_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9019907338448373,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -1.7793127298355103,
+      "second_triple_score": -1.5980961322784424,
+      "entity_score": -3.3774088621139526,
+      "lower_bound_score": -4.895090222358704,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 53
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "professional_society",
+      "r2": "location_of",
+      "first_triple": [
+        "inorganic_chemical",
+        "affects",
+        "professional_society"
+      ],
+      "second_triple": [
+        "professional_society",
+        "location_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9019907338448373,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -1.8135148286819458,
+      "second_triple_score": -1.6052414178848267,
+      "entity_score": -3.4187562465667725,
+      "lower_bound_score": -4.936437606811523,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 54
+    }
+  ]
+}

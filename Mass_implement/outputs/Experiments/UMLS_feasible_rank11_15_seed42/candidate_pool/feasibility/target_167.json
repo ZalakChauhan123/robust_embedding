@@ -1,0 +1,970 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "health_care_related_organization",
+    "isa",
+    "molecular_sequence"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 33,
+  "num_semantically_valid_templates": 5,
+  "num_selected_templates": 5,
+  "num_ranked_paths": 34,
+  "ranked_candidate_paths": [
+    {
+      "r1": "manages",
+      "intermediate_entity": "professional_society",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "manages",
+        "professional_society"
+      ],
+      "second_triple": [
+        "professional_society",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9703268834610962,
+      "relation_score": -0.8114039301872253,
+      "first_triple_score": -0.7844218015670776,
+      "second_triple_score": -1.1949256658554077,
+      "entity_score": -1.9793474674224854,
+      "lower_bound_score": -2.7907513976097107,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 1
+    },
+    {
+      "r1": "manages",
+      "intermediate_entity": "organization",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "manages",
+        "organization"
+      ],
+      "second_triple": [
+        "organization",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9703268834610962,
+      "relation_score": -0.8114039301872253,
+      "first_triple_score": -0.7989046573638916,
+      "second_triple_score": -1.228210687637329,
+      "entity_score": -2.0271153450012207,
+      "lower_bound_score": -2.838519275188446,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 2
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "functional_concept",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "isa",
+        "functional_concept"
+      ],
+      "second_triple": [
+        "functional_concept",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9915032551112727,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.105812907218933,
+      "second_triple_score": -0.8885573148727417,
+      "entity_score": -1.9943702220916748,
+      "lower_bound_score": -2.9274086356163025,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 3
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organization",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "isa",
+        "organization"
+      ],
+      "second_triple": [
+        "organization",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9915032551112727,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.8148292303085327,
+      "second_triple_score": -1.228210687637329,
+      "entity_score": -2.043039917945862,
+      "lower_bound_score": -2.9760783314704895,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 4
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "idea_or_concept",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "isa",
+        "idea_or_concept"
+      ],
+      "second_triple": [
+        "idea_or_concept",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9915032551112727,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.8621953725814819,
+      "second_triple_score": -1.2104014158248901,
+      "entity_score": -2.072596788406372,
+      "lower_bound_score": -3.0056352019309998,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 5
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "spatial_concept",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "isa",
+        "spatial_concept"
+      ],
+      "second_triple": [
+        "spatial_concept",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9915032551112727,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.016748070716858,
+      "second_triple_score": -1.0790513753890991,
+      "entity_score": -2.095799446105957,
+      "lower_bound_score": -3.0288378596305847,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 6
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "conceptual_entity",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "isa",
+        "conceptual_entity"
+      ],
+      "second_triple": [
+        "conceptual_entity",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9915032551112727,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.711544930934906,
+      "second_triple_score": -1.3909764289855957,
+      "entity_score": -2.1025213599205017,
+      "lower_bound_score": -3.0355597734451294,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 7
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "educational_activity",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "location_of",
+        "educational_activity"
+      ],
+      "second_triple": [
+        "educational_activity",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9551815373970639,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.5139195322990417,
+      "second_triple_score": -1.4707623720169067,
+      "entity_score": -1.9846819043159485,
+      "lower_bound_score": -3.5023632645606995,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 8
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "intellectual_product",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "isa",
+        "intellectual_product"
+      ],
+      "second_triple": [
+        "intellectual_product",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9915032551112727,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.242153286933899,
+      "second_triple_score": -1.333869218826294,
+      "entity_score": -2.576022505760193,
+      "lower_bound_score": -3.5090609192848206,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 9
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "molecular_biology_research_technique",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "location_of",
+        "molecular_biology_research_technique"
+      ],
+      "second_triple": [
+        "molecular_biology_research_technique",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9551815373970639,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.5494597554206848,
+      "second_triple_score": -1.461155891418457,
+      "entity_score": -2.010615646839142,
+      "lower_bound_score": -3.528297007083893,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 10
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "group",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "isa",
+        "group"
+      ],
+      "second_triple": [
+        "group",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9915032551112727,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.3397810459136963,
+      "second_triple_score": -1.27344810962677,
+      "entity_score": -2.6132291555404663,
+      "lower_bound_score": -3.546267569065094,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 11
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "governmental_or_regulatory_activity",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "location_of",
+        "governmental_or_regulatory_activity"
+      ],
+      "second_triple": [
+        "governmental_or_regulatory_activity",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9551815373970639,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.5048972964286804,
+      "second_triple_score": -1.5299947261810303,
+      "entity_score": -2.0348920226097107,
+      "lower_bound_score": -3.5525733828544617,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 12
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "research_activity",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "location_of",
+        "research_activity"
+      ],
+      "second_triple": [
+        "research_activity",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9551815373970639,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.583570122718811,
+      "second_triple_score": -1.4668337106704712,
+      "entity_score": -2.0504038333892822,
+      "lower_bound_score": -3.568085193634033,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 13
+    },
+    {
+      "r1": "manages",
+      "intermediate_entity": "patient_or_disabled_group",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "manages",
+        "patient_or_disabled_group"
+      ],
+      "second_triple": [
+        "patient_or_disabled_group",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9703268834610962,
+      "relation_score": -0.8114039301872253,
+      "first_triple_score": -1.5110126733779907,
+      "second_triple_score": -1.298975944519043,
+      "entity_score": -2.8099886178970337,
+      "lower_bound_score": -3.621392548084259,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 14
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "laboratory_procedure",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "location_of",
+        "laboratory_procedure"
+      ],
+      "second_triple": [
+        "laboratory_procedure",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9551815373970639,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.595404326915741,
+      "second_triple_score": -1.50934636592865,
+      "entity_score": -2.104750692844391,
+      "lower_bound_score": -3.622432053089142,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 15
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "occupational_activity",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "location_of",
+        "occupational_activity"
+      ],
+      "second_triple": [
+        "occupational_activity",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9551815373970639,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.6182885766029358,
+      "second_triple_score": -1.5215202569961548,
+      "entity_score": -2.1398088335990906,
+      "lower_bound_score": -3.6574901938438416,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 16
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "diagnostic_procedure",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "location_of",
+        "diagnostic_procedure"
+      ],
+      "second_triple": [
+        "diagnostic_procedure",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9551815373970639,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.6524239778518677,
+      "second_triple_score": -1.4954466819763184,
+      "entity_score": -2.147870659828186,
+      "lower_bound_score": -3.665552020072937,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 17
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "health_care_activity",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "location_of",
+        "health_care_activity"
+      ],
+      "second_triple": [
+        "health_care_activity",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9551815373970639,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.6246072053909302,
+      "second_triple_score": -1.5601080656051636,
+      "entity_score": -2.1847152709960938,
+      "lower_bound_score": -3.7023966312408447,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 18
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "anatomical_structure",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "isa",
+        "anatomical_structure"
+      ],
+      "second_triple": [
+        "anatomical_structure",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9915032551112727,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.3500903844833374,
+      "second_triple_score": -1.5162750482559204,
+      "entity_score": -2.866365432739258,
+      "lower_bound_score": -3.7994038462638855,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 19
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "therapeutic_or_preventive_procedure",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "second_triple": [
+        "therapeutic_or_preventive_procedure",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9551815373970639,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.7469320893287659,
+      "second_triple_score": -1.5556153059005737,
+      "entity_score": -2.3025473952293396,
+      "lower_bound_score": -3.8202287554740906,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 20
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "activity",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "isa",
+        "activity"
+      ],
+      "second_triple": [
+        "activity",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9915032551112727,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.2401587963104248,
+      "second_triple_score": -1.6822353601455688,
+      "entity_score": -2.9223941564559937,
+      "lower_bound_score": -3.8554325699806213,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 21
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "regulation_or_law",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "produces",
+        "regulation_or_law"
+      ],
+      "second_triple": [
+        "regulation_or_law",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9253766855595551,
+      "relation_score": -1.7029356956481934,
+      "first_triple_score": -1.2808594703674316,
+      "second_triple_score": -1.2171202898025513,
+      "entity_score": -2.497979760169983,
+      "lower_bound_score": -4.200915455818176,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 22
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "research_device",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "produces",
+        "research_device"
+      ],
+      "second_triple": [
+        "research_device",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9253766855595551,
+      "relation_score": -1.7029356956481934,
+      "first_triple_score": -1.0792231559753418,
+      "second_triple_score": -1.432075023651123,
+      "entity_score": -2.511298179626465,
+      "lower_bound_score": -4.214233875274658,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 23
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "intellectual_product",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "produces",
+        "intellectual_product"
+      ],
+      "second_triple": [
+        "intellectual_product",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9253766855595551,
+      "relation_score": -1.7029356956481934,
+      "first_triple_score": -1.283198595046997,
+      "second_triple_score": -1.333869218826294,
+      "entity_score": -2.617067813873291,
+      "lower_bound_score": -4.320003509521484,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 24
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "drug_delivery_device",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "produces",
+        "drug_delivery_device"
+      ],
+      "second_triple": [
+        "drug_delivery_device",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9253766855595551,
+      "relation_score": -1.7029356956481934,
+      "first_triple_score": -1.2565672397613525,
+      "second_triple_score": -1.4043949842453003,
+      "entity_score": -2.660962224006653,
+      "lower_bound_score": -4.363897919654846,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 25
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "classification",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "produces",
+        "classification"
+      ],
+      "second_triple": [
+        "classification",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9253766855595551,
+      "relation_score": -1.7029356956481934,
+      "first_triple_score": -1.247672200202942,
+      "second_triple_score": -1.4162615537643433,
+      "entity_score": -2.663933753967285,
+      "lower_bound_score": -4.3668694496154785,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 26
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "medical_device",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "produces",
+        "medical_device"
+      ],
+      "second_triple": [
+        "medical_device",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9253766855595551,
+      "relation_score": -1.7029356956481934,
+      "first_triple_score": -1.2572460174560547,
+      "second_triple_score": -1.4206678867340088,
+      "entity_score": -2.6779139041900635,
+      "lower_bound_score": -4.380849599838257,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 27
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "manufactured_object",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "produces",
+        "manufactured_object"
+      ],
+      "second_triple": [
+        "manufactured_object",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9253766855595551,
+      "relation_score": -1.7029356956481934,
+      "first_triple_score": -1.2335315942764282,
+      "second_triple_score": -1.4661139249801636,
+      "entity_score": -2.699645519256592,
+      "lower_bound_score": -4.402581214904785,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 28
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "clinical_drug",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "produces",
+        "clinical_drug"
+      ],
+      "second_triple": [
+        "clinical_drug",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9253766855595551,
+      "relation_score": -1.7029356956481934,
+      "first_triple_score": -1.309266209602356,
+      "second_triple_score": -1.4140033721923828,
+      "entity_score": -2.7232695817947388,
+      "lower_bound_score": -4.426205277442932,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 29
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "hormone",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "location_of",
+        "hormone"
+      ],
+      "second_triple": [
+        "hormone",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9551815373970639,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -1.4091442823410034,
+      "second_triple_score": -1.5650420188903809,
+      "entity_score": -2.9741863012313843,
+      "lower_bound_score": -4.491867661476135,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 30
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "nucleic_acid_nucleoside_or_nucleotide",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "produces",
+        "nucleic_acid_nucleoside_or_nucleotide"
+      ],
+      "second_triple": [
+        "nucleic_acid_nucleoside_or_nucleotide",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9253766855595551,
+      "relation_score": -1.7029356956481934,
+      "first_triple_score": -1.736851453781128,
+      "second_triple_score": -1.5028748512268066,
+      "entity_score": -3.2397263050079346,
+      "lower_bound_score": -4.942662000656128,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 31
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "receptor",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "produces",
+        "receptor"
+      ],
+      "second_triple": [
+        "receptor",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.9253766855595551,
+      "relation_score": -1.7029356956481934,
+      "first_triple_score": -1.7501839399337769,
+      "second_triple_score": -1.5554389953613281,
+      "entity_score": -3.305622935295105,
+      "lower_bound_score": -5.008558630943298,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 32
+    },
+    {
+      "r1": "issue_in",
+      "intermediate_entity": "biomedical_occupation_or_discipline",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "issue_in",
+        "biomedical_occupation_or_discipline"
+      ],
+      "second_triple": [
+        "biomedical_occupation_or_discipline",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.973413069404759,
+      "relation_score": -8.212182998657227,
+      "first_triple_score": -7.313908576965332,
+      "second_triple_score": -1.3439350128173828,
+      "entity_score": -8.657843589782715,
+      "lower_bound_score": -16.87002658843994,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 33
+    },
+    {
+      "r1": "issue_in",
+      "intermediate_entity": "occupation_or_discipline",
+      "r2": "isa",
+      "first_triple": [
+        "health_care_related_organization",
+        "issue_in",
+        "occupation_or_discipline"
+      ],
+      "second_triple": [
+        "occupation_or_discipline",
+        "isa",
+        "molecular_sequence"
+      ],
+      "pra_confidence": 0.973413069404759,
+      "relation_score": -8.212182998657227,
+      "first_triple_score": -7.31088399887085,
+      "second_triple_score": -1.3783743381500244,
+      "entity_score": -8.689258337020874,
+      "lower_bound_score": -16.9014413356781,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 34
+    }
+  ]
+}

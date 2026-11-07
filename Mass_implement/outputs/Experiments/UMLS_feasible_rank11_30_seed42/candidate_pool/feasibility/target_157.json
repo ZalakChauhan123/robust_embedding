@@ -1,0 +1,326 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "laboratory_or_test_result",
+    "manifestation_of",
+    "hazardous_or_poisonous_substance"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 126,
+  "num_semantically_valid_templates": 6,
+  "num_selected_templates": 6,
+  "num_ranked_paths": 11,
+  "ranked_candidate_paths": [
+    {
+      "r1": "result_of",
+      "intermediate_entity": "laboratory_procedure",
+      "r2": "assesses_effect_of",
+      "first_triple": [
+        "laboratory_or_test_result",
+        "result_of",
+        "laboratory_procedure"
+      ],
+      "second_triple": [
+        "laboratory_procedure",
+        "assesses_effect_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9610203368453712,
+      "relation_score": -1.4914522171020508,
+      "first_triple_score": -0.9845157861709595,
+      "second_triple_score": -0.48696368932724,
+      "entity_score": -1.4714794754981995,
+      "lower_bound_score": -2.9629316926002502,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "evaluation_of",
+      "intermediate_entity": "laboratory_procedure",
+      "r2": "assesses_effect_of",
+      "first_triple": [
+        "laboratory_or_test_result",
+        "evaluation_of",
+        "laboratory_procedure"
+      ],
+      "second_triple": [
+        "laboratory_procedure",
+        "assesses_effect_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9771025770936431,
+      "relation_score": -2.0060713291168213,
+      "first_triple_score": -1.2756428718566895,
+      "second_triple_score": -0.48696368932724,
+      "entity_score": -1.7626065611839294,
+      "lower_bound_score": -3.7686778903007507,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 2
+    },
+    {
+      "r1": "evaluation_of",
+      "intermediate_entity": "diagnostic_procedure",
+      "r2": "assesses_effect_of",
+      "first_triple": [
+        "laboratory_or_test_result",
+        "evaluation_of",
+        "diagnostic_procedure"
+      ],
+      "second_triple": [
+        "diagnostic_procedure",
+        "assesses_effect_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9771025770936431,
+      "relation_score": -2.0060713291168213,
+      "first_triple_score": -1.3349032402038574,
+      "second_triple_score": -0.5205739736557007,
+      "entity_score": -1.855477213859558,
+      "lower_bound_score": -3.8615485429763794,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 3
+    },
+    {
+      "r1": "associated_with",
+      "intermediate_entity": "clinical_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "laboratory_or_test_result",
+        "associated_with",
+        "clinical_attribute"
+      ],
+      "second_triple": [
+        "clinical_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9534824230418094,
+      "relation_score": -1.9810800552368164,
+      "first_triple_score": -0.784562349319458,
+      "second_triple_score": -1.381714940071106,
+      "entity_score": -2.166277289390564,
+      "lower_bound_score": -4.14735734462738,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 4
+    },
+    {
+      "r1": "associated_with",
+      "intermediate_entity": "organism_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "laboratory_or_test_result",
+        "associated_with",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9534824230418094,
+      "relation_score": -1.9810800552368164,
+      "first_triple_score": -0.8642328381538391,
+      "second_triple_score": -1.4477020502090454,
+      "entity_score": -2.3119348883628845,
+      "lower_bound_score": -4.293014943599701,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 5
+    },
+    {
+      "r1": "evaluation_of",
+      "intermediate_entity": "clinical_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "laboratory_or_test_result",
+        "evaluation_of",
+        "clinical_attribute"
+      ],
+      "second_triple": [
+        "clinical_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.947219070716481,
+      "relation_score": -2.256756067276001,
+      "first_triple_score": -0.6696224808692932,
+      "second_triple_score": -1.381714940071106,
+      "entity_score": -2.051337420940399,
+      "lower_bound_score": -4.3080934882164,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 6
+    },
+    {
+      "r1": "evaluation_of",
+      "intermediate_entity": "organism_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "laboratory_or_test_result",
+        "evaluation_of",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.947219070716481,
+      "relation_score": -2.256756067276001,
+      "first_triple_score": -0.6315921545028687,
+      "second_triple_score": -1.4477020502090454,
+      "entity_score": -2.079294204711914,
+      "lower_bound_score": -4.336050271987915,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 7
+    },
+    {
+      "r1": "evaluation_of",
+      "intermediate_entity": "laboratory_procedure",
+      "r2": "measures",
+      "first_triple": [
+        "laboratory_or_test_result",
+        "evaluation_of",
+        "laboratory_procedure"
+      ],
+      "second_triple": [
+        "laboratory_procedure",
+        "measures",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9514870077598918,
+      "relation_score": -2.6211743354797363,
+      "first_triple_score": -1.2756428718566895,
+      "second_triple_score": -1.1861588954925537,
+      "entity_score": -2.461801767349243,
+      "lower_bound_score": -5.0829761028289795,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 8
+    },
+    {
+      "r1": "evaluation_of",
+      "intermediate_entity": "research_activity",
+      "r2": "measures",
+      "first_triple": [
+        "laboratory_or_test_result",
+        "evaluation_of",
+        "research_activity"
+      ],
+      "second_triple": [
+        "research_activity",
+        "measures",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9514870077598918,
+      "relation_score": -2.6211743354797363,
+      "first_triple_score": -1.51628839969635,
+      "second_triple_score": -0.9547966718673706,
+      "entity_score": -2.4710850715637207,
+      "lower_bound_score": -5.092259407043457,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 9
+    },
+    {
+      "r1": "evaluation_of",
+      "intermediate_entity": "molecular_biology_research_technique",
+      "r2": "measures",
+      "first_triple": [
+        "laboratory_or_test_result",
+        "evaluation_of",
+        "molecular_biology_research_technique"
+      ],
+      "second_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9514870077598918,
+      "relation_score": -2.6211743354797363,
+      "first_triple_score": -1.5410529375076294,
+      "second_triple_score": -0.9460128545761108,
+      "entity_score": -2.4870657920837402,
+      "lower_bound_score": -5.108240127563477,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 10
+    },
+    {
+      "r1": "evaluation_of",
+      "intermediate_entity": "diagnostic_procedure",
+      "r2": "measures",
+      "first_triple": [
+        "laboratory_or_test_result",
+        "evaluation_of",
+        "diagnostic_procedure"
+      ],
+      "second_triple": [
+        "diagnostic_procedure",
+        "measures",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9514870077598918,
+      "relation_score": -2.6211743354797363,
+      "first_triple_score": -1.3349032402038574,
+      "second_triple_score": -1.1559792757034302,
+      "entity_score": -2.4908825159072876,
+      "lower_bound_score": -5.112056851387024,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 11
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "congenital_abnormality",
+    "part_of",
+    "congenital_abnormality"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 27,
+  "num_semantically_valid_templates": 1,
+  "num_selected_templates": 1,
+  "num_ranked_paths": 1,
+  "ranked_candidate_paths": [
+    {
+      "r1": "location_of",
+      "intermediate_entity": "immunologic_factor",
+      "r2": "indicates",
+      "first_triple": [
+        "congenital_abnormality",
+        "location_of",
+        "immunologic_factor"
+      ],
+      "second_triple": [
+        "immunologic_factor",
+        "indicates",
+        "congenital_abnormality"
+      ],
+      "pra_confidence": 0.9057706974469614,
+      "relation_score": -2.2679851055145264,
+      "first_triple_score": -2.1600396633148193,
+      "second_triple_score": -1.4763500690460205,
+      "entity_score": -3.63638973236084,
+      "lower_bound_score": -5.904374837875366,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 1
+    }
+  ]
+}

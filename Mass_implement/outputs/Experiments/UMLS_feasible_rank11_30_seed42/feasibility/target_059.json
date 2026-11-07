@@ -1,0 +1,494 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "pharmacologic_substance",
+    "treats",
+    "fully_formed_anatomical_structure"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 28,
+  "num_semantically_valid_templates": 2,
+  "num_selected_templates": 2,
+  "num_ranked_paths": 17,
+  "ranked_candidate_paths": [
+    {
+      "r1": "prevents",
+      "intermediate_entity": "disease_or_syndrome",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "prevents",
+        "disease_or_syndrome"
+      ],
+      "second_triple": [
+        "disease_or_syndrome",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9096267982709655,
+      "relation_score": -0.8362863659858704,
+      "first_triple_score": -1.3154500722885132,
+      "second_triple_score": -1.3433253765106201,
+      "entity_score": -2.6587754487991333,
+      "lower_bound_score": -3.4950618147850037,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 1
+    },
+    {
+      "r1": "prevents",
+      "intermediate_entity": "experimental_model_of_disease",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "prevents",
+        "experimental_model_of_disease"
+      ],
+      "second_triple": [
+        "experimental_model_of_disease",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9096267982709655,
+      "relation_score": -0.8362863659858704,
+      "first_triple_score": -1.3057125806808472,
+      "second_triple_score": -1.3644962310791016,
+      "entity_score": -2.6702088117599487,
+      "lower_bound_score": -3.506495177745819,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "prevents",
+      "intermediate_entity": "mental_or_behavioral_dysfunction",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "prevents",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "second_triple": [
+        "mental_or_behavioral_dysfunction",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9096267982709655,
+      "relation_score": -0.8362863659858704,
+      "first_triple_score": -1.3217482566833496,
+      "second_triple_score": -1.3679612874984741,
+      "entity_score": -2.6897095441818237,
+      "lower_bound_score": -3.525995910167694,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 3
+    },
+    {
+      "r1": "treats",
+      "intermediate_entity": "anatomical_abnormality",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "anatomical_abnormality"
+      ],
+      "second_triple": [
+        "anatomical_abnormality",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9530553235868128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.306748867034912,
+      "second_triple_score": -1.3010770082473755,
+      "entity_score": -2.6078258752822876,
+      "lower_bound_score": -3.5408642888069153,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 4
+    },
+    {
+      "r1": "treats",
+      "intermediate_entity": "congenital_abnormality",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "congenital_abnormality"
+      ],
+      "second_triple": [
+        "congenital_abnormality",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9530553235868128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.296443223953247,
+      "second_triple_score": -1.3234666585922241,
+      "entity_score": -2.619909882545471,
+      "lower_bound_score": -3.552948296070099,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 5
+    },
+    {
+      "r1": "treats",
+      "intermediate_entity": "acquired_abnormality",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "acquired_abnormality"
+      ],
+      "second_triple": [
+        "acquired_abnormality",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9530553235868128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.3254789113998413,
+      "second_triple_score": -1.2961828708648682,
+      "entity_score": -2.6216617822647095,
+      "lower_bound_score": -3.554700195789337,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 6
+    },
+    {
+      "r1": "prevents",
+      "intermediate_entity": "neoplastic_process",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "prevents",
+        "neoplastic_process"
+      ],
+      "second_triple": [
+        "neoplastic_process",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9096267982709655,
+      "relation_score": -0.8362863659858704,
+      "first_triple_score": -1.3315744400024414,
+      "second_triple_score": -1.3929578065872192,
+      "entity_score": -2.7245322465896606,
+      "lower_bound_score": -3.560818612575531,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 7
+    },
+    {
+      "r1": "prevents",
+      "intermediate_entity": "cell_or_molecular_dysfunction",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "prevents",
+        "cell_or_molecular_dysfunction"
+      ],
+      "second_triple": [
+        "cell_or_molecular_dysfunction",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9096267982709655,
+      "relation_score": -0.8362863659858704,
+      "first_triple_score": -1.326798677444458,
+      "second_triple_score": -1.4017046689987183,
+      "entity_score": -2.7285033464431763,
+      "lower_bound_score": -3.5647897124290466,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 8
+    },
+    {
+      "r1": "prevents",
+      "intermediate_entity": "pathologic_function",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "prevents",
+        "pathologic_function"
+      ],
+      "second_triple": [
+        "pathologic_function",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9096267982709655,
+      "relation_score": -0.8362863659858704,
+      "first_triple_score": -1.3247648477554321,
+      "second_triple_score": -1.413508415222168,
+      "entity_score": -2.7382732629776,
+      "lower_bound_score": -3.5745596289634705,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 9
+    },
+    {
+      "r1": "treats",
+      "intermediate_entity": "disease_or_syndrome",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "disease_or_syndrome"
+      ],
+      "second_triple": [
+        "disease_or_syndrome",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9530553235868128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.34467351436615,
+      "second_triple_score": -1.3433253765106201,
+      "entity_score": -2.68799889087677,
+      "lower_bound_score": -3.6210373044013977,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 10
+    },
+    {
+      "r1": "treats",
+      "intermediate_entity": "experimental_model_of_disease",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "experimental_model_of_disease"
+      ],
+      "second_triple": [
+        "experimental_model_of_disease",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9530553235868128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.332368016242981,
+      "second_triple_score": -1.3644962310791016,
+      "entity_score": -2.6968642473220825,
+      "lower_bound_score": -3.62990266084671,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 11
+    },
+    {
+      "r1": "prevents",
+      "intermediate_entity": "injury_or_poisoning",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "prevents",
+        "injury_or_poisoning"
+      ],
+      "second_triple": [
+        "injury_or_poisoning",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9096267982709655,
+      "relation_score": -0.8362863659858704,
+      "first_triple_score": -1.3806949853897095,
+      "second_triple_score": -1.4195005893707275,
+      "entity_score": -2.800195574760437,
+      "lower_bound_score": -3.6364819407463074,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 12
+    },
+    {
+      "r1": "treats",
+      "intermediate_entity": "mental_or_behavioral_dysfunction",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "second_triple": [
+        "mental_or_behavioral_dysfunction",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9530553235868128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.3460406064987183,
+      "second_triple_score": -1.3679612874984741,
+      "entity_score": -2.7140018939971924,
+      "lower_bound_score": -3.64704030752182,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 13
+    },
+    {
+      "r1": "treats",
+      "intermediate_entity": "cell_or_molecular_dysfunction",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "cell_or_molecular_dysfunction"
+      ],
+      "second_triple": [
+        "cell_or_molecular_dysfunction",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9530553235868128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.3435518741607666,
+      "second_triple_score": -1.4017046689987183,
+      "entity_score": -2.745256543159485,
+      "lower_bound_score": -3.6782949566841125,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 14
+    },
+    {
+      "r1": "treats",
+      "intermediate_entity": "neoplastic_process",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "neoplastic_process"
+      ],
+      "second_triple": [
+        "neoplastic_process",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9530553235868128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.3567583560943604,
+      "second_triple_score": -1.3929578065872192,
+      "entity_score": -2.7497161626815796,
+      "lower_bound_score": -3.6827545762062073,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 15
+    },
+    {
+      "r1": "treats",
+      "intermediate_entity": "pathologic_function",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "pathologic_function"
+      ],
+      "second_triple": [
+        "pathologic_function",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9530553235868128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.3372890949249268,
+      "second_triple_score": -1.413508415222168,
+      "entity_score": -2.7507975101470947,
+      "lower_bound_score": -3.6838359236717224,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 16
+    },
+    {
+      "r1": "treats",
+      "intermediate_entity": "injury_or_poisoning",
+      "r2": "isa",
+      "first_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "injury_or_poisoning"
+      ],
+      "second_triple": [
+        "injury_or_poisoning",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "pra_confidence": 0.9530553235868128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.432910680770874,
+      "second_triple_score": -1.4195005893707275,
+      "entity_score": -2.8524112701416016,
+      "lower_bound_score": -3.7854496836662292,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 17
+    }
+  ]
+}

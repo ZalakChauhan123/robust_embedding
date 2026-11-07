@@ -1,0 +1,35 @@
+{
+  "experiment": "MaSS UMLS pilot: DistMult victim evaluation",
+  "attack_name": "MaSS",
+  "victim_model": "DistMult",
+  "input_files": {
+    "clean_victim": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\seed_42\\distmult_victim_models\\clean_distmult.pt",
+    "poisoned_victim": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\seed_42\\distmult_victim_models\\poisoned_distmult.pt",
+    "set_A": "dataset_uml\\test.txt",
+    "set_B": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv",
+    "training_summary": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\seed_42\\distmult_victim_models\\training_summary.json",
+    "poisoning_summary": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\poisoning\\poisoning_summary.csv"
+  },
+  "num_clean_training_triples": 5216,
+  "num_poisoned_training_triples": 5378,
+  "num_injected_triples": 162,
+  "num_entities": 135,
+  "num_relations": 46,
+  "num_set_B_targets": 100,
+  "num_injected_targets": 96,
+  "num_not_injected_targets": 4,
+  "num_set_A_test_triples": 661,
+  "set_B_MRR_clean": 0.1013167863808547,
+  "set_B_MRR_poisoned": 0.1665831928957927,
+  "set_B_Hits_at_10_clean": 0.2,
+  "set_B_Hits_at_10_poisoned": 0.37,
+  "set_A_MRR_clean": 0.8533252107526194,
+  "set_A_MRR_poisoned": 0.8355805001668518,
+  "set_A_Hits_at_10_clean": 0.9576399394856279,
+  "set_A_Hits_at_10_poisoned": 0.9515885022692889,
+  "limitations": [
+    "One UMLS dataset and one random seed; results are preliminary.",
+    "DistMult is an opaque-box victim relative to the TransE attacker surrogate.",
+    "The frozen targets were rank-qualified under TransE, not this victim."
+  ]
+}

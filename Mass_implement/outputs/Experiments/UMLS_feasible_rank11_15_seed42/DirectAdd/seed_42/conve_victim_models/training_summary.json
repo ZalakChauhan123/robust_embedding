@@ -1,0 +1,83 @@
+{
+  "experiment": "DirectAdd UMLS pilot \u2014 matched clean and poisoned ConvE victims",
+  "attack_name": "DirectAdd",
+  "victim_model": "ConvE",
+  "parameters": {
+    "model": "ConvE",
+    "epochs": 500,
+    "embedding_dim": 64,
+    "embedding_height": 8,
+    "embedding_width": 8,
+    "num_filters": 32,
+    "kernel_size": 3,
+    "input_dropout": 0.2,
+    "feature_dropout": 0.2,
+    "hidden_dropout": 0.3,
+    "label_smoothing": 0.1,
+    "batch_size": 256,
+    "learning_rate": 0.001,
+    "random_seed": 42,
+    "optimizer": "Adam",
+    "loss": "1-vs-all binary cross entropy with logits",
+    "device": "cpu",
+    "independent_training_from_scratch": true,
+    "same_entity_relation_id_mappings": true,
+    "parameter_source": "Local UMLS defaults; not ConvE hyperparameters specified by the MaSS paper."
+  },
+  "datasets": {
+    "clean_train_file": "dataset_uml\\train.txt",
+    "poisoned_train_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\poisoning\\poisoned_train.txt",
+    "injected_triples_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\poisoning\\injected_triples.tsv",
+    "validation_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\valid.txt",
+    "test_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt",
+    "set_B_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv",
+    "clean_training_triples": 5216,
+    "poisoned_training_triples": 5416,
+    "unique_injected_triples": 200,
+    "validation_triples": 652,
+    "test_triples": 661,
+    "set_B_target_triples": 100,
+    "num_entities": 135,
+    "num_relations": 46,
+    "verified_poisoned_equals_clean_union_injected": true,
+    "verified_injection_disjoint_from_valid_test_and_set_B": true,
+    "source_sha256": {
+      "clean_train": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35",
+      "poisoned_train": "3f7b178c44ce13c02499c8e85a725ddb8be608ba6d067fa509f22d4cfa028406",
+      "injected_triples": "fd07238e642eaf11e7dde42f1e0e470c84fe5c752ac3c5d285900ca15eccf7da",
+      "validation": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e",
+      "test": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014",
+      "set_B_targets": "54521d859ceec544356b196e4598ed6cf36a94ab8c5243f3679f005d16bfeeb5"
+    }
+  },
+  "victims": {
+    "clean": {
+      "checkpoint": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\conve_victim_models\\clean_conve.pt",
+      "training_loss_csv": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\conve_victim_models\\clean_training_loss.csv",
+      "training_triples": 5216,
+      "training_queries": 810,
+      "initial_state_sha256": "315c1f4bd54211bdce61f7d4b7fd9ee38c7a7c5a4b71d534caa2dcfdfc5068b4",
+      "first_epoch_loss": 0.699984026985404,
+      "final_epoch_loss": 0.050064176008289246,
+      "minimum_epoch_loss": 0.04947740219441461,
+      "checkpoint_sha256": "e60e22a5a4dc9939db8d6590fb72fd72d656ae99036a0d391034b219e5557f43"
+    },
+    "poisoned": {
+      "checkpoint": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\conve_victim_models\\poisoned_conve.pt",
+      "training_loss_csv": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\conve_victim_models\\poisoned_training_loss.csv",
+      "training_triples": 5416,
+      "training_queries": 837,
+      "initial_state_sha256": "315c1f4bd54211bdce61f7d4b7fd9ee38c7a7c5a4b71d534caa2dcfdfc5068b4",
+      "first_epoch_loss": 0.6979896049488118,
+      "final_epoch_loss": 0.052871626293288905,
+      "minimum_epoch_loss": 0.052679850556303524,
+      "checkpoint_sha256": "cd25d8334818927d432c7b06b4740b587242efa2bb8a9fd1dbe14a1b37d77d91"
+    }
+  },
+  "same_initial_embeddings_verified": true,
+  "notes": [
+    "ConvE is trained from scratch; the TransE attacker surrogate is not a victim initialization.",
+    "The frozen Set-B protocol was selected from TransE ranks, not ConvE ranks.",
+    "Training loss is not an attack-success metric; use the paired RQ1/RQ2 evaluator."
+  ]
+}

@@ -404,9 +404,9 @@ def main() -> None:
         record, ranks = collect_run(args,budget,seed,attack_seed,poison,victims,evaluation)
         records.append(record)
         per_target_runs.append((budget,seed,ranks))
-        print(f"[verified] Set B ΔMRR={record['rq1_delta_MRR']:+.6f}; "
+        print(f"[verified] Set B delta MRR={record['rq1_delta_MRR']:+.6f}; "
               f"Set B poisoned Hits@10={record['rq1_setB_poisoned_Hits10']:.3f}; "
-              f"Set A ΔMRR={record['rq2_delta_MRR']:+.6f}", flush=True)
+              f"Set A delta MRR={record['rq2_delta_MRR']:+.6f}", flush=True)
 
     summary_dir = mode_dir / "summary"
     run_rows = sorted(records, key=lambda row: (row["budget"],row["victim_seed"]))
@@ -455,10 +455,10 @@ def main() -> None:
     print("\n=== MULTI-SEED EXPERIMENT COMPLETE ===")
     for item in aggregate:
         print(f"Budget {item['budget']}: n={item['n_seeds']}; "
-              f"RQ1 ΔMRR={item['rq1_delta_MRR_mean']:+.6f} "
+              f"RQ1 delta MRR={item['rq1_delta_MRR_mean']:+.6f} "
               f"(SD={item['rq1_delta_MRR_sample_sd']}); "
               f"RQ1 Hits@10={item['rq1_setB_poisoned_Hits10_mean']:.3f}; "
-              f"RQ2 ΔMRR={item['rq2_delta_MRR_mean']:+.6f}")
+              f"RQ2 delta MRR={item['rq2_delta_MRR_mean']:+.6f}")
     print(f"Saved summaries in: {summary_dir}")
 
 

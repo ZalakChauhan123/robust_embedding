@@ -1,0 +1,746 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "hormone",
+    "interacts_with",
+    "chemical_viewed_structurally"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 8,
+  "num_semantically_valid_templates": 3,
+  "num_selected_templates": 3,
+  "num_ranked_paths": 26,
+  "ranked_candidate_paths": [
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "hazardous_or_poisonous_substance",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "hazardous_or_poisonous_substance"
+      ],
+      "second_triple": [
+        "hazardous_or_poisonous_substance",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9872114328401597,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.2630053162574768,
+      "second_triple_score": -0.5906654596328735,
+      "entity_score": -0.8536707758903503,
+      "lower_bound_score": -1.01129749417305,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "chemical_viewed_functionally",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "chemical_viewed_functionally"
+      ],
+      "second_triple": [
+        "chemical_viewed_functionally",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9872114328401597,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.3822929263114929,
+      "second_triple_score": -0.48492226004600525,
+      "entity_score": -0.8672151863574982,
+      "lower_bound_score": -1.0248419046401978,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 2
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "vitamin",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "vitamin"
+      ],
+      "second_triple": [
+        "vitamin",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9872114328401597,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.3201170265674591,
+      "second_triple_score": -0.5505952835083008,
+      "entity_score": -0.8707123100757599,
+      "lower_bound_score": -1.0283390283584595,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 3
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "element_ion_or_isotope",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "element_ion_or_isotope"
+      ],
+      "second_triple": [
+        "element_ion_or_isotope",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9872114328401597,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.5620323419570923,
+      "second_triple_score": -0.3152240514755249,
+      "entity_score": -0.8772563934326172,
+      "lower_bound_score": -1.0348831117153168,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 4
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "receptor",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "receptor"
+      ],
+      "second_triple": [
+        "receptor",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9872114328401597,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.27904707193374634,
+      "second_triple_score": -0.6024194955825806,
+      "entity_score": -0.8814665675163269,
+      "lower_bound_score": -1.0390932857990265,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 5
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "immunologic_factor",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "immunologic_factor"
+      ],
+      "second_triple": [
+        "immunologic_factor",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9872114328401597,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.31376156210899353,
+      "second_triple_score": -0.5791573524475098,
+      "entity_score": -0.8929189145565033,
+      "lower_bound_score": -1.0505456328392029,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 6
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "pharmacologic_substance",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "pharmacologic_substance"
+      ],
+      "second_triple": [
+        "pharmacologic_substance",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9872114328401597,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.34173381328582764,
+      "second_triple_score": -0.5626811981201172,
+      "entity_score": -0.9044150114059448,
+      "lower_bound_score": -1.0620417296886444,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 7
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "biomedical_or_dental_material",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "biomedical_or_dental_material"
+      ],
+      "second_triple": [
+        "biomedical_or_dental_material",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9872114328401597,
+      "relation_score": -0.15762671828269958,
+      "first_triple_score": -0.47169747948646545,
+      "second_triple_score": -0.4352642297744751,
+      "entity_score": -0.9069617092609406,
+      "lower_bound_score": -1.0645884275436401,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 8
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "chemical",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "isa",
+        "chemical"
+      ],
+      "second_triple": [
+        "chemical",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9638122429080128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.5942838788032532,
+      "second_triple_score": -0.5084555149078369,
+      "entity_score": -1.10273939371109,
+      "lower_bound_score": -2.0357778072357178,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 9
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "indicator_reagent_or_diagnostic_aid",
+      "r2": "isa",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "second_triple": [
+        "indicator_reagent_or_diagnostic_aid",
+        "isa",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.43183979392051697,
+      "second_triple_score": -0.6881237030029297,
+      "entity_score": -1.1199634969234467,
+      "lower_bound_score": -2.0530019104480743,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 10
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "pharmacologic_substance",
+      "r2": "isa",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "pharmacologic_substance"
+      ],
+      "second_triple": [
+        "pharmacologic_substance",
+        "isa",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.34173381328582764,
+      "second_triple_score": -0.7960479855537415,
+      "entity_score": -1.137781798839569,
+      "lower_bound_score": -2.0708202123641968,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 11
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "hazardous_or_poisonous_substance",
+      "r2": "isa",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "hazardous_or_poisonous_substance"
+      ],
+      "second_triple": [
+        "hazardous_or_poisonous_substance",
+        "isa",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.2630053162574768,
+      "second_triple_score": -0.9105498194694519,
+      "entity_score": -1.1735551357269287,
+      "lower_bound_score": -2.1065935492515564,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 12
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "vitamin",
+      "r2": "isa",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "vitamin"
+      ],
+      "second_triple": [
+        "vitamin",
+        "isa",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.3201170265674591,
+      "second_triple_score": -0.8689959049224854,
+      "entity_score": -1.1891129314899445,
+      "lower_bound_score": -2.122151345014572,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 13
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "immunologic_factor",
+      "r2": "isa",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "immunologic_factor"
+      ],
+      "second_triple": [
+        "immunologic_factor",
+        "isa",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.31376156210899353,
+      "second_triple_score": -0.8759838342666626,
+      "entity_score": -1.1897453963756561,
+      "lower_bound_score": -2.122783809900284,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 14
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "receptor",
+      "r2": "isa",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "receptor"
+      ],
+      "second_triple": [
+        "receptor",
+        "isa",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.27904707193374634,
+      "second_triple_score": -0.9150508642196655,
+      "entity_score": -1.1940979361534119,
+      "lower_bound_score": -2.1271363496780396,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 15
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "antibiotic",
+      "r2": "isa",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "antibiotic"
+      ],
+      "second_triple": [
+        "antibiotic",
+        "isa",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.3101674020290375,
+      "second_triple_score": -0.8866368532180786,
+      "entity_score": -1.196804255247116,
+      "lower_bound_score": -2.1298426687717438,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 16
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "biologically_active_substance",
+      "r2": "isa",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "biologically_active_substance"
+      ],
+      "second_triple": [
+        "biologically_active_substance",
+        "isa",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.2462722659111023,
+      "second_triple_score": -0.963610827922821,
+      "entity_score": -1.2098830938339233,
+      "lower_bound_score": -2.142921507358551,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 17
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organic_chemical",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "isa",
+        "organic_chemical"
+      ],
+      "second_triple": [
+        "organic_chemical",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9638122429080128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.9166277050971985,
+      "second_triple_score": -0.29618358612060547,
+      "entity_score": -1.212811291217804,
+      "lower_bound_score": -2.1458497047424316,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 18
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "enzyme",
+      "r2": "isa",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "enzyme"
+      ],
+      "second_triple": [
+        "enzyme",
+        "isa",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.25717854499816895,
+      "second_triple_score": -0.9651804566383362,
+      "entity_score": -1.2223590016365051,
+      "lower_bound_score": -2.155397415161133,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 19
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "chemical_viewed_functionally",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "isa",
+        "chemical_viewed_functionally"
+      ],
+      "second_triple": [
+        "chemical_viewed_functionally",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9638122429080128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.7909636497497559,
+      "second_triple_score": -0.48492226004600525,
+      "entity_score": -1.275885909795761,
+      "lower_bound_score": -2.208924323320389,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 20
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "pharmacologic_substance",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "isa",
+        "pharmacologic_substance"
+      ],
+      "second_triple": [
+        "pharmacologic_substance",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9638122429080128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.9868282675743103,
+      "second_triple_score": -0.5626811981201172,
+      "entity_score": -1.5495094656944275,
+      "lower_bound_score": -2.482547879219055,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 21
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "biologically_active_substance",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "isa",
+        "biologically_active_substance"
+      ],
+      "second_triple": [
+        "biologically_active_substance",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9638122429080128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.900814950466156,
+      "second_triple_score": -0.7107974290847778,
+      "entity_score": -1.6116123795509338,
+      "lower_bound_score": -2.5446507930755615,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 22
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organism",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "isa",
+        "organism"
+      ],
+      "second_triple": [
+        "organism",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9638122429080128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.4976446628570557,
+      "second_triple_score": -1.818834900856018,
+      "entity_score": -3.3164795637130737,
+      "lower_bound_score": -4.249517977237701,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 23
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "vertebrate",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "isa",
+        "vertebrate"
+      ],
+      "second_triple": [
+        "vertebrate",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9638122429080128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.577877163887024,
+      "second_triple_score": -1.8340171575546265,
+      "entity_score": -3.4118943214416504,
+      "lower_bound_score": -4.344932734966278,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 24
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "mammal",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "isa",
+        "mammal"
+      ],
+      "second_triple": [
+        "mammal",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9638122429080128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.6566412448883057,
+      "second_triple_score": -1.8529971837997437,
+      "entity_score": -3.5096384286880493,
+      "lower_bound_score": -4.442676842212677,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 25
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "animal",
+      "r2": "interacts_with",
+      "first_triple": [
+        "hormone",
+        "isa",
+        "animal"
+      ],
+      "second_triple": [
+        "animal",
+        "interacts_with",
+        "chemical_viewed_structurally"
+      ],
+      "pra_confidence": 0.9638122429080128,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.6417624950408936,
+      "second_triple_score": -1.871993064880371,
+      "entity_score": -3.5137555599212646,
+      "lower_bound_score": -4.446793973445892,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 26
+    }
+  ]
+}

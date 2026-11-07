@@ -1,0 +1,118 @@
+{
+  "research_question": "RQ1 — attack effectiveness (MaSS, DeepPath victim)",
+  "victim_model": "DeepPath",
+  "prediction": "TAIL only: (h*, r*, ?) ranked against every known entity",
+  "ranking_protocol": "filtered; same original train+valid+test facts for both models",
+  "filter_excludes": "injected edges and synthetic Set B targets",
+  "tie_policy": "average rank, consistent with the TransE evaluation",
+  "interpretation": "Higher poisoned MRR/Hits@10, or positive rank improvement, favors the attacker",
+  "set_B_all_targets": {
+    "count": 100,
+    "clean": {
+      "count": 100,
+      "MRR": 0.0636925384744325,
+      "Hits@1": 0.01,
+      "Hits@3": 0.05,
+      "Hits@10": 0.11,
+      "Mean_Rank": 39.99,
+      "Median_Rank": 37.5
+    },
+    "poisoned": {
+      "count": 100,
+      "MRR": 0.05713936214326597,
+      "Hits@1": 0.0,
+      "Hits@3": 0.03,
+      "Hits@10": 0.14,
+      "Mean_Rank": 36.15,
+      "Median_Rank": 35.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": -0.0065531763311665325,
+      "Hits@1": -0.01,
+      "Hits@3": -0.020000000000000004,
+      "Hits@10": 0.030000000000000013,
+      "Mean_Rank": -3.8400000000000034,
+      "Median_Rank": -2.5
+    },
+    "num_improved_rank": 48,
+    "num_worsened_rank": 50,
+    "num_unchanged_rank": 2,
+    "num_new_hits_at_10": 8,
+    "num_lost_hits_at_10": 5,
+    "mean_rank_improvement_clean_minus_poisoned": 3.84
+  },
+  "set_B_injected_targets": {
+    "count": 96,
+    "clean": {
+      "count": 96,
+      "MRR": 0.06542473858584012,
+      "Hits@1": 0.010416666666666666,
+      "Hits@3": 0.052083333333333336,
+      "Hits@10": 0.11458333333333333,
+      "Mean_Rank": 39.520833333333336,
+      "Median_Rank": 35.5
+    },
+    "poisoned": {
+      "count": 96,
+      "MRR": 0.05863135429152325,
+      "Hits@1": 0.0,
+      "Hits@3": 0.03125,
+      "Hits@10": 0.14583333333333334,
+      "Mean_Rank": 35.40625,
+      "Median_Rank": 34.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": -0.006793384294316876,
+      "Hits@1": -0.010416666666666666,
+      "Hits@3": -0.020833333333333336,
+      "Hits@10": 0.031250000000000014,
+      "Mean_Rank": -4.114583333333336,
+      "Median_Rank": -1.5
+    },
+    "num_improved_rank": 47,
+    "num_worsened_rank": 47,
+    "num_unchanged_rank": 2,
+    "num_new_hits_at_10": 8,
+    "num_lost_hits_at_10": 5,
+    "mean_rank_improvement_clean_minus_poisoned": 4.114583333333333
+  },
+  "set_B_not_injected_targets": {
+    "count": 4,
+    "clean": {
+      "count": 4,
+      "MRR": 0.02211973580064958,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 51.25,
+      "Median_Rank": 54.5
+    },
+    "poisoned": {
+      "count": 4,
+      "MRR": 0.021331550585091105,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 54.0,
+      "Median_Rank": 51.5
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": -0.0007881852155584741,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 2.75,
+      "Median_Rank": -3.0
+    },
+    "num_improved_rank": 1,
+    "num_worsened_rank": 3,
+    "num_unchanged_rank": 0,
+    "num_new_hits_at_10": 0,
+    "num_lost_hits_at_10": 0,
+    "mean_rank_improvement_clean_minus_poisoned": -2.75
+  },
+  "attack_name": "MaSS",
+  "implementation_variant": "local_supervised_two_hop_path_policy_not_official_DeepPath",
+  "opaque_box_note": "The frozen attacker surrogate is TransE while the victim is DeepPath.",
+  "target_protocol_note": "Set B was selected with TransE ranks 11–15, not this victim's ranks."
+}

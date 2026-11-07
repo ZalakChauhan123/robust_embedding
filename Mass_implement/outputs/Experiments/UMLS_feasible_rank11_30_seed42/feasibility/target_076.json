@@ -1,0 +1,130 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "neoplastic_process",
+    "produces",
+    "substance"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 64,
+  "num_semantically_valid_templates": 1,
+  "num_selected_templates": 1,
+  "num_ranked_paths": 4,
+  "ranked_candidate_paths": [
+    {
+      "r1": "produces",
+      "intermediate_entity": "receptor",
+      "r2": "isa",
+      "first_triple": [
+        "neoplastic_process",
+        "produces",
+        "receptor"
+      ],
+      "second_triple": [
+        "receptor",
+        "isa",
+        "substance"
+      ],
+      "pra_confidence": 0.9028680693326855,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.6758599877357483,
+      "second_triple_score": -0.36435985565185547,
+      "entity_score": -1.0402198433876038,
+      "lower_bound_score": -1.9732582569122314,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 1
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "nucleic_acid_nucleoside_or_nucleotide",
+      "r2": "isa",
+      "first_triple": [
+        "neoplastic_process",
+        "produces",
+        "nucleic_acid_nucleoside_or_nucleotide"
+      ],
+      "second_triple": [
+        "nucleic_acid_nucleoside_or_nucleotide",
+        "isa",
+        "substance"
+      ],
+      "pra_confidence": 0.9028680693326855,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.9542092084884644,
+      "second_triple_score": -0.2294449508190155,
+      "entity_score": -1.1836541593074799,
+      "lower_bound_score": -2.1166925728321075,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "organic_chemical",
+      "r2": "isa",
+      "first_triple": [
+        "neoplastic_process",
+        "produces",
+        "organic_chemical"
+      ],
+      "second_triple": [
+        "organic_chemical",
+        "isa",
+        "substance"
+      ],
+      "pra_confidence": 0.9028680693326855,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.9758519530296326,
+      "second_triple_score": -0.2960129380226135,
+      "entity_score": -1.271864891052246,
+      "lower_bound_score": -2.204903304576874,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 3
+    },
+    {
+      "r1": "produces",
+      "intermediate_entity": "amino_acid_peptide_or_protein",
+      "r2": "isa",
+      "first_triple": [
+        "neoplastic_process",
+        "produces",
+        "amino_acid_peptide_or_protein"
+      ],
+      "second_triple": [
+        "amino_acid_peptide_or_protein",
+        "isa",
+        "substance"
+      ],
+      "pra_confidence": 0.9028680693326855,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -1.0311815738677979,
+      "second_triple_score": -0.3180999457836151,
+      "entity_score": -1.349281519651413,
+      "lower_bound_score": -2.2823199331760406,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 4
+    }
+  ]
+}

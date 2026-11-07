@@ -1,0 +1,76 @@
+{
+  "experiment": "DirectAdd UMLS pilot \u2014 matched clean and poisoned TransH victims",
+  "attack_name": "DirectAdd",
+  "victim_model": "TransH",
+  "parameters": {
+    "model": "TransH",
+    "embedding_dim": 64,
+    "epochs": 500,
+    "batch_size": 256,
+    "learning_rate": 0.01,
+    "margin": 1.0,
+    "loss": "mean ReLU(margin - positive_score + negative_score)",
+    "negative_sampling": "uniform random entity replacing head/tail with probability 0.5",
+    "normalization": "unit L2 entity, relation, and hyperplane-normal vectors after each step",
+    "random_seed": 42,
+    "optimizer": "Adam",
+    "device": "cpu",
+    "same_entity_relation_id_mappings": true,
+    "independent_training_from_scratch": true,
+    "parameter_source": "Local UMLS defaults; not victim hyperparameters specified by the MaSS paper."
+  },
+  "datasets": {
+    "clean_train_file": "dataset_uml\\train.txt",
+    "poisoned_train_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\poisoning\\poisoned_train.txt",
+    "injected_triples_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\poisoning\\injected_triples.tsv",
+    "validation_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\valid.txt",
+    "test_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt",
+    "set_B_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv",
+    "clean_training_triples": 5216,
+    "poisoned_training_triples": 5416,
+    "unique_injected_triples": 200,
+    "validation_triples": 652,
+    "test_triples": 661,
+    "set_B_target_triples": 100,
+    "num_entities": 135,
+    "num_relations": 46,
+    "verified_poisoned_equals_clean_union_injected": true,
+    "verified_injection_disjoint_from_valid_test_and_set_B": true,
+    "source_sha256": {
+      "clean_train": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35",
+      "poisoned_train": "3f7b178c44ce13c02499c8e85a725ddb8be608ba6d067fa509f22d4cfa028406",
+      "injected_triples": "fd07238e642eaf11e7dde42f1e0e470c84fe5c752ac3c5d285900ca15eccf7da",
+      "validation": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e",
+      "test": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014",
+      "set_B_targets": "54521d859ceec544356b196e4598ed6cf36a94ab8c5243f3679f005d16bfeeb5"
+    }
+  },
+  "victims": {
+    "clean": {
+      "checkpoint": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\transh_victim_models\\clean_transh.pt",
+      "training_loss_csv": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\transh_victim_models\\clean_training_loss.csv",
+      "training_triples": 5216,
+      "initial_state_sha256": "8b3334f07d2ca2018024ee22a66fbb4b7274212394f50b4f6dfa9abe9bb16753",
+      "first_epoch_loss": 0.9467774786832143,
+      "final_epoch_loss": 0.3521757646938043,
+      "minimum_epoch_loss": 0.342279861858286,
+      "checkpoint_sha256": "ae9970c5a4286cbe94a0bbda17d6adcd758cb17ccc162e6910e137a126693821"
+    },
+    "poisoned": {
+      "checkpoint": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\transh_victim_models\\poisoned_transh.pt",
+      "training_loss_csv": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\transh_victim_models\\poisoned_training_loss.csv",
+      "training_triples": 5416,
+      "initial_state_sha256": "8b3334f07d2ca2018024ee22a66fbb4b7274212394f50b4f6dfa9abe9bb16753",
+      "first_epoch_loss": 0.945387257695022,
+      "final_epoch_loss": 0.3791910995408739,
+      "minimum_epoch_loss": 0.3603051866967358,
+      "checkpoint_sha256": "914a0b7522ad40ef1299be2d57bd807b2b777b7a8d0fe7c750ac4acf7c324bfc"
+    }
+  },
+  "same_initial_embeddings_verified": true,
+  "notes": [
+    "TransH is trained from scratch; the TransE attacker surrogate is not a victim initialization.",
+    "The frozen Set-B protocol was selected from TransE ranks, not this victim model's ranks.",
+    "Use the matching filtered RQ1/RQ2 evaluator for attack results."
+  ]
+}

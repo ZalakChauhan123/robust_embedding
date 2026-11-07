@@ -296,7 +296,8 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
         raise AssertionError("Victims did not start from identical initialized weights")
 
     report = {
-        "experiment": "MaSS UMLS pilot — matched clean and poisoned TransE victims",
+        "experiment": f"{args.attack_name} UMLS pilot — matched clean and poisoned TransE victims",
+        "attack_name": args.attack_name,
         "parameters": config,
         "datasets": {
             "clean_train_file": str(args.clean_train),
@@ -337,6 +338,8 @@ def main() -> None:
     parser.add_argument("--entities", type=Path, default=DATASET_DIR / "entities.txt")
     parser.add_argument("--relations", type=Path, default=DATASET_DIR / "relations.txt")
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+    parser.add_argument("--attack-name", default="MaSS",
+                        help="Label recorded in the training provenance")
     parser.add_argument("--epochs", type=int, default=500)
     parser.add_argument("--dim", type=int, default=64)
     parser.add_argument("--batch-size", type=int, default=256)

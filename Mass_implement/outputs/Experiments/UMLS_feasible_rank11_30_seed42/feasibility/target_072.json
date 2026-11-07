@@ -1,0 +1,46 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "therapeutic_or_preventive_procedure",
+    "complicates",
+    "machine_activity"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 137,
+  "num_semantically_valid_templates": 1,
+  "num_selected_templates": 1,
+  "num_ranked_paths": 1,
+  "ranked_candidate_paths": [
+    {
+      "r1": "treats",
+      "intermediate_entity": "sign_or_symptom",
+      "r2": "evaluation_of",
+      "first_triple": [
+        "therapeutic_or_preventive_procedure",
+        "treats",
+        "sign_or_symptom"
+      ],
+      "second_triple": [
+        "sign_or_symptom",
+        "evaluation_of",
+        "machine_activity"
+      ],
+      "pra_confidence": 0.9568568282643847,
+      "relation_score": -2.136654853820801,
+      "first_triple_score": -1.9240096807479858,
+      "second_triple_score": -1.7312147617340088,
+      "entity_score": -3.6552244424819946,
+      "lower_bound_score": -5.791879296302795,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    }
+  ]
+}

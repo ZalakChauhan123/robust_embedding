@@ -1,0 +1,550 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "receptor",
+    "causes",
+    "fungus"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 62,
+  "num_semantically_valid_templates": 5,
+  "num_selected_templates": 5,
+  "num_ranked_paths": 19,
+  "ranked_candidate_paths": [
+    {
+      "r1": "causes",
+      "intermediate_entity": "pathologic_function",
+      "r2": "process_of",
+      "first_triple": [
+        "receptor",
+        "causes",
+        "pathologic_function"
+      ],
+      "second_triple": [
+        "pathologic_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9520983530108029,
+      "relation_score": -0.7996082305908203,
+      "first_triple_score": -0.6362580060958862,
+      "second_triple_score": -0.26400938630104065,
+      "entity_score": -0.9002673923969269,
+      "lower_bound_score": -1.6998756229877472,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "mental_or_behavioral_dysfunction",
+      "r2": "process_of",
+      "first_triple": [
+        "receptor",
+        "causes",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "second_triple": [
+        "mental_or_behavioral_dysfunction",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9520983530108029,
+      "relation_score": -0.7996082305908203,
+      "first_triple_score": -0.6245903372764587,
+      "second_triple_score": -0.3069742023944855,
+      "entity_score": -0.9315645396709442,
+      "lower_bound_score": -1.7311727702617645,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 2
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "immunologic_factor",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "interacts_with",
+        "immunologic_factor"
+      ],
+      "second_triple": [
+        "immunologic_factor",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9459276031052,
+      "relation_score": -1.0735273361206055,
+      "first_triple_score": -0.22580859065055847,
+      "second_triple_score": -0.7321181297302246,
+      "entity_score": -0.9579267203807831,
+      "lower_bound_score": -2.0314540565013885,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 3
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "antibiotic",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "interacts_with",
+        "antibiotic"
+      ],
+      "second_triple": [
+        "antibiotic",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9459276031052,
+      "relation_score": -1.0735273361206055,
+      "first_triple_score": -0.20171356201171875,
+      "second_triple_score": -0.7738253474235535,
+      "entity_score": -0.9755389094352722,
+      "lower_bound_score": -2.0490662455558777,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 4
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "hormone",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "interacts_with",
+        "hormone"
+      ],
+      "second_triple": [
+        "hormone",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9459276031052,
+      "relation_score": -1.0735273361206055,
+      "first_triple_score": -0.19904214143753052,
+      "second_triple_score": -0.8056573867797852,
+      "entity_score": -1.0046995282173157,
+      "lower_bound_score": -2.078226864337921,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 5
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "biologically_active_substance",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "interacts_with",
+        "biologically_active_substance"
+      ],
+      "second_triple": [
+        "biologically_active_substance",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9459276031052,
+      "relation_score": -1.0735273361206055,
+      "first_triple_score": -0.27637243270874023,
+      "second_triple_score": -0.730008065700531,
+      "entity_score": -1.0063804984092712,
+      "lower_bound_score": -2.0799078345298767,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 6
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "hazardous_or_poisonous_substance",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "interacts_with",
+        "hazardous_or_poisonous_substance"
+      ],
+      "second_triple": [
+        "hazardous_or_poisonous_substance",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9459276031052,
+      "relation_score": -1.0735273361206055,
+      "first_triple_score": -0.19583798944950104,
+      "second_triple_score": -0.8172736167907715,
+      "entity_score": -1.0131116062402725,
+      "lower_bound_score": -2.086638942360878,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 7
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "enzyme",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "interacts_with",
+        "enzyme"
+      ],
+      "second_triple": [
+        "enzyme",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9459276031052,
+      "relation_score": -1.0735273361206055,
+      "first_triple_score": -0.28166335821151733,
+      "second_triple_score": -0.7854412794113159,
+      "entity_score": -1.0671046376228333,
+      "lower_bound_score": -2.1406319737434387,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 8
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "chemical_viewed_functionally",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "interacts_with",
+        "chemical_viewed_functionally"
+      ],
+      "second_triple": [
+        "chemical_viewed_functionally",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9459276031052,
+      "relation_score": -1.0735273361206055,
+      "first_triple_score": -0.2979182004928589,
+      "second_triple_score": -0.7783142924308777,
+      "entity_score": -1.0762324929237366,
+      "lower_bound_score": -2.149759829044342,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 9
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "vitamin",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "interacts_with",
+        "vitamin"
+      ],
+      "second_triple": [
+        "vitamin",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9459276031052,
+      "relation_score": -1.0735273361206055,
+      "first_triple_score": -0.2909395396709442,
+      "second_triple_score": -0.7919257879257202,
+      "entity_score": -1.0828653275966644,
+      "lower_bound_score": -2.15639266371727,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 10
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "biomedical_or_dental_material",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "interacts_with",
+        "biomedical_or_dental_material"
+      ],
+      "second_triple": [
+        "biomedical_or_dental_material",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9459276031052,
+      "relation_score": -1.0735273361206055,
+      "first_triple_score": -0.3589918315410614,
+      "second_triple_score": -0.7511600255966187,
+      "entity_score": -1.11015185713768,
+      "lower_bound_score": -2.1836791932582855,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 11
+    },
+    {
+      "r1": "disrupts",
+      "intermediate_entity": "cell_function",
+      "r2": "process_of",
+      "first_triple": [
+        "receptor",
+        "disrupts",
+        "cell_function"
+      ],
+      "second_triple": [
+        "cell_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9214878071827015,
+      "relation_score": -1.6785025596618652,
+      "first_triple_score": -1.0943397283554077,
+      "second_triple_score": -0.2342170625925064,
+      "entity_score": -1.3285567909479141,
+      "lower_bound_score": -3.0070593506097794,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 12
+    },
+    {
+      "r1": "disrupts",
+      "intermediate_entity": "molecular_function",
+      "r2": "process_of",
+      "first_triple": [
+        "receptor",
+        "disrupts",
+        "molecular_function"
+      ],
+      "second_triple": [
+        "molecular_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9214878071827015,
+      "relation_score": -1.6785025596618652,
+      "first_triple_score": -1.1605141162872314,
+      "second_triple_score": -0.24382203817367554,
+      "entity_score": -1.404336154460907,
+      "lower_bound_score": -3.082838714122772,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 13
+    },
+    {
+      "r1": "disrupts",
+      "intermediate_entity": "mental_process",
+      "r2": "process_of",
+      "first_triple": [
+        "receptor",
+        "disrupts",
+        "mental_process"
+      ],
+      "second_triple": [
+        "mental_process",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9214878071827015,
+      "relation_score": -1.6785025596618652,
+      "first_triple_score": -1.1014586687088013,
+      "second_triple_score": -0.3093087673187256,
+      "entity_score": -1.4107674360275269,
+      "lower_bound_score": -3.089269995689392,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 14
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "mental_or_behavioral_dysfunction",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "causes",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "second_triple": [
+        "mental_or_behavioral_dysfunction",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9838866940805683,
+      "relation_score": -1.239169716835022,
+      "first_triple_score": -0.6245903372764587,
+      "second_triple_score": -1.5004931688308716,
+      "entity_score": -2.1250835061073303,
+      "lower_bound_score": -3.3642532229423523,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 15
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "pathologic_function",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "causes",
+        "pathologic_function"
+      ],
+      "second_triple": [
+        "pathologic_function",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9838866940805683,
+      "relation_score": -1.239169716835022,
+      "first_triple_score": -0.6362580060958862,
+      "second_triple_score": -1.5211361646652222,
+      "entity_score": -2.1573941707611084,
+      "lower_bound_score": -3.3965638875961304,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 16
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "acquired_abnormality",
+      "r2": "affects",
+      "first_triple": [
+        "receptor",
+        "causes",
+        "acquired_abnormality"
+      ],
+      "second_triple": [
+        "acquired_abnormality",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9838866940805683,
+      "relation_score": -1.239169716835022,
+      "first_triple_score": -0.607192873954773,
+      "second_triple_score": -1.5692960023880005,
+      "entity_score": -2.1764888763427734,
+      "lower_bound_score": -3.4156585931777954,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 17
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "congenital_abnormality",
+      "r2": "location_of",
+      "first_triple": [
+        "receptor",
+        "causes",
+        "congenital_abnormality"
+      ],
+      "second_triple": [
+        "congenital_abnormality",
+        "location_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9768888271467081,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.6254417896270752,
+      "second_triple_score": -2.0768990516662598,
+      "entity_score": -2.702340841293335,
+      "lower_bound_score": -4.220022201538086,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 18
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "acquired_abnormality",
+      "r2": "location_of",
+      "first_triple": [
+        "receptor",
+        "causes",
+        "acquired_abnormality"
+      ],
+      "second_triple": [
+        "acquired_abnormality",
+        "location_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9768888271467081,
+      "relation_score": -1.517681360244751,
+      "first_triple_score": -0.607192873954773,
+      "second_triple_score": -2.098344326019287,
+      "entity_score": -2.70553719997406,
+      "lower_bound_score": -4.223218560218811,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 19
+    }
+  ]
+}

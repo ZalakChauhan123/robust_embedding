@@ -1,0 +1,46 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "mental_or_behavioral_dysfunction",
+    "degree_of",
+    "virus"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 20,
+  "num_semantically_valid_templates": 1,
+  "num_selected_templates": 1,
+  "num_ranked_paths": 1,
+  "ranked_candidate_paths": [
+    {
+      "r1": "co-occurs_with",
+      "intermediate_entity": "anatomical_abnormality",
+      "r2": "location_of",
+      "first_triple": [
+        "mental_or_behavioral_dysfunction",
+        "co-occurs_with",
+        "anatomical_abnormality"
+      ],
+      "second_triple": [
+        "anatomical_abnormality",
+        "location_of",
+        "virus"
+      ],
+      "pra_confidence": 0.9260611138184882,
+      "relation_score": -1.393624186515808,
+      "first_triple_score": -0.12499579787254333,
+      "second_triple_score": -2.0653505325317383,
+      "entity_score": -2.1903463304042816,
+      "lower_bound_score": -3.5839705169200897,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    }
+  ]
+}

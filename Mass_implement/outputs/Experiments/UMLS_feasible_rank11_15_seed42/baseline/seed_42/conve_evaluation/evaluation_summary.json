@@ -1,0 +1,35 @@
+{
+  "experiment": "MaSS UMLS pilot: ConvE victim evaluation",
+  "attack_name": "MaSS",
+  "victim_model": "ConvE",
+  "input_files": {
+    "clean_victim": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\seed_42\\conve_victim_models\\clean_conve.pt",
+    "poisoned_victim": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\seed_42\\conve_victim_models\\poisoned_conve.pt",
+    "set_A": "dataset_uml\\test.txt",
+    "set_B": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv",
+    "training_summary": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\seed_42\\conve_victim_models\\training_summary.json",
+    "poisoning_summary": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\poisoning\\poisoning_summary.csv"
+  },
+  "num_clean_training_triples": 5216,
+  "num_poisoned_training_triples": 5378,
+  "num_injected_triples": 162,
+  "num_entities": 135,
+  "num_relations": 46,
+  "num_set_B_targets": 100,
+  "num_injected_targets": 96,
+  "num_not_injected_targets": 4,
+  "num_set_A_test_triples": 661,
+  "set_B_MRR_clean": 0.10041221222365639,
+  "set_B_MRR_poisoned": 0.16107882513536798,
+  "set_B_Hits_at_10_clean": 0.23,
+  "set_B_Hits_at_10_poisoned": 0.42,
+  "set_A_MRR_clean": 0.9171136235756084,
+  "set_A_MRR_poisoned": 0.8951854022715272,
+  "set_A_Hits_at_10_clean": 0.9924357034795764,
+  "set_A_Hits_at_10_poisoned": 0.9878971255673222,
+  "limitations": [
+    "One UMLS dataset and one random seed; results are preliminary.",
+    "ConvE is an opaque-box victim relative to the TransE attacker surrogate.",
+    "The frozen targets were rank-qualified under TransE, not ConvE."
+  ]
+}

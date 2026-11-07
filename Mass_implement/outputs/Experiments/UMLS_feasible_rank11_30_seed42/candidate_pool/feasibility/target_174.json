@@ -1,0 +1,102 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "environmental_effect_of_humans",
+    "result_of",
+    "hazardous_or_poisonous_substance"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 168,
+  "num_semantically_valid_templates": 2,
+  "num_selected_templates": 2,
+  "num_ranked_paths": 3,
+  "ranked_candidate_paths": [
+    {
+      "r1": "result_of",
+      "intermediate_entity": "laboratory_procedure",
+      "r2": "assesses_effect_of",
+      "first_triple": [
+        "environmental_effect_of_humans",
+        "result_of",
+        "laboratory_procedure"
+      ],
+      "second_triple": [
+        "laboratory_procedure",
+        "assesses_effect_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.974680719795623,
+      "relation_score": -1.7360069751739502,
+      "first_triple_score": -1.2043633460998535,
+      "second_triple_score": -0.48696368932724,
+      "entity_score": -1.6913270354270935,
+      "lower_bound_score": -3.4273340106010437,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 1
+    },
+    {
+      "r1": "result_of",
+      "intermediate_entity": "diagnostic_procedure",
+      "r2": "assesses_effect_of",
+      "first_triple": [
+        "environmental_effect_of_humans",
+        "result_of",
+        "diagnostic_procedure"
+      ],
+      "second_triple": [
+        "diagnostic_procedure",
+        "assesses_effect_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.974680719795623,
+      "relation_score": -1.7360069751739502,
+      "first_triple_score": -1.2631950378417969,
+      "second_triple_score": -0.5205739736557007,
+      "entity_score": -1.7837690114974976,
+      "lower_bound_score": -3.5197759866714478,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organism_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "environmental_effect_of_humans",
+        "isa",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9670085210724642,
+      "relation_score": -1.846409559249878,
+      "first_triple_score": -0.9036275744438171,
+      "second_triple_score": -1.4477020502090454,
+      "entity_score": -2.3513296246528625,
+      "lower_bound_score": -4.1977391839027405,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 3
+    }
+  ]
+}

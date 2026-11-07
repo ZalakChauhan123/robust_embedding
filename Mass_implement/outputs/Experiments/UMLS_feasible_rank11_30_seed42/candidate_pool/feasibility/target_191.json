@@ -1,0 +1,46 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "nucleic_acid_nucleoside_or_nucleotide",
+    "interacts_with",
+    "physical_object"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 8,
+  "num_semantically_valid_templates": 1,
+  "num_selected_templates": 1,
+  "num_ranked_paths": 1,
+  "ranked_candidate_paths": [
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "organic_chemical",
+      "r2": "isa",
+      "first_triple": [
+        "nucleic_acid_nucleoside_or_nucleotide",
+        "interacts_with",
+        "organic_chemical"
+      ],
+      "second_triple": [
+        "organic_chemical",
+        "isa",
+        "physical_object"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -0.26997578144073486,
+      "second_triple_score": -0.3835826516151428,
+      "entity_score": -0.6535584330558777,
+      "lower_bound_score": -1.5865968465805054,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "laboratory_procedure",
+    "analyzes",
+    "molecular_function"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 8,
+  "num_semantically_valid_templates": 1,
+  "num_selected_templates": 1,
+  "num_ranked_paths": 1,
+  "ranked_candidate_paths": [
+    {
+      "r1": "method_of",
+      "intermediate_entity": "diagnostic_procedure",
+      "r2": "assesses_effect_of",
+      "first_triple": [
+        "laboratory_procedure",
+        "method_of",
+        "diagnostic_procedure"
+      ],
+      "second_triple": [
+        "diagnostic_procedure",
+        "assesses_effect_of",
+        "molecular_function"
+      ],
+      "pra_confidence": 0.9059251243245655,
+      "relation_score": -1.5714129209518433,
+      "first_triple_score": -1.4806182384490967,
+      "second_triple_score": -1.5060232877731323,
+      "entity_score": -2.986641526222229,
+      "lower_bound_score": -4.558054447174072,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "physical_object",
+    "issue_in",
+    "chemical"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 53,
+  "num_semantically_valid_templates": 1,
+  "num_selected_templates": 1,
+  "num_ranked_paths": 2,
+  "ranked_candidate_paths": [
+    {
+      "r1": "issue_in",
+      "intermediate_entity": "occupation_or_discipline",
+      "r2": "isa",
+      "first_triple": [
+        "physical_object",
+        "issue_in",
+        "occupation_or_discipline"
+      ],
+      "second_triple": [
+        "occupation_or_discipline",
+        "isa",
+        "chemical"
+      ],
+      "pra_confidence": 0.9453425320979234,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -7.293490886688232,
+      "second_triple_score": -1.7656792402267456,
+      "entity_score": -9.059170126914978,
+      "lower_bound_score": -9.992208540439606,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "issue_in",
+      "intermediate_entity": "biomedical_occupation_or_discipline",
+      "r2": "isa",
+      "first_triple": [
+        "physical_object",
+        "issue_in",
+        "biomedical_occupation_or_discipline"
+      ],
+      "second_triple": [
+        "biomedical_occupation_or_discipline",
+        "isa",
+        "chemical"
+      ],
+      "pra_confidence": 0.9453425320979234,
+      "relation_score": -0.9330384135246277,
+      "first_triple_score": -7.313389778137207,
+      "second_triple_score": -1.7829792499542236,
+      "entity_score": -9.09636902809143,
+      "lower_bound_score": -10.029407441616058,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 2
+    }
+  ]
+}

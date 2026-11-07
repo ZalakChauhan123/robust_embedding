@@ -1,0 +1,74 @@
+{
+  "experiment": "DirectAdd UMLS pilot \u2014 matched clean and poisoned TransE victims",
+  "attack_name": "DirectAdd",
+  "parameters": {
+    "epochs": 500,
+    "embedding_dim": 64,
+    "batch_size": 256,
+    "learning_rate": 0.01,
+    "margin": 1.0,
+    "random_seed": 42,
+    "optimizer": "Adam",
+    "loss": "mean ReLU(margin + positive_L2_distance - negative_L2_distance)",
+    "negative_sampling": "uniform random entity replacing head/tail with probability 0.5",
+    "embedding_normalization": "L2-normalize entity embeddings after each optimizer step",
+    "device": "cpu",
+    "same_entity_relation_id_mappings": true,
+    "independent_training_from_scratch": true
+  },
+  "datasets": {
+    "clean_train_file": "dataset_uml\\train.txt",
+    "poisoned_train_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\poisoning\\poisoned_train.txt",
+    "injected_triples_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\poisoning\\injected_triples.tsv",
+    "validation_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\valid.txt",
+    "test_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt",
+    "set_B_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv",
+    "clean_training_triples": 5216,
+    "poisoned_training_triples": 5416,
+    "unique_injected_triples": 200,
+    "validation_triples": 652,
+    "test_triples": 661,
+    "set_B_target_triples": 100,
+    "num_entities": 135,
+    "num_relations": 46,
+    "verified_poisoned_equals_clean_union_injected": true,
+    "verified_injection_disjoint_from_valid_test_and_set_B": true,
+    "source_sha256": {
+      "clean_train": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35",
+      "poisoned_train": "3f7b178c44ce13c02499c8e85a725ddb8be608ba6d067fa509f22d4cfa028406",
+      "injected_triples": "fd07238e642eaf11e7dde42f1e0e470c84fe5c752ac3c5d285900ca15eccf7da",
+      "validation": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e",
+      "test": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014",
+      "set_B_targets": "54521d859ceec544356b196e4598ed6cf36a94ab8c5243f3679f005d16bfeeb5"
+    }
+  },
+  "victims": {
+    "clean": {
+      "checkpoint": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\victim_models\\clean_transe.pt",
+      "training_loss_csv": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\victim_models\\clean_training_loss.csv",
+      "training_triples": 5216,
+      "initial_state_sha256": "6ce177e3af07bffee28b8b3ae9a226574e0ea5518db99a541ea786c1105d803f",
+      "first_epoch_loss": 0.9569849028177788,
+      "final_epoch_loss": 0.3579565328688709,
+      "minimum_epoch_loss": 0.34401042055498604,
+      "checkpoint_sha256": "6e5e43c7d1faac351c0815d60b9d3b3c1937d14994d744299e768dc7fe336442"
+    },
+    "poisoned": {
+      "checkpoint": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\victim_models\\poisoned_transe.pt",
+      "training_loss_csv": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\victim_models\\poisoned_training_loss.csv",
+      "training_triples": 5416,
+      "initial_state_sha256": "6ce177e3af07bffee28b8b3ae9a226574e0ea5518db99a541ea786c1105d803f",
+      "first_epoch_loss": 0.9542112623395033,
+      "final_epoch_loss": 0.37773908716537047,
+      "minimum_epoch_loss": 0.3595171587505932,
+      "checkpoint_sha256": "aca665e0cb0f5c0bb55487b690093617b66eff931e8b04513e922b67dee3c1ca"
+    }
+  },
+  "same_initial_embeddings_verified": true,
+  "notes": [
+    "The existing PRA/TransE surrogate checkpoint was not used as a victim initialization.",
+    "Identical seeds and initial weights do not imply identical per-epoch permutations after the datasets differ.",
+    "Training loss is not an attack-success measure. Next evaluate both victims on Set A and Set B.",
+    "This is a TransE-only pilot, not a full reproduction of all MaSS victim architectures."
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "neoplastic_process",
+    "result_of",
+    "hazardous_or_poisonous_substance"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 168,
+  "num_semantically_valid_templates": 5,
+  "num_selected_templates": 5,
+  "num_ranked_paths": 10,
+  "ranked_candidate_paths": [
+    {
+      "r1": "result_of",
+      "intermediate_entity": "laboratory_procedure",
+      "r2": "assesses_effect_of",
+      "first_triple": [
+        "neoplastic_process",
+        "result_of",
+        "laboratory_procedure"
+      ],
+      "second_triple": [
+        "laboratory_procedure",
+        "assesses_effect_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.974680719795623,
+      "relation_score": -1.7360069751739502,
+      "first_triple_score": -1.175805687904358,
+      "second_triple_score": -0.48696368932724,
+      "entity_score": -1.662769377231598,
+      "lower_bound_score": -3.398776352405548,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "result_of",
+      "intermediate_entity": "diagnostic_procedure",
+      "r2": "assesses_effect_of",
+      "first_triple": [
+        "neoplastic_process",
+        "result_of",
+        "diagnostic_procedure"
+      ],
+      "second_triple": [
+        "diagnostic_procedure",
+        "assesses_effect_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.974680719795623,
+      "relation_score": -1.7360069751739502,
+      "first_triple_score": -1.2358605861663818,
+      "second_triple_score": -0.5205739736557007,
+      "entity_score": -1.7564345598220825,
+      "lower_bound_score": -3.4924415349960327,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "degree_of",
+      "intermediate_entity": "organism_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "neoplastic_process",
+        "degree_of",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9907096596195071,
+      "relation_score": -1.6846568584442139,
+      "first_triple_score": -0.49700480699539185,
+      "second_triple_score": -1.4477020502090454,
+      "entity_score": -1.9447068572044373,
+      "lower_bound_score": -3.629363715648651,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 3
+    },
+    {
+      "r1": "degree_of",
+      "intermediate_entity": "clinical_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "neoplastic_process",
+        "degree_of",
+        "clinical_attribute"
+      ],
+      "second_triple": [
+        "clinical_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9907096596195071,
+      "relation_score": -1.6846568584442139,
+      "first_triple_score": -0.5855875015258789,
+      "second_triple_score": -1.381714940071106,
+      "entity_score": -1.9673024415969849,
+      "lower_bound_score": -3.6519593000411987,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 4
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organism_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "neoplastic_process",
+        "isa",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9670085210724642,
+      "relation_score": -1.846409559249878,
+      "first_triple_score": -0.8474061489105225,
+      "second_triple_score": -1.4477020502090454,
+      "entity_score": -2.295108199119568,
+      "lower_bound_score": -4.141517758369446,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 5
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "organism_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "neoplastic_process",
+        "affects",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9748802980794943,
+      "relation_score": -1.609516978263855,
+      "first_triple_score": -1.172186017036438,
+      "second_triple_score": -1.4477020502090454,
+      "entity_score": -2.6198880672454834,
+      "lower_bound_score": -4.229405045509338,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 6
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "clinical_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "neoplastic_process",
+        "affects",
+        "clinical_attribute"
+      ],
+      "second_triple": [
+        "clinical_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9748802980794943,
+      "relation_score": -1.609516978263855,
+      "first_triple_score": -1.2959892749786377,
+      "second_triple_score": -1.381714940071106,
+      "entity_score": -2.6777042150497437,
+      "lower_bound_score": -4.287221193313599,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 7
+    },
+    {
+      "r1": "associated_with",
+      "intermediate_entity": "clinical_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "neoplastic_process",
+        "associated_with",
+        "clinical_attribute"
+      ],
+      "second_triple": [
+        "clinical_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9631693034823238,
+      "relation_score": -2.528862714767456,
+      "first_triple_score": -1.5859482288360596,
+      "second_triple_score": -1.381714940071106,
+      "entity_score": -2.9676631689071655,
+      "lower_bound_score": -5.496525883674622,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 8
+    },
+    {
+      "r1": "associated_with",
+      "intermediate_entity": "organism_attribute",
+      "r2": "measurement_of",
+      "first_triple": [
+        "neoplastic_process",
+        "associated_with",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9631693034823238,
+      "relation_score": -2.528862714767456,
+      "first_triple_score": -1.5679187774658203,
+      "second_triple_score": -1.4477020502090454,
+      "entity_score": -3.0156208276748657,
+      "lower_bound_score": -5.544483542442322,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 9
+    },
+    {
+      "r1": "associated_with",
+      "intermediate_entity": "laboratory_or_test_result",
+      "r2": "measurement_of",
+      "first_triple": [
+        "neoplastic_process",
+        "associated_with",
+        "laboratory_or_test_result"
+      ],
+      "second_triple": [
+        "laboratory_or_test_result",
+        "measurement_of",
+        "hazardous_or_poisonous_substance"
+      ],
+      "pra_confidence": 0.9631693034823238,
+      "relation_score": -2.528862714767456,
+      "first_triple_score": -2.469723701477051,
+      "second_triple_score": -0.6547976732254028,
+      "entity_score": -3.1245213747024536,
+      "lower_bound_score": -5.65338408946991,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 10
+    }
+  ]
+}

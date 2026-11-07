@@ -1,0 +1,37 @@
+{
+  "experiment": "MaSS UMLS pilot: DeepPath victim evaluation",
+  "attack_name": "MaSS",
+  "victim_model": "DeepPath",
+  "implementation_variant": "local_supervised_two_hop_path_policy_not_official_DeepPath",
+  "input_files": {
+    "clean_victim": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\seed_42\\deeppath_victim_models\\clean_deeppath.pt",
+    "poisoned_victim": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\seed_42\\deeppath_victim_models\\poisoned_deeppath.pt",
+    "set_A": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt",
+    "set_B": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv",
+    "training_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\seed_42\\deeppath_victim_models\\training_summary.json",
+    "poisoning_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\baseline\\poisoning\\poisoning_summary.csv"
+  },
+  "num_clean_training_triples": 5216,
+  "num_poisoned_training_triples": 5378,
+  "num_injected_triples": 162,
+  "num_entities": 135,
+  "num_relations": 46,
+  "num_set_B_targets": 100,
+  "num_injected_targets": 96,
+  "num_not_injected_targets": 4,
+  "num_set_A_test_triples": 661,
+  "deeppath_evaluation_batch_size": 4,
+  "set_B_MRR_clean": 0.0636925384744325,
+  "set_B_MRR_poisoned": 0.05713936214326597,
+  "set_B_Hits_at_10_clean": 0.11,
+  "set_B_Hits_at_10_poisoned": 0.14,
+  "set_A_MRR_clean": 0.18332521060682672,
+  "set_A_MRR_poisoned": 0.17251726199097356,
+  "set_A_Hits_at_10_clean": 0.4009077155824508,
+  "set_A_Hits_at_10_poisoned": 0.37367624810892586,
+  "limitations": [
+    "One UMLS dataset and one random seed; results are preliminary.",
+    "DeepPath is an opaque-box victim relative to the TransE attacker surrogate.",
+    "The frozen targets were rank-qualified under TransE, not this victim."
+  ]
+}

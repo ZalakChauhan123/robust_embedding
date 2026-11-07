@@ -1,0 +1,81 @@
+{
+  "experiment": "DirectAdd UMLS pilot \u2014 paired local DeepPath-style path-policy victims",
+  "attack_name": "DirectAdd",
+  "victim_model": "DeepPath",
+  "implementation_variant": "local_supervised_two_hop_path_policy_not_official_DeepPath",
+  "parameters": {
+    "embedding_dim": 64,
+    "hidden_dim": 128,
+    "dropout": 0.1,
+    "beam_size": 10,
+    "max_hops": 2,
+    "max_teacher_paths_per_training_triple": 1,
+    "epochs": 50,
+    "batch_size": 1024,
+    "learning_rate": 0.003,
+    "random_seed": 42,
+    "optimizer": "Adam",
+    "loss": "masked local-action cross entropy",
+    "device": "cpu",
+    "independent_training_from_scratch": true,
+    "same_entity_relation_id_mappings": true
+  },
+  "datasets": {
+    "clean_train_file": "dataset_uml\\train.txt",
+    "poisoned_train_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\poisoning\\poisoned_train.txt",
+    "injected_triples_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\poisoning\\injected_triples.tsv",
+    "validation_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\valid.txt",
+    "test_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt",
+    "set_B_file": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv",
+    "clean_training_triples": 5216,
+    "poisoned_training_triples": 5416,
+    "unique_injected_triples": 200,
+    "validation_triples": 652,
+    "test_triples": 661,
+    "set_B_target_triples": 100,
+    "num_entities": 135,
+    "num_relations": 46,
+    "verified_poisoned_equals_clean_union_injected": true,
+    "verified_injection_disjoint_from_valid_test_and_set_B": true,
+    "source_sha256": {
+      "clean_train": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35",
+      "poisoned_train": "3f7b178c44ce13c02499c8e85a725ddb8be608ba6d067fa509f22d4cfa028406",
+      "injected_triples": "fd07238e642eaf11e7dde42f1e0e470c84fe5c752ac3c5d285900ca15eccf7da",
+      "validation": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e",
+      "test": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014",
+      "set_B_targets": "54521d859ceec544356b196e4598ed6cf36a94ab8c5243f3679f005d16bfeeb5"
+    }
+  },
+  "victims": {
+    "clean": {
+      "checkpoint": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\deeppath_victim_models\\clean_deeppath.pt",
+      "training_loss_csv": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\deeppath_victim_models\\clean_training_loss.csv",
+      "training_triples": 5216,
+      "training_demonstrations": 10432,
+      "max_actions": 306,
+      "initial_trainable_state_sha256": "fe15c94331d1b887f1e3b8999dd4fd43095ff5d0226fcb5274f2111fec674487",
+      "first_epoch_loss": 4.064831568419567,
+      "final_epoch_loss": 0.19232263603459107,
+      "minimum_epoch_loss": 0.19014468057755313,
+      "checkpoint_sha256": "bc54ca305b3810b89f25913ce2dcf2a277fa2e3c414e051cee69e4f6a1412d24"
+    },
+    "poisoned": {
+      "checkpoint": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\deeppath_victim_models\\poisoned_deeppath.pt",
+      "training_loss_csv": "outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\DirectAdd\\seed_42\\deeppath_victim_models\\poisoned_training_loss.csv",
+      "training_triples": 5416,
+      "training_demonstrations": 10832,
+      "max_actions": 316,
+      "initial_trainable_state_sha256": "fe15c94331d1b887f1e3b8999dd4fd43095ff5d0226fcb5274f2111fec674487",
+      "first_epoch_loss": 4.0772161452069415,
+      "final_epoch_loss": 0.1846063652982388,
+      "minimum_epoch_loss": 0.1846063652982388,
+      "checkpoint_sha256": "a91713b2cae14336a2d8a39f09d6bf12a211d46d651dce8e2cb24fb0057f02ce"
+    }
+  },
+  "same_initial_embeddings_verified": true,
+  "notes": [
+    "This local supervised two-hop path policy is not the official TensorFlow/RL DeepPath reproduction.",
+    "The frozen Set-B protocol was selected from TransE ranks, not DeepPath-style path-policy ranks.",
+    "Graph action-table buffers differ correctly between clean and poisoned graphs; only trainable weights are matched."
+  ]
+}

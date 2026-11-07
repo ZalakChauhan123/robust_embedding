@@ -1,0 +1,87 @@
+{
+  "research_question": "RQ1 — attack effectiveness (DirectAdd, ConvKB victim)",
+  "victim_model": "ConvKB",
+  "prediction": "TAIL only: (h*, r*, ?) ranked against every known entity",
+  "ranking_protocol": "filtered; same original train+valid+test facts for both models",
+  "filter_excludes": "injected edges and synthetic Set B targets",
+  "tie_policy": "average rank, consistent with the TransE evaluation",
+  "interpretation": "Higher poisoned MRR/Hits@10, or positive rank improvement, favors the attacker",
+  "set_B_all_targets": {
+    "count": 100,
+    "clean": {
+      "count": 100,
+      "MRR": 0.06015360914463654,
+      "Hits@1": 0.01,
+      "Hits@3": 0.03,
+      "Hits@10": 0.16,
+      "Mean_Rank": 40.05,
+      "Median_Rank": 38.0
+    },
+    "poisoned": {
+      "count": 100,
+      "MRR": 0.08582196784790427,
+      "Hits@1": 0.01,
+      "Hits@3": 0.09,
+      "Hits@10": 0.19,
+      "Mean_Rank": 34.74,
+      "Median_Rank": 30.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.02566835870326773,
+      "Hits@1": 0.0,
+      "Hits@3": 0.06,
+      "Hits@10": 0.03,
+      "Mean_Rank": -5.309999999999995,
+      "Median_Rank": -8.0
+    },
+    "num_improved_rank": 54,
+    "num_worsened_rank": 45,
+    "num_unchanged_rank": 1,
+    "num_new_hits_at_10": 16,
+    "num_lost_hits_at_10": 13,
+    "mean_rank_improvement_clean_minus_poisoned": 5.31
+  },
+  "set_B_injected_targets": {
+    "count": 100,
+    "clean": {
+      "count": 100,
+      "MRR": 0.06015360914463654,
+      "Hits@1": 0.01,
+      "Hits@3": 0.03,
+      "Hits@10": 0.16,
+      "Mean_Rank": 40.05,
+      "Median_Rank": 38.0
+    },
+    "poisoned": {
+      "count": 100,
+      "MRR": 0.08582196784790427,
+      "Hits@1": 0.01,
+      "Hits@3": 0.09,
+      "Hits@10": 0.19,
+      "Mean_Rank": 34.74,
+      "Median_Rank": 30.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.02566835870326773,
+      "Hits@1": 0.0,
+      "Hits@3": 0.06,
+      "Hits@10": 0.03,
+      "Mean_Rank": -5.309999999999995,
+      "Median_Rank": -8.0
+    },
+    "num_improved_rank": 54,
+    "num_worsened_rank": 45,
+    "num_unchanged_rank": 1,
+    "num_new_hits_at_10": 16,
+    "num_lost_hits_at_10": 13,
+    "mean_rank_improvement_clean_minus_poisoned": 5.31
+  },
+  "set_B_not_injected_targets": {
+    "count": 0,
+    "note": "No targets in this group"
+  },
+  "attack_name": "DirectAdd",
+  "implementation_variant": "standard_local_implementation",
+  "opaque_box_note": "The frozen attacker surrogate is TransE while the victim is ConvKB.",
+  "target_protocol_note": "Set B was selected with TransE ranks 11–15, not this victim's ranks."
+}
