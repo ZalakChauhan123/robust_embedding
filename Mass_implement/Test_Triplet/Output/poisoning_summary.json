@@ -1,0 +1,67 @@
+{
+  "experiment": "MaSS UMLS pilot: leakage-controlled poisoning dataset construction",
+  "source": "saved feasibility target_XXX.json files, not recomputed Entity Selection",
+  "parameters": {
+    "delta": 0.7,
+    "path_accept_probability": 0.30000000000000004,
+    "budget_distinct_new_triples_per_target": 2,
+    "seed": 42,
+    "seed_per_target": "seed + zero-based Set B index",
+    "selection_policy": "baseline"
+  },
+  "source_files": {
+    "targets": "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\target_triplet.txt",
+    "feasibility_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\rescored_paths\\feasibility_summary.json",
+    "train": "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\train.txt",
+    "valid": "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\valid.txt",
+    "test": "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\test.txt"
+  },
+  "source_sha256": {
+    "targets": "309778ae899b20560484774a63a78f321281d354459c87691b7613726a791c5f",
+    "feasibility_summary": "b31fc5a34848f9f3a81772fb776cc8ac4b394e967313dbb017f01d64c1975f84",
+    "train": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35",
+    "valid": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e",
+    "test": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014"
+  },
+  "num_targets_set_B": 1,
+  "num_originally_feasible": 1,
+  "num_after_leakage_feasible": 1,
+  "num_targets_with_injections": 1,
+  "num_targets_not_injected": 0,
+  "total_input_candidate_paths": 43,
+  "total_eligible_candidate_paths": 9,
+  "total_sampled_paths": 4,
+  "total_selected_paths": 2,
+  "mean_selected_intermediate_degree": 96.5,
+  "num_clean_train_triples": 5216,
+  "num_unique_injected_triples": 2,
+  "num_poisoned_train_triples": 5218,
+  "injected_train_overlap": 0,
+  "injected_valid_overlap": 0,
+  "injected_test_overlap": 0,
+  "injected_set_B_overlap": 0,
+  "note": "Counts and outcomes only; attack success requires victim retraining and evaluation. Infeasible Set B targets remain in the final evaluation set.",
+  "targets": [
+    {
+      "target_id": "target_001",
+      "head": "antibiotic",
+      "relation": "complicates",
+      "tail": "reptile",
+      "original_status": "feasible",
+      "initial_paths": 43,
+      "eligible_paths": 9,
+      "rejected_leakage": 34,
+      "rejected_target_overlap": 0,
+      "rejected_invalid": 0,
+      "sampled_paths": 4,
+      "selected_paths": 2,
+      "injected_for_target": 2,
+      "new_to_global_training": 2,
+      "budget_skipped_paths": 0,
+      "status": "injected",
+      "selection_policy": "baseline",
+      "mean_sampled_intermediate_degree": 86.25,
+      "mean_selected_intermediate_degree": 96.5
+    }
+  ]
+}

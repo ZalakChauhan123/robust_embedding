@@ -1,0 +1,116 @@
+{
+  "completed_utc": "2026-11-09T20:09:16.463649+00:00",
+  "configuration": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\transe_dim128\\run_config.json",
+  "results": [
+    {
+      "attack": "MaSS",
+      "embedding_dim": 128,
+      "clean": {
+        "count": 100,
+        "MRR": 0.11094261788036644,
+        "Hits@1": 0.01,
+        "Hits@3": 0.06,
+        "Hits@10": 0.3,
+        "Mean_Rank": 15.93,
+        "Median_Rank": 14.0
+      },
+      "poisoned": {
+        "count": 100,
+        "MRR": 0.1316360356828555,
+        "Hits@1": 0.05,
+        "Hits@3": 0.06,
+        "Hits@10": 0.28,
+        "Mean_Rank": 15.78,
+        "Median_Rank": 14.0
+      },
+      "previous_64_dimension_poisoned": {
+        "count": 100,
+        "MRR": 0.09888458473102307,
+        "Hits@1": 0.0,
+        "Hits@3": 0.03,
+        "Hits@10": 0.28,
+        "Mean_Rank": 13.81,
+        "Median_Rank": 13.0
+      },
+      "evaluation_directory": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\transe_dim128\\baseline\\seed_42\\evaluation",
+      "training_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\transe_dim128\\baseline\\seed_42\\victim_models\\training_summary.json"
+    },
+    {
+      "attack": "DirectAdd",
+      "embedding_dim": 128,
+      "clean": {
+        "count": 100,
+        "MRR": 0.11094261788036644,
+        "Hits@1": 0.01,
+        "Hits@3": 0.06,
+        "Hits@10": 0.3,
+        "Mean_Rank": 15.93,
+        "Median_Rank": 14.0
+      },
+      "poisoned": {
+        "count": 100,
+        "MRR": 0.15884714220031024,
+        "Hits@1": 0.07,
+        "Hits@3": 0.09,
+        "Hits@10": 0.4,
+        "Mean_Rank": 13.77,
+        "Median_Rank": 13.0
+      },
+      "previous_64_dimension_poisoned": {
+        "count": 100,
+        "MRR": 0.132622648377337,
+        "Hits@1": 0.03,
+        "Hits@3": 0.07,
+        "Hits@10": 0.39,
+        "Mean_Rank": 13.11,
+        "Median_Rank": 12.5
+      },
+      "evaluation_directory": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\transe_dim128\\DirectAdd\\seed_42\\evaluation",
+      "training_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\transe_dim128\\DirectAdd\\seed_42\\victim_models\\training_summary.json"
+    },
+    {
+      "attack": "ComAttack",
+      "embedding_dim": 128,
+      "clean": {
+        "count": 100,
+        "MRR": 0.11094261788036644,
+        "Hits@1": 0.01,
+        "Hits@3": 0.06,
+        "Hits@10": 0.3,
+        "Mean_Rank": 15.93,
+        "Median_Rank": 14.0
+      },
+      "poisoned": {
+        "count": 100,
+        "MRR": 0.12365711751611651,
+        "Hits@1": 0.03,
+        "Hits@3": 0.06,
+        "Hits@10": 0.27,
+        "Mean_Rank": 14.83,
+        "Median_Rank": 14.0
+      },
+      "previous_64_dimension_poisoned": {
+        "count": 100,
+        "MRR": 0.11964111136234282,
+        "Hits@1": 0.02,
+        "Hits@3": 0.05,
+        "Hits@10": 0.35,
+        "Mean_Rank": 14.7,
+        "Median_Rank": 13.0
+      },
+      "evaluation_directory": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\transe_dim128\\ComAttack\\seed_42\\evaluation",
+      "training_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\transe_dim128\\ComAttack\\seed_42\\victim_models\\training_summary.json"
+    }
+  ],
+  "final_csv": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Final Results\\RQ-1 -- Attack Effectiveness -- Final Results.csv",
+  "final_csv_before_sha256": "df90b3c77546d1ad0c927692a99328513165b058eec4bf479bdef9750331f756",
+  "final_csv_after_sha256": "71ffc553ef391afc7d4cc7b030dbdbe99c0baed1e3ee26254ab2f0e43167df37",
+  "csv_presentation": "Two decimal places, matching the existing final table; full precision in this summary.",
+  "checks": {
+    "all_metrics_verified_from_100_target_ranks": true,
+    "all_original_sources_and_64_dimension_checkpoints_unchanged": true,
+    "clean_weights_identical_across_attacks": true,
+    "paired_initial_embeddings_identical": true
+  },
+  "note": "Existing other-model columns retain their previous settings. RQ2 final table is not updated by this RQ1 experiment."
+}

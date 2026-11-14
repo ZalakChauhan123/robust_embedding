@@ -1,0 +1,277 @@
+{
+  "created_utc": "2026-11-13T23:59:36.396373+00:00",
+  "status": "complete",
+  "signature": {
+    "input_sha256": {
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\config.json": "9e20d748ec3ae5b9d365c00e8d8899771ea2c5279ac1cc124d06a0033fe43a1e",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\train.txt": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\valid.txt": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\test.txt": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\entities.txt": "15561531bb8296e677ff4e682cf7a8a956a89ea49fcde20680c747cb1c4cda5d",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\relations.txt": "d2e33d4ea42374b38dffd214a3ba411ea35cc1195742c82722ad4df5c42b86b1",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\target_triplet.txt": "309778ae899b20560484774a63a78f321281d354459c87691b7613726a791c5f",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\mass_candidates.json": "2352681ce09cbc78c39a6506ff79e0d8d43d45c434029ead3304780ff91f2367"
+    },
+    "code_sha256": {
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\run_experiment.py": "27bca782a00c1c2f376830c3ddff720f1ecb20622fd91aee38b3213f1c291585",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Surrogate_Model\\TransE_Surrogate.py": "b16d7301d1ca584f7282bf0500645d4de2fe18b02436db34e7f80c24864881a9",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Victim_Model\\TransE_Victim.py": "f9b95e449636196dd11f59b538d508dfe1ec0787d41d467f7180644e78cd754c",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Experiment_Setup\\construct_poisoned_dataset.py": "f0adbae9e8d16ebeb987e398d1e2c3332fe20b55227f9c7338d779bdab439dcd",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Path_Generation_Module\\Random_Sampling.py": "a60adefa64cb481be0858d18a58ed9d14b699273cf2256839073c7034cf68dc9",
+      "C:\\my-code\\Robust Embedding\\Mass_implement\\Path_Generation_Module\\Stealthiness.py": "b13e8f49ce47f54527ef36b66743863cc3c04d5b761041e5363abe68763e548f"
+    },
+    "environment": {
+      "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+      "torch": "2.14.1+cpu",
+      "numpy": "2.5.1"
+    }
+  },
+  "config": {
+    "dataset": "UMLS",
+    "candidate_mode": "frozen_MaSS_paths_and_intermediate_entities",
+    "paths": {
+      "train": "Input/train.txt",
+      "valid": "Input/valid.txt",
+      "test": "Input/test.txt",
+      "entities": "Input/entities.txt",
+      "relations": "Input/relations.txt",
+      "targets": "Input/target_triplet.txt",
+      "mass_candidates": "Input/mass_candidates.json",
+      "poisoned_train": "Input/poisoned_train.txt",
+      "surrogate_checkpoint": "Surrogate_Model/surrogate_transe.pt",
+      "clean_checkpoint": "Victim_Model/clean_transe.pt",
+      "poisoned_checkpoint": "Victim_Model/poisoned_transe.pt",
+      "output_dir": "Output",
+      "clean_graph": "Graphs/Clean/clean_graph.graphml",
+      "poisoned_graph": "Graphs/Poisoned/poisoned_graph.graphml"
+    },
+    "surrogate": {
+      "dim": 128,
+      "epochs": 500,
+      "batch_size": 256,
+      "lr": 0.01,
+      "margin": 1.0,
+      "seed": 43
+    },
+    "victim": {
+      "dim": 128,
+      "epochs": 500,
+      "batch_size": 256,
+      "lr": 0.01,
+      "margin": 1.0,
+      "seed": 42
+    },
+    "attack": {
+      "budget": 2,
+      "delta": 0.7,
+      "seed": 42,
+      "selection_policy": "baseline"
+    },
+    "torch_threads": 1,
+    "input_sources": {
+      "train": {
+        "source_file": "../dataset_uml/train.txt",
+        "source_sha256": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35"
+      },
+      "valid": {
+        "source_file": "../dataset_uml/valid.txt",
+        "source_sha256": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e"
+      },
+      "test": {
+        "source_file": "../dataset_uml/test.txt",
+        "source_sha256": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014"
+      },
+      "entities": {
+        "source_file": "../dataset_uml/entities.txt",
+        "source_sha256": "15561531bb8296e677ff4e682cf7a8a956a89ea49fcde20680c747cb1c4cda5d"
+      },
+      "relations": {
+        "source_file": "../dataset_uml/relations.txt",
+        "source_sha256": "d2e33d4ea42374b38dffd214a3ba411ea35cc1195742c82722ad4df5c42b86b1"
+      }
+    }
+  },
+  "stages": {
+    "surrogate": {
+      "elapsed_seconds": 17.002011800010223,
+      "sha256": {
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Surrogate_Model\\surrogate_transe.pt": "11cb6b192ecbfd0ee3a1084a6e75c0f44dcdc443a63058d17bcd1b91c5717c4e",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\training_logs\\surrogate_loss.csv": "03b909ead9819e3329fae0372037dba4a511d8e3158f91881bdc549ee6c77347",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\training_logs\\surrogate_training_summary.json": "5e7cda636260a4fdc66e29097f9b0e63c7affedcf7504d1ab84251ed8ba96182",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\training_logs\\surrogate.log": "dd6d636f42c9a083b7356e20858ac2f384ed0e2938f69eb906df01b67a65eb99"
+      }
+    },
+    "rescore": {
+      "elapsed_seconds": 0.017522400012239814,
+      "sha256": {
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\rescored_paths\\feasibility_summary.json": "b31fc5a34848f9f3a81772fb776cc8ac4b394e967313dbb017f01d64c1975f84",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\rescored_paths\\target_001.json": "1aeafc8f1db1e00c76f78581cec43f8e25f9aa0356365d42479852e9638d174d",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\training_logs\\rescore.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "poisoning": {
+      "elapsed_seconds": 0.08788790000835434,
+      "sha256": {
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Input\\poisoned_train.txt": "54909d8df6f5ef8082687b284f4217e25ed00c9599efb72a366b879218ee6320",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\selected_poisoning_paths.json": "6c25cfa227d60673192e18287bb91298071ab04b83645bfe05ccabfd2b0954be",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\eligible_candidate_paths.json": "ca915b44b47aef2ee0df2fb845e3a026c15f2e617b017b56bbe4c8d15a21d219",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\injected_triples.tsv": "1e0d7f809b2d6ee94b3bc892e548dbca5d36534844b6e3d01e2cb2ded6236484",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\poisoning_summary.json": "e8711c2c498aff83265a74b19d109685e7ba1cfd6271a832e0391532139f84f7",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\poisoning_summary.csv": "e0128866e289230303cbc3a03e82557cfc1f11c39e5292cb922cbdb13be179ec",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\training_logs\\poisoning.log": "5eae0af6b272a8fb268d8f04a4f8cd146b06d328a6d3b99fbc45789cc2394371"
+      }
+    },
+    "graphs": {
+      "elapsed_seconds": 0.13082410002243705,
+      "sha256": {
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Graphs\\Clean\\clean_graph.graphml": "533f75dc68c525d8f355427a33cd65b02c16aa1273eeb4f1be96b288eca96941",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Graphs\\Poisoned\\poisoned_graph.graphml": "2747ad864aa7575f04764e2362f6a49013bbfea75effee077cdaad4b674881ec",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\training_logs\\graphs.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    "victims": {
+      "elapsed_seconds": 31.456059399992228,
+      "sha256": {
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Victim_Model\\clean_transe.pt": "af4679324619d61ee9fc6f593e7ad0243be209a093df7e1469a78c3f2c233e46",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Victim_Model\\poisoned_transe.pt": "922d872d4ebcb5e6c3af9b446c5eed815bcfb45d41c4ad2e389e81aae13d68d0",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\training_logs\\clean_victim_loss.csv": "a52ce26561951da84773f897277d6c9e64b8b1765d03a382e67269381ec5cbb0",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\training_logs\\poisoned_victim_loss.csv": "df950b335efdc197e98e6d4c9915ac40694a40dd0d2b4e9ba7a0b5673a950e08",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\victim_training_summary.json": "2eaa64501fa3202f6808624a9726fca3832e1323042e43b3931e546bc63e31c3",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\training_logs\\victims.log": "cb73d7b5060224e82d365305788d8bc7644fab1098dc3ad99705fc3651cafeb8"
+      }
+    },
+    "results": {
+      "elapsed_seconds": 0.008773300010943785,
+      "sha256": {
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\Final result.csv": "e4aeab4fa8725594b708499bd4baf5c113b06d3f3a7633d82d33189fd2aa6e0e",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\Final result.json": "7291833a4166821da27a990d75b505085f72a15dfa6e12ee26a4340517e22600",
+        "C:\\my-code\\Robust Embedding\\Mass_implement\\Test_Triplet\\Output\\training_logs\\results.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  },
+  "external_source_sha256": {
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Final Results\\RQ-1 -- Attack Effectiveness -- Final Results.csv": "71ffc553ef391afc7d4cc7b030dbdbe99c0baed1e3ee26254ab2f0e43167df37",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\train.txt": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\valid.txt": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\entities.txt": "15561531bb8296e677ff4e682cf7a8a956a89ea49fcde20680c747cb1c4cda5d",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\relations.txt": "d2e33d4ea42374b38dffd214a3ba411ea35cc1195742c82722ad4df5c42b86b1",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\feasibility\\target_003.json": "1d0ce268eb253e782681bcaa02197bf2534e5d9d30fcee2f24ec718d5281750b"
+  },
+  "candidate_mode": "Saved PRA paths/entities frozen; fresh embedding-dependent scores and selection",
+  "multiple_target_mode": "joint poisoned graph; one result row per target",
+  "source_candidate_metadata": [
+    {
+      "source_file": "../outputs/Experiments/UMLS_feasible_rank11_15_seed42/feasibility/target_003.json",
+      "source_target_id": "target_003",
+      "source_sha256": "1d0ce268eb253e782681bcaa02197bf2534e5d9d30fcee2f24ec718d5281750b",
+      "target_triple": [
+        "antibiotic",
+        "complicates",
+        "reptile"
+      ]
+    }
+  ],
+  "active_stage": null,
+  "completed_utc": "2026-11-14T00:02:02.495256+00:00",
+  "summary": {
+    "results": [
+      {
+        "target_id": "target_001",
+        "head": "antibiotic",
+        "relation": "complicates",
+        "tail": "reptile",
+        "clean_plausibility": -1.324150562286377,
+        "poisoned_plausibility": -0.9650945663452148,
+        "delta": -0.3590559959411621,
+        "poisoning_status": "injected",
+        "injected_for_target": 2,
+        "new_to_global_training": 2
+      }
+    ],
+    "delta_definition": "clean_plausibility - poisoned_plausibility",
+    "negative_delta": "Target more plausible to poisoned victim",
+    "num_targets": 1,
+    "num_clean_facts": 5216,
+    "num_poisoned_facts": 5218,
+    "num_unique_injected_facts": 2,
+    "num_entities": 135,
+    "num_relations": 46,
+    "multiple_target_mode": "Joint poisoned graph; cross-target effects are included",
+    "candidate_mode": "Existing MaSS templates/intermediate candidates frozen; freshly rescored and reselected",
+    "configuration": {
+      "dataset": "UMLS",
+      "candidate_mode": "frozen_MaSS_paths_and_intermediate_entities",
+      "paths": {
+        "train": "Input/train.txt",
+        "valid": "Input/valid.txt",
+        "test": "Input/test.txt",
+        "entities": "Input/entities.txt",
+        "relations": "Input/relations.txt",
+        "targets": "Input/target_triplet.txt",
+        "mass_candidates": "Input/mass_candidates.json",
+        "poisoned_train": "Input/poisoned_train.txt",
+        "surrogate_checkpoint": "Surrogate_Model/surrogate_transe.pt",
+        "clean_checkpoint": "Victim_Model/clean_transe.pt",
+        "poisoned_checkpoint": "Victim_Model/poisoned_transe.pt",
+        "output_dir": "Output",
+        "clean_graph": "Graphs/Clean/clean_graph.graphml",
+        "poisoned_graph": "Graphs/Poisoned/poisoned_graph.graphml"
+      },
+      "surrogate": {
+        "dim": 128,
+        "epochs": 500,
+        "batch_size": 256,
+        "lr": 0.01,
+        "margin": 1.0,
+        "seed": 43
+      },
+      "victim": {
+        "dim": 128,
+        "epochs": 500,
+        "batch_size": 256,
+        "lr": 0.01,
+        "margin": 1.0,
+        "seed": 42
+      },
+      "attack": {
+        "budget": 2,
+        "delta": 0.7,
+        "seed": 42,
+        "selection_policy": "baseline"
+      },
+      "torch_threads": 1,
+      "input_sources": {
+        "train": {
+          "source_file": "../dataset_uml/train.txt",
+          "source_sha256": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35"
+        },
+        "valid": {
+          "source_file": "../dataset_uml/valid.txt",
+          "source_sha256": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e"
+        },
+        "test": {
+          "source_file": "../dataset_uml/test.txt",
+          "source_sha256": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014"
+        },
+        "entities": {
+          "source_file": "../dataset_uml/entities.txt",
+          "source_sha256": "15561531bb8296e677ff4e682cf7a8a956a89ea49fcde20680c747cb1c4cda5d"
+        },
+        "relations": {
+          "source_file": "../dataset_uml/relations.txt",
+          "source_sha256": "d2e33d4ea42374b38dffd214a3ba411ea35cc1195742c82722ad4df5c42b86b1"
+        }
+      }
+    },
+    "checks": {
+      "paired_victim_initialization": true,
+      "independent_surrogate": true,
+      "legal_complete_paths_and_budget": true,
+      "all_targets_retained": true,
+      "checkpoint_scores_and_delta_verified": true,
+      "GraphML_round_trip": true,
+      "original_external_sources_unchanged": true
+    }
+  }
+}

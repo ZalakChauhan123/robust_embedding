@@ -1,0 +1,91 @@
+{
+  "results": [
+    {
+      "target_id": "target_001",
+      "head": "antibiotic",
+      "relation": "complicates",
+      "tail": "reptile",
+      "clean_plausibility": -1.324150562286377,
+      "poisoned_plausibility": -0.9650945663452148,
+      "delta": -0.3590559959411621,
+      "poisoning_status": "injected",
+      "injected_for_target": 2,
+      "new_to_global_training": 2
+    }
+  ],
+  "delta_definition": "clean_plausibility - poisoned_plausibility",
+  "negative_delta": "Target more plausible to poisoned victim",
+  "num_targets": 1,
+  "num_clean_facts": 5216,
+  "num_poisoned_facts": 5218,
+  "num_unique_injected_facts": 2,
+  "num_entities": 135,
+  "num_relations": 46,
+  "multiple_target_mode": "Joint poisoned graph; cross-target effects are included",
+  "candidate_mode": "Existing MaSS templates/intermediate candidates frozen; freshly rescored and reselected",
+  "configuration": {
+    "dataset": "UMLS",
+    "candidate_mode": "frozen_MaSS_paths_and_intermediate_entities",
+    "paths": {
+      "train": "Input/train.txt",
+      "valid": "Input/valid.txt",
+      "test": "Input/test.txt",
+      "entities": "Input/entities.txt",
+      "relations": "Input/relations.txt",
+      "targets": "Input/target_triplet.txt",
+      "mass_candidates": "Input/mass_candidates.json",
+      "poisoned_train": "Input/poisoned_train.txt",
+      "surrogate_checkpoint": "Surrogate_Model/surrogate_transe.pt",
+      "clean_checkpoint": "Victim_Model/clean_transe.pt",
+      "poisoned_checkpoint": "Victim_Model/poisoned_transe.pt",
+      "output_dir": "Output",
+      "clean_graph": "Graphs/Clean/clean_graph.graphml",
+      "poisoned_graph": "Graphs/Poisoned/poisoned_graph.graphml"
+    },
+    "surrogate": {
+      "dim": 128,
+      "epochs": 500,
+      "batch_size": 256,
+      "lr": 0.01,
+      "margin": 1.0,
+      "seed": 43
+    },
+    "victim": {
+      "dim": 128,
+      "epochs": 500,
+      "batch_size": 256,
+      "lr": 0.01,
+      "margin": 1.0,
+      "seed": 42
+    },
+    "attack": {
+      "budget": 2,
+      "delta": 0.7,
+      "seed": 42,
+      "selection_policy": "baseline"
+    },
+    "torch_threads": 1,
+    "input_sources": {
+      "train": {
+        "source_file": "../dataset_uml/train.txt",
+        "source_sha256": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35"
+      },
+      "valid": {
+        "source_file": "../dataset_uml/valid.txt",
+        "source_sha256": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e"
+      },
+      "test": {
+        "source_file": "../dataset_uml/test.txt",
+        "source_sha256": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014"
+      },
+      "entities": {
+        "source_file": "../dataset_uml/entities.txt",
+        "source_sha256": "15561531bb8296e677ff4e682cf7a8a956a89ea49fcde20680c747cb1c4cda5d"
+      },
+      "relations": {
+        "source_file": "../dataset_uml/relations.txt",
+        "source_sha256": "d2e33d4ea42374b38dffd214a3ba411ea35cc1195742c82722ad4df5c42b86b1"
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "element_ion_or_isotope",
+    "interacts_with",
+    "substance"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 8,
+  "num_semantically_valid_templates": 1,
+  "num_selected_templates": 1,
+  "num_ranked_paths": 3,
+  "ranked_candidate_paths": [
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "vitamin",
+      "r2": "isa",
+      "first_triple": [
+        "element_ion_or_isotope",
+        "interacts_with",
+        "vitamin"
+      ],
+      "second_triple": [
+        "vitamin",
+        "isa",
+        "substance"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -1.0120770931243896,
+      "first_triple_score": -0.2141062170267105,
+      "second_triple_score": -0.44377532601356506,
+      "entity_score": -0.6578815430402756,
+      "lower_bound_score": -1.6699586361646652,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "nucleic_acid_nucleoside_or_nucleotide",
+      "r2": "isa",
+      "first_triple": [
+        "element_ion_or_isotope",
+        "interacts_with",
+        "nucleic_acid_nucleoside_or_nucleotide"
+      ],
+      "second_triple": [
+        "nucleic_acid_nucleoside_or_nucleotide",
+        "isa",
+        "substance"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -1.0120770931243896,
+      "first_triple_score": -0.2868868112564087,
+      "second_triple_score": -0.371396005153656,
+      "entity_score": -0.6582828164100647,
+      "lower_bound_score": -1.6703599095344543,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "receptor",
+      "r2": "isa",
+      "first_triple": [
+        "element_ion_or_isotope",
+        "interacts_with",
+        "receptor"
+      ],
+      "second_triple": [
+        "receptor",
+        "isa",
+        "substance"
+      ],
+      "pra_confidence": 0.9407970385253726,
+      "relation_score": -1.0120770931243896,
+      "first_triple_score": -0.22069425880908966,
+      "second_triple_score": -0.472479909658432,
+      "entity_score": -0.6931741684675217,
+      "lower_bound_score": -1.7052512615919113,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 3
+    }
+  ]
+}

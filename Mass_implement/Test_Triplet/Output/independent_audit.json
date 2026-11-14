@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "audited_utc": "2026-11-14T00:03:56.339369+00:00",
+  "method": "Independent raw-tensor arithmetic, seed reconstruction, MaSS source comparison, GraphML MultiDiGraph round-trip and archived hash checks; no model-wrapper scoring reused.",
+  "protected_hash_counts": {
+    "inputs": 8,
+    "code": 6,
+    "external_sources": 7,
+    "stage_artifacts": 26
+  },
+  "source_MaSS_payloads_exact": true,
+  "copied_original_inputs_exact": true,
+  "training_epochs": {
+    "surrogate": 500,
+    "victims": 500
+  },
+  "initial_state_sha256": {
+    "surrogate": "5c5fbdfe319ffade47fce78e82d0dfdfa328f02a28beb5075ee5dbac0cc9d733",
+    "clean": "98c72ba30ebca88a894b50a3248d7d6236148fc516d1198161d3b8d738bc436f",
+    "poisoned": "98c72ba30ebca88a894b50a3248d7d6236148fc516d1198161d3b8d738bc436f"
+  },
+  "independent_surrogate_and_matched_victims": true,
+  "candidate_paths_recomputed": 43,
+  "selected_complete_paths": 2,
+  "clean_fact_count": 5216,
+  "poisoned_fact_count": 5218,
+  "unique_injected_count": 2,
+  "injected_triplets": [
+    [
+      "receptor",
+      "affects",
+      "reptile"
+    ],
+    [
+      "vitamin",
+      "affects",
+      "reptile"
+    ]
+  ],
+  "graphs": [
+    {
+      "graph": "Clean",
+      "nodes": 135,
+      "edges": 5216,
+      "parallel_node_pairs": 1033
+    },
+    {
+      "graph": "Poisoned",
+      "nodes": 135,
+      "edges": 5218,
+      "parallel_node_pairs": 1033
+    }
+  ],
+  "results": [
+    {
+      "target": [
+        "antibiotic",
+        "complicates",
+        "reptile"
+      ],
+      "clean_plausibility": -1.324150562286377,
+      "poisoned_plausibility": -0.9650945663452148,
+      "delta": -0.3590559959411621
+    }
+  ],
+  "old_reference_checkpoints_verified": 14,
+  "old_staged_artifact_hashes_verified": 44,
+  "final_RQ1_csv_sha256": "71ffc553ef391afc7d4cc7b030dbdbe99c0baed1e3ee26254ab2f0e43167df37",
+  "original_RQ1_csv_unchanged": true
+}

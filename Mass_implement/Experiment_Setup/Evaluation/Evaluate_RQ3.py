@@ -81,23 +81,22 @@ def pct(n, total):
     return round(100.0 * n / total, 4) if total else None
 
 
-def main():
-    parser = argparse.ArgumentParser(description="UMLS MaSS RQ3 detection evaluation")
-    parser.add_argument("--experiment-dir", type=Path, required=True)
-    parser.add_argument("--train", type=Path, default=MASS_DIR / "dataset_uml" / "train.txt")
-    parser.add_argument("--ontology", type=Path, default=MASS_DIR / "dataset_uml" / "Semantic_Constraints" / "SRSTRE2")
-    parser.add_argument("--output-dir", type=Path, default=None)
-    parser.add_argument("--methods", nargs="+", choices=METHODS, default=list(METHODS))
-    args = parser.parse_args()
-
-    experiment_dir = args.experiment_dir.resolve()
-    output_dir = (args.output_dir or experiment_dir / "RQ3").resolve()
-    domain, range_, pairs = load_ontology(args.ontology)
-    clean = read_triples(args.train)
+def evaluate(
+    experiment_dir: Path,
+    *,
+    train: Path = MASS_DIR / "dataset_uml" / "train.txt",
+    ontology: Path = MASS_DIR / "dataset_uml" / "Semantic_Constraints" / "SRSTRE2",
+    output_dir: Path | None = None,
+    methods=METHODS,
+):
+    experiment_dir = experiment_dir.resolve()
+    output_dir = (output_dir or experiment_dir / "RQ3").resolve()
+    domain, range_, pairs = load_ontology(ontology)
+    clean = read_triples(train)
     clean_set = set(clean)
     hr, rt = build_clean_indexes(clean)
     summary = []
-    for method in args.methods:
+    for method in methods:
         input_file = experiment_dir / method / "poisoning" / "injected_triples.tsv"
         injected = read_triples(input_file, require_unique=True)
         duplicates = clean_set.intersection(injected)
@@ -134,6 +133,19 @@ def main():
               f"type detected={item['type_detected']} (unknown={item['type_unknown']}); "
               f"mutual detected={item['mutual_detected']}; "
               f"combined union={item['combined_detected_union']}")
+    return summary
+
+
+def main():
+    parser = argparse.ArgumentParser(description="UMLS MaSS RQ3 detection evaluation")
+    parser.add_argument("--experiment-dir", type=Path, required=True)
+    parser.add_argument("--train", type=Path, default=MASS_DIR / "dataset_uml" / "train.txt")
+    parser.add_argument("--ontology", type=Path, default=MASS_DIR / "dataset_uml" / "Semantic_Constraints" / "SRSTRE2")
+    parser.add_argument("--output-dir", type=Path, default=None)
+    parser.add_argument("--methods", nargs="+", choices=METHODS, default=list(METHODS))
+    args = parser.parse_args()
+    evaluate(args.experiment_dir, train=args.train, ontology=args.ontology,
+             output_dir=args.output_dir, methods=args.methods)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,578 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "hormone",
+    "complicates",
+    "archaeon"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 137,
+  "num_semantically_valid_templates": 7,
+  "num_selected_templates": 7,
+  "num_ranked_paths": 20,
+  "ranked_candidate_paths": [
+    {
+      "r1": "complicates",
+      "intermediate_entity": "molecular_function",
+      "r2": "process_of",
+      "first_triple": [
+        "hormone",
+        "complicates",
+        "molecular_function"
+      ],
+      "second_triple": [
+        "molecular_function",
+        "process_of",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9220863051474107,
+      "relation_score": -0.7129290103912354,
+      "first_triple_score": -0.1266973912715912,
+      "second_triple_score": -0.4527086019515991,
+      "entity_score": -0.5794059932231903,
+      "lower_bound_score": -1.2923350036144257,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "vitamin",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "vitamin"
+      ],
+      "second_triple": [
+        "vitamin",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9595825515420016,
+      "relation_score": -0.6351805925369263,
+      "first_triple_score": -0.20411568880081177,
+      "second_triple_score": -0.7335772514343262,
+      "entity_score": -0.9376929402351379,
+      "lower_bound_score": -1.5728735327720642,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 2
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "enzyme",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "enzyme"
+      ],
+      "second_triple": [
+        "enzyme",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9595825515420016,
+      "relation_score": -0.6351805925369263,
+      "first_triple_score": -0.16225285828113556,
+      "second_triple_score": -0.7958319783210754,
+      "entity_score": -0.958084836602211,
+      "lower_bound_score": -1.5932654291391373,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 3
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "receptor",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "receptor"
+      ],
+      "second_triple": [
+        "receptor",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9595825515420016,
+      "relation_score": -0.6351805925369263,
+      "first_triple_score": -0.20248477160930634,
+      "second_triple_score": -0.7626818418502808,
+      "entity_score": -0.9651666134595871,
+      "lower_bound_score": -1.6003472059965134,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 4
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "immunologic_factor",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "immunologic_factor"
+      ],
+      "second_triple": [
+        "immunologic_factor",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9595825515420016,
+      "relation_score": -0.6351805925369263,
+      "first_triple_score": -0.1919618844985962,
+      "second_triple_score": -0.7934757471084595,
+      "entity_score": -0.9854376316070557,
+      "lower_bound_score": -1.620618224143982,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 5
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "hazardous_or_poisonous_substance",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "hazardous_or_poisonous_substance"
+      ],
+      "second_triple": [
+        "hazardous_or_poisonous_substance",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9595825515420016,
+      "relation_score": -0.6351805925369263,
+      "first_triple_score": -0.22058837115764618,
+      "second_triple_score": -0.8160732388496399,
+      "entity_score": -1.036661610007286,
+      "lower_bound_score": -1.6718422025442123,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 6
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "biologically_active_substance",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "biologically_active_substance"
+      ],
+      "second_triple": [
+        "biologically_active_substance",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9595825515420016,
+      "relation_score": -0.6351805925369263,
+      "first_triple_score": -0.25807780027389526,
+      "second_triple_score": -0.7936953902244568,
+      "entity_score": -1.051773190498352,
+      "lower_bound_score": -1.6869537830352783,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 7
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "antibiotic",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "antibiotic"
+      ],
+      "second_triple": [
+        "antibiotic",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9595825515420016,
+      "relation_score": -0.6351805925369263,
+      "first_triple_score": -0.2833450734615326,
+      "second_triple_score": -0.7797205448150635,
+      "entity_score": -1.063065618276596,
+      "lower_bound_score": -1.6982462108135223,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 8
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "indicator_reagent_or_diagnostic_aid",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "second_triple": [
+        "indicator_reagent_or_diagnostic_aid",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9595825515420016,
+      "relation_score": -0.6351805925369263,
+      "first_triple_score": -0.24380171298980713,
+      "second_triple_score": -0.8474900722503662,
+      "entity_score": -1.0912917852401733,
+      "lower_bound_score": -1.7264723777770996,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 9
+    },
+    {
+      "r1": "interacts_with",
+      "intermediate_entity": "pharmacologic_substance",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "interacts_with",
+        "pharmacologic_substance"
+      ],
+      "second_triple": [
+        "pharmacologic_substance",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9595825515420016,
+      "relation_score": -0.6351805925369263,
+      "first_triple_score": -0.2956845462322235,
+      "second_triple_score": -0.8485163450241089,
+      "entity_score": -1.1442008912563324,
+      "lower_bound_score": -1.7793814837932587,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 10
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "mental_or_behavioral_dysfunction",
+      "r2": "process_of",
+      "first_triple": [
+        "hormone",
+        "causes",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "second_triple": [
+        "mental_or_behavioral_dysfunction",
+        "process_of",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9400003775939925,
+      "relation_score": -0.7100968956947327,
+      "first_triple_score": -0.7823092341423035,
+      "second_triple_score": -0.40931904315948486,
+      "entity_score": -1.1916282773017883,
+      "lower_bound_score": -1.901725172996521,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 11
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "pathologic_function",
+      "r2": "process_of",
+      "first_triple": [
+        "hormone",
+        "causes",
+        "pathologic_function"
+      ],
+      "second_triple": [
+        "pathologic_function",
+        "process_of",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9400003775939925,
+      "relation_score": -0.7100968956947327,
+      "first_triple_score": -0.794651448726654,
+      "second_triple_score": -0.4577213227748871,
+      "entity_score": -1.2523727715015411,
+      "lower_bound_score": -1.9624696671962738,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 12
+    },
+    {
+      "r1": "complicates",
+      "intermediate_entity": "molecular_function",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "complicates",
+        "molecular_function"
+      ],
+      "second_triple": [
+        "molecular_function",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9525213609620646,
+      "relation_score": -1.1836833953857422,
+      "first_triple_score": -0.1266973912715912,
+      "second_triple_score": -1.3566581010818481,
+      "entity_score": -1.4833554923534393,
+      "lower_bound_score": -2.6670388877391815,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 13
+    },
+    {
+      "r1": "complicates",
+      "intermediate_entity": "physiologic_function",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "complicates",
+        "physiologic_function"
+      ],
+      "second_triple": [
+        "physiologic_function",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9525213609620646,
+      "relation_score": -1.1836833953857422,
+      "first_triple_score": -0.2689968943595886,
+      "second_triple_score": -1.3070924282073975,
+      "entity_score": -1.576089322566986,
+      "lower_bound_score": -2.7597727179527283,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 14
+    },
+    {
+      "r1": "disrupts",
+      "intermediate_entity": "molecular_function",
+      "r2": "process_of",
+      "first_triple": [
+        "hormone",
+        "disrupts",
+        "molecular_function"
+      ],
+      "second_triple": [
+        "molecular_function",
+        "process_of",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9912796753252004,
+      "relation_score": -1.3284165859222412,
+      "first_triple_score": -1.1419920921325684,
+      "second_triple_score": -0.4527086019515991,
+      "entity_score": -1.5947006940841675,
+      "lower_bound_score": -2.9231172800064087,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 15
+    },
+    {
+      "r1": "causes",
+      "intermediate_entity": "mental_or_behavioral_dysfunction",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "causes",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "second_triple": [
+        "mental_or_behavioral_dysfunction",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9221129923186623,
+      "relation_score": -1.7706345319747925,
+      "first_triple_score": -0.7823092341423035,
+      "second_triple_score": -1.4173707962036133,
+      "entity_score": -2.1996800303459167,
+      "lower_bound_score": -3.9703145623207092,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 16
+    },
+    {
+      "r1": "disrupts",
+      "intermediate_entity": "cell_component",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "disrupts",
+        "cell_component"
+      ],
+      "second_triple": [
+        "cell_component",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9598154551900543,
+      "relation_score": -1.826763391494751,
+      "first_triple_score": -0.8078672885894775,
+      "second_triple_score": -1.3986907005310059,
+      "entity_score": -2.2065579891204834,
+      "lower_bound_score": -4.033321380615234,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 17
+    },
+    {
+      "r1": "disrupts",
+      "intermediate_entity": "gene_or_genome",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "disrupts",
+        "gene_or_genome"
+      ],
+      "second_triple": [
+        "gene_or_genome",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9598154551900543,
+      "relation_score": -1.826763391494751,
+      "first_triple_score": -0.9314942955970764,
+      "second_triple_score": -1.373072862625122,
+      "entity_score": -2.3045671582221985,
+      "lower_bound_score": -4.1313305497169495,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 18
+    },
+    {
+      "r1": "disrupts",
+      "intermediate_entity": "molecular_function",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "disrupts",
+        "molecular_function"
+      ],
+      "second_triple": [
+        "molecular_function",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9598154551900543,
+      "relation_score": -1.826763391494751,
+      "first_triple_score": -1.1419920921325684,
+      "second_triple_score": -1.3566581010818481,
+      "entity_score": -2.4986501932144165,
+      "lower_bound_score": -4.3254135847091675,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 19
+    },
+    {
+      "r1": "disrupts",
+      "intermediate_entity": "physiologic_function",
+      "r2": "affects",
+      "first_triple": [
+        "hormone",
+        "disrupts",
+        "physiologic_function"
+      ],
+      "second_triple": [
+        "physiologic_function",
+        "affects",
+        "archaeon"
+      ],
+      "pra_confidence": 0.9598154551900543,
+      "relation_score": -1.826763391494751,
+      "first_triple_score": -1.1924208402633667,
+      "second_triple_score": -1.3070924282073975,
+      "entity_score": -2.499513268470764,
+      "lower_bound_score": -4.326276659965515,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 20
+    }
+  ]
+}

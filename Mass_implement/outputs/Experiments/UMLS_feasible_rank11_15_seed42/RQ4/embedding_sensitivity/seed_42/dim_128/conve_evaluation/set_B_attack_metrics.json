@@ -1,0 +1,117 @@
+{
+  "research_question": "RQ1 — attack effectiveness (MaSS, ConvE victim)",
+  "victim_model": "ConvE",
+  "prediction": "TAIL only: (h*, r*, ?) ranked against every known entity",
+  "ranking_protocol": "filtered; same original train+valid+test facts for both models",
+  "filter_excludes": "injected edges and synthetic Set B targets",
+  "tie_policy": "average rank, consistent with the TransE evaluation",
+  "interpretation": "Higher poisoned MRR/Hits@10, or positive rank improvement, favors the attacker",
+  "set_B_all_targets": {
+    "count": 100,
+    "clean": {
+      "count": 100,
+      "MRR": 0.10041221222365639,
+      "Hits@1": 0.02,
+      "Hits@3": 0.08,
+      "Hits@10": 0.23,
+      "Mean_Rank": 29.57,
+      "Median_Rank": 19.0
+    },
+    "poisoned": {
+      "count": 100,
+      "MRR": 0.16205262381102625,
+      "Hits@1": 0.04,
+      "Hits@3": 0.15,
+      "Hits@10": 0.54,
+      "Mean_Rank": 18.9,
+      "Median_Rank": 10.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.06164041158736987,
+      "Hits@1": 0.02,
+      "Hits@3": 0.06999999999999999,
+      "Hits@10": 0.31000000000000005,
+      "Mean_Rank": -10.670000000000002,
+      "Median_Rank": -9.0
+    },
+    "num_improved_rank": 66,
+    "num_worsened_rank": 24,
+    "num_unchanged_rank": 10,
+    "num_new_hits_at_10": 31,
+    "num_lost_hits_at_10": 0,
+    "mean_rank_improvement_clean_minus_poisoned": 10.67
+  },
+  "set_B_injected_targets": {
+    "count": 96,
+    "clean": {
+      "count": 96,
+      "MRR": 0.10151514611040045,
+      "Hits@1": 0.020833333333333332,
+      "Hits@3": 0.08333333333333333,
+      "Hits@10": 0.21875,
+      "Mean_Rank": 30.104166666666668,
+      "Median_Rank": 19.0
+    },
+    "poisoned": {
+      "count": 96,
+      "MRR": 0.16519701223701477,
+      "Hits@1": 0.041666666666666664,
+      "Hits@3": 0.15625,
+      "Hits@10": 0.5416666666666666,
+      "Mean_Rank": 18.90625,
+      "Median_Rank": 10.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.06368186612661432,
+      "Hits@1": 0.020833333333333332,
+      "Hits@3": 0.07291666666666667,
+      "Hits@10": 0.32291666666666663,
+      "Mean_Rank": -11.197916666666668,
+      "Median_Rank": -9.0
+    },
+    "num_improved_rank": 63,
+    "num_worsened_rank": 23,
+    "num_unchanged_rank": 10,
+    "num_new_hits_at_10": 31,
+    "num_lost_hits_at_10": 0,
+    "mean_rank_improvement_clean_minus_poisoned": 11.197916666666666
+  },
+  "set_B_not_injected_targets": {
+    "count": 4,
+    "clean": {
+      "count": 4,
+      "MRR": 0.07394179894179895,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.5,
+      "Mean_Rank": 16.75,
+      "Median_Rank": 15.5
+    },
+    "poisoned": {
+      "count": 4,
+      "MRR": 0.08658730158730159,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.5,
+      "Mean_Rank": 18.75,
+      "Median_Rank": 17.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.01264550264550264,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 2.0,
+      "Median_Rank": 1.5
+    },
+    "num_improved_rank": 3,
+    "num_worsened_rank": 1,
+    "num_unchanged_rank": 0,
+    "num_new_hits_at_10": 0,
+    "num_lost_hits_at_10": 0,
+    "mean_rank_improvement_clean_minus_poisoned": -2.0
+  },
+  "attack_name": "MaSS",
+  "opaque_box_note": "The frozen attacker surrogate is TransE while the victim is ConvE.",
+  "target_protocol_note": "Set B was selected with TransE ranks 11–15, not ConvE ranks."
+}

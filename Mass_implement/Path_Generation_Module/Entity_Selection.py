@@ -10,7 +10,9 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
 
 MASS_DIR = Path(__file__).resolve().parents[1]
 if str(MASS_DIR) not in sys.path:
@@ -25,25 +27,29 @@ from Semantic_Constraints_Module.Semantic_Constraints import (
 )
 from TransE_Surrogate import Surrogate
 
-def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
-               top_k: int = 10, top_entities: int = 10,
-               checkpoint: Path | None = None,
-               pra_method: str = "empirical") -> dict:
-    """Return ranked paths. All scores are higher-is-better (negative distances)."""
-    if top_k < 1 or top_entities < 1:
-        raise ValueError("top_k and top_entities must be positive integers")
 
+@dataclass(frozen=True)
+class PathRankingContext:
+    """Loaded inputs only; no relation predictions or candidate paths are cached."""
+
+    surrogate: Surrogate
+    triples: list[tuple[str, str, str]]
+    known_train: set[tuple[str, str, str]]
+    translator: Any
+    constraints: dict
+    entities: set[str]
+    checkpoint: Path
+    pra_method: str
+    threshold: float
+
+
+def load_ranking_context(checkpoint: Path | None = None,
+                         pra_method: str = "empirical",
+                         threshold: float = 0.8) -> PathRankingContext:
+    """Load immutable benchmark inputs outside per-target attack timing."""
     dataset_dir = MASS_DIR / "dataset_uml"
-    checkpoint = checkpoint or (MASS_DIR / "outputs" / "Path_Generation" / "transe_umls.pt")
+    checkpoint = (checkpoint or (MASS_DIR / "outputs" / "Path_Generation" / "transe_umls.pt")).resolve()
     surrogate = Surrogate.load(checkpoint)
-    for name, mapping, label in (
-        (head, surrogate.entity_to_id, "head"),
-        (tail, surrogate.entity_to_id, "tail"),
-        (relation, surrogate.relation_to_id, "relation"),
-    ):
-        if name not in mapping:
-            raise ValueError(f"Unknown target {label}: {name!r}")
-
     triples = load_dataset(str(dataset_dir / "train.txt"))
     if pra_method == "supervised":
         translator = SupervisedPRA(
@@ -59,12 +65,47 @@ def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
 
     else:
         raise ValueError(f"Unknown PRA method: {pra_method}")
-    pra_paths = translator.translate_relation(relation)
     constraints = load_semantic_constraints(str(dataset_dir / "Semantic_Constraints" / "SRSTRE2"))
     entities = load_dataset_entities(str(dataset_dir / "entities.txt"))
-    semantic_results = apply_semantic_constraints_to_pra(pra_paths, constraints, entities)
+    return PathRankingContext(
+        surrogate=surrogate, triples=triples, known_train=set(triples),
+        translator=translator, constraints=constraints, entities=entities,
+        checkpoint=checkpoint, pra_method=pra_method, threshold=threshold,
+    )
 
-    known_train = set(triples)
+
+def rank_paths(head: str, relation: str, tail: str, *, threshold: float = 0.8,
+               top_k: int = 10, top_entities: int = 10,
+               checkpoint: Path | None = None,
+               pra_method: str = "empirical",
+               context: PathRankingContext | None = None) -> dict:
+    """Return fresh ranked paths, optionally reusing loaded input resources.
+
+    All scores are higher-is-better (negative distances). A supplied context
+    must match the requested PRA configuration and any explicit checkpoint.
+    PRA inference, semantic processing, scoring and ranking run on every call.
+    """
+    if top_k < 1 or top_entities < 1:
+        raise ValueError("top_k and top_entities must be positive integers")
+    if context is None:
+        context = load_ranking_context(checkpoint, pra_method, threshold)
+    else:
+        if context.pra_method != pra_method or context.threshold != threshold:
+            raise ValueError("Ranking context PRA method or threshold differs from the request")
+        if checkpoint is not None and checkpoint.resolve() != context.checkpoint:
+            raise ValueError("Ranking context checkpoint differs from the request")
+    surrogate = context.surrogate
+    for name, mapping, label in (
+        (head, surrogate.entity_to_id, "head"),
+        (tail, surrogate.entity_to_id, "tail"),
+        (relation, surrogate.relation_to_id, "relation"),
+    ):
+        if name not in mapping:
+            raise ValueError(f"Unknown target {label}: {name!r}")
+    constraints, entities = context.constraints, context.entities
+    pra_paths = context.translator.translate_relation(relation)
+    semantic_results = apply_semantic_constraints_to_pra(pra_paths, constraints, entities)
+    known_train = context.known_train
 
     # Rank templates by TransE relation composition, not by PRA confidence.
     templates = []

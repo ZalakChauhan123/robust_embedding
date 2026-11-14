@@ -1,0 +1,48 @@
+Dataset integrity passed: clean=5216, poisoned=5416, injected=200
+
+[clean] Training TransE on 5216 triples
+[clean] Epoch    1/500: loss=0.925062
+[clean] Epoch   50/500: loss=0.366228
+[clean] Epoch  100/500: loss=0.366438
+[clean] Epoch  150/500: loss=0.363880
+[clean] Epoch  200/500: loss=0.368446
+[clean] Epoch  250/500: loss=0.361729
+[clean] Epoch  300/500: loss=0.359439
+[clean] Epoch  350/500: loss=0.359921
+[clean] Epoch  400/500: loss=0.361497
+[clean] Epoch  450/500: loss=0.364349
+[clean] Epoch  500/500: loss=0.366378
+
+[poisoned] Training TransE on 5416 triples
+[poisoned] Epoch    1/500: loss=0.919595
+[poisoned] Epoch   50/500: loss=0.378482
+[poisoned] Epoch  100/500: loss=0.373881
+[poisoned] Epoch  150/500: loss=0.373770
+[poisoned] Epoch  200/500: loss=0.375098
+[poisoned] Epoch  250/500: loss=0.368589
+[poisoned] Epoch  300/500: loss=0.375382
+[poisoned] Epoch  350/500: loss=0.379548
+[poisoned] Epoch  400/500: loss=0.379443
+[poisoned] Epoch  450/500: loss=0.369509
+[poisoned] Epoch  500/500: loss=0.376787
+
+=== VICTIM TRAINING FINISHED ===
+Identical initial embeddings: True
+Clean final training loss: 0.366378
+Poisoned final training loss: 0.376787
+Output directory: C:\my-code\Robust Embedding\Mass_implement\outputs\Experiments\UMLS_feasible_rank11_15_seed42\RQ1\transe_dim128\ComAttack\seed_42\victim_models
+Loaded victim checkpoints; 135 entities, 46 relations.
+Evaluating Set B (100 attacker target triples)...
+Evaluating Set A (661 original test triples)...
+
+=== ComAttack UMLS RQ1 — ATTACK EFFECTIVENESS ===
+Set B: 100 targets (injected=100, no injection=0)
+Hits@10  clean=0.3000  poisoned=0.2700  delta=-0.0300
+MRR      clean=0.1109  poisoned=0.1237  delta=+0.0127
+Improved targets: 53; worsened: 40; unchanged: 7
+
+=== PRELIMINARY RQ2 — STEALTHINESS ===
+Set A: 661 original test triples
+Hits@10  clean=0.8427  poisoned=0.7988
+MRR      clean=0.4581  poisoned=0.4833
+Saved evaluation results: C:\my-code\Robust Embedding\Mass_implement\outputs\Experiments\UMLS_feasible_rank11_15_seed42\RQ1\transe_dim128\ComAttack\seed_42\evaluation

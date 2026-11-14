@@ -1,0 +1,34 @@
+{
+  "experiment": "MaSS UMLS pilot: TransE victim evaluation",
+  "attack_name": "MaSS",
+  "input_files": {
+    "clean_victim": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\fresh_surrogates\\dim_128\\baseline\\victim_models\\clean_transe.pt",
+    "poisoned_victim": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\fresh_surrogates\\dim_128\\baseline\\victim_models\\poisoned_transe.pt",
+    "set_A": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt",
+    "set_B": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv",
+    "training_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\fresh_surrogates\\dim_128\\baseline\\victim_models\\training_summary.json",
+    "poisoning_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\fresh_surrogates\\dim_128\\baseline\\poisoning\\poisoning_summary.csv"
+  },
+  "num_clean_training_triples": 5216,
+  "num_poisoned_training_triples": 5375,
+  "num_injected_triples": 159,
+  "num_entities": 135,
+  "num_relations": 46,
+  "num_set_B_targets": 100,
+  "num_injected_targets": 96,
+  "num_not_injected_targets": 4,
+  "num_set_A_test_triples": 661,
+  "set_B_MRR_clean": 0.11094261788036644,
+  "set_B_MRR_poisoned": 0.09461188328423224,
+  "set_B_Hits_at_10_clean": 0.3,
+  "set_B_Hits_at_10_poisoned": 0.28,
+  "set_A_MRR_clean": 0.4580537185336761,
+  "set_A_MRR_poisoned": 0.463767837160456,
+  "set_A_Hits_at_10_clean": 0.8426626323751891,
+  "set_A_Hits_at_10_poisoned": 0.800302571860817,
+  "limitations": [
+    "One UMLS dataset and one random seed; results are preliminary.",
+    "TransE only: no opaque-box KGE transferability test yet.",
+    "This report evaluates one attack method at a time; compare matching runs separately."
+  ]
+}

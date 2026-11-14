@@ -24,7 +24,8 @@ MASS_DIR = Path(__file__).resolve().parents[1]
 if str(MASS_DIR) not in sys.path:
     sys.path.insert(0, str(MASS_DIR))
 
-from Path_Generation_Module.TransE_Surrogate import TransE, read_names, read_triples
+from Path_Generation_Module.TransE_Surrogate import read_names, read_triples
+from Path_Generation_Module.TransE_Victim import TransE
 
 DATASET_DIR = MASS_DIR / "dataset_uml"
 PILOT_DIR = MASS_DIR / "outputs" / "Experiments" / "UMLS_pilot"
@@ -156,6 +157,7 @@ def train_one_victim(
 ) -> dict[str, Any]:
     """Match the existing surrogate training loop, but use configurable inputs."""
     set_seed(seed)  # Reset before BOTH victims: identical initial embeddings.
+
     model = TransE(len(entity_to_id), len(relation_to_id), dim)
     initial_state_sha256 = sha256_initial_state(model)
     optimizer = torch.optim.Adam(model.parameters(), lr=lr)
@@ -197,7 +199,7 @@ def train_one_victim(
         if epoch == 1 or epoch == epochs or epoch % log_every == 0:
             print(f"[{label}] Epoch {epoch:4d}/{epochs}: loss={epoch_loss:.6f}", flush=True)
 
-    # Same checkpoint keys as the existing Surrogate.load() implementation.
+    # Preserve checkpoint keys for TransEVictim.load() and legacy Surrogate.load().
     checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
     torch.save({
         "state_dict": model.state_dict(),

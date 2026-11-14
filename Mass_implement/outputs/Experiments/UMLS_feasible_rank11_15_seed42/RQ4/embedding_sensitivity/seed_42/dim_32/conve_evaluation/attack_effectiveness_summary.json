@@ -1,0 +1,108 @@
+{
+  "set_B_all": {
+    "count": 100,
+    "clean": {
+      "count": 100,
+      "MRR": 0.10041221222365639,
+      "Hits@1": 0.02,
+      "Hits@3": 0.08,
+      "Hits@10": 0.23,
+      "Mean_Rank": 29.57,
+      "Median_Rank": 19.0
+    },
+    "poisoned": {
+      "count": 100,
+      "MRR": 0.1566120441249741,
+      "Hits@1": 0.04,
+      "Hits@3": 0.15,
+      "Hits@10": 0.46,
+      "Mean_Rank": 21.12,
+      "Median_Rank": 13.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.05619983190131771,
+      "Hits@1": 0.02,
+      "Hits@3": 0.06999999999999999,
+      "Hits@10": 0.23,
+      "Mean_Rank": -8.45,
+      "Median_Rank": -6.0
+    },
+    "num_improved_rank": 61,
+    "num_worsened_rank": 29,
+    "num_unchanged_rank": 10,
+    "num_new_hits_at_10": 25,
+    "num_lost_hits_at_10": 2,
+    "mean_rank_improvement_clean_minus_poisoned": 8.45
+  },
+  "set_B_injected": {
+    "count": 96,
+    "clean": {
+      "count": 96,
+      "MRR": 0.10151514611040045,
+      "Hits@1": 0.020833333333333332,
+      "Hits@3": 0.08333333333333333,
+      "Hits@10": 0.21875,
+      "Mean_Rank": 30.104166666666668,
+      "Median_Rank": 19.0
+    },
+    "poisoned": {
+      "count": 96,
+      "MRR": 0.15977510380796908,
+      "Hits@1": 0.041666666666666664,
+      "Hits@3": 0.15625,
+      "Hits@10": 0.4583333333333333,
+      "Mean_Rank": 21.291666666666668,
+      "Median_Rank": 13.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.05825995769756863,
+      "Hits@1": 0.020833333333333332,
+      "Hits@3": 0.07291666666666667,
+      "Hits@10": 0.23958333333333331,
+      "Mean_Rank": -8.8125,
+      "Median_Rank": -6.0
+    },
+    "num_improved_rank": 59,
+    "num_worsened_rank": 27,
+    "num_unchanged_rank": 10,
+    "num_new_hits_at_10": 25,
+    "num_lost_hits_at_10": 2,
+    "mean_rank_improvement_clean_minus_poisoned": 8.8125
+  },
+  "set_B_not_injected": {
+    "count": 4,
+    "clean": {
+      "count": 4,
+      "MRR": 0.07394179894179895,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.5,
+      "Mean_Rank": 16.75,
+      "Median_Rank": 15.5
+    },
+    "poisoned": {
+      "count": 4,
+      "MRR": 0.08069861173309449,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.5,
+      "Mean_Rank": 17.0,
+      "Median_Rank": 16.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.006756812791295544,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 0.25,
+      "Median_Rank": 0.5
+    },
+    "num_improved_rank": 2,
+    "num_worsened_rank": 2,
+    "num_unchanged_rank": 0,
+    "num_new_hits_at_10": 0,
+    "num_lost_hits_at_10": 0,
+    "mean_rank_improvement_clean_minus_poisoned": -0.25
+  },
+  "note": "Lower target rank / higher Hits@10 and MRR indicates better attack effectiveness"
+}

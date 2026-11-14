@@ -1,0 +1,47 @@
+Dataset integrity passed: clean=5216, poisoned=5218, injected=2
+
+[clean] Training TransH on 5216 triples
+[clean] Epoch    1/500: loss=0.926994
+[clean] Epoch   50/500: loss=0.358966
+[clean] Epoch  100/500: loss=0.367076
+[clean] Epoch  150/500: loss=0.363661
+[clean] Epoch  200/500: loss=0.375027
+[clean] Epoch  250/500: loss=0.365928
+[clean] Epoch  300/500: loss=0.359775
+[clean] Epoch  350/500: loss=0.359139
+[clean] Epoch  400/500: loss=0.361518
+[clean] Epoch  450/500: loss=0.371199
+[clean] Epoch  500/500: loss=0.368993
+
+[poisoned] Training TransH on 5218 triples
+[poisoned] Epoch    1/500: loss=0.930394
+[poisoned] Epoch   50/500: loss=0.370002
+[poisoned] Epoch  100/500: loss=0.361305
+[poisoned] Epoch  150/500: loss=0.361677
+[poisoned] Epoch  200/500: loss=0.381142
+[poisoned] Epoch  250/500: loss=0.368540
+[poisoned] Epoch  300/500: loss=0.372279
+[poisoned] Epoch  350/500: loss=0.365041
+[poisoned] Epoch  400/500: loss=0.379157
+[poisoned] Epoch  450/500: loss=0.370639
+[poisoned] Epoch  500/500: loss=0.374195
+
+=== TRANSH VICTIM TRAINING FINISHED ===
+Identical initial embeddings: True
+Clean final training loss: 0.368993
+Poisoned final training loss: 0.374195
+Output directory: C:\my-code\Robust Embedding\Mass_implement\outputs\Experiments\UMLS_feasible_rank11_15_seed42\RQ4\single_target_transe_transh_target003\TransH\victim_models
+Loaded TransH checkpoints; 135 entities, 46 relations.
+Evaluating Set B (1 attacker target triples)...
+Evaluating Set A (661 original test triples)...
+
+=== MaSS single-target UMLS RQ1 — TRANSH VICTIM ===
+Set B: 1 targets (injected=1, no injection=0)
+Hits@10  clean=0.0000  poisoned=0.0000  delta=+0.0000
+MRR      clean=0.0179  poisoned=0.0145  delta=-0.0034
+
+=== PRELIMINARY RQ2 — TRANSH VICTIM ===
+Set A: 661 original test triples
+Hits@10  clean=0.8941  poisoned=0.8911
+MRR      clean=0.6169  poisoned=0.6628
+Saved evaluation results: C:\my-code\Robust Embedding\Mass_implement\outputs\Experiments\UMLS_feasible_rank11_15_seed42\RQ4\single_target_transe_transh_target003\TransH\evaluation

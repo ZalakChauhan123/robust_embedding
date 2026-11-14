@@ -1,0 +1,74 @@
+{
+  "experiment": "DirectAdd UMLS pilot \u2014 matched clean and poisoned TransE victims",
+  "attack_name": "DirectAdd",
+  "parameters": {
+    "epochs": 500,
+    "embedding_dim": 128,
+    "batch_size": 256,
+    "learning_rate": 0.01,
+    "margin": 1.0,
+    "random_seed": 42,
+    "optimizer": "Adam",
+    "loss": "mean ReLU(margin + positive_L2_distance - negative_L2_distance)",
+    "negative_sampling": "uniform random entity replacing head/tail with probability 0.5",
+    "embedding_normalization": "L2-normalize entity embeddings after each optimizer step",
+    "device": "cpu",
+    "same_entity_relation_id_mappings": true,
+    "independent_training_from_scratch": true
+  },
+  "datasets": {
+    "clean_train_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\train.txt",
+    "poisoned_train_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\fresh_surrogates\\dim_128\\DirectAdd\\poisoning\\poisoned_train.txt",
+    "injected_triples_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\fresh_surrogates\\dim_128\\DirectAdd\\poisoning\\injected_triples.tsv",
+    "validation_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\valid.txt",
+    "test_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt",
+    "set_B_file": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv",
+    "clean_training_triples": 5216,
+    "poisoned_training_triples": 5416,
+    "unique_injected_triples": 200,
+    "validation_triples": 652,
+    "test_triples": 661,
+    "set_B_target_triples": 100,
+    "num_entities": 135,
+    "num_relations": 46,
+    "verified_poisoned_equals_clean_union_injected": true,
+    "verified_injection_disjoint_from_valid_test_and_set_B": true,
+    "source_sha256": {
+      "clean_train": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35",
+      "poisoned_train": "ca1ed73e31063c298f7526af04392b0d980dae4871922b6614c7c59348a0e41c",
+      "injected_triples": "bd14204aeb914fb0f32176cc8a064366726332a5abeb083bf9403c3e17f4131c",
+      "validation": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e",
+      "test": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014",
+      "set_B_targets": "54521d859ceec544356b196e4598ed6cf36a94ab8c5243f3679f005d16bfeeb5"
+    }
+  },
+  "victims": {
+    "clean": {
+      "checkpoint": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\fresh_surrogates\\dim_128\\DirectAdd\\victim_models\\clean_transe.pt",
+      "training_loss_csv": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\fresh_surrogates\\dim_128\\DirectAdd\\victim_models\\clean_training_loss.csv",
+      "training_triples": 5216,
+      "initial_state_sha256": "98c72ba30ebca88a894b50a3248d7d6236148fc516d1198161d3b8d738bc436f",
+      "first_epoch_loss": 0.925062128736929,
+      "final_epoch_loss": 0.3663781948981841,
+      "minimum_epoch_loss": 0.353059331515084,
+      "checkpoint_sha256": "af4679324619d61ee9fc6f593e7ad0243be209a093df7e1469a78c3f2c233e46"
+    },
+    "poisoned": {
+      "checkpoint": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\fresh_surrogates\\dim_128\\DirectAdd\\victim_models\\poisoned_transe.pt",
+      "training_loss_csv": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ1\\fresh_surrogates\\dim_128\\DirectAdd\\victim_models\\poisoned_training_loss.csv",
+      "training_triples": 5416,
+      "initial_state_sha256": "98c72ba30ebca88a894b50a3248d7d6236148fc516d1198161d3b8d738bc436f",
+      "first_epoch_loss": 0.9227250047589335,
+      "final_epoch_loss": 0.3847361550813588,
+      "minimum_epoch_loss": 0.3651029053783839,
+      "checkpoint_sha256": "d081b4fda0218554f7b78e2ccfe5bbd8506657d4bc325a00a40c4857662018e5"
+    }
+  },
+  "same_initial_embeddings_verified": true,
+  "notes": [
+    "The existing PRA/TransE surrogate checkpoint was not used as a victim initialization.",
+    "Identical seeds and initial weights do not imply identical per-epoch permutations after the datasets differ.",
+    "Training loss is not an attack-success measure. Next evaluate both victims on Set A and Set B.",
+    "This is a TransE-only pilot, not a full reproduction of all MaSS victim architectures."
+  ]
+}

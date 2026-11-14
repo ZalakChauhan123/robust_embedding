@@ -1,0 +1,496 @@
+{
+  "dataset": "UMLS",
+  "budgets": [
+    2,
+    4,
+    6,
+    8,
+    10,
+    12
+  ],
+  "methods": [
+    "DirectAdd",
+    "ComAttack",
+    "MaSS"
+  ],
+  "repeats": 3,
+  "seed": 42,
+  "checkpoint": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Path_Generation\\transe_umls.pt",
+  "surrogate_dim": 64,
+  "num_targets_in_source": 100,
+  "num_targets_measured": 100,
+  "attack": {
+    "threshold": 0.9,
+    "top_k": 10,
+    "top_entities": 10,
+    "delta": 0.7,
+    "promotion_step": 0.1,
+    "selection_policy": "baseline"
+  },
+  "timer": "time.perf_counter_ns; sum of per-target intervals / all attempted targets / 1e6",
+  "included": "Fresh candidate generation/scoring/ranking, PRA inference and semantic filtering for MaSS, leakage filtering, sampling, budget selection, global injected-set update.",
+  "excluded": "Training; imports/setup; model/data/ontology loading; file output; printing; post-generation integrity checks, audit serialization and degree-only annotations; victim evaluation.",
+  "setup_ms_excluded": 90.2349,
+  "warmup_targets_per_method": 3,
+  "candidate_caching": "None: only trained models, clean data and ontology resources are reused.",
+  "method_run_order": [
+    {
+      "repeat": 0,
+      "budget": 2,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 0,
+      "budget": 2,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 0,
+      "budget": 2,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 0,
+      "budget": 4,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 0,
+      "budget": 4,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 0,
+      "budget": 4,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 0,
+      "budget": 6,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 0,
+      "budget": 6,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 0,
+      "budget": 6,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 0,
+      "budget": 8,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 0,
+      "budget": 8,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 0,
+      "budget": 8,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 0,
+      "budget": 10,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 0,
+      "budget": 10,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 0,
+      "budget": 10,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 0,
+      "budget": 12,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 0,
+      "budget": 12,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 0,
+      "budget": 12,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 1,
+      "budget": 12,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 1,
+      "budget": 12,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 1,
+      "budget": 12,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 1,
+      "budget": 10,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 1,
+      "budget": 10,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 1,
+      "budget": 10,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 1,
+      "budget": 8,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 1,
+      "budget": 8,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 1,
+      "budget": 8,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 1,
+      "budget": 6,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 1,
+      "budget": 6,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 1,
+      "budget": 6,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 1,
+      "budget": 4,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 1,
+      "budget": 4,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 1,
+      "budget": 4,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 1,
+      "budget": 2,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 1,
+      "budget": 2,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 1,
+      "budget": 2,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 2,
+      "budget": 2,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 2,
+      "budget": 2,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 2,
+      "budget": 2,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 2,
+      "budget": 4,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 2,
+      "budget": 4,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 2,
+      "budget": 4,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 2,
+      "budget": 6,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 2,
+      "budget": 6,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 2,
+      "budget": 6,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 2,
+      "budget": 8,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 2,
+      "budget": 8,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 2,
+      "budget": 8,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 2,
+      "budget": 10,
+      "method": "DirectAdd"
+    },
+    {
+      "repeat": 2,
+      "budget": 10,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 2,
+      "budget": 10,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 2,
+      "budget": 12,
+      "method": "ComAttack"
+    },
+    {
+      "repeat": 2,
+      "budget": 12,
+      "method": "MaSS"
+    },
+    {
+      "repeat": 2,
+      "budget": 12,
+      "method": "DirectAdd"
+    }
+  ],
+  "reference_check_status": "eligible",
+  "reference_checks": [
+    {
+      "budget": 2,
+      "method": "DirectAdd",
+      "status": "passed"
+    },
+    {
+      "budget": 2,
+      "method": "ComAttack",
+      "status": "passed"
+    },
+    {
+      "budget": 2,
+      "method": "MaSS",
+      "status": "passed"
+    },
+    {
+      "budget": 4,
+      "method": "ComAttack",
+      "status": "passed"
+    },
+    {
+      "budget": 4,
+      "method": "MaSS",
+      "status": "passed"
+    },
+    {
+      "budget": 4,
+      "method": "DirectAdd",
+      "status": "passed"
+    },
+    {
+      "budget": 6,
+      "method": "MaSS",
+      "status": "passed"
+    },
+    {
+      "budget": 6,
+      "method": "DirectAdd",
+      "status": "passed"
+    },
+    {
+      "budget": 6,
+      "method": "ComAttack",
+      "status": "passed"
+    },
+    {
+      "budget": 8,
+      "method": "DirectAdd",
+      "status": "passed"
+    },
+    {
+      "budget": 8,
+      "method": "ComAttack",
+      "status": "passed"
+    },
+    {
+      "budget": 8,
+      "method": "MaSS",
+      "status": "passed"
+    },
+    {
+      "budget": 10,
+      "method": "ComAttack",
+      "status": "passed"
+    },
+    {
+      "budget": 10,
+      "method": "MaSS",
+      "status": "passed"
+    },
+    {
+      "budget": 10,
+      "method": "DirectAdd",
+      "status": "passed"
+    },
+    {
+      "budget": 12,
+      "method": "MaSS",
+      "status": "passed"
+    },
+    {
+      "budget": 12,
+      "method": "DirectAdd",
+      "status": "passed"
+    },
+    {
+      "budget": 12,
+      "method": "ComAttack",
+      "status": "passed"
+    }
+  ],
+  "fixed_seed_injected_sets_identical_across_repeats": true,
+  "input_sha256": {
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\train.txt": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\valid.txt": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\entities.txt": "15561531bb8296e677ff4e682cf7a8a956a89ea49fcde20680c747cb1c4cda5d",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\relations.txt": "d2e33d4ea42374b38dffd214a3ba411ea35cc1195742c82722ad4df5c42b86b1",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Path_Generation\\transe_umls.pt": "5da0913ea4d72e46d1a18796ea363a6bb923081c7fd5f5ab8101366145222b41",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv": "54521d859ceec544356b196e4598ed6cf36a94ab8c5243f3679f005d16bfeeb5",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\Semantic_Constraints\\SRSTRE2": "8290d3c79fb9387f53067312e67aa7df1b3014326dd9b5551bc03ca2f5e7a207",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\PRA\\supervised_pra_umls.joblib": "532da79f2590df45cb936e8e20c760ffbf09b765ea5f181806b6c805afda8f93",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\Path_Generation_Module\\Entity_Selection.py": "a0b649dd759e3e28e155b4bc1ab8554f50ca23ebd3aaa1554fe479de88a47fb2",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\Path_Generation_Module\\TransE_Surrogate.py": "d4c20b770062df4aa0ffa2e70956d8e71a8f127ee6ed672870dccf1eeff1112e",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\Path_Generation_Module\\Random_Sampling.py": "a60adefa64cb481be0858d18a58ed9d14b699273cf2256839073c7034cf68dc9",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\PRA_Module\\PRA_supervised.py": "c46c6fefea2871e90b97bc13f8c81a1d8f2a98b5b1ceed82c90e70c4420766f4",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\PRA_Module\\Pra_implement_finalVersion.py": "93aec38a59ea554a0af5782b39e8015ca560e833a4d909f2a9a28b3049859544",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\Semantic_Constraints_Module\\Semantic_Constraints.py": "691cb3d3dc8313a1588a9fe0154c604ecd58a974e600abf171721baaf2ddb357",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\Experiment_Setup\\construct_poisoned_dataset.py": "f0adbae9e8d16ebeb987e398d1e2c3332fe20b55227f9c7338d779bdab439dcd",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\Experiment_Setup\\construct_attack_baselines.py": "ebf017898f99d261b2ed5522622174a09600bf10bc4cdf30dfce98d1a72a82ae",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\Experiment_Setup\\Evaluation\\Evaluate_RQ4_Time_Efficiency.py": "84ce526ba883b86c7df5335d72f6653eb9b87ba1d707c0b7261e05b50a23f3af",
+    "C:\\my-code\\Robust Embedding\\Mass_implement\\Experiment_Setup\\Evaluation\\RQ4_Time_Plot.py": "500ee8ba49dd657b02c4f476c3893b82ea78e6b3f77593c84f336ab745b7c35d"
+  },
+  "environment": {
+    "python": "3.14.0 (tags/v3.14.0:ebf955d, Oct  7 2025, 10:15:03) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.1",
+    "sklearn": "1.9.0",
+    "os": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "processor_identifier": "Intel64 Family 6 Model 165 Stepping 2, GenuineIntel",
+    "logical_cpus": 8,
+    "torch_threads": 4,
+    "torch_interop_threads": 4,
+    "blas_threads_requested": 1,
+    "threadpool_runtime": [
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\my-code\\Robust Embedding\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-b788215d9d47792bcba3a2e2a7114320.dll",
+        "version": "0.3.33.112.0",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 8,
+        "prefix": "vcomp",
+        "filepath": "C:\\my-code\\Robust Embedding\\.venv\\Lib\\site-packages\\sklearn\\.libs\\vcomp140.dll",
+        "version": null
+      },
+      {
+        "user_api": "blas",
+        "internal_api": "openblas",
+        "num_threads": 1,
+        "prefix": "libscipy_openblas",
+        "filepath": "C:\\my-code\\Robust Embedding\\.venv\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll",
+        "version": "0.3.31.dev",
+        "threading_layer": "pthreads",
+        "architecture": "Haswell"
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 4,
+        "prefix": "libiomp",
+        "filepath": "C:\\my-code\\Robust Embedding\\.venv\\Lib\\site-packages\\torch\\lib\\libiomp5md.dll",
+        "version": null
+      },
+      {
+        "user_api": "openmp",
+        "internal_api": "openmp",
+        "num_threads": 1,
+        "prefix": "libiomp",
+        "filepath": "C:\\my-code\\Robust Embedding\\.venv\\Lib\\site-packages\\torch\\lib\\libiompstubs5md.dll",
+        "version": null
+      }
+    ],
+    "gc_enabled": true,
+    "clock_resolution_seconds": 1e-07
+  },
+  "limitations": [
+    "Timings measure these local UMLS implementations and machine, not paper hardware or an exact original implementation.",
+    "DirectAdd and ComAttack are the project's target-promotion adaptations.",
+    "The paper does not explicitly define timer boundaries; this is a declared local generation-only protocol.",
+    "Three fixed-seed timing repeats measure runtime variation, not attack-effectiveness variation."
+  ],
+  "measured_artifacts_sha256": {
+    "timing_samples.csv": "1d964375c1266955fa9b3f2b4b080469f25c4a2facb2041c977445188a1ff6b8",
+    "timing_samples.json": "d7f0ebd4a5b4b7572068daf27da124a003e38db3e5f50ee08978066a18ed37c8",
+    "timing_runs.csv": "7a77dc17656b8ab008e27c89f82ad96244a17d8e60567d6772a270d3b28f7bef",
+    "timing_runs.json": "92aebc6e6cc37909828a29e3c69b7c2ead27c297a8bbdecd4a43c6866e63f346"
+  }
+}

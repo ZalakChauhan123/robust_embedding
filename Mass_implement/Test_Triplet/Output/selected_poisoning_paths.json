@@ -1,0 +1,148 @@
+{
+  "delta": 0.7,
+  "budget_per_target": 2,
+  "selection_policy": "baseline",
+  "stealthiness_note": "Baseline: lower-bound ranked random sampling and budget order; degrees annotated only.",
+  "targets": [
+    {
+      "target_id": "target_001",
+      "target_triple": [
+        "antibiotic",
+        "complicates",
+        "reptile"
+      ],
+      "status": "injected",
+      "sampling_seed": 42,
+      "selection_policy": "baseline",
+      "sampling": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "antibiotic",
+          "complicates",
+          "reptile"
+        ],
+        "delta": 0.7,
+        "acceptance_probability": 0.30000000000000004,
+        "random_seed": 42,
+        "requested_max_paths": null,
+        "num_input_paths": 9,
+        "num_examined_paths": 9,
+        "num_selected_paths": 4
+      },
+      "budget": 2,
+      "budget_skipped_paths": 0,
+      "attributed_injected_triples": [
+        [
+          "receptor",
+          "affects",
+          "reptile"
+        ],
+        [
+          "vitamin",
+          "affects",
+          "reptile"
+        ]
+      ],
+      "new_to_global_training": [
+        [
+          "receptor",
+          "affects",
+          "reptile"
+        ],
+        [
+          "vitamin",
+          "affects",
+          "reptile"
+        ]
+      ],
+      "stealthiness": {
+        "dataset": "UMLS",
+        "target_triple": [
+          "antibiotic",
+          "complicates",
+          "reptile"
+        ],
+        "selection_policy": "baseline",
+        "degree_definition": "IN_PLUS_OUT_CLEAN_TRAINING_TRIPLE_OCCURRENCES; SELF_LOOP_COUNTS_TWICE",
+        "num_training_triples": 5216,
+        "num_selected_paths": 2,
+        "mean_selected_intermediate_degree": 96.5,
+        "selected_candidate_paths": [
+          {
+            "r1": "interacts_with",
+            "intermediate_entity": "receptor",
+            "r2": "affects",
+            "first_triple": [
+              "antibiotic",
+              "interacts_with",
+              "receptor"
+            ],
+            "second_triple": [
+              "receptor",
+              "affects",
+              "reptile"
+            ],
+            "pra_confidence": 0.9595825515420016,
+            "relation_score": -0.8204510807991028,
+            "first_triple_score": -0.26641976833343506,
+            "second_triple_score": -0.7710477113723755,
+            "entity_score": -1.0374674797058105,
+            "lower_bound_score": -1.8579185605049133,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 7,
+            "source_rank": 4,
+            "intermediate_entity_degree": 95
+          },
+          {
+            "r1": "interacts_with",
+            "intermediate_entity": "vitamin",
+            "r2": "affects",
+            "first_triple": [
+              "antibiotic",
+              "interacts_with",
+              "vitamin"
+            ],
+            "second_triple": [
+              "vitamin",
+              "affects",
+              "reptile"
+            ],
+            "pra_confidence": 0.9595825515420016,
+            "relation_score": -0.8204510807991028,
+            "first_triple_score": -0.3385477662086487,
+            "second_triple_score": -0.7333453893661499,
+            "entity_score": -1.0718931555747986,
+            "lower_bound_score": -1.8923442363739014,
+            "first_triple_is_self_loop": false,
+            "second_triple_is_self_loop": false,
+            "has_self_loop": false,
+            "first_triple_exists_in_train": true,
+            "second_triple_exists_in_train": false,
+            "num_new_triples": 1,
+            "rank": 9,
+            "source_rank": 15,
+            "intermediate_entity_degree": 98
+          }
+        ],
+        "paths_by_ascending_intermediate_degree": [
+          {
+            "rank": 7,
+            "intermediate_entity": "receptor",
+            "degree": 95
+          },
+          {
+            "rank": 9,
+            "intermediate_entity": "vitamin",
+            "degree": 98
+          }
+        ],
+        "note": "Baseline: degree is annotation only; original MaSS sampling/budget order retained."
+      }
+    }
+  ]
+}

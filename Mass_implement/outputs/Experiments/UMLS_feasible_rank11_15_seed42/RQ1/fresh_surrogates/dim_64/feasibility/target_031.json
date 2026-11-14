@@ -1,0 +1,1474 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "embryonic_structure",
+    "location_of",
+    "therapeutic_or_preventive_procedure"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 89,
+  "num_semantically_valid_templates": 13,
+  "num_selected_templates": 10,
+  "num_ranked_paths": 52,
+  "ranked_candidate_paths": [
+    {
+      "r1": "developmental_form_of",
+      "intermediate_entity": "cell",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "developmental_form_of",
+        "cell"
+      ],
+      "second_triple": [
+        "cell",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9503874833911072,
+      "relation_score": -0.17302829027175903,
+      "first_triple_score": -0.12234725058078766,
+      "second_triple_score": -1.1816619634628296,
+      "entity_score": -1.3040092140436172,
+      "lower_bound_score": -1.4770375043153763,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "injury_or_poisoning",
+      "r2": "result_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "injury_or_poisoning"
+      ],
+      "second_triple": [
+        "injury_or_poisoning",
+        "result_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9913278984203863,
+      "relation_score": -0.1126941367983818,
+      "first_triple_score": -0.26818448305130005,
+      "second_triple_score": -1.1189322471618652,
+      "entity_score": -1.3871167302131653,
+      "lower_bound_score": -1.499810867011547,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "mental_or_behavioral_dysfunction",
+      "r2": "result_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "second_triple": [
+        "mental_or_behavioral_dysfunction",
+        "result_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9913278984203863,
+      "relation_score": -0.1126941367983818,
+      "first_triple_score": -0.2357225865125656,
+      "second_triple_score": -1.171897053718567,
+      "entity_score": -1.4076196402311325,
+      "lower_bound_score": -1.5203137770295143,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 3
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "mental_or_behavioral_dysfunction",
+      "r2": "precedes",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "second_triple": [
+        "mental_or_behavioral_dysfunction",
+        "precedes",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9859658116170797,
+      "relation_score": -0.1192997470498085,
+      "first_triple_score": -0.2357225865125656,
+      "second_triple_score": -1.2340960502624512,
+      "entity_score": -1.4698186367750168,
+      "lower_bound_score": -1.5891183838248253,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 4
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "neoplastic_process",
+      "r2": "precedes",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "neoplastic_process"
+      ],
+      "second_triple": [
+        "neoplastic_process",
+        "precedes",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9859658116170797,
+      "relation_score": -0.1192997470498085,
+      "first_triple_score": -0.24433033168315887,
+      "second_triple_score": -1.2422515153884888,
+      "entity_score": -1.4865818470716476,
+      "lower_bound_score": -1.6058815941214561,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 5
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "cell_or_molecular_dysfunction",
+      "r2": "result_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "cell_or_molecular_dysfunction"
+      ],
+      "second_triple": [
+        "cell_or_molecular_dysfunction",
+        "result_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9913278984203863,
+      "relation_score": -0.1126941367983818,
+      "first_triple_score": -0.29155826568603516,
+      "second_triple_score": -1.201813817024231,
+      "entity_score": -1.4933720827102661,
+      "lower_bound_score": -1.606066219508648,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 6
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "anatomical_abnormality",
+      "r2": "result_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "anatomical_abnormality"
+      ],
+      "second_triple": [
+        "anatomical_abnormality",
+        "result_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9913278984203863,
+      "relation_score": -0.1126941367983818,
+      "first_triple_score": -0.3021165430545807,
+      "second_triple_score": -1.200284719467163,
+      "entity_score": -1.5024012625217438,
+      "lower_bound_score": -1.6150953993201256,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 7
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "experimental_model_of_disease",
+      "r2": "result_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "experimental_model_of_disease"
+      ],
+      "second_triple": [
+        "experimental_model_of_disease",
+        "result_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9913278984203863,
+      "relation_score": -0.1126941367983818,
+      "first_triple_score": -0.30936434864997864,
+      "second_triple_score": -1.211464524269104,
+      "entity_score": -1.5208288729190826,
+      "lower_bound_score": -1.6335230097174644,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 8
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "molecular_function",
+      "r2": "result_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "molecular_function"
+      ],
+      "second_triple": [
+        "molecular_function",
+        "result_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9913278984203863,
+      "relation_score": -0.1126941367983818,
+      "first_triple_score": -0.28706541657447815,
+      "second_triple_score": -1.2363908290863037,
+      "entity_score": -1.5234562456607819,
+      "lower_bound_score": -1.6361503824591637,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 9
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "cell_or_molecular_dysfunction",
+      "r2": "precedes",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "cell_or_molecular_dysfunction"
+      ],
+      "second_triple": [
+        "cell_or_molecular_dysfunction",
+        "precedes",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9859658116170797,
+      "relation_score": -0.1192997470498085,
+      "first_triple_score": -0.29155826568603516,
+      "second_triple_score": -1.2706166505813599,
+      "entity_score": -1.562174916267395,
+      "lower_bound_score": -1.6814746633172035,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 10
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "acquired_abnormality",
+      "r2": "result_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "acquired_abnormality"
+      ],
+      "second_triple": [
+        "acquired_abnormality",
+        "result_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9913278984203863,
+      "relation_score": -0.1126941367983818,
+      "first_triple_score": -0.3571763336658478,
+      "second_triple_score": -1.2225197553634644,
+      "entity_score": -1.5796960890293121,
+      "lower_bound_score": -1.692390225827694,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 11
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "organ_or_tissue_function",
+      "r2": "result_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "organ_or_tissue_function"
+      ],
+      "second_triple": [
+        "organ_or_tissue_function",
+        "result_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9913278984203863,
+      "relation_score": -0.1126941367983818,
+      "first_triple_score": -0.3248732388019562,
+      "second_triple_score": -1.2623727321624756,
+      "entity_score": -1.5872459709644318,
+      "lower_bound_score": -1.6999401077628136,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 12
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "molecular_function",
+      "r2": "precedes",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "molecular_function"
+      ],
+      "second_triple": [
+        "molecular_function",
+        "precedes",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9859658116170797,
+      "relation_score": -0.1192997470498085,
+      "first_triple_score": -0.28706541657447815,
+      "second_triple_score": -1.306017518043518,
+      "entity_score": -1.5930829346179962,
+      "lower_bound_score": -1.7123826816678047,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 13
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "experimental_model_of_disease",
+      "r2": "precedes",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "experimental_model_of_disease"
+      ],
+      "second_triple": [
+        "experimental_model_of_disease",
+        "precedes",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9859658116170797,
+      "relation_score": -0.1192997470498085,
+      "first_triple_score": -0.30936434864997864,
+      "second_triple_score": -1.2855398654937744,
+      "entity_score": -1.594904214143753,
+      "lower_bound_score": -1.7142039611935616,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 14
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "disease_or_syndrome",
+      "r2": "precedes",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "disease_or_syndrome"
+      ],
+      "second_triple": [
+        "disease_or_syndrome",
+        "precedes",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9859658116170797,
+      "relation_score": -0.1192997470498085,
+      "first_triple_score": -0.30898189544677734,
+      "second_triple_score": -1.2982677221298218,
+      "entity_score": -1.6072496175765991,
+      "lower_bound_score": -1.7265493646264076,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 15
+    },
+    {
+      "r1": "interconnects",
+      "intermediate_entity": "body_space_or_junction",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "interconnects",
+        "body_space_or_junction"
+      ],
+      "second_triple": [
+        "body_space_or_junction",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9675497763941712,
+      "relation_score": -0.3130532503128052,
+      "first_triple_score": -0.43340128660202026,
+      "second_triple_score": -1.011601209640503,
+      "entity_score": -1.4450024962425232,
+      "lower_bound_score": -1.7580557465553284,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 16
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "pathologic_function",
+      "r2": "precedes",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "pathologic_function"
+      ],
+      "second_triple": [
+        "pathologic_function",
+        "precedes",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9859658116170797,
+      "relation_score": -0.1192997470498085,
+      "first_triple_score": -0.32916098833084106,
+      "second_triple_score": -1.3339651823043823,
+      "entity_score": -1.6631261706352234,
+      "lower_bound_score": -1.782425917685032,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 17
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "diagnostic_procedure",
+      "r2": "precedes",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "diagnostic_procedure"
+      ],
+      "second_triple": [
+        "diagnostic_procedure",
+        "precedes",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9859658116170797,
+      "relation_score": -0.1192997470498085,
+      "first_triple_score": -1.2805416584014893,
+      "second_triple_score": -0.38902512192726135,
+      "entity_score": -1.6695667803287506,
+      "lower_bound_score": -1.7888665273785591,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 18
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "organ_or_tissue_function",
+      "r2": "precedes",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "organ_or_tissue_function"
+      ],
+      "second_triple": [
+        "organ_or_tissue_function",
+        "precedes",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9859658116170797,
+      "relation_score": -0.1192997470498085,
+      "first_triple_score": -0.3248732388019562,
+      "second_triple_score": -1.3461028337478638,
+      "entity_score": -1.67097607254982,
+      "lower_bound_score": -1.7902758195996284,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 19
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "genetic_function",
+      "r2": "precedes",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "genetic_function"
+      ],
+      "second_triple": [
+        "genetic_function",
+        "precedes",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9859658116170797,
+      "relation_score": -0.1192997470498085,
+      "first_triple_score": -0.34701842069625854,
+      "second_triple_score": -1.3424081802368164,
+      "entity_score": -1.689426600933075,
+      "lower_bound_score": -1.8087263479828835,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 20
+    },
+    {
+      "r1": "interconnects",
+      "intermediate_entity": "cell",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "interconnects",
+        "cell"
+      ],
+      "second_triple": [
+        "cell",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9675497763941712,
+      "relation_score": -0.3130532503128052,
+      "first_triple_score": -0.3995192050933838,
+      "second_triple_score": -1.1816619634628296,
+      "entity_score": -1.5811811685562134,
+      "lower_bound_score": -1.8942344188690186,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 21
+    },
+    {
+      "r1": "surrounds",
+      "intermediate_entity": "body_space_or_junction",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "surrounds",
+        "body_space_or_junction"
+      ],
+      "second_triple": [
+        "body_space_or_junction",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9796827295495918,
+      "relation_score": -0.32684293389320374,
+      "first_triple_score": -0.5849353671073914,
+      "second_triple_score": -1.011601209640503,
+      "entity_score": -1.5965365767478943,
+      "lower_bound_score": -1.923379510641098,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 22
+    },
+    {
+      "r1": "surrounds",
+      "intermediate_entity": "cell",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "surrounds",
+        "cell"
+      ],
+      "second_triple": [
+        "cell",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9796827295495918,
+      "relation_score": -0.32684293389320374,
+      "first_triple_score": -0.4241519272327423,
+      "second_triple_score": -1.1816619634628296,
+      "entity_score": -1.605813890695572,
+      "lower_bound_score": -1.9326568245887756,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 23
+    },
+    {
+      "r1": "surrounds",
+      "intermediate_entity": "body_part_organ_or_organ_component",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "surrounds",
+        "body_part_organ_or_organ_component"
+      ],
+      "second_triple": [
+        "body_part_organ_or_organ_component",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9796827295495918,
+      "relation_score": -0.32684293389320374,
+      "first_triple_score": -0.4448525011539459,
+      "second_triple_score": -1.1734775304794312,
+      "entity_score": -1.618330031633377,
+      "lower_bound_score": -1.9451729655265808,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 24
+    },
+    {
+      "r1": "surrounds",
+      "intermediate_entity": "tissue",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "surrounds",
+        "tissue"
+      ],
+      "second_triple": [
+        "tissue",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9796827295495918,
+      "relation_score": -0.32684293389320374,
+      "first_triple_score": -0.4251253604888916,
+      "second_triple_score": -1.2223896980285645,
+      "entity_score": -1.647515058517456,
+      "lower_bound_score": -1.9743579924106598,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 25
+    },
+    {
+      "r1": "surrounds",
+      "intermediate_entity": "cell_component",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "surrounds",
+        "cell_component"
+      ],
+      "second_triple": [
+        "cell_component",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9796827295495918,
+      "relation_score": -0.32684293389320374,
+      "first_triple_score": -0.4116794466972351,
+      "second_triple_score": -1.2396711111068726,
+      "entity_score": -1.6513505578041077,
+      "lower_bound_score": -1.9781934916973114,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 26
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "anatomical_structure",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "isa",
+        "anatomical_structure"
+      ],
+      "second_triple": [
+        "anatomical_structure",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9621909461373833,
+      "relation_score": -1.0120769739151,
+      "first_triple_score": -0.7053984999656677,
+      "second_triple_score": -1.159942626953125,
+      "entity_score": -1.8653411269187927,
+      "lower_bound_score": -2.877418100833893,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 27
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organization",
+      "r2": "carries_out",
+      "first_triple": [
+        "embryonic_structure",
+        "isa",
+        "organization"
+      ],
+      "second_triple": [
+        "organization",
+        "carries_out",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9095493620812627,
+      "relation_score": -1.1084718704223633,
+      "first_triple_score": -1.4400134086608887,
+      "second_triple_score": -0.44327449798583984,
+      "entity_score": -1.8832879066467285,
+      "lower_bound_score": -2.991759777069092,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 28
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organization",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "isa",
+        "organization"
+      ],
+      "second_triple": [
+        "organization",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9621909461373833,
+      "relation_score": -1.0120769739151,
+      "first_triple_score": -1.4400134086608887,
+      "second_triple_score": -0.6041285395622253,
+      "entity_score": -2.044141948223114,
+      "lower_bound_score": -3.056218922138214,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 29
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "fully_formed_anatomical_structure",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "isa",
+        "fully_formed_anatomical_structure"
+      ],
+      "second_triple": [
+        "fully_formed_anatomical_structure",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9621909461373833,
+      "relation_score": -1.0120769739151,
+      "first_triple_score": -0.9698663353919983,
+      "second_triple_score": -1.256603479385376,
+      "entity_score": -2.2264698147773743,
+      "lower_bound_score": -3.2385467886924744,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 30
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "anatomical_abnormality",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "anatomical_abnormality"
+      ],
+      "second_triple": [
+        "anatomical_abnormality",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9976709553873745,
+      "relation_score": -1.5065422058105469,
+      "first_triple_score": -0.3021165430545807,
+      "second_triple_score": -1.927141547203064,
+      "entity_score": -2.2292580902576447,
+      "lower_bound_score": -3.7358002960681915,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 31
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "congenital_abnormality",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "congenital_abnormality"
+      ],
+      "second_triple": [
+        "congenital_abnormality",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9976709553873745,
+      "relation_score": -1.5065422058105469,
+      "first_triple_score": -0.36538243293762207,
+      "second_triple_score": -1.8932815790176392,
+      "entity_score": -2.2586640119552612,
+      "lower_bound_score": -3.765206217765808,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 32
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "acquired_abnormality",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "acquired_abnormality"
+      ],
+      "second_triple": [
+        "acquired_abnormality",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9976709553873745,
+      "relation_score": -1.5065422058105469,
+      "first_triple_score": -0.3571763336658478,
+      "second_triple_score": -1.9155329465866089,
+      "entity_score": -2.2727092802524567,
+      "lower_bound_score": -3.7792514860630035,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 33
+    },
+    {
+      "r1": "contains",
+      "intermediate_entity": "body_part_organ_or_organ_component",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "contains",
+        "body_part_organ_or_organ_component"
+      ],
+      "second_triple": [
+        "body_part_organ_or_organ_component",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9547918955521661,
+      "relation_score": -1.3070398569107056,
+      "first_triple_score": -1.3742388486862183,
+      "second_triple_score": -1.1734775304794312,
+      "entity_score": -2.5477163791656494,
+      "lower_bound_score": -3.854756236076355,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 34
+    },
+    {
+      "r1": "contains",
+      "intermediate_entity": "tissue",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "contains",
+        "tissue"
+      ],
+      "second_triple": [
+        "tissue",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9547918955521661,
+      "relation_score": -1.3070398569107056,
+      "first_triple_score": -1.3824111223220825,
+      "second_triple_score": -1.2223896980285645,
+      "entity_score": -2.604800820350647,
+      "lower_bound_score": -3.9118406772613525,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 35
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "body_part_organ_or_organ_component",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "body_part_organ_or_organ_component"
+      ],
+      "second_triple": [
+        "body_part_organ_or_organ_component",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9976709553873745,
+      "relation_score": -1.5065422058105469,
+      "first_triple_score": -1.4478226900100708,
+      "second_triple_score": -1.1734775304794312,
+      "entity_score": -2.621300220489502,
+      "lower_bound_score": -4.127842426300049,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 36
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "cell_component",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "cell_component"
+      ],
+      "second_triple": [
+        "cell_component",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9976709553873745,
+      "relation_score": -1.5065422058105469,
+      "first_triple_score": -1.419928789138794,
+      "second_triple_score": -1.2396711111068726,
+      "entity_score": -2.6595999002456665,
+      "lower_bound_score": -4.166142106056213,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 37
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "body_space_or_junction",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "body_space_or_junction"
+      ],
+      "second_triple": [
+        "body_space_or_junction",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9976709553873745,
+      "relation_score": -1.5065422058105469,
+      "first_triple_score": -1.6717798709869385,
+      "second_triple_score": -1.011601209640503,
+      "entity_score": -2.6833810806274414,
+      "lower_bound_score": -4.189923286437988,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 38
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "tissue",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "tissue"
+      ],
+      "second_triple": [
+        "tissue",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9976709553873745,
+      "relation_score": -1.5065422058105469,
+      "first_triple_score": -1.4786776304244995,
+      "second_triple_score": -1.2223896980285645,
+      "entity_score": -2.701067328453064,
+      "lower_bound_score": -4.207609534263611,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 39
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "body_location_or_region",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "body_location_or_region"
+      ],
+      "second_triple": [
+        "body_location_or_region",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9976709553873745,
+      "relation_score": -1.5065422058105469,
+      "first_triple_score": -1.7145546674728394,
+      "second_triple_score": -1.029902696609497,
+      "entity_score": -2.7444573640823364,
+      "lower_bound_score": -4.250999569892883,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 40
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "health_care_activity",
+      "r2": "associated_with",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "health_care_activity"
+      ],
+      "second_triple": [
+        "health_care_activity",
+        "associated_with",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9783448826999097,
+      "relation_score": -1.524051308631897,
+      "first_triple_score": -1.235695481300354,
+      "second_triple_score": -1.5222362279891968,
+      "entity_score": -2.757931709289551,
+      "lower_bound_score": -4.281983017921448,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 41
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "diagnostic_procedure",
+      "r2": "associated_with",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "diagnostic_procedure"
+      ],
+      "second_triple": [
+        "diagnostic_procedure",
+        "associated_with",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9783448826999097,
+      "relation_score": -1.524051308631897,
+      "first_triple_score": -1.2805416584014893,
+      "second_triple_score": -1.5170562267303467,
+      "entity_score": -2.797597885131836,
+      "lower_bound_score": -4.321649193763733,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 42
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "laboratory_procedure",
+      "r2": "associated_with",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "laboratory_procedure"
+      ],
+      "second_triple": [
+        "laboratory_procedure",
+        "associated_with",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9783448826999097,
+      "relation_score": -1.524051308631897,
+      "first_triple_score": -1.2008628845214844,
+      "second_triple_score": -1.5998464822769165,
+      "entity_score": -2.800709366798401,
+      "lower_bound_score": -4.324760675430298,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 43
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "molecular_biology_research_technique",
+      "r2": "associated_with",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "molecular_biology_research_technique"
+      ],
+      "second_triple": [
+        "molecular_biology_research_technique",
+        "associated_with",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9783448826999097,
+      "relation_score": -1.524051308631897,
+      "first_triple_score": -1.3911412954330444,
+      "second_triple_score": -1.4550676345825195,
+      "entity_score": -2.846208930015564,
+      "lower_bound_score": -4.370260238647461,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 44
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "governmental_or_regulatory_activity",
+      "r2": "associated_with",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "governmental_or_regulatory_activity"
+      ],
+      "second_triple": [
+        "governmental_or_regulatory_activity",
+        "associated_with",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9783448826999097,
+      "relation_score": -1.524051308631897,
+      "first_triple_score": -1.4920051097869873,
+      "second_triple_score": -1.3918097019195557,
+      "entity_score": -2.883814811706543,
+      "lower_bound_score": -4.40786612033844,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 45
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "injury_or_poisoning",
+      "r2": "associated_with",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "injury_or_poisoning"
+      ],
+      "second_triple": [
+        "injury_or_poisoning",
+        "associated_with",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9783448826999097,
+      "relation_score": -1.524051308631897,
+      "first_triple_score": -0.26818448305130005,
+      "second_triple_score": -2.6581060886383057,
+      "entity_score": -2.9262905716896057,
+      "lower_bound_score": -4.450341880321503,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 46
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "research_activity",
+      "r2": "associated_with",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "research_activity"
+      ],
+      "second_triple": [
+        "research_activity",
+        "associated_with",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9783448826999097,
+      "relation_score": -1.524051308631897,
+      "first_triple_score": -1.4375683069229126,
+      "second_triple_score": -1.502714991569519,
+      "entity_score": -2.9402832984924316,
+      "lower_bound_score": -4.464334607124329,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 47
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "educational_activity",
+      "r2": "associated_with",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "educational_activity"
+      ],
+      "second_triple": [
+        "educational_activity",
+        "associated_with",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9783448826999097,
+      "relation_score": -1.524051308631897,
+      "first_triple_score": -1.577908992767334,
+      "second_triple_score": -1.3671547174453735,
+      "entity_score": -2.9450637102127075,
+      "lower_bound_score": -4.4691150188446045,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 48
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "mental_or_behavioral_dysfunction",
+      "r2": "associated_with",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "second_triple": [
+        "mental_or_behavioral_dysfunction",
+        "associated_with",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9783448826999097,
+      "relation_score": -1.524051308631897,
+      "first_triple_score": -0.2357225865125656,
+      "second_triple_score": -2.723599433898926,
+      "entity_score": -2.9593220204114914,
+      "lower_bound_score": -4.483373329043388,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 49
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "virus",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "virus"
+      ],
+      "second_triple": [
+        "virus",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9976709553873745,
+      "relation_score": -1.5065422058105469,
+      "first_triple_score": -1.1787322759628296,
+      "second_triple_score": -1.9199320077896118,
+      "entity_score": -3.0986642837524414,
+      "lower_bound_score": -4.605206489562988,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 50
+    },
+    {
+      "r1": "location_of",
+      "intermediate_entity": "fungus",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "location_of",
+        "fungus"
+      ],
+      "second_triple": [
+        "fungus",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9976709553873745,
+      "relation_score": -1.5065422058105469,
+      "first_triple_score": -1.176658272743225,
+      "second_triple_score": -1.942507266998291,
+      "entity_score": -3.119165539741516,
+      "lower_bound_score": -4.625707745552063,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 51
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "anatomical_abnormality",
+      "r2": "location_of",
+      "first_triple": [
+        "embryonic_structure",
+        "isa",
+        "anatomical_abnormality"
+      ],
+      "second_triple": [
+        "anatomical_abnormality",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "pra_confidence": 0.9621909461373833,
+      "relation_score": -1.0120769739151,
+      "first_triple_score": -1.809050440788269,
+      "second_triple_score": -1.927141547203064,
+      "entity_score": -3.736191987991333,
+      "lower_bound_score": -4.748268961906433,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 52
+    }
+  ]
+}

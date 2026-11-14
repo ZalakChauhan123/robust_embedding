@@ -103,6 +103,7 @@ def source_fingerprints(args: argparse.Namespace) -> dict[str, str]:
         "construct_script": CONSTRUCT_SCRIPT, "train_script": TRAIN_SCRIPT,
         "evaluate_script": EVAL_SCRIPT,
         "surrogate_module": MASS_DIR / "Path_Generation_Module" / "TransE_Surrogate.py",
+        "victim_module": MASS_DIR / "Path_Generation_Module" / "TransE_Victim.py",
         "sampling_module": MASS_DIR / "Path_Generation_Module" / "Random_Sampling.py",
         "stealthiness_module": MASS_DIR / "Path_Generation_Module" / "Stealthiness.py",
     }

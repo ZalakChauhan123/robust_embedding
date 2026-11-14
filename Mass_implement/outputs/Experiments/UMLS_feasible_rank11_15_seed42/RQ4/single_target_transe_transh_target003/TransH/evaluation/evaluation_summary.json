@@ -1,0 +1,37 @@
+{
+  "experiment": "MaSS single-target UMLS pilot: TransH victim evaluation",
+  "attack_name": "MaSS single-target",
+  "victim_model": "TransH",
+  "implementation_variant": "standard_local_implementation",
+  "input_files": {
+    "clean_victim": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\single_target_transe_transh_target003\\TransH\\victim_models\\clean_transh.pt",
+    "poisoned_victim": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\single_target_transe_transh_target003\\TransH\\victim_models\\poisoned_transh.pt",
+    "set_A": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt",
+    "set_B": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\single_target_transe_transh_target003\\target_triple.tsv",
+    "training_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\single_target_transe_transh_target003\\TransH\\victim_models\\training_summary.json",
+    "poisoning_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\single_target_transe_transh_target003\\poisoning\\poisoning_summary.csv"
+  },
+  "num_clean_training_triples": 5216,
+  "num_poisoned_training_triples": 5218,
+  "num_injected_triples": 2,
+  "num_entities": 135,
+  "num_relations": 46,
+  "num_set_B_targets": 1,
+  "num_injected_targets": 1,
+  "num_not_injected_targets": 0,
+  "num_set_A_test_triples": 661,
+  "deeppath_evaluation_batch_size": null,
+  "set_B_MRR_clean": 0.017857142857142856,
+  "set_B_MRR_poisoned": 0.014492753623188406,
+  "set_B_Hits_at_10_clean": 0.0,
+  "set_B_Hits_at_10_poisoned": 0.0,
+  "set_A_MRR_clean": 0.6169380032045785,
+  "set_A_MRR_poisoned": 0.6628199433866854,
+  "set_A_Hits_at_10_clean": 0.8940998487140696,
+  "set_A_Hits_at_10_poisoned": 0.8910741301059002,
+  "limitations": [
+    "One UMLS dataset and one random seed; results are preliminary.",
+    "TransH is an opaque-box victim relative to the TransE attacker surrogate.",
+    "The frozen targets were rank-qualified under TransE, not this victim."
+  ]
+}

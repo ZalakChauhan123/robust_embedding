@@ -1,0 +1,34 @@
+{
+  "experiment": "MaSS single-target UMLS pilot: TransE victim evaluation",
+  "attack_name": "MaSS single-target",
+  "input_files": {
+    "clean_victim": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\single_target_transe_transh_target003\\TransE\\victim_models\\clean_transe.pt",
+    "poisoned_victim": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\single_target_transe_transh_target003\\TransE\\victim_models\\poisoned_transe.pt",
+    "set_A": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt",
+    "set_B": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\single_target_transe_transh_target003\\target_triple.tsv",
+    "training_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\single_target_transe_transh_target003\\TransE\\victim_models\\training_summary.json",
+    "poisoning_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\single_target_transe_transh_target003\\poisoning\\poisoning_summary.csv"
+  },
+  "num_clean_training_triples": 5216,
+  "num_poisoned_training_triples": 5218,
+  "num_injected_triples": 2,
+  "num_entities": 135,
+  "num_relations": 46,
+  "num_set_B_targets": 1,
+  "num_injected_targets": 1,
+  "num_not_injected_targets": 0,
+  "num_set_A_test_triples": 661,
+  "set_B_MRR_clean": 0.02857142857142857,
+  "set_B_MRR_poisoned": 0.125,
+  "set_B_Hits_at_10_clean": 0.0,
+  "set_B_Hits_at_10_poisoned": 1.0,
+  "set_A_MRR_clean": 0.4580537185336761,
+  "set_A_MRR_poisoned": 0.46965045032540803,
+  "set_A_Hits_at_10_clean": 0.8426626323751891,
+  "set_A_Hits_at_10_poisoned": 0.8366111951588502,
+  "limitations": [
+    "One UMLS dataset and one random seed; results are preliminary.",
+    "TransE only: no opaque-box KGE transferability test yet.",
+    "This report evaluates one attack method at a time; compare matching runs separately."
+  ]
+}

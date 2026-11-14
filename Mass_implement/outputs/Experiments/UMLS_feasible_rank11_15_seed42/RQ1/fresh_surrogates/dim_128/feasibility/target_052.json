@@ -1,0 +1,914 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "molecular_biology_research_technique",
+    "measures",
+    "fungus"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 85,
+  "num_semantically_valid_templates": 7,
+  "num_selected_templates": 7,
+  "num_ranked_paths": 32,
+  "ranked_candidate_paths": [
+    {
+      "r1": "measures",
+      "intermediate_entity": "organism_function",
+      "r2": "process_of",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "organism_function"
+      ],
+      "second_triple": [
+        "organism_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9855319164826551,
+      "relation_score": -0.8865242600440979,
+      "first_triple_score": -1.3121137619018555,
+      "second_triple_score": -0.3058387041091919,
+      "entity_score": -1.6179524660110474,
+      "lower_bound_score": -2.5044767260551453,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "enzyme",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "enzyme"
+      ],
+      "second_triple": [
+        "enzyme",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9932364828319101,
+      "relation_score": -0.16243432462215424,
+      "first_triple_score": -1.0684112310409546,
+      "second_triple_score": -1.3189433813095093,
+      "entity_score": -2.387354612350464,
+      "lower_bound_score": -2.549788936972618,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "molecular_function",
+      "r2": "process_of",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "molecular_function"
+      ],
+      "second_triple": [
+        "molecular_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9855319164826551,
+      "relation_score": -0.8865242600440979,
+      "first_triple_score": -1.3785157203674316,
+      "second_triple_score": -0.3100809156894684,
+      "entity_score": -1.6885966360569,
+      "lower_bound_score": -2.575120896100998,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 3
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "chemical_viewed_functionally",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "chemical_viewed_functionally"
+      ],
+      "second_triple": [
+        "chemical_viewed_functionally",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9932364828319101,
+      "relation_score": -0.16243432462215424,
+      "first_triple_score": -1.0343319177627563,
+      "second_triple_score": -1.3875361680984497,
+      "entity_score": -2.421868085861206,
+      "lower_bound_score": -2.5843024104833603,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 4
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "natural_phenomenon_or_process",
+      "r2": "process_of",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "natural_phenomenon_or_process"
+      ],
+      "second_triple": [
+        "natural_phenomenon_or_process",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9855319164826551,
+      "relation_score": -0.8865242600440979,
+      "first_triple_score": -1.303486943244934,
+      "second_triple_score": -0.3980918526649475,
+      "entity_score": -1.7015787959098816,
+      "lower_bound_score": -2.5881030559539795,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 5
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "biologically_active_substance",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "biologically_active_substance"
+      ],
+      "second_triple": [
+        "biologically_active_substance",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9932364828319101,
+      "relation_score": -0.16243432462215424,
+      "first_triple_score": -1.1109586954116821,
+      "second_triple_score": -1.3509185314178467,
+      "entity_score": -2.461877226829529,
+      "lower_bound_score": -2.624311551451683,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 6
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "hormone",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "hormone"
+      ],
+      "second_triple": [
+        "hormone",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9932364828319101,
+      "relation_score": -0.16243432462215424,
+      "first_triple_score": -1.062259316444397,
+      "second_triple_score": -1.4044873714447021,
+      "entity_score": -2.466746687889099,
+      "lower_bound_score": -2.6291810125112534,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 7
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "inorganic_chemical",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "inorganic_chemical"
+      ],
+      "second_triple": [
+        "inorganic_chemical",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9932364828319101,
+      "relation_score": -0.16243432462215424,
+      "first_triple_score": -1.0634311437606812,
+      "second_triple_score": -1.4232921600341797,
+      "entity_score": -2.486723303794861,
+      "lower_bound_score": -2.649157628417015,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 8
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "experimental_model_of_disease",
+      "r2": "process_of",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "experimental_model_of_disease"
+      ],
+      "second_triple": [
+        "experimental_model_of_disease",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9855319164826551,
+      "relation_score": -0.8865242600440979,
+      "first_triple_score": -1.3711715936660767,
+      "second_triple_score": -0.4003433883190155,
+      "entity_score": -1.7715149819850922,
+      "lower_bound_score": -2.65803924202919,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 9
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "organic_chemical",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "organic_chemical"
+      ],
+      "second_triple": [
+        "organic_chemical",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9932364828319101,
+      "relation_score": -0.16243432462215424,
+      "first_triple_score": -1.1251916885375977,
+      "second_triple_score": -1.3801604509353638,
+      "entity_score": -2.5053521394729614,
+      "lower_bound_score": -2.6677864640951157,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 10
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "vitamin",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "vitamin"
+      ],
+      "second_triple": [
+        "vitamin",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9932364828319101,
+      "relation_score": -0.16243432462215424,
+      "first_triple_score": -1.1740617752075195,
+      "second_triple_score": -1.3374284505844116,
+      "entity_score": -2.511490225791931,
+      "lower_bound_score": -2.6739245504140854,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 11
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "indicator_reagent_or_diagnostic_aid",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "second_triple": [
+        "indicator_reagent_or_diagnostic_aid",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9932364828319101,
+      "relation_score": -0.16243432462215424,
+      "first_triple_score": -1.0537655353546143,
+      "second_triple_score": -1.4631094932556152,
+      "entity_score": -2.5168750286102295,
+      "lower_bound_score": -2.6793093532323837,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 12
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "immunologic_factor",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "immunologic_factor"
+      ],
+      "second_triple": [
+        "immunologic_factor",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9932364828319101,
+      "relation_score": -0.16243432462215424,
+      "first_triple_score": -1.1466398239135742,
+      "second_triple_score": -1.3808852434158325,
+      "entity_score": -2.5275250673294067,
+      "lower_bound_score": -2.689959391951561,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 13
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "mental_process",
+      "r2": "process_of",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "mental_process"
+      ],
+      "second_triple": [
+        "mental_process",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9855319164826551,
+      "relation_score": -0.8865242600440979,
+      "first_triple_score": -1.3871283531188965,
+      "second_triple_score": -0.4164555072784424,
+      "entity_score": -1.8035838603973389,
+      "lower_bound_score": -2.6901081204414368,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 14
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "cell_function",
+      "r2": "process_of",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "cell_function"
+      ],
+      "second_triple": [
+        "cell_function",
+        "process_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.9855319164826551,
+      "relation_score": -0.8865242600440979,
+      "first_triple_score": -1.4337759017944336,
+      "second_triple_score": -0.37053927779197693,
+      "entity_score": -1.8043151795864105,
+      "lower_bound_score": -2.6908394396305084,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 15
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "hazardous_or_poisonous_substance",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "hazardous_or_poisonous_substance"
+      ],
+      "second_triple": [
+        "hazardous_or_poisonous_substance",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9932364828319101,
+      "relation_score": -0.16243432462215424,
+      "first_triple_score": -1.1611244678497314,
+      "second_triple_score": -1.395249843597412,
+      "entity_score": -2.5563743114471436,
+      "lower_bound_score": -2.718808636069298,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 16
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "chemical_viewed_functionally",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "chemical_viewed_functionally"
+      ],
+      "second_triple": [
+        "chemical_viewed_functionally",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9938750150089746,
+      "relation_score": -1.274898886680603,
+      "first_triple_score": -1.0343319177627563,
+      "second_triple_score": -0.8762320876121521,
+      "entity_score": -1.9105640053749084,
+      "lower_bound_score": -3.1854628920555115,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 17
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "enzyme",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "enzyme"
+      ],
+      "second_triple": [
+        "enzyme",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9938750150089746,
+      "relation_score": -1.274898886680603,
+      "first_triple_score": -1.0684112310409546,
+      "second_triple_score": -0.8446167707443237,
+      "entity_score": -1.9130280017852783,
+      "lower_bound_score": -3.1879268884658813,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 18
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "receptor",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "receptor"
+      ],
+      "second_triple": [
+        "receptor",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9938750150089746,
+      "relation_score": -1.274898886680603,
+      "first_triple_score": -1.1867982149124146,
+      "second_triple_score": -0.7631535530090332,
+      "entity_score": -1.9499517679214478,
+      "lower_bound_score": -3.224850654602051,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 19
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "nucleic_acid_nucleoside_or_nucleotide",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "nucleic_acid_nucleoside_or_nucleotide"
+      ],
+      "second_triple": [
+        "nucleic_acid_nucleoside_or_nucleotide",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9938750150089746,
+      "relation_score": -1.274898886680603,
+      "first_triple_score": -1.200912594795227,
+      "second_triple_score": -0.7710487246513367,
+      "entity_score": -1.9719613194465637,
+      "lower_bound_score": -3.2468602061271667,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 20
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "organic_chemical",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "organic_chemical"
+      ],
+      "second_triple": [
+        "organic_chemical",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9938750150089746,
+      "relation_score": -1.274898886680603,
+      "first_triple_score": -1.1251916885375977,
+      "second_triple_score": -0.8502175211906433,
+      "entity_score": -1.975409209728241,
+      "lower_bound_score": -3.250308096408844,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 21
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "biologically_active_substance",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "biologically_active_substance"
+      ],
+      "second_triple": [
+        "biologically_active_substance",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9938750150089746,
+      "relation_score": -1.274898886680603,
+      "first_triple_score": -1.1109586954116821,
+      "second_triple_score": -0.8647006154060364,
+      "entity_score": -1.9756593108177185,
+      "lower_bound_score": -3.2505581974983215,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 22
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "chemical",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "chemical"
+      ],
+      "second_triple": [
+        "chemical",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9938750150089746,
+      "relation_score": -1.274898886680603,
+      "first_triple_score": -1.15378999710083,
+      "second_triple_score": -0.8404387831687927,
+      "entity_score": -1.9942287802696228,
+      "lower_bound_score": -3.269127666950226,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 23
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "inorganic_chemical",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "inorganic_chemical"
+      ],
+      "second_triple": [
+        "inorganic_chemical",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9938750150089746,
+      "relation_score": -1.274898886680603,
+      "first_triple_score": -1.0634311437606812,
+      "second_triple_score": -0.9347101449966431,
+      "entity_score": -1.9981412887573242,
+      "lower_bound_score": -3.2730401754379272,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 24
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "amino_acid_peptide_or_protein",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "amino_acid_peptide_or_protein"
+      ],
+      "second_triple": [
+        "amino_acid_peptide_or_protein",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9938750150089746,
+      "relation_score": -1.274898886680603,
+      "first_triple_score": -1.3104075193405151,
+      "second_triple_score": -0.6948210000991821,
+      "entity_score": -2.0052285194396973,
+      "lower_bound_score": -3.2801274061203003,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 25
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "chemical_viewed_structurally",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "chemical_viewed_structurally"
+      ],
+      "second_triple": [
+        "chemical_viewed_structurally",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9938750150089746,
+      "relation_score": -1.274898886680603,
+      "first_triple_score": -1.1836261749267578,
+      "second_triple_score": -0.8217495083808899,
+      "entity_score": -2.0053756833076477,
+      "lower_bound_score": -3.2802745699882507,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 26
+    },
+    {
+      "r1": "measures",
+      "intermediate_entity": "body_substance",
+      "r2": "part_of",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "body_substance"
+      ],
+      "second_triple": [
+        "body_substance",
+        "part_of",
+        "fungus"
+      ],
+      "pra_confidence": 0.968875528613128,
+      "relation_score": -1.842272400856018,
+      "first_triple_score": -1.0954960584640503,
+      "second_triple_score": -1.5698412656784058,
+      "entity_score": -2.665337324142456,
+      "lower_bound_score": -4.507609724998474,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 27
+    },
+    {
+      "r1": "uses",
+      "intermediate_entity": "pharmacologic_substance",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "uses",
+        "pharmacologic_substance"
+      ],
+      "second_triple": [
+        "pharmacologic_substance",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9180622331984115,
+      "relation_score": -2.3909661769866943,
+      "first_triple_score": -1.2781615257263184,
+      "second_triple_score": -1.4117870330810547,
+      "entity_score": -2.689948558807373,
+      "lower_bound_score": -5.080914735794067,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 28
+    },
+    {
+      "r1": "uses",
+      "intermediate_entity": "antibiotic",
+      "r2": "interacts_with",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "uses",
+        "antibiotic"
+      ],
+      "second_triple": [
+        "antibiotic",
+        "interacts_with",
+        "fungus"
+      ],
+      "pra_confidence": 0.9180622331984115,
+      "relation_score": -2.3909661769866943,
+      "first_triple_score": -1.3705531358718872,
+      "second_triple_score": -1.4339720010757446,
+      "entity_score": -2.804525136947632,
+      "lower_bound_score": -5.195491313934326,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 29
+    },
+    {
+      "r1": "method_of",
+      "intermediate_entity": "therapeutic_or_preventive_procedure",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "method_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "second_triple": [
+        "therapeutic_or_preventive_procedure",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9404858334110914,
+      "relation_score": -2.508716583251953,
+      "first_triple_score": -1.6811020374298096,
+      "second_triple_score": -1.7249162197113037,
+      "entity_score": -3.4060182571411133,
+      "lower_bound_score": -5.914734840393066,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 30
+    },
+    {
+      "r1": "method_of",
+      "intermediate_entity": "diagnostic_procedure",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "method_of",
+        "diagnostic_procedure"
+      ],
+      "second_triple": [
+        "diagnostic_procedure",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9404858334110914,
+      "relation_score": -2.508716583251953,
+      "first_triple_score": -1.6799677610397339,
+      "second_triple_score": -1.802598237991333,
+      "entity_score": -3.482565999031067,
+      "lower_bound_score": -5.99128258228302,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 31
+    },
+    {
+      "r1": "method_of",
+      "intermediate_entity": "laboratory_procedure",
+      "r2": "affects",
+      "first_triple": [
+        "molecular_biology_research_technique",
+        "method_of",
+        "laboratory_procedure"
+      ],
+      "second_triple": [
+        "laboratory_procedure",
+        "affects",
+        "fungus"
+      ],
+      "pra_confidence": 0.9404858334110914,
+      "relation_score": -2.508716583251953,
+      "first_triple_score": -1.6872682571411133,
+      "second_triple_score": -1.8323001861572266,
+      "entity_score": -3.51956844329834,
+      "lower_bound_score": -6.028285026550293,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 32
+    }
+  ]
+}

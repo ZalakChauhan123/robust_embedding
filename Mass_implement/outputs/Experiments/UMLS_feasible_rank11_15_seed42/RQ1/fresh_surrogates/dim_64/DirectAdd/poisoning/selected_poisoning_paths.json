@@ -1,0 +1,4110 @@
+{
+  "attack": "DirectAdd",
+  "implementation_variant": "target_promotion_adaptation",
+  "enhancement": "none",
+  "enhancement_metadata": {},
+  "budget_distinct_new_triples_per_target": 2,
+  "attack_seed": 42,
+  "targets": [
+    {
+      "target_id": "target_001",
+      "target_triple": [
+        "environmental_effect_of_humans",
+        "isa",
+        "disease_or_syndrome"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "environmental_effect_of_humans",
+          "isa",
+          "biologic_function"
+        ],
+        [
+          "environmental_effect_of_humans",
+          "isa",
+          "cell_or_molecular_dysfunction"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "environmental_effect_of_humans",
+            "isa",
+            "biologic_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09984010457992554
+        },
+        {
+          "edge": [
+            "environmental_effect_of_humans",
+            "isa",
+            "cell_or_molecular_dysfunction"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.0997920036315918
+        }
+      ]
+    },
+    {
+      "target_id": "target_002",
+      "target_triple": [
+        "daily_or_recreational_activity",
+        "associated_with",
+        "organism_attribute"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "daily_or_recreational_activity",
+          "associated_with",
+          "clinical_attribute"
+        ],
+        [
+          "machine_activity",
+          "indicates",
+          "organism_attribute"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "daily_or_recreational_activity",
+            "associated_with",
+            "clinical_attribute"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09181439876556396
+        },
+        {
+          "edge": [
+            "machine_activity",
+            "indicates",
+            "organism_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09129214286804199
+        }
+      ]
+    },
+    {
+      "target_id": "target_003",
+      "target_triple": [
+        "antibiotic",
+        "complicates",
+        "reptile"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "antibiotic",
+          "complicates",
+          "invertebrate"
+        ],
+        [
+          "pharmacologic_substance",
+          "complicates",
+          "reptile"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "pharmacologic_substance",
+            "complicates",
+            "reptile"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09967845678329468
+        },
+        {
+          "edge": [
+            "antibiotic",
+            "complicates",
+            "invertebrate"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09955060482025146
+        }
+      ]
+    },
+    {
+      "target_id": "target_004",
+      "target_triple": [
+        "genetic_function",
+        "affects",
+        "tissue"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "genetic_function",
+          "affects",
+          "gene_or_genome"
+        ],
+        [
+          "pathologic_function",
+          "affects",
+          "tissue"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "pathologic_function",
+            "affects",
+            "tissue"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09995114803314209
+        },
+        {
+          "edge": [
+            "genetic_function",
+            "affects",
+            "gene_or_genome"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09986865520477295
+        }
+      ]
+    },
+    {
+      "target_id": "target_005",
+      "target_triple": [
+        "cell",
+        "produces",
+        "medical_device"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "body_part_organ_or_organ_component",
+          "produces",
+          "medical_device"
+        ],
+        [
+          "embryonic_structure",
+          "produces",
+          "medical_device"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "embryonic_structure",
+            "produces",
+            "medical_device"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09942424297332764
+        },
+        {
+          "edge": [
+            "body_part_organ_or_organ_component",
+            "produces",
+            "medical_device"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.0991659164428711
+        }
+      ]
+    },
+    {
+      "target_id": "target_006",
+      "target_triple": [
+        "cell_function",
+        "affects",
+        "body_part_organ_or_organ_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "cell_function",
+          "affects",
+          "cell_component"
+        ],
+        [
+          "physiologic_function",
+          "affects",
+          "body_part_organ_or_organ_component"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "physiologic_function",
+            "affects",
+            "body_part_organ_or_organ_component"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09984970092773438
+        },
+        {
+          "edge": [
+            "cell_function",
+            "affects",
+            "cell_component"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.099814772605896
+        }
+      ]
+    },
+    {
+      "target_id": "target_007",
+      "target_triple": [
+        "laboratory_procedure",
+        "diagnoses",
+        "clinical_attribute"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "diagnostic_procedure",
+          "diagnoses",
+          "clinical_attribute"
+        ],
+        [
+          "laboratory_procedure",
+          "diagnoses",
+          "organism_attribute"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "diagnostic_procedure",
+            "diagnoses",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.0989803671836853
+        },
+        {
+          "edge": [
+            "laboratory_procedure",
+            "diagnoses",
+            "organism_attribute"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09798330068588257
+        }
+      ]
+    },
+    {
+      "target_id": "target_008",
+      "target_triple": [
+        "laboratory_procedure",
+        "analyzes",
+        "cell_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "laboratory_procedure",
+          "analyzes",
+          "body_part_organ_or_organ_component"
+        ],
+        [
+          "laboratory_procedure",
+          "analyzes",
+          "gene_or_genome"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "laboratory_procedure",
+            "analyzes",
+            "gene_or_genome"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09961307048797607
+        },
+        {
+          "edge": [
+            "laboratory_procedure",
+            "analyzes",
+            "body_part_organ_or_organ_component"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.0996091365814209
+        }
+      ]
+    },
+    {
+      "target_id": "target_009",
+      "target_triple": [
+        "organ_or_tissue_function",
+        "co-occurs_with",
+        "neoplastic_process"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "natural_phenomenon_or_process",
+          "co-occurs_with",
+          "neoplastic_process"
+        ],
+        [
+          "organ_or_tissue_function",
+          "co-occurs_with",
+          "mental_or_behavioral_dysfunction"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "organ_or_tissue_function",
+            "co-occurs_with",
+            "mental_or_behavioral_dysfunction"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09069103747606277
+        },
+        {
+          "edge": [
+            "natural_phenomenon_or_process",
+            "co-occurs_with",
+            "neoplastic_process"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.08788108825683594
+        }
+      ]
+    },
+    {
+      "target_id": "target_010",
+      "target_triple": [
+        "vitamin",
+        "disrupts",
+        "cell_or_molecular_dysfunction"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "receptor",
+          "disrupts",
+          "cell_or_molecular_dysfunction"
+        ],
+        [
+          "vitamin",
+          "disrupts",
+          "experimental_model_of_disease"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "receptor",
+            "disrupts",
+            "cell_or_molecular_dysfunction"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09986627101898193
+        },
+        {
+          "edge": [
+            "vitamin",
+            "disrupts",
+            "experimental_model_of_disease"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09984302520751953
+        }
+      ]
+    },
+    {
+      "target_id": "target_011",
+      "target_triple": [
+        "physiologic_function",
+        "result_of",
+        "sign_or_symptom"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "anatomical_abnormality",
+          "manifestation_of",
+          "sign_or_symptom"
+        ],
+        [
+          "biologic_function",
+          "result_of",
+          "sign_or_symptom"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "anatomical_abnormality",
+            "manifestation_of",
+            "sign_or_symptom"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09971833229064941
+        },
+        {
+          "edge": [
+            "biologic_function",
+            "result_of",
+            "sign_or_symptom"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09971272945404053
+        }
+      ]
+    },
+    {
+      "target_id": "target_012",
+      "target_triple": [
+        "hormone",
+        "interacts_with",
+        "biomedical_or_dental_material"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "receptor",
+          "interacts_with",
+          "biomedical_or_dental_material"
+        ],
+        [
+          "vitamin",
+          "interacts_with",
+          "biomedical_or_dental_material"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "receptor",
+            "interacts_with",
+            "biomedical_or_dental_material"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09893998503684998
+        },
+        {
+          "edge": [
+            "vitamin",
+            "interacts_with",
+            "biomedical_or_dental_material"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09892091155052185
+        }
+      ]
+    },
+    {
+      "target_id": "target_013",
+      "target_triple": [
+        "organism_function",
+        "co-occurs_with",
+        "experimental_model_of_disease"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "natural_phenomenon_or_process",
+          "surrounds",
+          "experimental_model_of_disease"
+        ],
+        [
+          "organism_function",
+          "co-occurs_with",
+          "cell_or_molecular_dysfunction"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "organism_function",
+            "co-occurs_with",
+            "cell_or_molecular_dysfunction"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09492884576320648
+        },
+        {
+          "edge": [
+            "natural_phenomenon_or_process",
+            "surrounds",
+            "experimental_model_of_disease"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09109663963317871
+        }
+      ]
+    },
+    {
+      "target_id": "target_014",
+      "target_triple": [
+        "organism_function",
+        "affects",
+        "tissue"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "organ_or_tissue_function",
+          "affects",
+          "tissue"
+        ],
+        [
+          "organism_function",
+          "affects",
+          "gene_or_genome"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "organism_function",
+            "affects",
+            "gene_or_genome"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09986412525177002
+        },
+        {
+          "edge": [
+            "organ_or_tissue_function",
+            "affects",
+            "tissue"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09981393814086914
+        }
+      ]
+    },
+    {
+      "target_id": "target_015",
+      "target_triple": [
+        "acquired_abnormality",
+        "affects",
+        "environmental_effect_of_humans"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "acquired_abnormality",
+          "affects",
+          "human_caused_phenomenon_or_process"
+        ],
+        [
+          "anatomical_abnormality",
+          "affects",
+          "environmental_effect_of_humans"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "anatomical_abnormality",
+            "affects",
+            "environmental_effect_of_humans"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09977543354034424
+        },
+        {
+          "edge": [
+            "acquired_abnormality",
+            "affects",
+            "human_caused_phenomenon_or_process"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09953808784484863
+        }
+      ]
+    },
+    {
+      "target_id": "target_016",
+      "target_triple": [
+        "pathologic_function",
+        "affects",
+        "cell_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "genetic_function",
+          "affects",
+          "cell_component"
+        ],
+        [
+          "molecular_function",
+          "affects",
+          "cell_component"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "genetic_function",
+            "affects",
+            "cell_component"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09994888305664062
+        },
+        {
+          "edge": [
+            "molecular_function",
+            "affects",
+            "cell_component"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09994173049926758
+        }
+      ]
+    },
+    {
+      "target_id": "target_017",
+      "target_triple": [
+        "disease_or_syndrome",
+        "process_of",
+        "cell_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "biologic_function",
+          "process_of",
+          "cell_component"
+        ],
+        [
+          "cell_or_molecular_dysfunction",
+          "process_of",
+          "cell_component"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "cell_or_molecular_dysfunction",
+            "process_of",
+            "cell_component"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09985005855560303
+        },
+        {
+          "edge": [
+            "biologic_function",
+            "process_of",
+            "cell_component"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09984898567199707
+        }
+      ]
+    },
+    {
+      "target_id": "target_018",
+      "target_triple": [
+        "experimental_model_of_disease",
+        "affects",
+        "cell_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "experimental_model_of_disease",
+          "affects",
+          "body_part_organ_or_organ_component"
+        ],
+        [
+          "experimental_model_of_disease",
+          "affects",
+          "embryonic_structure"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "experimental_model_of_disease",
+            "affects",
+            "body_part_organ_or_organ_component"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09982109069824219
+        },
+        {
+          "edge": [
+            "experimental_model_of_disease",
+            "affects",
+            "embryonic_structure"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09981977939605713
+        }
+      ]
+    },
+    {
+      "target_id": "target_019",
+      "target_triple": [
+        "bird",
+        "interacts_with",
+        "biologic_function"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "bird",
+          "interacts_with",
+          "disease_or_syndrome"
+        ],
+        [
+          "bird",
+          "interacts_with",
+          "molecular_function"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "bird",
+            "interacts_with",
+            "molecular_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09978699684143066
+        },
+        {
+          "edge": [
+            "bird",
+            "interacts_with",
+            "disease_or_syndrome"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09978139400482178
+        }
+      ]
+    },
+    {
+      "target_id": "target_020",
+      "target_triple": [
+        "machine_activity",
+        "isa",
+        "physical_object"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "machine_activity",
+          "interacts_with",
+          "neuroreactive_substance_or_biogenic_amine"
+        ],
+        [
+          "machine_activity",
+          "result_of",
+          "element_ion_or_isotope"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "machine_activity",
+            "result_of",
+            "element_ion_or_isotope"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09873366355895996
+        },
+        {
+          "edge": [
+            "machine_activity",
+            "interacts_with",
+            "neuroreactive_substance_or_biogenic_amine"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09807729721069336
+        }
+      ]
+    },
+    {
+      "target_id": "target_021",
+      "target_triple": [
+        "mental_or_behavioral_dysfunction",
+        "associated_with",
+        "congenital_abnormality"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "molecular_function",
+          "associated_with",
+          "congenital_abnormality"
+        ],
+        [
+          "neoplastic_process",
+          "associated_with",
+          "congenital_abnormality"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "neoplastic_process",
+            "associated_with",
+            "congenital_abnormality"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09988963603973389
+        },
+        {
+          "edge": [
+            "molecular_function",
+            "associated_with",
+            "congenital_abnormality"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09971415996551514
+        }
+      ]
+    },
+    {
+      "target_id": "target_022",
+      "target_triple": [
+        "research_activity",
+        "isa",
+        "finding"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "molecular_biology_research_technique",
+          "isa",
+          "finding"
+        ],
+        [
+          "research_activity",
+          "isa",
+          "sign_or_symptom"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "molecular_biology_research_technique",
+            "isa",
+            "finding"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09964311122894287
+        },
+        {
+          "edge": [
+            "research_activity",
+            "isa",
+            "sign_or_symptom"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.0982292890548706
+        }
+      ]
+    },
+    {
+      "target_id": "target_023",
+      "target_triple": [
+        "chemical",
+        "affects",
+        "archaeon"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "chemical",
+          "affects",
+          "fish"
+        ],
+        [
+          "chemical",
+          "affects",
+          "invertebrate"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "chemical",
+            "affects",
+            "invertebrate"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09884297847747803
+        },
+        {
+          "edge": [
+            "chemical",
+            "affects",
+            "fish"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09871417284011841
+        }
+      ]
+    },
+    {
+      "target_id": "target_024",
+      "target_triple": [
+        "immunologic_factor",
+        "indicates",
+        "anatomical_abnormality"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "receptor",
+          "indicates",
+          "anatomical_abnormality"
+        ],
+        [
+          "vitamin",
+          "indicates",
+          "anatomical_abnormality"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "vitamin",
+            "indicates",
+            "anatomical_abnormality"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09986448287963867
+        },
+        {
+          "edge": [
+            "receptor",
+            "indicates",
+            "anatomical_abnormality"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09979581832885742
+        }
+      ]
+    },
+    {
+      "target_id": "target_025",
+      "target_triple": [
+        "mental_or_behavioral_dysfunction",
+        "affects",
+        "cell_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "anatomical_abnormality",
+          "affects",
+          "cell_component"
+        ],
+        [
+          "mental_or_behavioral_dysfunction",
+          "affects",
+          "gene_or_genome"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "mental_or_behavioral_dysfunction",
+            "affects",
+            "gene_or_genome"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09981071949005127
+        },
+        {
+          "edge": [
+            "anatomical_abnormality",
+            "affects",
+            "cell_component"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09980988502502441
+        }
+      ]
+    },
+    {
+      "target_id": "target_026",
+      "target_triple": [
+        "cell_component",
+        "produces",
+        "medical_device"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "gene_or_genome",
+          "produces",
+          "medical_device"
+        ],
+        [
+          "tissue",
+          "produces",
+          "medical_device"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "gene_or_genome",
+            "produces",
+            "medical_device"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09933274984359741
+        },
+        {
+          "edge": [
+            "tissue",
+            "produces",
+            "medical_device"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09886437654495239
+        }
+      ]
+    },
+    {
+      "target_id": "target_027",
+      "target_triple": [
+        "plant",
+        "interacts_with",
+        "molecular_function"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "plant",
+          "interacts_with",
+          "biologic_function"
+        ],
+        [
+          "plant",
+          "interacts_with",
+          "pathologic_function"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "plant",
+            "interacts_with",
+            "pathologic_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09991085529327393
+        },
+        {
+          "edge": [
+            "plant",
+            "interacts_with",
+            "biologic_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09975367784500122
+        }
+      ]
+    },
+    {
+      "target_id": "target_028",
+      "target_triple": [
+        "vitamin",
+        "affects",
+        "amphibian"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "immunologic_factor",
+          "affects",
+          "amphibian"
+        ],
+        [
+          "mental_or_behavioral_dysfunction",
+          "precedes",
+          "amphibian"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "immunologic_factor",
+            "affects",
+            "amphibian"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09951162338256836
+        },
+        {
+          "edge": [
+            "mental_or_behavioral_dysfunction",
+            "precedes",
+            "amphibian"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09945309162139893
+        }
+      ]
+    },
+    {
+      "target_id": "target_029",
+      "target_triple": [
+        "hormone",
+        "complicates",
+        "archaeon"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "receptor",
+          "complicates",
+          "archaeon"
+        ],
+        [
+          "vitamin",
+          "complicates",
+          "archaeon"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "vitamin",
+            "complicates",
+            "archaeon"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09986263513565063
+        },
+        {
+          "edge": [
+            "receptor",
+            "complicates",
+            "archaeon"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09968143701553345
+        }
+      ]
+    },
+    {
+      "target_id": "target_030",
+      "target_triple": [
+        "element_ion_or_isotope",
+        "interacts_with",
+        "substance"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "amino_acid_peptide_or_protein",
+          "interacts_with",
+          "substance"
+        ],
+        [
+          "lipid",
+          "interacts_with",
+          "substance"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "amino_acid_peptide_or_protein",
+            "interacts_with",
+            "substance"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09900587797164917
+        },
+        {
+          "edge": [
+            "lipid",
+            "interacts_with",
+            "substance"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09899049997329712
+        }
+      ]
+    },
+    {
+      "target_id": "target_031",
+      "target_triple": [
+        "embryonic_structure",
+        "location_of",
+        "therapeutic_or_preventive_procedure"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "gene_or_genome",
+          "location_of",
+          "therapeutic_or_preventive_procedure"
+        ],
+        [
+          "molecular_function",
+          "interacts_with",
+          "therapeutic_or_preventive_procedure"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "gene_or_genome",
+            "location_of",
+            "therapeutic_or_preventive_procedure"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09874582290649414
+        },
+        {
+          "edge": [
+            "molecular_function",
+            "interacts_with",
+            "therapeutic_or_preventive_procedure"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09847450256347656
+        }
+      ]
+    },
+    {
+      "target_id": "target_032",
+      "target_triple": [
+        "enzyme",
+        "disrupts",
+        "cell_or_molecular_dysfunction"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "enzyme",
+          "disrupts",
+          "experimental_model_of_disease"
+        ],
+        [
+          "enzyme",
+          "disrupts",
+          "neoplastic_process"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "enzyme",
+            "disrupts",
+            "experimental_model_of_disease"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09981578588485718
+        },
+        {
+          "edge": [
+            "enzyme",
+            "disrupts",
+            "neoplastic_process"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09975707530975342
+        }
+      ]
+    },
+    {
+      "target_id": "target_033",
+      "target_triple": [
+        "human",
+        "interacts_with",
+        "animal"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "human",
+          "precedes",
+          "animal"
+        ],
+        [
+          "reptile",
+          "interacts_with",
+          "animal"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "human",
+            "precedes",
+            "animal"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09826305508613586
+        },
+        {
+          "edge": [
+            "reptile",
+            "interacts_with",
+            "animal"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09790366888046265
+        }
+      ]
+    },
+    {
+      "target_id": "target_034",
+      "target_triple": [
+        "animal",
+        "interacts_with",
+        "pathologic_function"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "animal",
+          "interacts_with",
+          "genetic_function"
+        ],
+        [
+          "animal",
+          "interacts_with",
+          "molecular_function"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "animal",
+            "interacts_with",
+            "molecular_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09991335868835449
+        },
+        {
+          "edge": [
+            "animal",
+            "interacts_with",
+            "genetic_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09984898567199707
+        }
+      ]
+    },
+    {
+      "target_id": "target_035",
+      "target_triple": [
+        "physiologic_function",
+        "produces",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "cell_function",
+          "produces",
+          "indicator_reagent_or_diagnostic_aid"
+        ],
+        [
+          "pathologic_function",
+          "produces",
+          "indicator_reagent_or_diagnostic_aid"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "cell_function",
+            "produces",
+            "indicator_reagent_or_diagnostic_aid"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09974342584609985
+        },
+        {
+          "edge": [
+            "pathologic_function",
+            "produces",
+            "indicator_reagent_or_diagnostic_aid"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09972816705703735
+        }
+      ]
+    },
+    {
+      "target_id": "target_036",
+      "target_triple": [
+        "fully_formed_anatomical_structure",
+        "location_of",
+        "archaeon"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "fully_formed_anatomical_structure",
+          "location_of",
+          "fish"
+        ],
+        [
+          "fully_formed_anatomical_structure",
+          "location_of",
+          "mammal"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "fully_formed_anatomical_structure",
+            "location_of",
+            "fish"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09954369068145752
+        },
+        {
+          "edge": [
+            "fully_formed_anatomical_structure",
+            "location_of",
+            "mammal"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.0994178056716919
+        }
+      ]
+    },
+    {
+      "target_id": "target_037",
+      "target_triple": [
+        "mental_process",
+        "process_of",
+        "environmental_effect_of_humans"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "organ_or_tissue_function",
+          "process_of",
+          "environmental_effect_of_humans"
+        ],
+        [
+          "physiologic_function",
+          "process_of",
+          "environmental_effect_of_humans"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "physiologic_function",
+            "process_of",
+            "environmental_effect_of_humans"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09954833984375
+        },
+        {
+          "edge": [
+            "organ_or_tissue_function",
+            "process_of",
+            "environmental_effect_of_humans"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.099437415599823
+        }
+      ]
+    },
+    {
+      "target_id": "target_038",
+      "target_triple": [
+        "chemical",
+        "causes",
+        "organism_function"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "chemical",
+          "causes",
+          "organ_or_tissue_function"
+        ],
+        [
+          "chemical",
+          "causes",
+          "physiologic_function"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "chemical",
+            "causes",
+            "organ_or_tissue_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.098838210105896
+        },
+        {
+          "edge": [
+            "chemical",
+            "causes",
+            "physiologic_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09875398874282837
+        }
+      ]
+    },
+    {
+      "target_id": "target_039",
+      "target_triple": [
+        "organization",
+        "location_of",
+        "mental_or_behavioral_dysfunction"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "organization",
+          "location_of",
+          "injury_or_poisoning"
+        ],
+        [
+          "organization",
+          "location_of",
+          "neoplastic_process"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "organization",
+            "location_of",
+            "neoplastic_process"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09978407621383667
+        },
+        {
+          "edge": [
+            "organization",
+            "location_of",
+            "injury_or_poisoning"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09942859411239624
+        }
+      ]
+    },
+    {
+      "target_id": "target_040",
+      "target_triple": [
+        "molecular_function",
+        "affects",
+        "body_part_organ_or_organ_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "disease_or_syndrome",
+          "affects",
+          "body_part_organ_or_organ_component"
+        ],
+        [
+          "pathologic_function",
+          "affects",
+          "body_part_organ_or_organ_component"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "pathologic_function",
+            "affects",
+            "body_part_organ_or_organ_component"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.0999448299407959
+        },
+        {
+          "edge": [
+            "disease_or_syndrome",
+            "affects",
+            "body_part_organ_or_organ_component"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09993124008178711
+        }
+      ]
+    },
+    {
+      "target_id": "target_041",
+      "target_triple": [
+        "physiologic_function",
+        "affects",
+        "tissue"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "biologic_function",
+          "affects",
+          "tissue"
+        ],
+        [
+          "physiologic_function",
+          "affects",
+          "gene_or_genome"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "biologic_function",
+            "affects",
+            "tissue"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09991037845611572
+        },
+        {
+          "edge": [
+            "physiologic_function",
+            "affects",
+            "gene_or_genome"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09987103939056396
+        }
+      ]
+    },
+    {
+      "target_id": "target_042",
+      "target_triple": [
+        "mental_or_behavioral_dysfunction",
+        "degree_of",
+        "cell_function"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "injury_or_poisoning",
+          "degree_of",
+          "cell_function"
+        ],
+        [
+          "neoplastic_process",
+          "degree_of",
+          "cell_function"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "neoplastic_process",
+            "degree_of",
+            "cell_function"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09315615892410278
+        },
+        {
+          "edge": [
+            "injury_or_poisoning",
+            "degree_of",
+            "cell_function"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09135900437831879
+        }
+      ]
+    },
+    {
+      "target_id": "target_043",
+      "target_triple": [
+        "disease_or_syndrome",
+        "affects",
+        "cell_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "biologic_function",
+          "affects",
+          "cell_component"
+        ],
+        [
+          "disease_or_syndrome",
+          "affects",
+          "embryonic_structure"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "biologic_function",
+            "affects",
+            "cell_component"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09991824626922607
+        },
+        {
+          "edge": [
+            "disease_or_syndrome",
+            "affects",
+            "embryonic_structure"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09981238842010498
+        }
+      ]
+    },
+    {
+      "target_id": "target_044",
+      "target_triple": [
+        "natural_phenomenon_or_process",
+        "affects",
+        "reptile"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "natural_phenomenon_or_process",
+          "affects",
+          "human"
+        ],
+        [
+          "natural_phenomenon_or_process",
+          "affects",
+          "invertebrate"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "natural_phenomenon_or_process",
+            "affects",
+            "invertebrate"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09986639022827148
+        },
+        {
+          "edge": [
+            "natural_phenomenon_or_process",
+            "affects",
+            "human"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09976112842559814
+        }
+      ]
+    },
+    {
+      "target_id": "target_045",
+      "target_triple": [
+        "organism_function",
+        "produces",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "genetic_function",
+          "produces",
+          "indicator_reagent_or_diagnostic_aid"
+        ],
+        [
+          "organism_function",
+          "produces",
+          "inorganic_chemical"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "organism_function",
+            "produces",
+            "inorganic_chemical"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09948903322219849
+        },
+        {
+          "edge": [
+            "genetic_function",
+            "produces",
+            "indicator_reagent_or_diagnostic_aid"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09932422637939453
+        }
+      ]
+    },
+    {
+      "target_id": "target_046",
+      "target_triple": [
+        "neoplastic_process",
+        "result_of",
+        "finding"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "cell_or_molecular_dysfunction",
+          "result_of",
+          "finding"
+        ],
+        [
+          "mental_or_behavioral_dysfunction",
+          "result_of",
+          "finding"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "mental_or_behavioral_dysfunction",
+            "result_of",
+            "finding"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09982502460479736
+        },
+        {
+          "edge": [
+            "cell_or_molecular_dysfunction",
+            "result_of",
+            "finding"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09975135326385498
+        }
+      ]
+    },
+    {
+      "target_id": "target_047",
+      "target_triple": [
+        "injury_or_poisoning",
+        "complicates",
+        "natural_phenomenon_or_process"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "injury_or_poisoning",
+          "developmental_form_of",
+          "pharmacologic_substance"
+        ],
+        [
+          "injury_or_poisoning",
+          "developmental_form_of",
+          "receptor"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "injury_or_poisoning",
+            "developmental_form_of",
+            "pharmacologic_substance"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09952902793884277
+        },
+        {
+          "edge": [
+            "injury_or_poisoning",
+            "developmental_form_of",
+            "receptor"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09947991371154785
+        }
+      ]
+    },
+    {
+      "target_id": "target_048",
+      "target_triple": [
+        "receptor",
+        "causes",
+        "clinical_attribute"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "hormone",
+          "causes",
+          "clinical_attribute"
+        ],
+        [
+          "vitamin",
+          "causes",
+          "clinical_attribute"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "vitamin",
+            "causes",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09980309009552002
+        },
+        {
+          "edge": [
+            "hormone",
+            "causes",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09954833984375
+        }
+      ]
+    },
+    {
+      "target_id": "target_049",
+      "target_triple": [
+        "congenital_abnormality",
+        "result_of",
+        "tissue"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "anatomical_abnormality",
+          "result_of",
+          "tissue"
+        ],
+        [
+          "congenital_abnormality",
+          "result_of",
+          "gene_or_genome"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "congenital_abnormality",
+            "result_of",
+            "gene_or_genome"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09964489936828613
+        },
+        {
+          "edge": [
+            "anatomical_abnormality",
+            "result_of",
+            "tissue"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09944283962249756
+        }
+      ]
+    },
+    {
+      "target_id": "target_050",
+      "target_triple": [
+        "receptor",
+        "affects",
+        "amphibian"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "natural_phenomenon_or_process",
+          "interacts_with",
+          "amphibian"
+        ],
+        [
+          "organ_or_tissue_function",
+          "precedes",
+          "amphibian"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "organ_or_tissue_function",
+            "precedes",
+            "amphibian"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.0995413064956665
+        },
+        {
+          "edge": [
+            "natural_phenomenon_or_process",
+            "interacts_with",
+            "amphibian"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09932911396026611
+        }
+      ]
+    },
+    {
+      "target_id": "target_051",
+      "target_triple": [
+        "virus",
+        "location_of",
+        "mental_process"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "virus",
+          "location_of",
+          "organ_or_tissue_function"
+        ],
+        [
+          "virus",
+          "location_of",
+          "physiologic_function"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "virus",
+            "location_of",
+            "organ_or_tissue_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09985208511352539
+        },
+        {
+          "edge": [
+            "virus",
+            "location_of",
+            "physiologic_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09972751140594482
+        }
+      ]
+    },
+    {
+      "target_id": "target_052",
+      "target_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "fungus"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "molecular_biology_research_technique",
+          "measures",
+          "invertebrate"
+        ],
+        [
+          "research_activity",
+          "measures",
+          "fungus"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "molecular_biology_research_technique",
+            "measures",
+            "invertebrate"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09955096244812012
+        },
+        {
+          "edge": [
+            "research_activity",
+            "measures",
+            "fungus"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09939301013946533
+        }
+      ]
+    },
+    {
+      "target_id": "target_053",
+      "target_triple": [
+        "professional_or_occupational_group",
+        "diagnoses",
+        "biologic_function"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "professional_or_occupational_group",
+          "diagnoses",
+          "molecular_function"
+        ],
+        [
+          "professional_or_occupational_group",
+          "diagnoses",
+          "physiologic_function"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "professional_or_occupational_group",
+            "diagnoses",
+            "physiologic_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09980738162994385
+        },
+        {
+          "edge": [
+            "professional_or_occupational_group",
+            "diagnoses",
+            "molecular_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09976959228515625
+        }
+      ]
+    },
+    {
+      "target_id": "target_054",
+      "target_triple": [
+        "diagnostic_procedure",
+        "associated_with",
+        "clinical_attribute"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "diagnostic_procedure",
+          "associated_with",
+          "organism_attribute"
+        ],
+        [
+          "laboratory_procedure",
+          "associated_with",
+          "clinical_attribute"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "laboratory_procedure",
+            "associated_with",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09883338212966919
+        },
+        {
+          "edge": [
+            "diagnostic_procedure",
+            "associated_with",
+            "organism_attribute"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09750789403915405
+        }
+      ]
+    },
+    {
+      "target_id": "target_055",
+      "target_triple": [
+        "population_group",
+        "produces",
+        "amino_acid_peptide_or_protein"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "population_group",
+          "produces",
+          "eicosanoid"
+        ],
+        [
+          "population_group",
+          "produces",
+          "organic_chemical"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "population_group",
+            "produces",
+            "organic_chemical"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09970831871032715
+        },
+        {
+          "edge": [
+            "population_group",
+            "produces",
+            "eicosanoid"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09955906867980957
+        }
+      ]
+    },
+    {
+      "target_id": "target_056",
+      "target_triple": [
+        "laboratory_procedure",
+        "assesses_effect_of",
+        "clinical_attribute"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "diagnostic_procedure",
+          "assesses_effect_of",
+          "clinical_attribute"
+        ],
+        [
+          "laboratory_procedure",
+          "assesses_effect_of",
+          "organism_attribute"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "diagnostic_procedure",
+            "assesses_effect_of",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09947192668914795
+        },
+        {
+          "edge": [
+            "laboratory_procedure",
+            "assesses_effect_of",
+            "organism_attribute"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09884369373321533
+        }
+      ]
+    },
+    {
+      "target_id": "target_057",
+      "target_triple": [
+        "laboratory_procedure",
+        "affects",
+        "congenital_abnormality"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "diagnostic_procedure",
+          "affects",
+          "congenital_abnormality"
+        ],
+        [
+          "laboratory_procedure",
+          "affects",
+          "acquired_abnormality"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "diagnostic_procedure",
+            "affects",
+            "congenital_abnormality"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09951949119567871
+        },
+        {
+          "edge": [
+            "laboratory_procedure",
+            "affects",
+            "acquired_abnormality"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09950709342956543
+        }
+      ]
+    },
+    {
+      "target_id": "target_058",
+      "target_triple": [
+        "pathologic_function",
+        "process_of",
+        "fully_formed_anatomical_structure"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "genetic_function",
+          "process_of",
+          "fully_formed_anatomical_structure"
+        ],
+        [
+          "molecular_function",
+          "process_of",
+          "fully_formed_anatomical_structure"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "molecular_function",
+            "process_of",
+            "fully_formed_anatomical_structure"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09989714622497559
+        },
+        {
+          "edge": [
+            "genetic_function",
+            "process_of",
+            "fully_formed_anatomical_structure"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09988892078399658
+        }
+      ]
+    },
+    {
+      "target_id": "target_059",
+      "target_triple": [
+        "mental_process",
+        "produces",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "biologic_function",
+          "produces",
+          "indicator_reagent_or_diagnostic_aid"
+        ],
+        [
+          "mental_process",
+          "produces",
+          "inorganic_chemical"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "mental_process",
+            "produces",
+            "inorganic_chemical"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09937804937362671
+        },
+        {
+          "edge": [
+            "biologic_function",
+            "produces",
+            "indicator_reagent_or_diagnostic_aid"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09934645891189575
+        }
+      ]
+    },
+    {
+      "target_id": "target_060",
+      "target_triple": [
+        "congenital_abnormality",
+        "part_of",
+        "molecular_function"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "congenital_abnormality",
+          "part_of",
+          "biologic_function"
+        ],
+        [
+          "congenital_abnormality",
+          "part_of",
+          "pathologic_function"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "congenital_abnormality",
+            "part_of",
+            "pathologic_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09994304180145264
+        },
+        {
+          "edge": [
+            "congenital_abnormality",
+            "part_of",
+            "biologic_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09989774227142334
+        }
+      ]
+    },
+    {
+      "target_id": "target_061",
+      "target_triple": [
+        "neoplastic_process",
+        "affects",
+        "cell_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "neoplastic_process",
+          "affects",
+          "embryonic_structure"
+        ],
+        [
+          "neoplastic_process",
+          "affects",
+          "gene_or_genome"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "neoplastic_process",
+            "affects",
+            "gene_or_genome"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.0998154878616333
+        },
+        {
+          "edge": [
+            "neoplastic_process",
+            "affects",
+            "embryonic_structure"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09981346130371094
+        }
+      ]
+    },
+    {
+      "target_id": "target_062",
+      "target_triple": [
+        "occupational_activity",
+        "associated_with",
+        "clinical_attribute"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "event",
+          "indicates",
+          "clinical_attribute"
+        ],
+        [
+          "occupational_activity",
+          "associated_with",
+          "organism_attribute"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "occupational_activity",
+            "associated_with",
+            "organism_attribute"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09198343753814697
+        },
+        {
+          "edge": [
+            "event",
+            "indicates",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09157943725585938
+        }
+      ]
+    },
+    {
+      "target_id": "target_063",
+      "target_triple": [
+        "inorganic_chemical",
+        "causes",
+        "clinical_attribute"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "indicator_reagent_or_diagnostic_aid",
+          "causes",
+          "clinical_attribute"
+        ],
+        [
+          "nucleic_acid_nucleoside_or_nucleotide",
+          "causes",
+          "clinical_attribute"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "indicator_reagent_or_diagnostic_aid",
+            "causes",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09912407398223877
+        },
+        {
+          "edge": [
+            "nucleic_acid_nucleoside_or_nucleotide",
+            "causes",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09905076026916504
+        }
+      ]
+    },
+    {
+      "target_id": "target_064",
+      "target_triple": [
+        "organ_or_tissue_function",
+        "produces",
+        "indicator_reagent_or_diagnostic_aid"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "molecular_function",
+          "produces",
+          "indicator_reagent_or_diagnostic_aid"
+        ],
+        [
+          "organ_or_tissue_function",
+          "produces",
+          "inorganic_chemical"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "molecular_function",
+            "produces",
+            "indicator_reagent_or_diagnostic_aid"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09957587718963623
+        },
+        {
+          "edge": [
+            "organ_or_tissue_function",
+            "produces",
+            "inorganic_chemical"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09948211908340454
+        }
+      ]
+    },
+    {
+      "target_id": "target_065",
+      "target_triple": [
+        "pharmacologic_substance",
+        "treats",
+        "clinical_attribute"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "antibiotic",
+          "treats",
+          "clinical_attribute"
+        ],
+        [
+          "hormone",
+          "treats",
+          "clinical_attribute"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "antibiotic",
+            "treats",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09983289241790771
+        },
+        {
+          "edge": [
+            "hormone",
+            "treats",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09944939613342285
+        }
+      ]
+    },
+    {
+      "target_id": "target_066",
+      "target_triple": [
+        "molecular_biology_research_technique",
+        "measures",
+        "bacterium"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "diagnostic_procedure",
+          "measures",
+          "bacterium"
+        ],
+        [
+          "research_activity",
+          "measures",
+          "bacterium"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "research_activity",
+            "measures",
+            "bacterium"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.0994417667388916
+        },
+        {
+          "edge": [
+            "diagnostic_procedure",
+            "measures",
+            "bacterium"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09918606281280518
+        }
+      ]
+    },
+    {
+      "target_id": "target_067",
+      "target_triple": [
+        "cell_component",
+        "location_of",
+        "amphibian"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "cell",
+          "location_of",
+          "amphibian"
+        ],
+        [
+          "gene_or_genome",
+          "location_of",
+          "amphibian"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "cell",
+            "location_of",
+            "amphibian"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09957563877105713
+        },
+        {
+          "edge": [
+            "gene_or_genome",
+            "location_of",
+            "amphibian"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09956419467926025
+        }
+      ]
+    },
+    {
+      "target_id": "target_068",
+      "target_triple": [
+        "organism_attribute",
+        "result_of",
+        "cell_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "organism_attribute",
+          "interacts_with",
+          "cell_component"
+        ],
+        [
+          "organism_attribute",
+          "result_of",
+          "gene_or_genome"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "organism_attribute",
+            "interacts_with",
+            "cell_component"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.0995628833770752
+        },
+        {
+          "edge": [
+            "organism_attribute",
+            "result_of",
+            "gene_or_genome"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09949827194213867
+        }
+      ]
+    },
+    {
+      "target_id": "target_069",
+      "target_triple": [
+        "environmental_effect_of_humans",
+        "result_of",
+        "archaeon"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "environmental_effect_of_humans",
+          "developmental_form_of",
+          "archaeon"
+        ],
+        [
+          "human_caused_phenomenon_or_process",
+          "result_of",
+          "archaeon"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "human_caused_phenomenon_or_process",
+            "result_of",
+            "archaeon"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09943842887878418
+        },
+        {
+          "edge": [
+            "environmental_effect_of_humans",
+            "developmental_form_of",
+            "archaeon"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09936261177062988
+        }
+      ]
+    },
+    {
+      "target_id": "target_070",
+      "target_triple": [
+        "therapeutic_or_preventive_procedure",
+        "affects",
+        "environmental_effect_of_humans"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "therapeutic_or_preventive_procedure",
+          "affects",
+          "human_caused_phenomenon_or_process"
+        ],
+        [
+          "therapeutic_or_preventive_procedure",
+          "affects",
+          "natural_phenomenon_or_process"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "therapeutic_or_preventive_procedure",
+            "affects",
+            "human_caused_phenomenon_or_process"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09954464435577393
+        },
+        {
+          "edge": [
+            "therapeutic_or_preventive_procedure",
+            "affects",
+            "natural_phenomenon_or_process"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09895002841949463
+        }
+      ]
+    },
+    {
+      "target_id": "target_071",
+      "target_triple": [
+        "therapeutic_or_preventive_procedure",
+        "complicates",
+        "molecular_biology_research_technique"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "therapeutic_or_preventive_procedure",
+          "associated_with",
+          "enzyme"
+        ],
+        [
+          "therapeutic_or_preventive_procedure",
+          "complicates",
+          "governmental_or_regulatory_activity"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "therapeutic_or_preventive_procedure",
+            "associated_with",
+            "enzyme"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09883677959442139
+        },
+        {
+          "edge": [
+            "therapeutic_or_preventive_procedure",
+            "complicates",
+            "governmental_or_regulatory_activity"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09864020347595215
+        }
+      ]
+    },
+    {
+      "target_id": "target_072",
+      "target_triple": [
+        "cell_or_molecular_dysfunction",
+        "process_of",
+        "fully_formed_anatomical_structure"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "experimental_model_of_disease",
+          "process_of",
+          "fully_formed_anatomical_structure"
+        ],
+        [
+          "neoplastic_process",
+          "process_of",
+          "fully_formed_anatomical_structure"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "experimental_model_of_disease",
+            "process_of",
+            "fully_formed_anatomical_structure"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09991836547851562
+        },
+        {
+          "edge": [
+            "neoplastic_process",
+            "process_of",
+            "fully_formed_anatomical_structure"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.0997849702835083
+        }
+      ]
+    },
+    {
+      "target_id": "target_073",
+      "target_triple": [
+        "organic_chemical",
+        "causes",
+        "clinical_attribute"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "chemical_viewed_functionally",
+          "causes",
+          "clinical_attribute"
+        ],
+        [
+          "eicosanoid",
+          "causes",
+          "clinical_attribute"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "eicosanoid",
+            "causes",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09886336326599121
+        },
+        {
+          "edge": [
+            "chemical_viewed_functionally",
+            "causes",
+            "clinical_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09877210855484009
+        }
+      ]
+    },
+    {
+      "target_id": "target_074",
+      "target_triple": [
+        "pathologic_function",
+        "result_of",
+        "sign_or_symptom"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "genetic_function",
+          "result_of",
+          "sign_or_symptom"
+        ],
+        [
+          "molecular_function",
+          "result_of",
+          "sign_or_symptom"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "genetic_function",
+            "result_of",
+            "sign_or_symptom"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09990203380584717
+        },
+        {
+          "edge": [
+            "molecular_function",
+            "result_of",
+            "sign_or_symptom"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09982824325561523
+        }
+      ]
+    },
+    {
+      "target_id": "target_075",
+      "target_triple": [
+        "enzyme",
+        "interacts_with",
+        "chemical_viewed_functionally"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "enzyme",
+          "interacts_with",
+          "organic_chemical"
+        ],
+        [
+          "hormone",
+          "precedes",
+          "chemical_viewed_functionally"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "enzyme",
+            "interacts_with",
+            "organic_chemical"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09715771675109863
+        },
+        {
+          "edge": [
+            "hormone",
+            "precedes",
+            "chemical_viewed_functionally"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.0961427390575409
+        }
+      ]
+    },
+    {
+      "target_id": "target_076",
+      "target_triple": [
+        "biologically_active_substance",
+        "disrupts",
+        "disease_or_syndrome"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "biologically_active_substance",
+          "disrupts",
+          "biologic_function"
+        ],
+        [
+          "biologically_active_substance",
+          "disrupts",
+          "cell_or_molecular_dysfunction"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "biologically_active_substance",
+            "disrupts",
+            "cell_or_molecular_dysfunction"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.0998002290725708
+        },
+        {
+          "edge": [
+            "biologically_active_substance",
+            "disrupts",
+            "biologic_function"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09974384307861328
+        }
+      ]
+    },
+    {
+      "target_id": "target_077",
+      "target_triple": [
+        "mental_process",
+        "precedes",
+        "anatomical_abnormality"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "mental_process",
+          "precedes",
+          "acquired_abnormality"
+        ],
+        [
+          "organ_or_tissue_function",
+          "precedes",
+          "anatomical_abnormality"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "mental_process",
+            "precedes",
+            "acquired_abnormality"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.0942859947681427
+        },
+        {
+          "edge": [
+            "organ_or_tissue_function",
+            "precedes",
+            "anatomical_abnormality"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.092709481716156
+        }
+      ]
+    },
+    {
+      "target_id": "target_078",
+      "target_triple": [
+        "molecular_function",
+        "result_of",
+        "laboratory_procedure"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "molecular_function",
+          "measures",
+          "antibiotic"
+        ],
+        [
+          "molecular_function",
+          "measures",
+          "hormone"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "molecular_function",
+            "measures",
+            "antibiotic"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09982538223266602
+        },
+        {
+          "edge": [
+            "molecular_function",
+            "measures",
+            "hormone"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09978485107421875
+        }
+      ]
+    },
+    {
+      "target_id": "target_079",
+      "target_triple": [
+        "disease_or_syndrome",
+        "affects",
+        "gene_or_genome"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "cell_or_molecular_dysfunction",
+          "affects",
+          "gene_or_genome"
+        ],
+        [
+          "molecular_function",
+          "affects",
+          "gene_or_genome"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "molecular_function",
+            "affects",
+            "gene_or_genome"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09993064403533936
+        },
+        {
+          "edge": [
+            "cell_or_molecular_dysfunction",
+            "affects",
+            "gene_or_genome"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.0999290943145752
+        }
+      ]
+    },
+    {
+      "target_id": "target_080",
+      "target_triple": [
+        "therapeutic_or_preventive_procedure",
+        "complicates",
+        "natural_phenomenon_or_process"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "therapeutic_or_preventive_procedure",
+          "developmental_form_of",
+          "hormone"
+        ],
+        [
+          "therapeutic_or_preventive_procedure",
+          "developmental_form_of",
+          "receptor"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "therapeutic_or_preventive_procedure",
+            "developmental_form_of",
+            "receptor"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09943807125091553
+        },
+        {
+          "edge": [
+            "therapeutic_or_preventive_procedure",
+            "developmental_form_of",
+            "hormone"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09924185276031494
+        }
+      ]
+    },
+    {
+      "target_id": "target_081",
+      "target_triple": [
+        "disease_or_syndrome",
+        "process_of",
+        "fully_formed_anatomical_structure"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "biologic_function",
+          "process_of",
+          "fully_formed_anatomical_structure"
+        ],
+        [
+          "mental_or_behavioral_dysfunction",
+          "process_of",
+          "fully_formed_anatomical_structure"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "biologic_function",
+            "process_of",
+            "fully_formed_anatomical_structure"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09984445571899414
+        },
+        {
+          "edge": [
+            "mental_or_behavioral_dysfunction",
+            "process_of",
+            "fully_formed_anatomical_structure"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.0995703935623169
+        }
+      ]
+    },
+    {
+      "target_id": "target_082",
+      "target_triple": [
+        "molecular_function",
+        "affects",
+        "tissue"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "disease_or_syndrome",
+          "affects",
+          "tissue"
+        ],
+        [
+          "mental_process",
+          "affects",
+          "tissue"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "disease_or_syndrome",
+            "affects",
+            "tissue"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09993195533752441
+        },
+        {
+          "edge": [
+            "mental_process",
+            "affects",
+            "tissue"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09982752799987793
+        }
+      ]
+    },
+    {
+      "target_id": "target_083",
+      "target_triple": [
+        "organism_function",
+        "affects",
+        "body_part_organ_or_organ_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "organism_function",
+          "affects",
+          "cell"
+        ],
+        [
+          "organism_function",
+          "affects",
+          "cell_component"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "organism_function",
+            "affects",
+            "cell_component"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09980618953704834
+        },
+        {
+          "edge": [
+            "organism_function",
+            "affects",
+            "cell"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09979367256164551
+        }
+      ]
+    },
+    {
+      "target_id": "target_084",
+      "target_triple": [
+        "molecular_function",
+        "result_of",
+        "cell_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "molecular_function",
+          "location_of",
+          "cell_component"
+        ],
+        [
+          "pathologic_function",
+          "result_of",
+          "cell_component"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "pathologic_function",
+            "result_of",
+            "cell_component"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09985208511352539
+        },
+        {
+          "edge": [
+            "molecular_function",
+            "location_of",
+            "cell_component"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09979438781738281
+        }
+      ]
+    },
+    {
+      "target_id": "target_085",
+      "target_triple": [
+        "pathologic_function",
+        "manifestation_of",
+        "fungus"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "genetic_function",
+          "manifestation_of",
+          "fungus"
+        ],
+        [
+          "molecular_function",
+          "manifestation_of",
+          "fungus"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "genetic_function",
+            "manifestation_of",
+            "fungus"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09989535808563232
+        },
+        {
+          "edge": [
+            "molecular_function",
+            "manifestation_of",
+            "fungus"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09988546371459961
+        }
+      ]
+    },
+    {
+      "target_id": "target_086",
+      "target_triple": [
+        "gene_or_genome",
+        "part_of",
+        "experimental_model_of_disease"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "gene_or_genome",
+          "part_of",
+          "cell_or_molecular_dysfunction"
+        ],
+        [
+          "tissue",
+          "part_of",
+          "experimental_model_of_disease"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "gene_or_genome",
+            "part_of",
+            "cell_or_molecular_dysfunction"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09994280338287354
+        },
+        {
+          "edge": [
+            "tissue",
+            "part_of",
+            "experimental_model_of_disease"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09986937046051025
+        }
+      ]
+    },
+    {
+      "target_id": "target_087",
+      "target_triple": [
+        "cell_function",
+        "result_of",
+        "fully_formed_anatomical_structure"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "genetic_function",
+          "co-occurs_with",
+          "fully_formed_anatomical_structure"
+        ],
+        [
+          "physiologic_function",
+          "result_of",
+          "fully_formed_anatomical_structure"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "physiologic_function",
+            "result_of",
+            "fully_formed_anatomical_structure"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09975934028625488
+        },
+        {
+          "edge": [
+            "genetic_function",
+            "co-occurs_with",
+            "fully_formed_anatomical_structure"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09971773624420166
+        }
+      ]
+    },
+    {
+      "target_id": "target_088",
+      "target_triple": [
+        "cell_or_molecular_dysfunction",
+        "affects",
+        "cell_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "cell_or_molecular_dysfunction",
+          "affects",
+          "body_part_organ_or_organ_component"
+        ],
+        [
+          "cell_or_molecular_dysfunction",
+          "affects",
+          "embryonic_structure"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "cell_or_molecular_dysfunction",
+            "affects",
+            "embryonic_structure"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09981894493103027
+        },
+        {
+          "edge": [
+            "cell_or_molecular_dysfunction",
+            "affects",
+            "body_part_organ_or_organ_component"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09981679916381836
+        }
+      ]
+    },
+    {
+      "target_id": "target_089",
+      "target_triple": [
+        "laboratory_procedure",
+        "assesses_effect_of",
+        "drug_delivery_device"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "diagnostic_procedure",
+          "assesses_effect_of",
+          "drug_delivery_device"
+        ],
+        [
+          "laboratory_procedure",
+          "assesses_effect_of",
+          "research_device"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "diagnostic_procedure",
+            "assesses_effect_of",
+            "drug_delivery_device"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.0997002124786377
+        },
+        {
+          "edge": [
+            "laboratory_procedure",
+            "assesses_effect_of",
+            "research_device"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09901285171508789
+        }
+      ]
+    },
+    {
+      "target_id": "target_090",
+      "target_triple": [
+        "fully_formed_anatomical_structure",
+        "part_of",
+        "cell_or_molecular_dysfunction"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "fully_formed_anatomical_structure",
+          "part_of",
+          "disease_or_syndrome"
+        ],
+        [
+          "fully_formed_anatomical_structure",
+          "part_of",
+          "experimental_model_of_disease"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "fully_formed_anatomical_structure",
+            "part_of",
+            "experimental_model_of_disease"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09994268417358398
+        },
+        {
+          "edge": [
+            "fully_formed_anatomical_structure",
+            "part_of",
+            "disease_or_syndrome"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09989261627197266
+        }
+      ]
+    },
+    {
+      "target_id": "target_091",
+      "target_triple": [
+        "chemical",
+        "affects",
+        "human"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "chemical",
+          "affects",
+          "amphibian"
+        ],
+        [
+          "chemical",
+          "affects",
+          "reptile"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "chemical",
+            "affects",
+            "reptile"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09900397062301636
+        },
+        {
+          "edge": [
+            "chemical",
+            "affects",
+            "amphibian"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.0982392430305481
+        }
+      ]
+    },
+    {
+      "target_id": "target_092",
+      "target_triple": [
+        "fully_formed_anatomical_structure",
+        "produces",
+        "medical_device"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "fully_formed_anatomical_structure",
+          "produces",
+          "drug_delivery_device"
+        ],
+        [
+          "fully_formed_anatomical_structure",
+          "produces",
+          "research_device"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "fully_formed_anatomical_structure",
+            "produces",
+            "research_device"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09820318222045898
+        },
+        {
+          "edge": [
+            "fully_formed_anatomical_structure",
+            "produces",
+            "drug_delivery_device"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09741902351379395
+        }
+      ]
+    },
+    {
+      "target_id": "target_093",
+      "target_triple": [
+        "language",
+        "issue_in",
+        "medical_device"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "language",
+          "issue_in",
+          "drug_delivery_device"
+        ],
+        [
+          "language",
+          "issue_in",
+          "research_device"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "language",
+            "issue_in",
+            "drug_delivery_device"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.0999755859375
+        },
+        {
+          "edge": [
+            "language",
+            "issue_in",
+            "research_device"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.0999746322631836
+        }
+      ]
+    },
+    {
+      "target_id": "target_094",
+      "target_triple": [
+        "organ_or_tissue_function",
+        "affects",
+        "body_part_organ_or_organ_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "biologic_function",
+          "affects",
+          "body_part_organ_or_organ_component"
+        ],
+        [
+          "organ_or_tissue_function",
+          "affects",
+          "cell_component"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "biologic_function",
+            "affects",
+            "body_part_organ_or_organ_component"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09985029697418213
+        },
+        {
+          "edge": [
+            "organ_or_tissue_function",
+            "affects",
+            "cell_component"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09981691837310791
+        }
+      ]
+    },
+    {
+      "target_id": "target_095",
+      "target_triple": [
+        "immunologic_factor",
+        "complicates",
+        "reptile"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "receptor",
+          "complicates",
+          "reptile"
+        ],
+        [
+          "vitamin",
+          "complicates",
+          "reptile"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "vitamin",
+            "complicates",
+            "reptile"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09975707530975342
+        },
+        {
+          "edge": [
+            "receptor",
+            "complicates",
+            "reptile"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09968334436416626
+        }
+      ]
+    },
+    {
+      "target_id": "target_096",
+      "target_triple": [
+        "mental_process",
+        "affects",
+        "body_part_organ_or_organ_component"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "mental_process",
+          "affects",
+          "cell"
+        ],
+        [
+          "mental_process",
+          "affects",
+          "cell_component"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "mental_process",
+            "affects",
+            "cell_component"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09981250762939453
+        },
+        {
+          "edge": [
+            "mental_process",
+            "affects",
+            "cell"
+          ],
+          "direction": "head_neighborhood",
+          "directadd_benefit": 0.09980463981628418
+        }
+      ]
+    },
+    {
+      "target_id": "target_097",
+      "target_triple": [
+        "disease_or_syndrome",
+        "precedes",
+        "acquired_abnormality"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "biologic_function",
+          "precedes",
+          "acquired_abnormality"
+        ],
+        [
+          "organ_or_tissue_function",
+          "precedes",
+          "acquired_abnormality"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "organ_or_tissue_function",
+            "precedes",
+            "acquired_abnormality"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09588825702667236
+        },
+        {
+          "edge": [
+            "biologic_function",
+            "precedes",
+            "acquired_abnormality"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09581902623176575
+        }
+      ]
+    },
+    {
+      "target_id": "target_098",
+      "target_triple": [
+        "experimental_model_of_disease",
+        "result_of",
+        "fish"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "cell_or_molecular_dysfunction",
+          "result_of",
+          "fish"
+        ],
+        [
+          "neoplastic_process",
+          "result_of",
+          "fish"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "cell_or_molecular_dysfunction",
+            "result_of",
+            "fish"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09988820552825928
+        },
+        {
+          "edge": [
+            "neoplastic_process",
+            "result_of",
+            "fish"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09973657131195068
+        }
+      ]
+    },
+    {
+      "target_id": "target_099",
+      "target_triple": [
+        "injury_or_poisoning",
+        "complicates",
+        "organism_attribute"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "mental_or_behavioral_dysfunction",
+          "complicates",
+          "organism_attribute"
+        ],
+        [
+          "neoplastic_process",
+          "complicates",
+          "organism_attribute"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "mental_or_behavioral_dysfunction",
+            "complicates",
+            "organism_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09949123859405518
+        },
+        {
+          "edge": [
+            "neoplastic_process",
+            "complicates",
+            "organism_attribute"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.0991973876953125
+        }
+      ]
+    },
+    {
+      "target_id": "target_100",
+      "target_triple": [
+        "hormone",
+        "affects",
+        "amphibian"
+      ],
+      "status": "injected",
+      "attributed_injected_triples": [
+        [
+          "disease_or_syndrome",
+          "precedes",
+          "amphibian"
+        ],
+        [
+          "neoplastic_process",
+          "precedes",
+          "amphibian"
+        ]
+      ],
+      "selected": [
+        {
+          "edge": [
+            "neoplastic_process",
+            "precedes",
+            "amphibian"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09928721189498901
+        },
+        {
+          "edge": [
+            "disease_or_syndrome",
+            "precedes",
+            "amphibian"
+          ],
+          "direction": "tail_neighborhood",
+          "directadd_benefit": 0.09900182485580444
+        }
+      ]
+    }
+  ]
+}

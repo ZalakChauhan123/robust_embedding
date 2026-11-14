@@ -1,0 +1,84 @@
+{
+  "research_question": "RQ1 — attack effectiveness (MaSS single-target, TransE-only UMLS pilot)",
+  "prediction": "TAIL only: (h*, r*, ?) ranked against every known entity",
+  "ranking_protocol": "filtered; same original train+valid+test facts for both models",
+  "filter_excludes": "injected edges and synthetic Set B targets",
+  "tie_policy": "average rank, consistent with existing Model_Evaluation.py",
+  "interpretation": "Higher poisoned MRR/Hits@10, or positive rank improvement, favors the attacker",
+  "set_B_all_targets": {
+    "count": 1,
+    "clean": {
+      "count": 1,
+      "MRR": 0.02857142857142857,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 35.0,
+      "Median_Rank": 35.0
+    },
+    "poisoned": {
+      "count": 1,
+      "MRR": 0.125,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 1.0,
+      "Mean_Rank": 8.0,
+      "Median_Rank": 8.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.09642857142857143,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 1.0,
+      "Mean_Rank": -27.0,
+      "Median_Rank": -27.0
+    },
+    "num_improved_rank": 1,
+    "num_worsened_rank": 0,
+    "num_unchanged_rank": 0,
+    "num_new_hits_at_10": 1,
+    "num_lost_hits_at_10": 0,
+    "mean_rank_improvement_clean_minus_poisoned": 27.0
+  },
+  "set_B_injected_targets": {
+    "count": 1,
+    "clean": {
+      "count": 1,
+      "MRR": 0.02857142857142857,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 0.0,
+      "Mean_Rank": 35.0,
+      "Median_Rank": 35.0
+    },
+    "poisoned": {
+      "count": 1,
+      "MRR": 0.125,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 1.0,
+      "Mean_Rank": 8.0,
+      "Median_Rank": 8.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.09642857142857143,
+      "Hits@1": 0.0,
+      "Hits@3": 0.0,
+      "Hits@10": 1.0,
+      "Mean_Rank": -27.0,
+      "Median_Rank": -27.0
+    },
+    "num_improved_rank": 1,
+    "num_worsened_rank": 0,
+    "num_unchanged_rank": 0,
+    "num_new_hits_at_10": 1,
+    "num_lost_hits_at_10": 0,
+    "mean_rank_improvement_clean_minus_poisoned": 27.0
+  },
+  "set_B_not_injected_targets": {
+    "count": 0,
+    "note": "No targets in this group"
+  },
+  "attack_name": "MaSS single-target",
+  "opaque_box_note": "TransE surrogate and TransE victims are same architecture; opaque-box transfer is not tested"
+}

@@ -1,0 +1,382 @@
+{
+  "dataset": "UMLS",
+  "pra_method": "supervised",
+  "target_triple": [
+    "disease_or_syndrome",
+    "affects",
+    "gene_or_genome"
+  ],
+  "pra_threshold": 0.9,
+  "top_k_relation_templates": 10,
+  "top_entities_per_template": 10,
+  "num_pra_templates": 404,
+  "num_semantically_valid_templates": 11,
+  "num_selected_templates": 10,
+  "num_ranked_paths": 13,
+  "ranked_candidate_paths": [
+    {
+      "r1": "produces",
+      "intermediate_entity": "biologically_active_substance",
+      "r2": "disrupts",
+      "first_triple": [
+        "disease_or_syndrome",
+        "produces",
+        "biologically_active_substance"
+      ],
+      "second_triple": [
+        "biologically_active_substance",
+        "disrupts",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9623271153425891,
+      "relation_score": -1.109055757522583,
+      "first_triple_score": -0.8247148990631104,
+      "second_triple_score": -0.9051559567451477,
+      "entity_score": -1.729870855808258,
+      "lower_bound_score": -2.838926613330841,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 1
+    },
+    {
+      "r1": "result_of",
+      "intermediate_entity": "injury_or_poisoning",
+      "r2": "disrupts",
+      "first_triple": [
+        "disease_or_syndrome",
+        "result_of",
+        "injury_or_poisoning"
+      ],
+      "second_triple": [
+        "injury_or_poisoning",
+        "disrupts",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9539061596308839,
+      "relation_score": -1.4107871055603027,
+      "first_triple_score": -0.23321060836315155,
+      "second_triple_score": -2.0819404125213623,
+      "entity_score": -2.315151020884514,
+      "lower_bound_score": -3.7259381264448166,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 2
+    },
+    {
+      "r1": "co-occurs_with",
+      "intermediate_entity": "injury_or_poisoning",
+      "r2": "disrupts",
+      "first_triple": [
+        "disease_or_syndrome",
+        "co-occurs_with",
+        "injury_or_poisoning"
+      ],
+      "second_triple": [
+        "injury_or_poisoning",
+        "disrupts",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9704148699689565,
+      "relation_score": -1.4364279508590698,
+      "first_triple_score": -0.30587130784988403,
+      "second_triple_score": -2.0819404125213623,
+      "entity_score": -2.3878117203712463,
+      "lower_bound_score": -3.824239671230316,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 3
+    },
+    {
+      "r1": "degree_of",
+      "intermediate_entity": "clinical_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "disease_or_syndrome",
+        "degree_of",
+        "clinical_attribute"
+      ],
+      "second_triple": [
+        "clinical_attribute",
+        "property_of",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9926475196960992,
+      "relation_score": -1.761582612991333,
+      "first_triple_score": -0.5952980518341064,
+      "second_triple_score": -1.5272854566574097,
+      "entity_score": -2.122583508491516,
+      "lower_bound_score": -3.884166121482849,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 4
+    },
+    {
+      "r1": "degree_of",
+      "intermediate_entity": "organism_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "disease_or_syndrome",
+        "degree_of",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "property_of",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9926475196960992,
+      "relation_score": -1.761582612991333,
+      "first_triple_score": -0.622320830821991,
+      "second_triple_score": -1.6456620693206787,
+      "entity_score": -2.2679829001426697,
+      "lower_bound_score": -4.029565513134003,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 5
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "biologically_active_substance",
+      "r2": "disrupts",
+      "first_triple": [
+        "disease_or_syndrome",
+        "isa",
+        "biologically_active_substance"
+      ],
+      "second_triple": [
+        "biologically_active_substance",
+        "disrupts",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9554451892974095,
+      "relation_score": -1.6621414422988892,
+      "first_triple_score": -1.4954521656036377,
+      "second_triple_score": -0.9051559567451477,
+      "entity_score": -2.4006081223487854,
+      "lower_bound_score": -4.062749564647675,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 6
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "pharmacologic_substance",
+      "r2": "disrupts",
+      "first_triple": [
+        "disease_or_syndrome",
+        "isa",
+        "pharmacologic_substance"
+      ],
+      "second_triple": [
+        "pharmacologic_substance",
+        "disrupts",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9554451892974095,
+      "relation_score": -1.6621414422988892,
+      "first_triple_score": -1.5686651468276978,
+      "second_triple_score": -0.8504348993301392,
+      "entity_score": -2.419100046157837,
+      "lower_bound_score": -4.081241488456726,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": true,
+      "num_new_triples": 1,
+      "rank": 7
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "clinical_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "disease_or_syndrome",
+        "affects",
+        "clinical_attribute"
+      ],
+      "second_triple": [
+        "clinical_attribute",
+        "property_of",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9777238577324141,
+      "relation_score": -1.4319835901260376,
+      "first_triple_score": -1.239767074584961,
+      "second_triple_score": -1.5272854566574097,
+      "entity_score": -2.7670525312423706,
+      "lower_bound_score": -4.199036121368408,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 8
+    },
+    {
+      "r1": "affects",
+      "intermediate_entity": "organism_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "disease_or_syndrome",
+        "affects",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "property_of",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9777238577324141,
+      "relation_score": -1.4319835901260376,
+      "first_triple_score": -1.2327228784561157,
+      "second_triple_score": -1.6456620693206787,
+      "entity_score": -2.8783849477767944,
+      "lower_bound_score": -4.310368537902832,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 9
+    },
+    {
+      "r1": "isa",
+      "intermediate_entity": "organism_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "disease_or_syndrome",
+        "isa",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "property_of",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9404393823879217,
+      "relation_score": -1.9981166124343872,
+      "first_triple_score": -0.9943687319755554,
+      "second_triple_score": -1.6456620693206787,
+      "entity_score": -2.640030801296234,
+      "lower_bound_score": -4.638147413730621,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 10
+    },
+    {
+      "r1": "associated_with",
+      "intermediate_entity": "clinical_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "disease_or_syndrome",
+        "associated_with",
+        "clinical_attribute"
+      ],
+      "second_triple": [
+        "clinical_attribute",
+        "property_of",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9797707312479534,
+      "relation_score": -1.8503813743591309,
+      "first_triple_score": -1.6125156879425049,
+      "second_triple_score": -1.5272854566574097,
+      "entity_score": -3.1398011445999146,
+      "lower_bound_score": -4.990182518959045,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 11
+    },
+    {
+      "r1": "associated_with",
+      "intermediate_entity": "organism_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "disease_or_syndrome",
+        "associated_with",
+        "organism_attribute"
+      ],
+      "second_triple": [
+        "organism_attribute",
+        "property_of",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9797707312479534,
+      "relation_score": -1.8503813743591309,
+      "first_triple_score": -1.6951717138290405,
+      "second_triple_score": -1.6456620693206787,
+      "entity_score": -3.3408337831497192,
+      "lower_bound_score": -5.19121515750885,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": true,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 1,
+      "rank": 12
+    },
+    {
+      "r1": "associated_with",
+      "intermediate_entity": "group_attribute",
+      "r2": "property_of",
+      "first_triple": [
+        "disease_or_syndrome",
+        "associated_with",
+        "group_attribute"
+      ],
+      "second_triple": [
+        "group_attribute",
+        "property_of",
+        "gene_or_genome"
+      ],
+      "pra_confidence": 0.9797707312479534,
+      "relation_score": -1.8503813743591309,
+      "first_triple_score": -2.7323503494262695,
+      "second_triple_score": -1.563309669494629,
+      "entity_score": -4.295660018920898,
+      "lower_bound_score": -6.146041393280029,
+      "first_triple_is_self_loop": false,
+      "second_triple_is_self_loop": false,
+      "has_self_loop": false,
+      "first_triple_exists_in_train": false,
+      "second_triple_exists_in_train": false,
+      "num_new_triples": 2,
+      "rank": 13
+    }
+  ]
+}

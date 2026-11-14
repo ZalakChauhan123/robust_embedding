@@ -1,0 +1,41 @@
+{
+  "victims": {
+    "clean": {
+      "settings": {
+        "dim": 128,
+        "epochs": 500,
+        "batch_size": 256,
+        "lr": 0.01,
+        "margin": 1.0,
+        "seed": 42
+      },
+      "training_triples": 5216,
+      "model_class": "Victim_Model.TransE_Victim.TransE",
+      "initial_state_sha256": "98c72ba30ebca88a894b50a3248d7d6236148fc516d1198161d3b8d738bc436f",
+      "final_state_sha256": "a7a4c67d203d042927f0d758b96f8e491bf704f0be880b2ff34239e054ace04b",
+      "checkpoint_sha256": "af4679324619d61ee9fc6f593e7ad0243be209a093df7e1469a78c3f2c233e46",
+      "first_loss": 0.925062128736929,
+      "last_loss": 0.3663781948981841
+    },
+    "poisoned": {
+      "settings": {
+        "dim": 128,
+        "epochs": 500,
+        "batch_size": 256,
+        "lr": 0.01,
+        "margin": 1.0,
+        "seed": 42
+      },
+      "training_triples": 5218,
+      "model_class": "Victim_Model.TransE_Victim.TransE",
+      "initial_state_sha256": "98c72ba30ebca88a894b50a3248d7d6236148fc516d1198161d3b8d738bc436f",
+      "final_state_sha256": "2377cb96817714b922a442a7c28f1a7db1bc32656b42c7f4db6fb572a180d659",
+      "checkpoint_sha256": "922d872d4ebcb5e6c3af9b446c5eed815bcfb45d41c4ad2e389e81aae13d68d0",
+      "first_loss": 0.9233804383283376,
+      "last_loss": 0.3648212237598431
+    }
+  },
+  "same_victim_initial_embeddings_verified": true,
+  "surrogate_independent_initialization_verified": true,
+  "training_protocol": "Adam, margin-ranking negative L2, one uniform head/tail negative per positive, unit entity normalization after every step"
+}

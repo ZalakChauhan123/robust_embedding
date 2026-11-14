@@ -1,0 +1,40 @@
+{
+  "research_question": "RQ2 — preliminary stealthiness check on Set A",
+  "prediction": "TAIL only to match the paper's evaluation protocol",
+  "set_A_original_test_triples": {
+    "count": 661,
+    "clean": {
+      "count": 661,
+      "MRR": 0.4580537185336761,
+      "Hits@1": 0.2692889561270802,
+      "Hits@3": 0.5597579425113465,
+      "Hits@10": 0.8426626323751891,
+      "Mean_Rank": 7.951588502269289,
+      "Median_Rank": 3.0
+    },
+    "poisoned": {
+      "count": 661,
+      "MRR": 0.463767837160456,
+      "Hits@1": 0.2813918305597579,
+      "Hits@3": 0.5794251134644478,
+      "Hits@10": 0.800302571860817,
+      "Mean_Rank": 8.0196671709531,
+      "Median_Rank": 3.0
+    },
+    "delta_poisoned_minus_clean": {
+      "MRR": 0.005714118626779896,
+      "Hits@1": 0.012102874432677713,
+      "Hits@3": 0.01966717095310133,
+      "Hits@10": -0.04236006051437213,
+      "Mean_Rank": 0.0680786686838113,
+      "Median_Rank": 0.0
+    },
+    "num_improved_rank": 191,
+    "num_worsened_rank": 210,
+    "num_unchanged_rank": 260,
+    "num_new_hits_at_10": 22,
+    "num_lost_hits_at_10": 50,
+    "mean_rank_improvement_clean_minus_poisoned": -0.0680786686838124
+  },
+  "interpretation": "Small clean-to-poisoned degradation in Hits@10/MRR favors stealthiness"
+}

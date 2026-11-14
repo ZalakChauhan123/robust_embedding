@@ -1,0 +1,35 @@
+{
+  "experiment": "ComAttack UMLS pilot: ConvE victim evaluation",
+  "attack_name": "ComAttack",
+  "victim_model": "ConvE",
+  "input_files": {
+    "clean_victim": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\enhancing_attacks\\ComAttack\\plausibility\\seed_42\\conve_victim_models\\clean_conve.pt",
+    "poisoned_victim": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\enhancing_attacks\\ComAttack\\plausibility\\seed_42\\conve_victim_models\\poisoned_conve.pt",
+    "set_A": "C:\\my-code\\Robust Embedding\\Mass_implement\\dataset_uml\\test.txt",
+    "set_B": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\setup\\set_B_target_triples.tsv",
+    "training_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\enhancing_attacks\\ComAttack\\plausibility\\seed_42\\conve_victim_models\\training_summary.json",
+    "poisoning_summary": "C:\\my-code\\Robust Embedding\\Mass_implement\\outputs\\Experiments\\UMLS_feasible_rank11_15_seed42\\RQ4\\enhancing_attacks\\ComAttack\\plausibility\\seed_42\\poisoning\\poisoning_summary.csv"
+  },
+  "num_clean_training_triples": 5216,
+  "num_poisoned_training_triples": 5346,
+  "num_injected_triples": 130,
+  "num_entities": 135,
+  "num_relations": 46,
+  "num_set_B_targets": 100,
+  "num_injected_targets": 65,
+  "num_not_injected_targets": 35,
+  "num_set_A_test_triples": 661,
+  "set_B_MRR_clean": 0.10041221222365639,
+  "set_B_MRR_poisoned": 0.11093998130955156,
+  "set_B_Hits_at_10_clean": 0.23,
+  "set_B_Hits_at_10_poisoned": 0.28,
+  "set_A_MRR_clean": 0.9171136235756084,
+  "set_A_MRR_poisoned": 0.9189860840957664,
+  "set_A_Hits_at_10_clean": 0.9924357034795764,
+  "set_A_Hits_at_10_poisoned": 0.9939485627836612,
+  "limitations": [
+    "One UMLS dataset and one random seed; results are preliminary.",
+    "ConvE is an opaque-box victim relative to the TransE attacker surrogate.",
+    "The frozen targets were rank-qualified under TransE, not ConvE."
+  ]
+}

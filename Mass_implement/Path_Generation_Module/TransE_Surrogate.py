@@ -53,7 +53,7 @@ class TransE(nn.Module):
 
         # Implement TransE Formula = h+r = t
         return torch.linalg.vector_norm(
-            self.entity(heads) + self.relation(relations) - self.entity(tails),
+            self.entity(heads) + self.relation(relations) - self.entity(tails), 
             ord=2, dim=-1,
         )
     # Convert distance into plausibility score (TransE Model Score)
@@ -62,8 +62,7 @@ class TransE(nn.Module):
         return -self.distance(heads, relations, tails)
 
 """
-Wrapper around the trained TransE model that makes calculating relation similarity & triple plausibility.
-
+Wrapper around the trained TransE model that makes calculating relation similarity & triple plausibility. 
 """
 class Surrogate:
     # Wrap trained TransE

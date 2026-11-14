@@ -1,0 +1,48 @@
+Dataset integrity passed: clean=5216, poisoned=5218, injected=2
+
+[clean] Training TransE on 5216 triples
+[clean] Epoch    1/500: loss=0.925062
+[clean] Epoch   50/500: loss=0.366228
+[clean] Epoch  100/500: loss=0.366438
+[clean] Epoch  150/500: loss=0.363880
+[clean] Epoch  200/500: loss=0.368446
+[clean] Epoch  250/500: loss=0.361729
+[clean] Epoch  300/500: loss=0.359439
+[clean] Epoch  350/500: loss=0.359921
+[clean] Epoch  400/500: loss=0.361497
+[clean] Epoch  450/500: loss=0.364349
+[clean] Epoch  500/500: loss=0.366378
+
+[poisoned] Training TransE on 5218 triples
+[poisoned] Epoch    1/500: loss=0.923515
+[poisoned] Epoch   50/500: loss=0.363081
+[poisoned] Epoch  100/500: loss=0.365215
+[poisoned] Epoch  150/500: loss=0.371792
+[poisoned] Epoch  200/500: loss=0.372460
+[poisoned] Epoch  250/500: loss=0.357377
+[poisoned] Epoch  300/500: loss=0.371396
+[poisoned] Epoch  350/500: loss=0.366277
+[poisoned] Epoch  400/500: loss=0.367000
+[poisoned] Epoch  450/500: loss=0.363379
+[poisoned] Epoch  500/500: loss=0.365091
+
+=== VICTIM TRAINING FINISHED ===
+Identical initial embeddings: True
+Clean final training loss: 0.366378
+Poisoned final training loss: 0.365091
+Output directory: C:\my-code\Robust Embedding\Mass_implement\outputs\Experiments\UMLS_feasible_rank11_15_seed42\RQ4\single_target_transe_transh_target003\TransE\victim_models
+Loaded victim checkpoints; 135 entities, 46 relations.
+Evaluating Set B (1 attacker target triples)...
+Evaluating Set A (661 original test triples)...
+
+=== MaSS single-target UMLS RQ1 — ATTACK EFFECTIVENESS ===
+Set B: 1 targets (injected=1, no injection=0)
+Hits@10  clean=0.0000  poisoned=1.0000  delta=+1.0000
+MRR      clean=0.0286  poisoned=0.1250  delta=+0.0964
+Improved targets: 1; worsened: 0; unchanged: 0
+
+=== PRELIMINARY RQ2 — STEALTHINESS ===
+Set A: 661 original test triples
+Hits@10  clean=0.8427  poisoned=0.8366
+MRR      clean=0.4581  poisoned=0.4697
+Saved evaluation results: C:\my-code\Robust Embedding\Mass_implement\outputs\Experiments\UMLS_feasible_rank11_15_seed42\RQ4\single_target_transe_transh_target003\TransE\evaluation

@@ -2,7 +2,7 @@
 """Build DirectAdd and ComAttack-style UMLS comparison datasets.
 
 The original MaSS constructor remains unchanged. These constructors use the
-same held-out/Set-B leakage protections and B=2 accounting so their fresh
+same held-out/Set-B leakage protections and per-target triple accounting so their fresh
 TransE victims can be evaluated by the existing RQ1/RQ2 evaluator.
 
 Both source attacks were originally formulated mainly to degrade a true fact.
@@ -17,7 +17,7 @@ import json
 import sys
 from collections import Counter
 from pathlib import Path
-from typing import Any, Iterable, Literal
+from typing import Any, Callable, Iterable, Literal
 
 import torch
 
@@ -109,11 +109,15 @@ def directadd_candidates(
     target_set: set[Triple],
     globally_injected: set[Triple],
     step: float,
+    edge_filter: Callable[[Triple], bool] | None = None,
 ) -> tuple[list[dict[str, Any]], Counter[str]]:
     """Rank direct additions using the promotion form of DirectAdd Eq. 3.
 
     f(h,r,t)=-||h+r-t||. Promotion shifts are eps_h=-s*d/||d|| and
     eps_t=+s*d/||d||, where d=h+r-t. Candidate score is f(shifted)-f(base).
+    An optional edge filter runs after the mandatory integrity checks. Its
+    rejection count is the number of proposed edge candidates, before the
+    existing symmetric-pool deduplication.
     """
     head, relation, tail = target
     e2id, r2id = surrogate.entity_to_id, surrogate.relation_to_id
@@ -148,6 +152,9 @@ def directadd_candidates(
                 if not legal:
                     rejected[reason or "invalid"] += 1
                     continue
+                if edge_filter is not None and not edge_filter(edge):
+                    rejected["enhancement"] += 1
+                    continue
                 records.append({"edge": edge, "direction": direction, "directadd_benefit": benefit})
     records.sort(key=lambda item: (-item["directadd_benefit"], item["edge"]))
     # (h, r_j, t) appears once from each symmetric candidate pool.  It is one
@@ -170,11 +177,15 @@ def comattack_candidates(
     original_known: set[Triple],
     target_set: set[Triple],
     globally_injected: set[Triple],
+    edge_filter: Callable[[Triple], bool] | None = None,
 ) -> tuple[list[dict[str, Any]], Counter[str]]:
     """Construct a ComAttack-style target-promotion composition body.
 
     Pair order follows ||r-(r1+r2)||. For each pair, a legal z is ranked by
     sigmoid(f(h,r1,z))*sigmoid(f(z,r2,t)); first viable pair is retained.
+    A filtered body must pass on both edges. Enhancement rejections count
+    complete body candidates, once per rejected body. A pair with no surviving
+    body does not prevent searching later relation pairs.
     """
     head, target_relation, tail = target
     e2id, r2id = surrogate.entity_to_id, surrogate.relation_to_id
@@ -219,6 +230,11 @@ def comattack_candidates(
             if not second_ok:
                 rejected[second_reason or "invalid"] += 1
                 continue
+            if edge_filter is not None and (
+                not edge_filter(first) or not edge_filter(second)
+            ):
+                rejected["enhancement"] += 1
+                continue
             records.append({
                 "first_triple": first, "second_triple": second,
                 "r1": first_relation, "r2": second_relation, "intermediate_entity": middle,
@@ -247,11 +263,16 @@ def construct(
     budget: int = 2,
     seed: int = 42,
     directadd_step: float = 0.1,
+    edge_filter: Callable[[Triple], bool] | None = None,
+    enhancement: str = "none",
+    enhancement_metadata: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     if attack not in ("DirectAdd", "ComAttack"):
         raise ValueError(f"Unsupported attack: {attack}")
-    if budget != 2:
-        raise ValueError("These predeclared comparison baselines use exactly B=2")
+    if budget < 1:
+        raise ValueError("budget must be >= 1")
+    if attack == "ComAttack" and budget % 2:
+        raise ValueError("ComAttack requires an even budget for complete two-edge composition bodies")
     if directadd_step <= 0:
         raise ValueError("directadd_step must be positive")
     output_dir = output_dir.resolve()
@@ -282,6 +303,7 @@ def construct(
                 target, surrogate=surrogate, entities=entities, relations=relations,
                 original_known=original_known, target_set=target_set,
                 globally_injected=globally_injected, step=directadd_step,
+                edge_filter=edge_filter,
             )
             chosen = candidates[:budget]
             injected = [item["edge"] for item in chosen]
@@ -298,9 +320,13 @@ def construct(
                 target, surrogate=surrogate, entities=entities, relations=relations,
                 original_known=original_known, target_set=target_set,
                 globally_injected=globally_injected,
+                edge_filter=edge_filter,
             )
-            chosen = candidates[:1]  # Each selected composition body costs two new facts.
-            injected = [] if not chosen else [chosen[0]["first_triple"], chosen[0]["second_triple"]]
+            # Within this relation pair each body has a different intermediate
+            # entity. With self-loops excluded, their edges are disjoint and
+            # each complete body costs exactly two new facts.
+            chosen = candidates[:budget // 2]
+            injected = [item[key] for item in chosen for key in ("first_triple", "second_triple")]
             selected = [
                 {"first_triple": list(item["first_triple"]), "second_triple": list(item["second_triple"]),
                  "r1": item["r1"], "r2": item["r2"], "intermediate_entity": item["intermediate_entity"],
@@ -362,11 +388,13 @@ def construct(
         writer.writerows(summary_rows)
     write_json(output_dir / "eligible_candidate_paths.json", {
         "attack": attack, "implementation_variant": "target_promotion_adaptation",
+        "enhancement": enhancement, "enhancement_metadata": enhancement_metadata or {},
         "legal_filter": "new non-self-loop triples only; no original KG, Set-B, or global duplicate facts",
         "targets": candidate_audit,
     })
     write_json(output_dir / "selected_poisoning_paths.json", {
         "attack": attack, "implementation_variant": "target_promotion_adaptation",
+        "enhancement": enhancement, "enhancement_metadata": enhancement_metadata or {},
         "budget_distinct_new_triples_per_target": budget, "attack_seed": seed, "targets": selected_audit,
     })
     report = {
@@ -376,11 +404,16 @@ def construct(
             "budget_distinct_new_triples_per_target": budget, "attack_seed": seed,
             "directadd_lambda_2": 1.0, "directadd_lambda_3": 1.0,
             "directadd_promotion_step": directadd_step, "comattack_pattern": "composition",
+            "enhancement": enhancement, "enhancement_metadata": enhancement_metadata or {},
         },
         "method_note": (
             "DirectAdd Eq. 3 ranking over direct facts, promotion sign, no semantic/PRA/delta filtering."
+            if attack == "DirectAdd" and edge_filter is None else
+            f"DirectAdd Eq. 3 ranking over direct facts, promotion sign; {enhancement} edge eligibility filter."
             if attack == "DirectAdd" else
-            "ComAttack-style TransE composition relation pair and two legal body facts; target-promotion adaptation."
+            "ComAttack-style first viable TransE composition relation pair; select up to budget/2 "
+            "ranked complete two-edge bodies; target-promotion adaptation."
+            + (f" Both edges must pass the {enhancement} eligibility filter." if edge_filter is not None else "")
         ),
         "source_files": {
             "targets": str(targets_file), "train": str(train_file), "valid": str(valid_file),

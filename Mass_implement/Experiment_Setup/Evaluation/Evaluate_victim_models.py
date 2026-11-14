@@ -25,7 +25,8 @@ PATH_MODULE_DIR = MASS_DIR / "Path_Generation_Module"
 if str(PATH_MODULE_DIR) not in sys.path:
     sys.path.insert(0, str(PATH_MODULE_DIR))
 
-from TransE_Surrogate import Surrogate, read_triples  # Same model/checkpoint format.
+from TransE_Surrogate import read_triples
+from TransE_Victim import TransEVictim
 
 DATASET_DIR = MASS_DIR / "dataset_uml"
 PILOT_DIR = MASS_DIR / "outputs" / "Experiments" / "UMLS_pilot"
@@ -99,7 +100,7 @@ def make_true_tail_index(original_facts: list[tuple[int, int, int]]) -> dict[tup
 
 @torch.no_grad()
 def tail_rank(
-    victim: Surrogate,
+    victim: TransEVictim,
     encoded_target: tuple[int, int, int],
     true_tails_by_hr: dict[tuple[int, int], set[int]],
     candidate_ids: torch.Tensor,
@@ -233,8 +234,8 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
                             args.train, args.poisoned_train, args.injected, args.valid,
                             args.test, args.targets)
 
-    clean_model = Surrogate.load(args.clean_checkpoint)
-    poisoned_model = Surrogate.load(args.poisoned_checkpoint)
+    clean_model = TransEVictim.load(args.clean_checkpoint)
+    poisoned_model = TransEVictim.load(args.poisoned_checkpoint)
     if clean_model.entity_to_id != poisoned_model.entity_to_id or (
         clean_model.relation_to_id != poisoned_model.relation_to_id
     ):
