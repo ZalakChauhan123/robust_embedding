@@ -43,10 +43,14 @@ def default_config():
     return {
         "dataset": "UMLS", "candidate_mode": "frozen_MaSS_paths_and_intermediate_entities",
         "paths": {
-            "train": "Input/train.txt", "valid": "Input/valid.txt", "test": "Input/test.txt",
+
+            # 
+            "train": "Input/train.txt", "valid": "Input/valid.txt", "test": "Input/test.txt", # For Clean Model
             "entities": "Input/entities.txt", "relations": "Input/relations.txt",
             "targets": "Input/target_triplet.txt", "mass_candidates": "Input/mass_candidates.json",
-            "poisoned_train": "Input/poisoned_train.txt",
+            
+            "poisoned_train": "Input/poisoned_train.txt", # For Poisoned Model
+
             "surrogate_checkpoint": "Surrogate_Model/surrogate_transe.pt",
             "clean_checkpoint": "Victim_Model/clean_transe.pt",
             "poisoned_checkpoint": "Victim_Model/poisoned_transe.pt", "output_dir": "Output",
@@ -417,10 +421,16 @@ def run(config_path, resume=False):
         export_graphml(paths["poisoned_graph"], poisoned, entities, injected)
     stage("graphs", graphs, lambda: [paths["clean_graph"], paths["poisoned_graph"]])
 
+    # Clean & Poisoned Model Training
+    # Clean TransE = train.txt (5216 Triples)
+    # Poisoned TransE = poisoned_train.txt (5218 triplets)
+    # -------------------------------------------------------------------------------
     def victim_training():
         reports = {}
         for label, triples, checkpoint in (("clean", train, paths["clean_checkpoint"]), ("poisoned", poisoned, paths["poisoned_checkpoint"])):
             reports[label] = train_model(VictimTransE, triples, entities, relations, config["victim"], checkpoint, logs / f"{label}_victim_loss.csv", f"{label} victim")
+    # -------------------------------------------------------------------------------
+
         if reports["clean"]["initial_state_sha256"] != reports["poisoned"]["initial_state_sha256"]:
             raise ValueError("Victim initial embeddings differ")
         surrogate_report = read_json(logs / "surrogate_training_summary.json")
@@ -438,9 +448,16 @@ def run(config_path, resume=False):
         for index, (target, record) in enumerate(zip(targets, status), 1):
             if tuple(record[k] for k in ("head", "relation", "tail")) != target:
                 raise ValueError("Poisoning summary target order mismatch")
+            
+            # -------------------------------------------------------------------------
             s_clean, s_poisoned = before.triple_score(*target), after.triple_score(*target)
+            # -------------------------------------------------------------------------
+
             rows.append({"target_id": f"target_{index:03d}", "head": target[0], "relation": target[1], "tail": target[2],
+
+                         # ------------------------------------------------
                          "clean_plausibility": s_clean, "poisoned_plausibility": s_poisoned, "delta": s_clean - s_poisoned,
+                         # # ------------------------------------------------
                          "poisoning_status": record["status"], "injected_for_target": record["injected_for_target"],
                          "new_to_global_training": record["new_to_global_training"]})
         with (output / "Final result.csv").open("w", encoding="utf-8", newline="") as stream:

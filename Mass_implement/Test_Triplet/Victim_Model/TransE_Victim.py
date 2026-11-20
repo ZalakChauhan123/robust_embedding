@@ -1,7 +1,21 @@
-"""Local independent TransE victim architecture and loader for Test_Triplet.
+"""
+Victim Model (TransE)
 
-The clean and poisoned victims are trained as separate instances. Initialization,
-negative L2 scoring and checkpoint keys match the existing TransE implementation.
+INPUT
+train.txt , entity/relation.txt
+
+OUTPUT
+surrogate_transe.pt
+
+----------------------------
+
+Why we train 2 vinctims ?
+--------------------
+We train two victims to measure the effect of poisoning:
+- Clean victim: shows the target’s plausibility before poisoning.
+- Poisoned victim: shows its plausibility after adding the poisoned triplets.
+Both start with the same initial weights and training settings, so the comparison measures the effect of changing the training data.
+
 """
 from __future__ import annotations
 
@@ -31,6 +45,7 @@ class TransE(nn.Module):
 
     def score(self, heads: torch.Tensor, relations: torch.Tensor,
               tails: torch.Tensor) -> torch.Tensor:
+        
         """Return raw plausibility; higher (closer to zero) is better."""
         return -self.distance(heads, relations, tails)
 
