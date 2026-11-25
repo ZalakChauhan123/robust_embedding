@@ -1,0 +1,49 @@
+{
+  "dicee_version": "0.3.2",
+  "training": {
+    "embedding_dim": 128,
+    "batch_size": 256,
+    "lr": 0.01,
+    "epochs": 500,
+    "poisoned_model_seed": 43,
+    "victim_seed": 42
+  },
+  "graph_settings": {
+    "budget": 2,
+    "delta": 0.7,
+    "seed": 42,
+    "selection_policy": "baseline"
+  },
+  "input_sha256": {
+    "train.txt": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35",
+    "valid.txt": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e",
+    "test.txt": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014",
+    "target_triplet.txt": "309778ae899b20560484774a63a78f321281d354459c87691b7613726a791c5f",
+    "entities.txt": "15561531bb8296e677ff4e682cf7a8a956a89ea49fcde20680c747cb1c4cda5d",
+    "relations.txt": "d2e33d4ea42374b38dffd214a3ba411ea35cc1195742c82722ad4df5c42b86b1",
+    "mass_candidates.json": "2352681ce09cbc78c39a6506ff79e0d8d43d45c434029ead3304780ff91f2367"
+  },
+  "artifacts": {
+    "clean_graph": "Graphs/Clean/run_001/train.txt",
+    "poisoned_graph": "Graphs/Poisoned/run_001/train.txt",
+    "poisoned_model": "Poisoned/TransE/run_001",
+    "clean_victim": "Victim/TransE/run_001/Clean",
+    "poisoned_victim": "Victim/TransE/run_001/Poisoned"
+  },
+  "clean_graph_facts": 5216,
+  "poisoned_graph_facts": 5218,
+  "added_facts": [
+    [
+      "receptor",
+      "affects",
+      "reptile"
+    ],
+    [
+      "vitamin",
+      "affects",
+      "reptile"
+    ]
+  ],
+  "rank_method": "Filtered tail prediction using original train, valid and test facts; average ties",
+  "rank_candidates_after_filtering": 117
+}

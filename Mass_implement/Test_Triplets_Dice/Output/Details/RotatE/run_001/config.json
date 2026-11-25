@@ -1,0 +1,365 @@
+{
+  "dicee_version": "0.3.3",
+  "model": "RotatE",
+  "training": {
+    "embedding_dim": 128,
+    "batch_size": 256,
+    "lr": 0.01,
+    "epochs": 500,
+    "poisoned_model_seed": 43,
+    "victim_seed": 42
+  },
+  "graph_settings": {
+    "budget": 2,
+    "delta": 0.7,
+    "seed": 42,
+    "selection_policy": "baseline"
+  },
+  "input_sha256": {
+    "train.txt": "873ef4925516b83e7f6f8cc02b4be51d848828710a7f65a956f0ac4a9e452f35",
+    "valid.txt": "025c98f8a4891e2a6582ec5b40ee0d904031edad9c52554522f4b7904820c98e",
+    "test.txt": "a7eb529a3d2810fcc96341ccc97c625a5e202f8389673aa6bd317eeebbb79014",
+    "target_triplet.txt": "6dfb9cca8228cae60a01c04cacae9b3361f2e7820ca2fe9b2e48fa50ee4b62f2",
+    "entities.txt": "15561531bb8296e677ff4e682cf7a8a956a89ea49fcde20680c747cb1c4cda5d",
+    "relations.txt": "d2e33d4ea42374b38dffd214a3ba411ea35cc1195742c82722ad4df5c42b86b1",
+    "mass_candidates.json": "8e36099093c3842e5c85aabb2ed61fd5bb26858e32fcab292d1ea55c865da0be"
+  },
+  "artifacts": {
+    "clean_graph": "Graphs/Clean/RotatE/run_001/train.txt",
+    "poisoned_graph": "Graphs/Poisoned/RotatE/run_001/train.txt",
+    "poisoned_model": "Poisoned/RotatE/run_001",
+    "clean_victim": "Victim/RotatE/run_001/Clean",
+    "poisoned_victim": "Victim/RotatE/run_001/Poisoned"
+  },
+  "clean_graph_facts": 5216,
+  "poisoned_graph_facts": 5236,
+  "target_count": 10,
+  "graph_mode": "One shared poisoned graph for all targets",
+  "added_facts": [
+    [
+      "anatomical_abnormality",
+      "affects",
+      "clinical_attribute"
+    ],
+    [
+      "anatomical_abnormality",
+      "location_of",
+      "body_part_organ_or_organ_component"
+    ],
+    [
+      "body_substance",
+      "isa",
+      "medical_device"
+    ],
+    [
+      "cell_function",
+      "precedes",
+      "cell_or_molecular_dysfunction"
+    ],
+    [
+      "disease_or_syndrome",
+      "degree_of",
+      "organism_attribute"
+    ],
+    [
+      "environmental_effect_of_humans",
+      "isa",
+      "molecular_function"
+    ],
+    [
+      "enzyme",
+      "affects",
+      "reptile"
+    ],
+    [
+      "experimental_model_of_disease",
+      "affects",
+      "clinical_attribute"
+    ],
+    [
+      "experimental_model_of_disease",
+      "co-occurs_with",
+      "neoplastic_process"
+    ],
+    [
+      "fungus",
+      "location_of",
+      "tissue"
+    ],
+    [
+      "genetic_function",
+      "isa",
+      "pharmacologic_substance"
+    ],
+    [
+      "immunologic_factor",
+      "isa",
+      "medical_device"
+    ],
+    [
+      "mental_or_behavioral_dysfunction",
+      "degree_of",
+      "organism_attribute"
+    ],
+    [
+      "molecular_function",
+      "isa",
+      "disease_or_syndrome"
+    ],
+    [
+      "molecular_function",
+      "produces",
+      "cell_component"
+    ],
+    [
+      "organ_or_tissue_function",
+      "degree_of",
+      "experimental_model_of_disease"
+    ],
+    [
+      "organism_function",
+      "produces",
+      "cell_component"
+    ],
+    [
+      "physiologic_function",
+      "precedes",
+      "cell_or_molecular_dysfunction"
+    ],
+    [
+      "plant",
+      "location_of",
+      "body_part_organ_or_organ_component"
+    ],
+    [
+      "vitamin",
+      "affects",
+      "reptile"
+    ]
+  ],
+  "target_graph_construction": [
+    {
+      "target_id": "target_001",
+      "head": "environmental_effect_of_humans",
+      "relation": "isa",
+      "tail": "disease_or_syndrome",
+      "original_status": "feasible",
+      "initial_paths": 19,
+      "eligible_paths": 14,
+      "rejected_leakage": 5,
+      "rejected_target_overlap": 0,
+      "rejected_invalid": 0,
+      "sampled_paths": 8,
+      "selected_paths": 1,
+      "injected_for_target": 2,
+      "new_to_global_training": 2,
+      "budget_skipped_paths": 0,
+      "status": "injected",
+      "selection_policy": "baseline",
+      "mean_sampled_intermediate_degree": 182.125,
+      "mean_selected_intermediate_degree": 211.0
+    },
+    {
+      "target_id": "target_002",
+      "head": "daily_or_recreational_activity",
+      "relation": "associated_with",
+      "tail": "organism_attribute",
+      "original_status": "feasible",
+      "initial_paths": 33,
+      "eligible_paths": 19,
+      "rejected_leakage": 14,
+      "rejected_target_overlap": 0,
+      "rejected_invalid": 0,
+      "sampled_paths": 4,
+      "selected_paths": 2,
+      "injected_for_target": 2,
+      "new_to_global_training": 2,
+      "budget_skipped_paths": 0,
+      "status": "injected",
+      "selection_policy": "baseline",
+      "mean_sampled_intermediate_degree": 168.0,
+      "mean_selected_intermediate_degree": 297.5
+    },
+    {
+      "target_id": "target_003",
+      "head": "antibiotic",
+      "relation": "complicates",
+      "tail": "reptile",
+      "original_status": "feasible",
+      "initial_paths": 43,
+      "eligible_paths": 9,
+      "rejected_leakage": 34,
+      "rejected_target_overlap": 0,
+      "rejected_invalid": 0,
+      "sampled_paths": 6,
+      "selected_paths": 2,
+      "injected_for_target": 2,
+      "new_to_global_training": 2,
+      "budget_skipped_paths": 0,
+      "status": "injected",
+      "selection_policy": "baseline",
+      "mean_sampled_intermediate_degree": 84.5,
+      "mean_selected_intermediate_degree": 102.5
+    },
+    {
+      "target_id": "target_004",
+      "head": "genetic_function",
+      "relation": "affects",
+      "tail": "tissue",
+      "original_status": "feasible",
+      "initial_paths": 25,
+      "eligible_paths": 19,
+      "rejected_leakage": 6,
+      "rejected_target_overlap": 0,
+      "rejected_invalid": 0,
+      "sampled_paths": 10,
+      "selected_paths": 2,
+      "injected_for_target": 2,
+      "new_to_global_training": 2,
+      "budget_skipped_paths": 0,
+      "status": "injected",
+      "selection_policy": "baseline",
+      "mean_sampled_intermediate_degree": 146.1,
+      "mean_selected_intermediate_degree": 85.5
+    },
+    {
+      "target_id": "target_005",
+      "head": "cell",
+      "relation": "produces",
+      "tail": "medical_device",
+      "original_status": "feasible",
+      "initial_paths": 38,
+      "eligible_paths": 35,
+      "rejected_leakage": 3,
+      "rejected_target_overlap": 0,
+      "rejected_invalid": 0,
+      "sampled_paths": 12,
+      "selected_paths": 2,
+      "injected_for_target": 2,
+      "new_to_global_training": 2,
+      "budget_skipped_paths": 2,
+      "status": "injected",
+      "selection_policy": "baseline",
+      "mean_sampled_intermediate_degree": 107.75,
+      "mean_selected_intermediate_degree": 89.5
+    },
+    {
+      "target_id": "target_006",
+      "head": "cell_function",
+      "relation": "affects",
+      "tail": "body_part_organ_or_organ_component",
+      "original_status": "feasible",
+      "initial_paths": 28,
+      "eligible_paths": 25,
+      "rejected_leakage": 3,
+      "rejected_target_overlap": 0,
+      "rejected_invalid": 0,
+      "sampled_paths": 6,
+      "selected_paths": 2,
+      "injected_for_target": 2,
+      "new_to_global_training": 2,
+      "budget_skipped_paths": 3,
+      "status": "injected",
+      "selection_policy": "baseline",
+      "mean_sampled_intermediate_degree": 135.0,
+      "mean_selected_intermediate_degree": 117.5
+    },
+    {
+      "target_id": "target_007",
+      "head": "laboratory_procedure",
+      "relation": "diagnoses",
+      "tail": "clinical_attribute",
+      "original_status": "feasible",
+      "initial_paths": 16,
+      "eligible_paths": 7,
+      "rejected_leakage": 9,
+      "rejected_target_overlap": 0,
+      "rejected_invalid": 0,
+      "sampled_paths": 2,
+      "selected_paths": 2,
+      "injected_for_target": 2,
+      "new_to_global_training": 2,
+      "budget_skipped_paths": 0,
+      "status": "injected",
+      "selection_policy": "baseline",
+      "mean_sampled_intermediate_degree": 240.0,
+      "mean_selected_intermediate_degree": 240.0
+    },
+    {
+      "target_id": "target_008",
+      "head": "laboratory_procedure",
+      "relation": "analyzes",
+      "tail": "cell_component",
+      "original_status": "feasible",
+      "initial_paths": 19,
+      "eligible_paths": 14,
+      "rejected_leakage": 5,
+      "rejected_target_overlap": 0,
+      "rejected_invalid": 0,
+      "sampled_paths": 5,
+      "selected_paths": 2,
+      "injected_for_target": 2,
+      "new_to_global_training": 2,
+      "budget_skipped_paths": 0,
+      "status": "injected",
+      "selection_policy": "baseline",
+      "mean_sampled_intermediate_degree": 218.2,
+      "mean_selected_intermediate_degree": 216.0
+    },
+    {
+      "target_id": "target_009",
+      "head": "organ_or_tissue_function",
+      "relation": "co-occurs_with",
+      "tail": "neoplastic_process",
+      "original_status": "feasible",
+      "initial_paths": 52,
+      "eligible_paths": 45,
+      "rejected_leakage": 7,
+      "rejected_target_overlap": 0,
+      "rejected_invalid": 0,
+      "sampled_paths": 12,
+      "selected_paths": 1,
+      "injected_for_target": 2,
+      "new_to_global_training": 2,
+      "budget_skipped_paths": 0,
+      "status": "injected",
+      "selection_policy": "baseline",
+      "mean_sampled_intermediate_degree": 252.25,
+      "mean_selected_intermediate_degree": 299.0
+    },
+    {
+      "target_id": "target_010",
+      "head": "vitamin",
+      "relation": "disrupts",
+      "tail": "cell_or_molecular_dysfunction",
+      "original_status": "feasible",
+      "initial_paths": 25,
+      "eligible_paths": 14,
+      "rejected_leakage": 11,
+      "rejected_target_overlap": 0,
+      "rejected_invalid": 0,
+      "sampled_paths": 3,
+      "selected_paths": 2,
+      "injected_for_target": 2,
+      "new_to_global_training": 2,
+      "budget_skipped_paths": 0,
+      "status": "injected",
+      "selection_policy": "baseline",
+      "mean_sampled_intermediate_degree": 214.33333333333334,
+      "mean_selected_intermediate_degree": 211.0
+    }
+  ],
+  "rank_method": "Filtered tail prediction using original train, valid and test facts; average ties",
+  "rank_candidates_after_filtering": [
+    132,
+    125,
+    117,
+    102,
+    119,
+    102,
+    125,
+    109,
+    131,
+    121
+  ]
+}
